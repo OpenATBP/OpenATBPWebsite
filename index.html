@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
+    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
+    <meta property="og:image" content="atbp-bee.png">
+    <meta property="og:url" content=""> <!-- Add URL -->
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>OpenATBP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Rajdhani", sans-serif;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: #0C0C0C;
+            font-size: large;
+            color: white;
+        }
+        .navigation-a {
+            text-decoration: none;
+            color: inherit;
+            margin-right: 2em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .navigation-a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.2em;
+            width: 100%;
+            height: 2px;
+            background-color: #E9C874;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        .navigation-a:hover {
+            color: #E9C874;
+        }
+        .navigation-a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        #nav-logo {
+            height: 70px;
+            width: auto;
+            margin-right: 1em;
+        }
+        #download-section {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5%;
+            justify-content: center;
+            align-items: center;
+        }
+        #atbp-logo {
+            height: 300px;
+            width: auto;
+            justify-content: center;
+        }
+        #play-button {
+            text-decoration: none;
+            background-color: #e4be35;
+            color: black;
+            margin-top: 1em;
+            padding: 2em 3em;
+            font-weight: bold;
+            font-size: 1.2em;
+            border: 2px solid white;
+            border-radius: 0.35em;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #play-button:hover {
+            background-color: #f7ce3c;
+            color: white;
+            border-color: #f7ce3c;
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <img src="atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <a class="navigation-a" href="">PATCH NOTES</a>
+        <a class="navigation-a" href="">WIKI</a>
+        <a class="navigation-a" href="">RANKINGS</a>
+        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+    </div>
+    <div id="download-section">
+        <img src="ATBP_Logo.png" id="atbp-logo" alt="Open ATBP Game Logo">
+        <a id="play-button" href="https://github.com/OpenATBP/OpenATBPClient/releases/download/1.0/OpenATBPClient-Installer-1.0.0.exe">PLAY NOW</a>
+    </div>
+</body>
+</html>
