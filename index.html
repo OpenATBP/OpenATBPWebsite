@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <style>
         body {
             font-family: "Rajdhani", sans-serif;
@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url('bg.png');
+            background-image: url('img/bg.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -80,12 +80,12 @@
             width: auto;
             justify-content: center;
         }
-        #play-button {
+        #button {
             text-decoration: none;
             background-color: #e4be35;
             color: black;
             margin-top: 1em;
-            padding: 2em 3em;
+            padding: 1em 3em;
             font-weight: bold;
             font-size: 1.2em;
             border: 2px solid white;
@@ -94,26 +94,45 @@
             display: inline-block;
             cursor: pointer;
         }
-        #play-button:hover {
+        #button:hover {
             background-color: #f7ce3c;
             color: white;
             border-color: #f7ce3c;
             transform: scale(1.05);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         }
+        
+        #button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        #windows-img {
+            height: 30px;
+            width: auto;
+        }
+        #button-text {
+            margin: 0 0 0.5em 0;
+        }
     </style>
 </head>
 <body>
     <div class="navigation">
-        <img src="atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
         <a class="navigation-a" href="">PATCH NOTES</a>
         <a class="navigation-a" href="">WIKI</a>
         <a class="navigation-a" href="">RANKINGS</a>
         <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
     </div>
     <div id="download-section">
-        <img src="ATBP_Logo.png" id="atbp-logo" alt="Open ATBP Game Logo">
-        <a id="play-button" href="https://github.com/OpenATBP/OpenATBPClient/releases/download/1.0/OpenATBPClient-Installer-1.0.0.exe">PLAY NOW</a>
+        <img src="img/ATBP_Logo.png" id="atbp-logo" alt="Open ATBP Game Logo">
+        <div id="button">
+            <p id="button-text">Download for Windows</p>
+            <img src="img/windows-icon.png" id="windows-img" alt="Windows only">
+        </div>
     </div>
 </body>
 </html>
