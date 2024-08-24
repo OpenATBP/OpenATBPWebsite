@@ -97,6 +97,11 @@ body {
 #button-text {
     margin: 0 0 0.5em 0;
 }
+#download-header {
+    margin-top: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 #patch-notes-section {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +120,7 @@ body {
     border-radius: 0.5em;
     opacity: 0.85;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Gigi Noob */
 }
 .patch-box:hover {
     transform: scale(1.05); 
@@ -162,6 +167,3 @@ body {
 .patch-notes-content li {
     list-style-type: square;
 }
-
-
-
