@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
+    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
+    <meta property="og:image" content="atbp-bee.png">
+    <meta property="og:url" content=""> <!-- Add URL -->
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>OpenATBP Patch Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="navigation">
+        <img src="../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <a class="navigation-a" href="../index.html">DOWNLOAD</a>
+        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+        <a class="navigation-a" href="">RANKINGS</a>
+        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+    </div>
+    <div class="wiki-area">
+        <div class="wiki-text">
+            <h1>Statistics</h1>
+            <div class="wiki-champion">
+                <table class="wiki-champion-stat-table">
+                    <tr>
+                        <th colspan="2" class="wiki-champion-stat-table-top">Champion statistics</th>
+                        <th class="wiki-champion-stat-table-top">
+                            <select class="champion-level-select">
+                                <option>Level 1</option>
+                                <option>Level 2</option>
+                                <option>Level 3</option>
+                                <option>Level 4</option>
+                                <option>Level 5</option>
+                                <option>Level 6</option>
+                                <option>Level 7</option>
+                                <option>Level 8</option>
+                                <option>Level 9</option>
+                                <option>Level 10</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/attack-damage.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-damage-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/armor.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Armor</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value armor-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/attack-speed.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Speed</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-speed-value"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/power-damage.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Power Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value power-damage-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/shields.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Shields</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value shields-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/health.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Health</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value health-value"></p>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/regenerate.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Regenerate</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value regenerate-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/attack-range.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Range</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-range-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/speed.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Speed</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value speed-value"></p>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/attack-vamp.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Vamp</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-vamp-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/power-vamp.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Power Vamp</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value power-vamp-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../img/wiki/champion-stats/crit.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Critical Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value critical-damage-value"></p>
+                        </td>
+                    </tr>      
+                </table>
+                <table class="wiki-champion-infobox">
+                    <tr>
+                        <th colspan="2">Sir Rattleballs</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="../img/wiki/champion-portraits/rattleballs-portrait.png"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="wiki-champion-infobox-desc">The shadowy protecter of the Candy Kingdom.</td>
+                    </tr>
+                    <tr>
+                        <td>Release date</td>
+                        <td>19-03-2014</td>
+                    </tr>
+                    <tr>
+                        <td>Attack range type</td>
+                        <td>Melee</td>
+                    </tr>
+                    <tr>
+                        <td>Roles</td>
+                        <td>Fighter, Ninja</td>
+                    </tr>
+                </table>
+            </div>
+            <h1>Abilities</h1>
+            <div class="wiki-champion-abilities">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="../img/wiki/champion-abilities/rattleballs-passive.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Dodge, Parry (Passive)</p>
+                            <p>For 3 seconds after using an ability, Rattleballs' next 2 basic attacks will heal him for 65% of the damage he deals. Dodge, Parry does not activate on structures (Towers and Bases).</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> none</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../img/wiki/champion-abilities/rattleballs-q.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Shadowless Thrust (Q)</p>
+                            <p>Rattleballs dashes into Counter Stance. If hit by a basic attack he will Counter Attack, taking no damage and dealing a Crit crit attack to his attacker. If not attacked for 1.5 seconds, he will Spin Attack (75 + 50% Power damage power damage) nearby foes. Press Q again to Dash Attack damaging (50 + 50% Power damage power damage) foes in his path.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 12s (10s at level 10)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../img/wiki/champion-abilities/rattleballs-w.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Dust Storm (W)</p>
+                            <p>Rattleballs' awesome sword powers deal damage (75 + 40% Power damage power damage) in a large area and pull any opponents within range toward him.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 16s (14s at level 10)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../img/wiki/champion-abilities/rattleballs-e.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">The Sword Stuff (E)</p>
+                            <p>Rattleballs pulls a blade spinning move that repeatedly damages all nearby foes (70 + 70% Power damage power damage / sec) and gaining a small increase to his own Move speed move speed while active +14% for 3.5 seconds. He can press E again to cancel the power early. The Sword Stuff move speed boost is not affected by other speed increases.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 60s (50s at level 10)</p>
+                        </td>
+                    </tr> 
+                </table>
+            </div>
+            <h1>Outfits</h1>
+            <table class="wiki-champion-outfits">
+                <tr>
+                    <td>
+                        <p class="wiki-bold-text">Cloaked Rattleballs</p>
+                    </td>
+                    <td>
+                        <p class="wiki-bold-text">Spi-do-tron Rattleballs</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="wiki-champion-outfit-img" src="../img/wiki/champion-skins/cloaked-rattleballs.png">
+                    </td>
+                    <td>
+                        <img class="wiki-champion-outfit-img" src="../img/wiki/champion-skins/spi-do-tron-rattleballs.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="wiki-champion-outfit-price">
+                            1250
+                            <img src="../img/wiki/other/pb-coin.png" class="wiki-pb-coin-img">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="wiki-champion-outfit-price">
+                            2500
+                            <img src="../img/wiki/other/pb-coin.png" class="wiki-pb-coin-img">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <h1>Recommended backpacks</h1>
+            <ul class="wiki-list wiki-backpacks-list">
+                <li>Billy's Bag 1=>1=>5=>5=>1=>5=>1=>5=>3=>3 (4/0/2/0/4)</li>
+                <li>Champion's Backpack 1=>1=>2=>2=>1=>2=>1=>2=>3=>3 (4/4/2/0/0)</li>
+            </ul>
+        </div>
+    </div>
+    <script src="../champion-table-handler.js" type="text/javascript"></script>
+</body>
+</html>

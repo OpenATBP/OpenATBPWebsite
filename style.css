@@ -296,5 +296,194 @@ body {
     margin-right: 0.5em;
 }
 
+.wiki-champion-infobox {
+    border-collapse: collapse;
+    width: 30vh;
+    text-align: center;
+}
+
+.wiki-champion-infobox td {
+    background-color: rgba(27, 67, 107, 0.1);
+}
+
+.wiki-champion-infobox img {
+    display: block;
+    height: 40vh;
+}
+
+.wiki-champion-infobox-desc {
+    color: rgb(166, 192, 191);
+}
+
+.wiki-champion-infobox th {
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #0d2c4c;
+}
+
+.wiki-champion {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.wiki-champion-stat-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wiki-champion-stat-p {
+    margin-left: 0.2em;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #60bcc9;
+}
+
+.wiki-champion-stat-table {
+    text-align: center;
+    border-collapse: collapse;
+    margin-right: 2em;
+}
+
+.wiki-champion-stat-table td, .wiki-champion-stat-table th {
+    border: 1px solid #1A2833;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.wiki-champion-stat-table img {
+    height: 2vh;
+    width: 2vh;
+}
+
+.wiki-champion-stat-table th {
+    background-color: #0d2c4c;
+    font-weight: bold;
+}
 
 
+.wiki-champion-stat-value {
+    margin: 0.3em 0 0 0;
+    font-weight: bold;
+}
+
+.wiki-champion-stat-table td {
+    width: 10vw;
+    height: fit-content;
+    background-color: rgba(27, 67, 107, 0.1);
+}
+
+.wiki-table-padding {
+    padding: 0.5em;
+}
+
+.wiki-attack-damage {
+    color: #de5d4a;
+}
+
+.wiki-armor {
+    color: #e1b641;
+}
+
+.wiki-attack-speed {
+    color: #de5d4a;
+}
+
+.wiki-power-damage {
+    color: #0066ff;
+}
+
+.wiki-shields {
+    color: #9156d2;
+}
+
+.wiki-health {
+    color: #039403;
+}
+
+.wiki-regenerate {
+    color: #039403;
+}
+
+.wiki-attack-range {
+    color: #d22e15;
+}
+
+.wiki-speed {
+    color: #ffff66;
+}
+
+.wiki-attack-vamp {
+    color: #e71e60;
+}
+
+.wiki-power-vamp {
+    color: #00ffff;
+}
+
+.wiki-crit {
+    color: #d22e15;
+}
+
+.wiki-bold-text {
+    font-weight: bold;
+}
+
+.wiki-mark-out {
+    color: #60bcc9;
+}
+
+.wiki-champion-abilities {
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.wiki-champion-abilities table {
+    border-collapse: collapse;
+}
+
+.wiki-champion-abilities td {
+    border: 1px solid #1A2833;
+    background-color: rgba(27, 67, 107, 0.1);
+}
+
+.wiki-champion-abilities td p {
+    margin-left: 0.5em;
+}
+
+.wiki-champion-ability-img {
+    height: 10vh;
+    width: auto;
+}
+
+.wiki-champion-outfits {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.wiki-champion-outfit-img {
+    height: 12vh;
+    width: 12vh;
+}
+
+.wiki-champion-outfits td {
+    border: 1px solid #2b4050;
+    background-color: rgba(27, 67, 107, 0.1);
+}
+
+.wiki-champion-outfit-price {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.wiki-pb-coin-img {
+    margin-left: 0.3em
+}
+
+.wiki-backpacks-list li {
+    margin-bottom: 2em;
+}
