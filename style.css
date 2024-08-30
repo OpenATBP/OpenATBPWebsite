@@ -287,7 +287,8 @@ body {
 }
 
 .wiki-colored-text {
-    color: #e4be35
+    color: #e4be35;
+    font-weight: bold;
 }
 
 .wiki-attack-type {
@@ -382,50 +383,62 @@ body {
 
 .wiki-attack-damage {
     color: #de5d4a;
+    font-weight: bold;
 }
 
 .wiki-armor {
     color: #e1b641;
+    font-weight: bold;
 }
 
 .wiki-attack-speed {
     color: #de5d4a;
+    font-weight: bold;
 }
 
 .wiki-power-damage {
     color: #0066ff;
+    font-weight: bold;
 }
 
 .wiki-shields {
     color: #9156d2;
+    font-weight: bold;
 }
 
 .wiki-health {
     color: #039403;
+    font-weight: bold;
 }
 
 .wiki-regenerate {
     color: #039403;
+    font-weight: bold;
 }
 
 .wiki-attack-range {
     color: #d22e15;
+    font-weight: bold;
 }
 
 .wiki-speed {
     color: #ffff66;
+    font-weight: bold;
 }
 
 .wiki-attack-vamp {
     color: #e71e60;
+    font-weight: bold;
 }
 
 .wiki-power-vamp {
     color: #00ffff;
+    font-weight: bold;
 }
 
 .wiki-crit {
     color: #d22e15;
+    font-weight: bold;
 }
 
 .wiki-bold-text {
@@ -434,6 +447,7 @@ body {
 
 .wiki-mark-out {
     color: #60bcc9;
+    font-weight: bold;
 }
 
 .wiki-champion-abilities {
