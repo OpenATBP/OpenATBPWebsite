@@ -132,28 +132,28 @@ const ITEMS = {
     "lightning-sword": {
         "stat1": "Power Damage (10/32/50/100)"
     },
-    "Magic Nail": {
+    "magic-nail": {
         "stat1": "Attack Damage (5/10/20/35)",
         "stat2": "Speed (.05/.10/.15/.20)",
-        "stat3": "getting KO’s adds bonus Attack Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 25 Attack Damage per level in Magic Nail."
+        "stat3": "getting KO's adds bonus Attack Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 25 Attack Damage per level in Magic Nail."
     },
-    "Magic Wand": {
+    "magic-wand": {
         "stat1": "Power Damage (20/50/100/200)"
     },
-    "Marcelines Amp": {
+    "marcelines-amp": {
         "stat1": "Power Damage (15/35/75/150)",
         "stat2": "Power Vamp (5%/10%/15%/20%)"
     },
-    "Medal of Bravery": {
+    "medal-of-bravery": {
         "stat1": "Armor (10/20/40/75)",
         "stat2": "Attack Speed (75/150/250/350)"
     },
-    "Me-Mows Dagger": {
+    "me-mows-dagger": {
         "stat1": "Attack Damage (10/20/30/50)",
         "stat2": "Critical Chance (5%/10%/15%/20%)",
         "stat3": "Attack Speed (75/150/250/350)"
     },
-    "Nightosphere Amulet": {
+    "nightosphere-amulet": {
         "stat1": "Health (50/100/150/225)",
         "stat2": "Attack Vamp (5%/10%/15%/20%)",
         "stat3": "Power Vamp (5%/10%/15%/20%)"
@@ -162,7 +162,7 @@ const ITEMS = {
         "stat1": "Attack Damage (10/25/45/75)",
         "stat2": "Armor Breach (5/10/15/25)"
     },
-    "Numb-Chucks": {
+    "numb-chucks": {
         "stat1": "Attack Damage (10/20/30/50)",
         "stat2": "Speed (.03/.05/.08/.10)",
         "stat3": "Your basic attacks lower enemy champion Attack Speed by 25% for 3 seconds"

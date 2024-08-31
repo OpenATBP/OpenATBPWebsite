@@ -1,6 +1,7 @@
 body {
     font-family: "Rajdhani", sans-serif;
     font-weight: 500;
+    font-size: 0.95vw;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -248,11 +249,6 @@ body {
     transform: scale(1.1);
 }
 
-.wiki-navigation-caption {
-    text-decoration: none;
-    color: #e4be35
-}
-
 .wiki-champions-text {
     margin: 1em;
 }
@@ -299,7 +295,6 @@ body {
 
 .wiki-champion-infobox {
     border-collapse: collapse;
-    width: 30vh;
     text-align: center;
 }
 
@@ -308,8 +303,8 @@ body {
 }
 
 .wiki-champion-infobox img {
-    display: block;
-    height: 40vh;
+    width: 13vw;
+    height: auto;
 }
 
 .wiki-champion-infobox-desc {
@@ -500,4 +495,61 @@ body {
 
 .wiki-backpacks-list li {
     margin-bottom: 2em;
+}
+
+.wiki-item-list li {
+    margin-bottom: 0.5em;
+}
+
+.wiki-backpack-items-table {
+    background-color: rgba(27, 67, 107, 0.1);
+    border-collapse: collapse;
+}
+
+.wiki-backpack-items-table td {
+    border-bottom: 1px solid #1A2833;
+}
+
+.wiki-backpack-items-table p {
+    margin-left: 0.5em;
+}
+
+.wiki-backpack-image {
+    width: 30vw;
+    height: auto;
+    margin-top: 1.5em;
+}
+
+.wiki-item-image {
+    width: 5vw;
+    height: auto;
+}
+
+.wiki-backpacks-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+
+.wiki-backpacks-gallery img {
+    width: 25vw;
+    height: auto;
+    transition: filter 0.2s ease-in-out;
+}
+
+.wiki-backpacks-gallery img:hover {
+    filter: brightness(1.2);
+}
+
+.wiki-link {
+    color: #e4be35;
+    text-decoration: none;
+}
+
+.wiki-link:hover {
+    color: #f1cc42;
+    text-decoration: underline;
 }
