@@ -550,6 +550,38 @@ body {
 }
 
 .wiki-link:hover {
-    color: #f1cc42;
+    color: #f1d981;
     text-decoration: underline;
+}
+
+.wiki-monster-table {
+    border-collapse: collapse;
+    background-color: rgba(58, 95, 133, 0.2);
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+}
+.wiki-monster-table img {
+    width: 10vw;
+    height: auto;
+}
+
+.wiki-monster-table td {
+    padding: 1em;
+    border-bottom: 1px dashed rgb(105, 179, 166);
+}
+
+.wiki-monster-table th {
+    padding-top: 1em;
+}
+
+.jungle-monster-section table {
+    margin-right: 2em;
+}
+
+.jungle-monster-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
 }
