@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
+    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
+    <meta property="og:image" content="atbp-bee.png">
+    <meta property="og:url" content=""> <!-- Add URL -->
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>Patch Notes 1.3 | OpenATBP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="navigation">
+        <img src="../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <a class="navigation-a" href="../index.html">DOWNLOAD</a>
+        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+        <a class="navigation-a" href="">RANKINGS</a>
+        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+    </div>
+    <div class="patch-notes-content">
+        <h2>MATCHMAKING</h2>
+        <ul class="patch-notes-ul">
+            <li>Curved all player's elo to separate into the higher tiers (top players should be near purple and bottom players will be in tier 1)</li>
+            <li>Add system to punish players who dodge games constantly. Dodging too many times in a short time will result in a 30-minute queue ban</li>
+            <li>Temporarily remove auto balancing on team. This is to test if the feature actually balances games or makes it worse.</li>
+            <li>[NEW] Change the "bot" 1v1 mode to 2v2, as widely requested. PLEASE NOTE: There is a known issue that the mini map shows the main map and not the practice map. This is hard coded into the client and its removal would have delayed this patch.</li>
+            <li>Add "derank protection" which prevents you from deranking from one massive loss. This will make it harder to derank from tiers.</li>
+            <li>Add elo probability skew if you have a player disconnect on your team--meaning that for the elo calculation at the end of the game, players with less players will actually be considered disadvantaged.</li>
+            <li>Add alt account tracking. Players are only permitted to use one alt account, any additional accounts may result in reset elo and progress as well as a potential ban</li>
+        </ul>
+        <h2>BALANCE UPDATES</h2>
+        <div class="patch-notes-image-section">
+            <img src="../img/atbp-bee.png" alt="bee image">
+            <p>General Changes</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Increased catch-up xp from 1 xp per level gap to 2 xp per level gap.</li>
+            <li>Added "per level" stats onto characters at level 1. Essentially increasing everyone's base stats at level 1 based on their character's scaling.</li>
+            <li>Removed AI players</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/billy.png" alt="billy image">
+            <p>Billy</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Reduced AP scaling on Q from 70% to 55%</li>
+            <li>Reduced movement speed buff from empowered W from 0.8 to 0.5 (which was the original value in ATBP)</li>
+            <li>Increased W cooldown at level 10 by 2 seconds (this was just missed from last patch)</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/bmo.png" alt="bmo image">
+            <p>BMO</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Decreased damage falloff from 30% per hit to 15% per hit.</li>
+            <li>Increased AP ratio on W from 20% to 40%</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/cb.png" alt="cb image">
+            <p>Cinnamon Bun</p>
+        </div>
+        <ul class="balance-ul">
+            <li>All abilities now only do 50% damage to towers</li>
+            <li>W cooldown increased by 2 seconds from 15s (12s at lvl 10) to 17s (14s at lvl 10) </li>
+            <li>W damage ratio decreased from 40% to 30%</li>
+            <li>Health scaling decreased from 50 per level to 25</li>
+            <li>Decreased speed from 2.8 to 2.7</li>
+            <li>[NOTE] CB's ult was not impacted in this patch because the belief is that his tankiness and movement is likely the cause of his strength rather than the ult. We will monitor as the games go on. #dontstandinthecircle</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/finn.png" alt="finn image">
+            <p>Finn</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Decreased armor gained from Q from 25% to 15%</li>
+            <li>Increased W cooldown from 9 seconds (7s at lvl 10) to 12 seconds (10s at lvl 10)</li>
+            <li>Reduced health scaling from 50 per level to 25</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/fionna.png" alt="fionna image">
+            <p>Fionna</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Removed ult cast delay</li>
+            <li>Increased speed from 2.65 to 2.8</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/fp.png" alt="fp image">
+            <p>Flame Princess</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Decreased attack range by 0.1</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/gunter.png" alt="gunter image">
+            <p>Gunter</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Decreased crit damage from 250% to 225%</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/hunson.png" alt="hunson image">
+            <p>Hunson</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Hunson's passive now procs even when the champion dies</li>
+            <li>Reduced Q idle time (time you can wait between firing Qs before it goes on cooldown) from 6 seconds to 4.5 seconds</li>
+            <li>Added a 5-second cooldown on Hunson's passive</li>
+            <li>Reduced passive duration from 5 seconds to 3.5 seconds</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/iceking.png" alt="ice king image">
+            <p>Ice King</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Ice Shield (passive) now reduces the damage from the first hit taken by 50%</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/jake.png" alt="jake image">
+            <p>Jake</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Passive now roots for one second instead of applying a slow</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/lich.png" alt="lich image">
+            <p>The Lich</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Decreased Skully's attack speed from 1s (1000) to 1.25s (1250)</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/magicman.png" alt="magic man image">
+            <p>Magic Man</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Ult damage is now a flat 35% HP scaling and does not gain any additional damage based on AP</li>
+            <li>Reduced ult damage on large monster by 50%</li>
+            <li>Increased AP ratio on W from 50% to 70%</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/marceline.png" alt="marceline image">
+            <p>Marceline</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Increased HP scaling from 35 per level to 50</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/pb.png" alt="princess bubblegum image">
+            <p>Princess Bubblegum</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Enemies hit by all 3 passive stacks will also be slowed by 25% for 2.5 seconds</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/rattleballs.png" alt="rattleballs image">
+            <p>Rattleballs</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Ult now destroys enemy skill shots (excluding ultimates) while active</li>
+        </ul>
+        <h2>BUG FIXES</h2>
+        <ul class="patch-notes-ul">
+            <li>Fixed issue where two players could choose the same character in champ select</li>
+            <li>Fixed issue where dead players were receiving boss buffs while dead</li>
+            <li>Fixed issue where Marcy would not gain CC immunity when transforming into Vampire form</li>
+            <li>Fixed issue where the Gumball Guardian was not destroying NEPTR's W</li>
+            <li>[NOTE] In the bug reporting forum, if you notice a tag that says "need more info" - it means I am unable to replicate the bug and would like more details on how to replicate it. Videos are greatly appreciated!</li>
+        </ul>
+    </div>
+</body>
+</html>

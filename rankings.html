@@ -11,40 +11,31 @@
     <meta property="og:url" content=""> <!-- Add URL -->
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
-    <title>OpenATBP Wiki</title>
+    <title>OpenATBP Rankings</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  fetch('http://127.0.0.1:8000/data/rankings').then((res) => {
+    console.log(res);
+  }).catch(console.error);
+</script>
 <body>
     <div class="navigation">
         <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
         <a class="navigation-a" href="index.html">DOWNLOAD</a>
         <a class="navigation-a" href="notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="rankings.html">RANKINGS</a>
+        <a class="navigation-a" href="wiki-home.html">WIKI</a>
         <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
         <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
     </div>
     <div class="wiki-area">
         <div class="wiki-page-header">
-            <h1>Welcome, Adventurer!</h1>
-            <p>Explore everything you need to know about Adventure Time Battle Party through our ultimate Wiki resource!</p>
-        </div>
-        <div class="wiki-navigation">
-            <div class="item">
-                <a href="wiki-pages/champions.html"><img src="img/finn.png"></a>
-                <a href="wiki-pages/champions.html" class="wiki-link">Champions</a>
-            </div>
-            <div class="item">
-                <a href="wiki-pages/backpacks.html"><img src="img/backpack.png"></a>
-                <a href="wiki-pages/backpacks.html" class="wiki-link">Backpacks</a>
-            </div>
-            <div class="item">
-                <a href="wiki-pages/junglemonsters.html"><img src="img/jungle-monters.png"></a>
-                <a href="wiki-pages/junglemonsters.html" class="wiki-link">Monsters</a>
-            </div>
+            <h1>WORK IN PROGRESS</h1>
+            <p>For now... you can use the BMO bot on the Discord!</p>
         </div>
     </div>
 </body>

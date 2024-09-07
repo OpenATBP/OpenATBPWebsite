@@ -41,7 +41,7 @@ BASE_STATS = {
         "health": 500,
         "regenerate": 2,
         "attack-range": 1.8,
-        "speed": 2.8,
+        "speed": 2.7,
         "attack-vamp": "0%",
         "power-vamp": "0%",
         "critical-damage": "200%"
@@ -69,7 +69,7 @@ BASE_STATS = {
         "health": 500,
         "regenerate": 2,
         "attack-range": 1.5,
-        "speed": 2.65,
+        "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
         "critical-damage": "200%"
@@ -82,7 +82,7 @@ BASE_STATS = {
         "shields": 30,
         "health": 350,
         "regenerate": 2,
-        "attack-range": 6.5,
+        "attack-range": 6.4,
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
@@ -100,7 +100,7 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
-        "critical-damage": "250%"
+        "critical-damage": "225%"
     },
     "hunson": {
         "attack-damage": 55,
@@ -297,7 +297,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 30,
         "power-damage": 3,
         "shields": 2,
-        "health": 50,
+        "health": 25,
         "regenerate": 1,
     },
     "finn": {
@@ -306,7 +306,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 2,
         "shields": 1,
-        "health": 50,
+        "health": 25,
         "regenerate": 1,
     },
     "fionna": {
@@ -405,7 +405,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 5,
         "shields": 1,
-        "health": 35,
+        "health": 50,
         "regenerate": 1,
     },
     "neptr": {
