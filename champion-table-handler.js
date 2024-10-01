@@ -16,6 +16,9 @@ BASE_STATS = {
         "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "bmo": {
@@ -30,6 +33,9 @@ BASE_STATS = {
         "speed": 2.95,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "cb": {
@@ -44,6 +50,9 @@ BASE_STATS = {
         "speed": 2.7,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "finn": {
@@ -58,6 +67,9 @@ BASE_STATS = {
         "speed": 3,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "fionna": {
@@ -72,6 +84,9 @@ BASE_STATS = {
         "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "fp": {
@@ -86,6 +101,9 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "gunter": {
@@ -100,6 +118,9 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 5,
+        "shield-breach": 0,
+        "critical-chance": "1%",
         "critical-damage": "225%"
     },
     "hunson": {
@@ -114,6 +135,9 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "20%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "iceking": {
@@ -128,6 +152,9 @@ BASE_STATS = {
         "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "jake": {
@@ -142,6 +169,9 @@ BASE_STATS = {
         "speed": 2.65,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "lemongrab": {
@@ -156,6 +186,9 @@ BASE_STATS = {
         "speed": 3,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "lich": {
@@ -170,6 +203,9 @@ BASE_STATS = {
         "speed": 2.45,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "lsp": {
@@ -184,6 +220,9 @@ BASE_STATS = {
         "speed": 3.15,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "magicman": {
@@ -198,6 +237,9 @@ BASE_STATS = {
         "speed": 2.75,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "marceline": {
@@ -212,6 +254,9 @@ BASE_STATS = {
         "speed": 3,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "neptr": {
@@ -226,6 +271,9 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "pb": {
@@ -240,6 +288,9 @@ BASE_STATS = {
         "speed": 2.75,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "pepbut": {
@@ -254,6 +305,9 @@ BASE_STATS = {
         "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
     "rattleballs": {
@@ -268,6 +322,9 @@ BASE_STATS = {
         "speed": 2.8,
         "attack-vamp": "0%",
         "power-vamp": "0%",
+        "armor-breach": 0,
+        "shield-breach": 0,
+        "critical-chance": "0%",
         "critical-damage": "200%"
     },
 }
@@ -446,7 +503,7 @@ STATS_PER_LEVEL = {
     },
 }
 
-IMMUTABLE_STATS = ["attack-range", "speed", "attack-vamp", "power-vamp", "critical-damage"];
+IMMUTABLE_STATS = ["attack-range", "speed", "attack-vamp", "power-vamp", "armor-breach", "shield-breach", "critical-chance", "critical-damage"];
 
 
 const baseStats = BASE_STATS[championName];
