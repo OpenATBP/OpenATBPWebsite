@@ -124,11 +124,6 @@
         }
     </style>
 </head>
-<script>
-  fetch('http://127.0.0.1:8000/data/rankings').then((res) => {
-    console.log(res);
-  }).catch(console.error);
-</script>
 <body>
     <div class="navigation">
         <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
@@ -151,6 +146,23 @@
     <div id="global-stats-section"></div>
     <div id="player-search-section"></div>
     <script>
+        function getPlayerColor(index) {
+            let position = index + 1;
+            switch (position) {
+                case 1:
+                    return 'gold';
+                    break;
+                case 2:
+                    return 'silver';
+                    break;
+                case 3:
+                    return '#cd7f32';
+                    break;
+                default:
+                    return 'white';             
+            }
+        }
+
         function getRankImage(elo) {
             if (elo > 2433) return 'img/ranks/4-4.png';
             else if (elo > 2225 && elo < 2434) {
@@ -184,7 +196,7 @@
 
         async function displayLeaderboard() {
             try {
-                const res = await fetch('http://127.0.0.1:8000/data/rankings');
+                const res = await fetch('https://beta.openatbp.xyz/data/rankings');
                 const data = await res.json();
 
                 if (data.length > 0) {
@@ -200,7 +212,10 @@
                             if (index != array.length - 1) row.className = 'bottom-border-cell';
 
                             let numberCell = document.createElement('td');
+                            numberCell.textContent = index + 1;
                             numberCell.className = 'leaderboard-position';
+                            numberCell.style.color = getPlayerColor(index);
+
 
                             let imageCell = document.createElement('td');
                             let profilePicture = document.createElement('img');
@@ -216,6 +231,7 @@
                                     nameCell.appendChild(document.createElement('br'));
                                 }
                             });
+                            nameCell.style.color = getPlayerColor(index);
 
                             let eloCell = document.createElement('td');
                             eloCell.textContent = elo;
