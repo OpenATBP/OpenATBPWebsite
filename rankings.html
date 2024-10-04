@@ -11,7 +11,7 @@
     <meta property="og:url" content=""> <!-- Add URL -->
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
-    <title>OpenATBP Leaderboard</title>
+    <title>OpenATBP Rankings</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -124,6 +124,11 @@
         }
     </style>
 </head>
+<script>
+  fetch('http://127.0.0.1:8000/data/rankings').then((res) => {
+    console.log(res);
+  }).catch(console.error);
+</script>
 <body>
     <div class="navigation">
         <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
@@ -174,7 +179,7 @@
                 return 'img/ranks/1-1.png';
             } else {
                 return 'img/ranks/1-0.png';
-            }        
+            }
         }
 
         async function displayLeaderboard() {
@@ -211,7 +216,7 @@
                                     nameCell.appendChild(document.createElement('br'));
                                 }
                             });
-                            
+
                             let eloCell = document.createElement('td');
                             eloCell.textContent = elo;
 
@@ -230,18 +235,18 @@
 
                             table.appendChild(row);
                         });
-                        leaderboardSection.appendChild(table);    
+                        leaderboardSection.appendChild(table);
                     }
                 }
             } catch (error) {
                 console.log(error);
             }
-        } 
-        
+        }
+
         async function displayGlobalStats() {
 
         }
- 
+
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('#spicy-battle-menu div');
             const sections = document.querySelectorAll('[id$="-section"]'); // Select all sections ending with "-section"
