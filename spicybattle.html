@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://www.openatbp.xyz/spicybattle.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
-    <title>OpenATBP Rankings</title>
+    <title>OpenATBP Spicy Battle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -132,31 +132,38 @@
         }
 
         .purple {
-            color: #e600ff;
+            color: transparent;
+            -webkit-text-stroke: 2px #e600ff;
         }
 
         .teal {
-            color: #29dddd;
+            color: transparent;
+            -webkit-text-stroke: 2px #29dddd;
         }
 
         .gold {
-            color: #ffe504;
+            color: transparent;
+            -webkit-text-stroke: 2px #ffe504;
         }
 
         .silver {
-            color: #81acdc;
+            color: transparent;
+            -webkit-text-stroke: 2px #81acdc;
         }
 
-        .bronze { 
-            color: #ffa900;
+        .bronze {
+            color: transparent;
+            -webkit-text-stroke: 2px #ffa900;
         }
 
         .master {
-            color: #7b286b;
+            color: transparent;
+            -webkit-text-stroke: 2px #7b286b;
         }
 
         .royal {
-            color: #42c2d9;
+            color: transparent;
+            -webkit-text-stroke: 2px #42c2d9;
         }
 
         #page-header {
@@ -170,6 +177,18 @@
 
         #page-header p {
             margin-top: 0.5em;
+        }
+
+        #global-stats-section {
+            color: white;
+            text-align: center;
+            display: none;
+        }
+
+        #player-search-section {
+            color: white;
+            text-align: center;
+            display: none;
         }
     </style>
 </head>
@@ -191,8 +210,8 @@
         <div id="player-search-btn" class="inactive">Player Search</div>
     </div>
     <div id="leaderboard-section"></div>
-    <div id="global-stats-section"></div>
-    <div id="player-search-section"></div>
+    <div id="global-stats-section"><h1>Coming soon™</h1></div>
+    <div id="player-search-section"><h1>Coming soon™</h1></div>
     <script>
         function getTop50Border(elo) {
             if (elo > 2433) return 'purple-border';
@@ -244,7 +263,7 @@
                         data.forEach((object, index, array) => {
                             let elo = object.player.elo;
                             let dname = object.user.dname;
-                            
+
                             let row = document.createElement('tr'); 
 
                             let numberCell = document.createElement('td');
@@ -301,7 +320,7 @@
         }
 
         async function displayGlobalStats() {
-
+            
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -336,6 +355,7 @@
                     // display active section after the button was clicked
                     if (clickedSection) {
                         clickedSection.style.display = 'block';
+                        // if (sectionId === 'global-stats-section') displayGlobalStats();
                     }
                 });
             });
