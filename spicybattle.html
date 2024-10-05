@@ -8,7 +8,7 @@
     <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
     <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
     <meta property="og:image" content="atbp-bee.png">
-    <meta property="og:url" content=""> <!-- Add URL -->
+    <meta property="og:url" content="https://www.openatbp.xyz/spicybattle.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <title>OpenATBP Rankings</title>
@@ -61,6 +61,7 @@
             border-radius: 8px;
             background-color: rgba(21, 45, 82, 0.2);
             margin: auto;
+            overflow: hidden;
             color: white;
         }
 
@@ -98,16 +99,64 @@
             font-size: 2em;
         }
 
-        .top1 {
-            color: gold;
+        .purple-border {
+            border-bottom: 2px solid #e600ff;
         }
 
-        .top2 {
-            color: silver;
+        .teal-border {
+            border-bottom: 2px solid #29dddd;
         }
 
-        .top3 {
-            color: #cd7f32;
+        .gold-border {
+            border-bottom: 2px solid #ffe504;
+        }
+
+        .silver-border {
+            border-bottom: 2px solid #81acdc;
+        }
+
+        .bronze-border {
+            border-bottom: 2px solid #ffa900;
+        }
+
+        .master-border {
+            border-bottom: 2px solid #7b286b;
+        }
+
+        .royal-border {
+            border-bottom: 2px solid #42c2d9;
+        }
+
+        .regular-border {
+            border-bottom: 2px solid white;
+        }
+
+        .purple {
+            color: #e600ff;
+        }
+
+        .teal {
+            color: #29dddd;
+        }
+
+        .gold {
+            color: #ffe504;
+        }
+
+        .silver {
+            color: #81acdc;
+        }
+
+        .bronze { 
+            color: #ffa900;
+        }
+
+        .master {
+            color: #7b286b;
+        }
+
+        .royal {
+            color: #42c2d9;
         }
 
         #page-header {
@@ -135,7 +184,6 @@
     </div>
     <div id="page-header">
         <h1>Spicy Battle</h1>
-        <p>Scores refresh every x minutes</p>
     </div>
     <div id="spicy-battle-menu">
         <div id="leaderboard-btn">Leaderboard</div>
@@ -146,52 +194,41 @@
     <div id="global-stats-section"></div>
     <div id="player-search-section"></div>
     <script>
-        function getPlayerColor(index) {
-            let position = index + 1;
-            switch (position) {
-                case 1:
-                    return 'gold';
-                    break;
-                case 2:
-                    return 'silver';
-                    break;
-                case 3:
-                    return '#cd7f32';
-                    break;
-                default:
-                    return 'white';             
-            }
+        function getTop50Border(elo) {
+            if (elo > 2433) return 'purple-border';
+            else if (elo > 2225) return 'teal-border';
+            else if (elo > 2017) return 'gold-border';
+            else if (elo > 1809) return 'silver-border';
+            else if (elo > 1600) return 'bronze-border';
+            else if (elo > 1348) return 'master-border';
+            else if (elo > 1147) return 'royal-border';
+        }
+
+        function getTop50NumberColor(elo) {
+            if (elo > 2433) return 'purple';
+            else if (elo > 2225) return 'teal';
+            else if (elo > 2017) return 'gold';
+            else if (elo > 1809) return 'silver';
+            else if (elo > 1600) return 'bronze';
+            else if (elo > 1348) return 'master';
+            else if (elo > 1147) return 'royal';
         }
 
         function getRankImage(elo) {
             if (elo > 2433) return 'img/ranks/4-4.png';
-            else if (elo > 2225 && elo < 2434) {
-                return 'img/ranks/4-3.png';
-            } else if (elo > 2017 && elo < 2226) {
-                return 'img/ranks/4-2.png';
-            } else if (elo > 1809 && elo < 2018) {
-                return 'img/ranks/4-1.png';
-            } else if (elo > 1600 && elo < 1810) {
-                return 'img/ranks/4-0.png';
-            } else if (elo > 1538 && elo < 1601) {
-                return 'img/ranks/3-3.png';
-            } else if (elo > 1475 && elo < 1539) {
-                return 'img/ranks/3-2.png';
-            } else if (elo > 1412 && elo < 1476) {
-                return 'img/ranks/3-1.png';
-            } else if (elo > 1348 && elo < 1413) {
-                return 'img/ranks/3-0.png';
-            } else if (elo > 1282 && elo < 1349) {
-                return 'img/ranks/2-2.png';
-            } else if (elo > 1215 && elo < 1283) {
-                return 'img/ranks/2-1.png';
-            } else if (elo > 1147 && elo < 1216) {
-                return 'img/ranks/2-0.png';
-            } else if (elo > 573) {
-                return 'img/ranks/1-1.png';
-            } else {
-                return 'img/ranks/1-0.png';
-            }
+            else if (elo > 2225) return 'img/ranks/4-3.png';
+            else if (elo > 2017) return 'img/ranks/4-2.png';
+            else if (elo > 1809) return 'img/ranks/4-1.png';
+            else if (elo > 1600) return 'img/ranks/4-0.png';
+            else if (elo > 1538) return 'img/ranks/3-3.png';
+            else if (elo > 1475) return 'img/ranks/3-2.png';
+            else if (elo > 1412) return 'img/ranks/3-1.png';
+            else if (elo > 1348) return 'img/ranks/3-0.png';
+            else if (elo > 1282) return 'img/ranks/2-2.png';
+            else if (elo > 1215) return 'img/ranks/2-1.png';
+            else if (elo > 1147) return 'img/ranks/2-0.png';
+            else if (elo > 573) return 'img/ranks/1-1.png';
+            else return 'img/ranks/1-0.png';
         }
 
         async function displayLeaderboard() {
@@ -207,15 +244,12 @@
                         data.forEach((object, index, array) => {
                             let elo = object.player.elo;
                             let dname = object.user.dname;
-
-                            let row = document.createElement('tr');
-                            if (index != array.length - 1) row.className = 'bottom-border-cell';
+                            
+                            let row = document.createElement('tr'); 
 
                             let numberCell = document.createElement('td');
                             numberCell.textContent = index + 1;
                             numberCell.className = 'leaderboard-position';
-                            numberCell.style.color = getPlayerColor(index);
-
 
                             let imageCell = document.createElement('td');
                             let profilePicture = document.createElement('img');
@@ -224,14 +258,12 @@
                             imageCell.appendChild(profilePicture);
 
                             let nameCell = document.createElement('td');
-                            console.log()
                             dname.split(' ').forEach((word, index, array) => {
                                 nameCell.appendChild(document.createTextNode(word));
                                 if (index < array.length - 1) {
                                     nameCell.appendChild(document.createElement('br'));
                                 }
                             });
-                            nameCell.style.color = getPlayerColor(index);
 
                             let eloCell = document.createElement('td');
                             eloCell.textContent = elo;
@@ -243,6 +275,15 @@
                             rankImage.className = 'rank-image';
                             rankImageCell.appendChild(rankImage);
 
+                            // styling based on position
+                            let position = index + 1;
+                            let borderName = 'regular-border';
+                            if (position < 51) {
+                                borderName = getTop50Border(elo);
+                                numberCell.classList.add(getTop50NumberColor(elo));
+                            }
+                            row.className = borderName;
+                            
                             row.appendChild(numberCell);
                             row.appendChild(imageCell);
                             row.appendChild(nameCell);
