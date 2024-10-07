@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="patch-notes-content">
         <h2>NEW FEATURES</h2>
@@ -38,7 +67,7 @@
         </ul>
         <h2>BALANCE UPDATES</h2>
         <div class="patch-notes-image-section">
-            <img src="../img/billy.png" alt="billy image">
+            <img src="../img/champions/billy.png" alt="billy image">
             <p>Billy</p>
         </div>
         <ul class="balance-ul">
@@ -48,21 +77,21 @@
             <li>Lowered shield growth per level from 2 to 1</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/finn.png" alt="finn image">
+            <img src="../img/champions/finn.png" alt="finn image">
             <p>Finn</p>
         </div>
         <ul class="balance-ul">
             <li>Removed attack speed gained in ult</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/fionna.png" alt="fionna image">
+            <img src="../img/champions/fionna.png" alt="fionna image">
             <p>Fionna</p>
         </div>
         <ul class="balance-ul">
             <li>Power scaling on Q increased from 30% to 40%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/fp.png" alt="fp image">
+            <img src="../img/champions/fp.png" alt="fp image">
             <p>Flame Princess</p>
         </div>
         <ul class="balance-ul">
@@ -70,7 +99,7 @@
             <li>Passive damage scaling increased from 35% to 45%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/gunter.png" alt="gunter image">
+            <img src="../img/champions/gunter.png" alt="gunter image">
             <p>Gunter</p>
         </div>
         <ul class="balance-ul">
@@ -79,7 +108,7 @@
             <li>Increase base armor breach from 0 to 5</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/hunson.png" alt="hunson image">
+            <img src="../img/champions/hunson.png" alt="hunson image">
             <p>Hunson</p>
         </div>
         <ul class="balance-ul">
@@ -89,7 +118,7 @@
             <li>Hunson can now move slowly while in ult form</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/iceking.png" alt="ice king image">
+            <img src="../img/champions/iceking.png" alt="ice king image">
             <p>Ice King</p>
         </div>
         <ul class="balance-ul">
@@ -98,42 +127,42 @@
             <li>Deals 10% more damage to targets affected by CC</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/jake.png" alt="jake image">
+            <img src="../img/champions/jake.png" alt="jake image">
             <p>Jake</p>
         </div>
         <ul class="balance-ul">
             <li>Increased passive ad scaling from 40% to 60%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lemongrab.png" alt="lemongrab image">
+            <img src="../img/champions/lemongrab.png" alt="lemongrab image">
             <p>Lemongrab</p>
         </div>
         <ul class="balance-ul">
             <li>W's cooldown is now reduced by 30% if you only hit a non-champion</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lich.png" alt="lich image">
+            <img src="../img/champions/lich.png" alt="lich image">
             <p>The Lich</p>
         </div>
         <ul class="balance-ul">
             <li>Reduced base attack damage from 40 to 35</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lsp.png" alt="lumpy space princess image">
+            <img src="../img/champions/lsp.png" alt="lumpy space princess image">
             <p>Lumpy Space Princess</p>
         </div>
         <ul class="balance-ul">
             <li>Increased Q AP scaling from 40% to 70%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/neptr.png" alt="neptr image">
+            <img src="../img/champions/neptr.png" alt="neptr image">
             <p>NEPTR</p>
         </div>
         <ul class="balance-ul">
             <li>Passive no longer disappears while standing in the bush</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/pepbut.png" alt="peppermint butler image">
+            <img src="../img/champions/pepbut.png" alt="peppermint butler image">
             <p>Peppermint Butler</p>
         </div>
         <ul class="balance-ul">
@@ -141,7 +170,7 @@
             <li>Ult now gives Pepp an increased .1 attack range</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/pb.png" alt="princess bubblegum image">
+            <img src="../img/champions/pb.png" alt="princess bubblegum image">
             <p>Princess Bubblegum</p>
         </div>
         <ul class="balance-ul">
@@ -174,5 +203,6 @@
             <li>Fixed an issue where Quinceanera LSP crashed the game</li>
         </ul>
     </div>
+    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
 </body>
 </html>

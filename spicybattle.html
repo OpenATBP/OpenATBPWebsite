@@ -133,37 +133,37 @@
 
         .purple {
             color: transparent;
-            -webkit-text-stroke: 2px #e600ff;
+            -webkit-text-stroke: 1px #e600ff;
         }
 
         .teal {
             color: transparent;
-            -webkit-text-stroke: 2px #29dddd;
+            -webkit-text-stroke: 1px #29dddd;
         }
 
         .gold {
             color: transparent;
-            -webkit-text-stroke: 2px #ffe504;
+            -webkit-text-stroke: 1px #ffe504;
         }
 
         .silver {
             color: transparent;
-            -webkit-text-stroke: 2px #81acdc;
+            -webkit-text-stroke: 1px #81acdc;
         }
 
         .bronze {
             color: transparent;
-            -webkit-text-stroke: 2px #ffa900;
+            -webkit-text-stroke: 1px #ffa900;
         }
 
         .master {
             color: transparent;
-            -webkit-text-stroke: 2px #7b286b;
+            -webkit-text-stroke: 1px #7b286b;
         }
 
         .royal {
             color: transparent;
-            -webkit-text-stroke: 2px #42c2d9;
+            -webkit-text-stroke: 1px #42c2d9;
         }
 
         #page-header {
@@ -193,13 +193,39 @@
     </style>
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="wiki-home.html">WIKI</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="wiki-home.html">WIKI</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div id="page-header">
         <h1>Spicy Battle</h1>
@@ -362,5 +388,6 @@
         });
         displayLeaderboard()
     </script>
+    <script type="text/javascript" src="mobile-nav-handler.js" ></script>
 </body>
 </html>

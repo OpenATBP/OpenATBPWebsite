@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="patch-notes-content">
         <h2>NEW FEATURES</h2>
@@ -37,7 +66,7 @@
         </ul>
         <h2>BALANCE UPDATES</h2>
         <div class="patch-notes-image-section">
-            <img src="../img/billy.png" alt="billy image">
+            <img src="../img/champions/billy.png" alt="billy image">
             <p>Billy</p>
         </div>
         <ul class="balance-ul">
@@ -46,14 +75,14 @@
             <li>Reduced W damage ratio from 50% to 40%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/cb.png" alt="cb image">
+            <img src="../img/champions/cb.png" alt="cb image">
             <p>Cinnamon Bun</p>
         </div>
         <ul class="balance-ul">
             <li>Reduced Cinnamon Bun's ult damage ratio from 40% to 35%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/gunter.png" alt="gunter image">
+            <img src="../img/champions/gunter.png" alt="gunter image">
             <p>Gunter</p>
         </div>
         <ul class="balance-ul">
@@ -61,7 +90,7 @@
             <li>Gunter can now cancel his ult by dashing with his Q</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/hunson.png" alt="hunson image">
+            <img src="../img/champions/hunson.png" alt="hunson image">
             <p>Hunson</p>
         </div>
         <ul class="balance-ul">
@@ -69,7 +98,7 @@
             <li>Hunson no longer stops moving after casting his W</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lich.png" alt="lich image">
+            <img src="../img/champions/lich.png" alt="lich image">
             <p>The Lich</p>
         </div>
         <ul class="balance-ul">
@@ -83,5 +112,6 @@
             <li>Fixed issue where death push/pull abilities caused weird champion movement</li>
         </ul>
     </div>
+    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
 </body>
 </html>
