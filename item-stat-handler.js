@@ -15,8 +15,8 @@ const ITEMS = {
         "stat3": "Power Damage (-10/-20/-30/-50)"
     },
     "armor-of-zelderon": {
-        "stat1": "Shields (10/20/30/50)",
-        "stat2": "Shield Breach (10/20/30/50)"
+        "stat1": "Armor (10/20/30/50)",
+        "stat2": "Speed (.10/.15/.20/.30)"
     },
     "ax-bass": {
         "stat1": "Attack Damage (10/25/45/75)",

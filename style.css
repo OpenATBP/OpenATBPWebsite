@@ -530,22 +530,21 @@ body {
     height: auto;
 }
 
-.wiki-backpacks-gallery {
+#wiki-backpacks-gallery {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-bottom: 2em;
-    border-collapse: collapse;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.wiki-backpacks-gallery img {
-    width: 25vw;
-    height: auto;
+#wiki-backpacks-gallery img {
+    max-width: 100%;
     transition: filter 0.2s ease-in-out;
 }
 
-.wiki-backpacks-gallery img:hover {
+#wiki-backpacks-gallery img:hover {
     filter: brightness(1.2);
 }
 
@@ -578,6 +577,7 @@ body {
 
 .wiki-monster-table th {
     padding-top: 1em;
+    color: #60bcc9;
 }
 
 .jungle-monster-section table {
@@ -586,6 +586,7 @@ body {
 
 .jungle-monster-section {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center
@@ -677,6 +678,26 @@ body {
 
     .patch-notes-content {
         margin: 1rem 5% 1rem 5%;
+    }
+
+    #wiki-backpacks-gallery img {
+        width: 70vw;
+        height: auto;
+    }
+    
+    .wiki-backpack-image {
+        width: 80vw;
+        height: auto;
+    }
+
+    .wiki-item-image {
+        width: 70px;
+        height: auto;
+    }
+
+    .wiki-monster-table img {
+        width: 40vw;
+        height: auto;
     }
 
 }
