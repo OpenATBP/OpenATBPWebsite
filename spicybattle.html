@@ -23,9 +23,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 1em 0 1em 0;
+            margin-top: 1rem;
             font-size: 1.5em;
-
         }
 
         #spicy-battle-menu div {
@@ -56,6 +55,10 @@
             cursor: pointer;
         }
 
+        #leaderboard-section {
+            margin-top: 2rem;
+        }
+
         #leaderboard-section table {
             width: 30%;
             border-collapse: collapse;
@@ -66,8 +69,6 @@
             overflow: hidden;
             color: white;
         }
-
-        
 
         #leaderboard-section tr {
             transition: background-color 0.3s;
@@ -183,10 +184,45 @@
             margin-top: 0.5em;
         }
 
+        #global-stats-sorting-select {
+            margin: 0 0 1rem 0;
+        }
+
         #global-stats-section {
             color: white;
-            text-align: center;
             display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .champion-card {
+            margin-bottom: 0.5rem;
+        }
+
+        .champion-card:nth-child(odd) {
+           background-color: rgb(10, 30, 56);
+        }
+
+        .champion-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+        }
+
+        .champion-card p {
+            margin: 0;
+        }
+
+        .champion-stats {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.5rem;
+            margin-right: 1rem;
+        }
+
+        .champion-stats p:nth-child(1) {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         #player-search-section {
@@ -211,7 +247,6 @@
                 width: 50px;
                 height: auto;
             }
-
         }
     </style>
 </head>
@@ -259,7 +294,16 @@
         <div id="player-search-btn" class="inactive">Player Search</div>
     </div>
     <div id="leaderboard-section"></div>
-    <div id="global-stats-section"><h1>Coming soon™</h1></div>
+    <div id="global-stats-section">
+        <p style="margin: 0;">Sorting:</p>
+        <select id="global-stats-sorting-select">
+            <option selected value="champion">Alphabetical</option>
+            <option value="playsPVP">Games played</option>
+            <option value="wr">Win rate</option>
+            <option value="avgKills">Average kills per game</option>
+            <option value="avgDmg">Average damage per game</option>
+        </select>
+    </div>
     <div id="player-search-section"><h1>Coming soon™</h1></div>
     <script>
         function getTop50Border(elo) {
@@ -299,7 +343,7 @@
             else return 'img/ranks/1-0.png';
         }
 
-        async function displayLeaderboard() {
+        async function createLeaderboard() {
             try {
                 const res = await fetch('https://beta.openatbp.xyz/data/rankings');
                 const data = await res.json();
@@ -368,8 +412,177 @@
             }
         }
 
-        async function displayGlobalStats() {
-            
+        function getChampionImage(avatar) {
+            switch (avatar) {
+                case "cinnamonbun":
+                    return "img/champions/cb.png";
+                case "flame":
+                    return "img/champions/fp.png";
+                case "princessbubblegum":
+                    return "img/champions/pb.png";
+                case "peppermintbutler":
+                    return "img/champions/pepbut.png";
+                default:
+                    return `img/champions/${avatar}.png`;                 
+            }
+        }
+
+        function getFormalName(avatar) {
+            switch (avatar) {
+                case "bmo":
+                    return "Beemo";
+                case "cinnamonbun":
+                    return "Cinnamon Bun";
+                case "flame":
+                    return "Flame Princess";
+                case "iceking":
+                    return "Ice King";
+                case "lsp": 
+                    return "Lumpy Space Princess";
+                case "magicman":
+                    return "Magic Man";
+                case "peppermintbutler":
+                    return "Peppermint Butler";
+                case "princessbubblegum":  
+                    return "Princess Bubblegum";
+                default:
+                    return avatar.charAt(0).toUpperCase() + avatar.slice(1);                    
+            }
+        }
+
+        function determineIfObjSmaller(obj, obj2, sorting) {
+            switch (sorting) {
+                case 'champion': //alphabetical sorting
+                    let objChar1 = obj.champion.charCodeAt(0);
+                    let obj2Char1 = obj2.champion.charCodeAt(0);
+                    let objChar2 = obj.champion.charCodeAt(1);
+                    let obj2Char2 = obj2.champion.charCodeAt(1);
+                    let objChar3 = obj.champion.charCodeAt(2);
+                    let obj2Char3 = obj2.champion.charCodeAt(2);
+
+                    if (objChar1 < obj2Char1) return false;
+                    else if (objChar1 > obj2Char1) return true;
+                    else if (objChar1 == obj2Char1) {
+                        if (objChar2 < obj2Char2) return false;
+                        else if (objChar2 > obj2Char2) return true;
+                        else if (objChar2 == obj2Char2) {
+                            if (objChar3 < obj2Char3) return false;
+                            else return true;
+                        }
+                    }
+
+                case 'playsPVP':
+                    let objPlaysPVP = obj.playsPVP;
+                    let obj2PlaysPVP = obj2.playsPVP;
+                    return objPlaysPVP < obj2PlaysPVP;
+
+                case 'wr':
+                    let objPlays = obj.playsPVP;
+                    let objWins = obj.winsPVP;
+
+                    let obj2Plays = obj2.playsPVP;
+                    let obj2Wins = obj2.winsPVP;
+                    
+                    let objWr = objPlays > 0 ? Math.round((objWins / objPlays) * 100) : 0; 
+                    let obj2Wr = obj2Plays > 0 ? Math.round((obj2Wins / obj2Plays) * 100) : 0;
+                    return objWr < obj2Wr;
+
+                case 'avgKills':
+                    let objKills = obj.kills;
+                    let objDeaths = obj.deaths;
+
+                    let obj2Kills = obj2.kills;
+                    let obj2Deaths = obj2.deaths;
+
+                    let objAvgKills = objDeaths > 0 ? (objKills / objDeaths).toFixed(2) : objKills;
+                    let obj2AvgKills = obj2Deaths > 0 ? (obj2Kills / obj2Deaths).toFixed(2) : obj2Kills;
+                    return objAvgKills < obj2AvgKills;
+
+                case 'avgDmg':
+                    let objGames = obj.playsPVP;
+                    let objDmg = obj.damage;
+
+                    let obj2Games = obj2.playsPVP;
+                    let obj2Dmg = obj2.damage;
+
+                    let objAvgDmg = objGames > 0 ? Math.round(objDmg / objGames) : 0;
+                    let obj2AvgDmg = obj2Games > 0 ? Math.round(obj2Dmg / obj2Games) : 0;
+                    return objAvgDmg < obj2AvgDmg;
+            }
+        }
+
+        async function getSortedChampStatsArray(sorting) { 
+            try {
+                let array = [];
+                const res = await fetch('https://beta.openatbp.xyz/data/champstats');
+                const data = await res.json();
+
+                if (data.length > 0) {
+                    for (let i = 0; i < data.length; i++) {
+                        for (let n = 0; n < data.length - 1; n++) {
+                            let obj = data[n];
+                            let obj2 = data[n + 1];
+
+                            let objSmaller = determineIfObjSmaller(obj, obj2, sorting);
+                            if (objSmaller) {
+                                let temp = data[n];
+                                data[n] = data[n + 1];
+                                data[n + 1] = temp;
+                            }
+                        }
+                    }
+                    return data;
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        async function createGlobalStats(sorting) {
+            try {
+                const data = await getSortedChampStatsArray(sorting);
+                console.log(data);
+                const globalStatsSection = document.getElementById('global-stats-section');
+                const parentDiv = document.createElement('div');
+                parentDiv.setAttribute('id', `${sorting}`);
+
+                if (Array.isArray(data)) {
+                    data.forEach((element) => {
+                        let champName = element.champion;
+                        let playsPVP = element.playsPVP;
+                        let winsPVP = element.winsPVP;
+                        let kills = element.kills;
+                        let deaths = element.deaths;
+                        let assists = element.assists;
+                        let damage = element.damage;
+
+                        let div = document.createElement('div');
+                        div.className = 'champion-card';
+                        
+                        let wr = playsPVP > 0 ? Math.round((winsPVP / playsPVP) * 100) : 0;
+                        let avgKills = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
+                        let avgDmg = playsPVP > 0 ? Math.round(damage / playsPVP) : 0;
+
+                        let championImage = getChampionImage(champName);
+                        let formalName = getFormalName(champName);
+                        
+                        div.innerHTML = `
+                            <img src="${championImage}">
+                            <div class="champion-stats">
+                                <p>${formalName}</p>
+                                <p>Games played: ${playsPVP}</p>
+                                <p>Win rate: ${wr}%</p>
+                                <p>Average kills per game: ${avgKills}</p>
+                                <p>Average damage per game: ${avgDmg}</p>
+                            </div>
+                        `;
+                        parentDiv.appendChild(div);
+                    });
+                    globalStatsSection.appendChild(parentDiv);
+                }
+            } catch (error) {
+                console.log(error);
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -403,13 +616,49 @@
 
                     // display active section after the button was clicked
                     if (clickedSection) {
-                        clickedSection.style.display = 'block';
-                        // if (sectionId === 'global-stats-section') displayGlobalStats();
+                        switch (sectionId) {
+                            case 'global-stats-section':
+                                clickedSection.style.display = 'flex';
+                                if (clickedSection.children.length < 3) {
+                                    let defaultSorting = 'champion'; //alphabetical sorting
+                                    createGlobalStats(defaultSorting);
+                                }
+                                break;
+                            
+                            case 'leaderboard-section':
+                                clickedSection.style.display = 'block';
+                                break;
+                        }
+                    }
+                });
+            });
+
+            const select = document.getElementById('global-stats-sorting-select');
+
+            select.addEventListener('change', () => {
+                let option = select.value;
+                let sortedSection = document.getElementById(option);
+
+                if (!sortedSection) {
+                    createGlobalStats(option); // create global stats with the selected sorting option
+                } else {
+                    sortedSection.style.display = 'block';
+                }
+
+                let allSortedSections = ['champion', 'playsPVP', 'wr', 'avgKills', 'avgDmg'];
+                const index = allSortedSections.indexOf(option);
+
+                if (index > -1) allSortedSections.splice(index, 1);
+
+                allSortedSections.forEach((id) => {
+                    let element = document.getElementById(id);
+                    if (element) {
+                        element.style.display = 'none';
                     }
                 });
             });
         });
-        displayLeaderboard()
+        createLeaderboard();
     </script>
     <script type="text/javascript" src="mobile-nav-handler.js" ></script>
 </body>
