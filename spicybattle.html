@@ -541,7 +541,6 @@
         async function createGlobalStats(sorting) {
             try {
                 const data = await getSortedChampStatsArray(sorting);
-                console.log(data);
                 const globalStatsSection = document.getElementById('global-stats-section');
                 const parentDiv = document.createElement('div');
                 parentDiv.setAttribute('id', `${sorting}`);
@@ -628,6 +627,9 @@
                             case 'leaderboard-section':
                                 clickedSection.style.display = 'block';
                                 break;
+
+                            case 'player-search-section':
+                                clickedSection.style.display = 'block';    
                         }
                     }
                 });
