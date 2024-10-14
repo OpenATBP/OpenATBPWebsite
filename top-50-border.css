@@ -1,0 +1,50 @@
+#search-result-top50 {
+    margin-top: 2rem;
+    background-color: rgb(10, 29, 54);
+    width: 350px;
+    border-radius: 1rem;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;    
+}
+
+#search-result-top50::after, #search-result-top50::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),rgb(223, 223, 110), rgb(231, 114, 114), rgb(134, 228, 134), rgb(131, 131, 228), rgb(218, 117, 218), rgb(223, 223, 110));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    animation: 3s spin linear infinite;
+}
+
+#search-result-top50::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+#search-result-top50 div:nth-child(odd) {
+    background-color: rgb(13, 36, 66);
+}
+
+#search-result-top50 div {
+    font-size: 1.1rem;
+}

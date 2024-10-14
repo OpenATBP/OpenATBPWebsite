@@ -17,18 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="top-50-border.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         #spicy-battle-menu {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin-top: 1rem;
             font-size: 1.5em;
         }
 
         #spicy-battle-menu div {
-            margin: 1rem;
+            margin: 0.5rem 1rem;
             transition: color 0.3s;
         }
 
@@ -177,7 +178,7 @@
         }
 
         #page-header h1 {
-            margin-bottom: 0;
+            margin: 0.5rem 0;
         }
 
         #page-header p {
@@ -229,7 +230,161 @@
             color: white;
             text-align: center;
             display: none;
+            list-style: none;
         }
+
+        #player-search-result {
+            display: flex;
+            justify-content: center;
+        }
+
+        #search-result {
+            margin-top: 2rem;
+            background-color: rgb(10, 29, 54);
+            width: 350px;
+            border-radius: 1rem;
+            border: 0.3rem solid;
+            position: relative;
+        }
+
+        #search-result div:nth-child(odd) {
+            background-color: rgb(13, 36, 66);
+        }
+
+        #search-result div {
+            font-size: 1.1rem;
+        }
+
+        #player-header {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid;
+            width: fit-content;
+            margin: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        #player-header img {
+            width: 115px;
+            height: auto;
+            border-radius: 0.5rem;
+            border: 2px solid;
+        }
+
+        #player-name {
+            padding-left: 1rem;
+        }
+
+        #tier-name {
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+
+        #experience-section {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid;
+            text-align: center;
+            border-radius: 0.5rem;
+        }
+
+        #experience-section p:not(:last-child) {
+            margin: 0 0 0.3rem 0;
+        }
+
+        #experience-section p:last-child {
+            margin: 0;
+        }
+
+        #rank-section {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid;
+            margin: 1rem;
+            justify-content: center;
+            border-radius: 0.5rem;
+        }
+        
+        #stats-section {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid;
+            text-align: center;
+            border-radius: 0.5rem;
+            
+        }
+
+        #stats-section p:not(:last-child) {
+            margin: 0 0 0.3rem 0;
+        }
+
+        #stats-section p:last-child {
+            margin: 0;
+        }
+
+        
+
+        
+
+        #not-found-text {
+            font-size: 1.5rem;
+        }
+
+        #search-leaderboard-pos {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+
+        #search-interface {
+            display: flex;
+            justify-content: center;
+            margin-top: .5rem;
+        }
+
+        #search-interface input, button {
+            font-weight: bold;
+        }
+
+        #search-input, button {
+            font-size: 1.25rem;
+        }
+
+        #hint-list {
+            list-style: none;
+            margin: 1rem 0 0 0;
+        }
+
+        #hint-list li:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        #hint-list li {
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: rgb(15, 40, 73);
+            width: fit-content;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        #hint-list li:hover {
+            cursor: pointer;
+        }
+
+        #search-again {
+            display: none;
+        }
+        
+
+
+
 
         @media (max-width: 768px) {
             #leaderboard-section table {
@@ -293,6 +448,7 @@
         <div id="global-stats-btn" class="inactive">Global Stats</div>
         <div id="player-search-btn" class="inactive">Player Search</div>
     </div>
+
     <div id="leaderboard-section"></div>
     <div id="global-stats-section">
         <p style="margin: 0;">Sorting:</p>
@@ -304,7 +460,21 @@
             <option value="avgDmg">Average damage per game</option>
         </select>
     </div>
-    <div id="player-search-section"><h1>Coming soon™</h1></div>
+    <div id="player-search-section">
+            <div id="search-interface">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Enter player's display name" autocomplete="off">
+                    <button type="submit" id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <ul id="hint-list"></ul>
+                </div>
+                <button type="button" id="search-again">Search another player</button>
+            </div>
+        <div id="player-search-result"></div>
+    </div>
+
+    
     <script>
         function getTop50Border(elo) {
             if (elo > 2433) return 'purple-border';
@@ -341,6 +511,13 @@
             else if (elo > 1147) return 'img/ranks/2-0.png';
             else if (elo > 573) return 'img/ranks/1-1.png';
             else return 'img/ranks/1-0.png';
+        }
+
+        function getTierName(elo) {
+            if (elo < 1148) return 'BRAVE HERO';
+            else if (elo < 1349) return 'ROYAL LEGEND';
+            else if (elo < 1601) return 'MASTER OF BATTLE';
+            else return 'IMMORTAL WARRIOR';
         }
 
         async function createLeaderboard() {
@@ -451,6 +628,18 @@
         }
 
         function determineIfObjSmaller(obj, obj2, sorting) {
+            let objGamesPlayed = obj.playsPVP;
+            let objWins = obj.winsPVP;
+            let objKills = obj.kills;
+            let objDeaths = obj.deaths;
+            let objDamage = obj.damage;
+
+            let obj2GamesPlayed = obj2.playsPVP;
+            let obj2Wins = obj2.winsPVP;
+            let obj2Kills = obj2.kills;
+            let obj2Deaths = obj2.deaths;
+            let obj2Damage = obj2.damage;
+
             switch (sorting) {
                 case 'champion': //alphabetical sorting
                     let objChar1 = obj.champion.charCodeAt(0);
@@ -472,41 +661,21 @@
                     }
 
                 case 'playsPVP':
-                    let objPlaysPVP = obj.playsPVP;
-                    let obj2PlaysPVP = obj2.playsPVP;
-                    return objPlaysPVP < obj2PlaysPVP;
+                    return objGamesPlayed < obj2GamesPlayed;
 
                 case 'wr':
-                    let objPlays = obj.playsPVP;
-                    let objWins = obj.winsPVP;
-
-                    let obj2Plays = obj2.playsPVP;
-                    let obj2Wins = obj2.winsPVP;
-                    
-                    let objWr = objPlays > 0 ? Math.round((objWins / objPlays) * 100) : 0; 
-                    let obj2Wr = obj2Plays > 0 ? Math.round((obj2Wins / obj2Plays) * 100) : 0;
+                    let objWr = objGamesPlayed > 0 ? Math.round((objWins / objGamesPlayed) * 100) : 0; 
+                    let obj2Wr = obj2GamesPlayed > 0 ? Math.round((obj2Wins / obj2GamesPlayed) * 100) : 0; 
                     return objWr < obj2Wr;
 
                 case 'avgKills':
-                    let objKills = obj.kills;
-                    let objDeaths = obj.deaths;
-
-                    let obj2Kills = obj2.kills;
-                    let obj2Deaths = obj2.deaths;
-
-                    let objAvgKills = objDeaths > 0 ? (objKills / objDeaths).toFixed(2) : objKills;
-                    let obj2AvgKills = obj2Deaths > 0 ? (obj2Kills / obj2Deaths).toFixed(2) : obj2Kills;
+                    let objAvgKills = objGamesPlayed > 0 ? (objKills / objGamesPlayed).toFixed(2) : objKills;
+                    let obj2AvgKills = obj2GamesPlayed > 0 ? (obj2Kills / obj2GamesPlayed).toFixed(2) : obj2Kills;
                     return objAvgKills < obj2AvgKills;
 
                 case 'avgDmg':
-                    let objGames = obj.playsPVP;
-                    let objDmg = obj.damage;
-
-                    let obj2Games = obj2.playsPVP;
-                    let obj2Dmg = obj2.damage;
-
-                    let objAvgDmg = objGames > 0 ? Math.round(objDmg / objGames) : 0;
-                    let obj2AvgDmg = obj2Games > 0 ? Math.round(obj2Dmg / obj2Games) : 0;
+                    let objAvgDmg = objGamesPlayed > 0 ? Math.round(objDamage / objGamesPlayed) : 0;
+                    let obj2AvgDmg = obj2GamesPlayed > 0 ? Math.round(obj2Damage / obj2GamesPlayed) : 0;
                     return objAvgDmg < obj2AvgDmg;
             }
         }
@@ -551,7 +720,6 @@
                         let playsPVP = element.playsPVP;
                         let winsPVP = element.winsPVP;
                         let kills = element.kills;
-                        let deaths = element.deaths;
                         let assists = element.assists;
                         let damage = element.damage;
 
@@ -559,7 +727,7 @@
                         div.className = 'champion-card';
                         
                         let wr = playsPVP > 0 ? Math.round((winsPVP / playsPVP) * 100) : 0;
-                        let avgKills = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
+                        let avgKills = playsPVP > 0 ? (kills / playsPVP).toFixed(2) : kills;
                         let avgDmg = playsPVP > 0 ? Math.round(damage / playsPVP) : 0;
 
                         let championImage = getChampionImage(champName);
@@ -659,9 +827,123 @@
                     }
                 });
             });
+
+            const playerSearchBtn = document.getElementById('search-btn');
+            
+            playerSearchBtn.addEventListener('click', async () => {
+                let textContent = document.getElementById('search-input').value;
+
+                if (textContent.charAt(textContent.length - 1) === ' ') {
+                    textContent = textContent.substr(0, textContent.length - 1);
+                }
+            
+                const playerSearchSection = document.getElementById('player-search-section');
+                const playerSearchResultSection = document.getElementById('player-search-result');
+
+                if (textContent.length > 0) {
+                    const res = await fetch('http://127.0.0.1:8000/data/player', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({playerName: textContent}),
+                    });
+                    
+                    const data = await res.json();
+                    let innerContent;
+                    let leaderboardPosition;
+                    let elo;
+
+
+                    const searchUi = document.querySelector('.search-container');
+                        const searchAgainBtn = document.getElementById('search-again');
+                        const input = document.getElementById('search-input');
+
+                        searchUi.style.display = 'none';
+                        searchAgainBtn.style.display = 'block';
+
+                        searchAgainBtn.addEventListener('click', () => {
+                            searchUi.style.display = 'block';
+                            searchAgainBtn.style.display = 'none';
+                            playerSearchResultSection.innerHTML = '';
+                            input.value = '';
+                        });
+
+                    if (data.player) {
+
+                        let dname = data.user.dname;
+                        let level = data.player.rank;
+                        let gamesPlayed = data.player.playsPVP;
+                        let wins = data.player.winsPVP;
+                        let deaths = data.player.deaths;
+                        let kills = data.player.kills;
+                        let largestSpree = data.player.largestSpree;
+                        let largestMulti = data.player.largestMulti;
+
+                        elo = data.player.elo;
+                        leaderboardPosition = data.player.leaderboardPosition;
+
+                        let wr = gamesPlayed > 0 ? Math.round((wins / gamesPlayed) * 100) : 0;
+                        let avgKillsGame = gamesPlayed > 0 ? (kills / gamesPlayed).toFixed(2) : kills;
+                        let avgKillsLife = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
+
+                        let rankImagePath = getRankImage(elo);
+                        let tierName = getTierName(elo);
+
+                        innerContent = `
+                            <div id="search-result">
+                                <div id="player-header">
+                                    <img src="img/profile-icons/180x180_profile_generic.jpg" alt="Player Image" class="player-image">
+                                    <h2 id="player-name">${dname}</h2>
+                                </div>
+                                <div id="experience-section">
+                                    <p>Player level: ${level}</p>
+                                    <p>Games played: ${gamesPlayed}</p>
+                                </div>
+                                <div id="rank-section">
+                                    <img src="${rankImagePath}" alt="Elo Image">
+                                    <p id="tier-name">${tierName}</p>
+                                </div>
+                                <div id="stats-section">
+                                    <p id='search-leaderboard-pos'>Position on the leadeboard: ${leaderboardPosition}</p>
+                                    <p>Elo: ${elo}</p>
+                                    <p>Win rate: ${wr}%</p>
+                                    <p>Average kills per game: ${avgKillsGame}</p>
+                                    <p>Average kills per life: ${avgKillsLife}</p>
+                                    <p>Largest killing spree: ${largestSpree}</p>
+                                    <p>Largest multi kill: ${largestMulti}</p>
+                                </div>
+                            </div>
+                        `;
+
+                    } else {
+                        innerContent = `
+                            <p id='not-found-text'>${data.message}</p>
+                        `;
+                    }
+
+                    playerSearchResultSection.innerHTML = innerContent;
+
+                    if (leaderboardPosition < 51 && data.player) {
+                        const leaderboardText = document.getElementById('search-leaderboard-pos');
+
+                        if (leaderboardText) {
+                            let color = elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
+                            leaderboardText.style.color = color;
+                        }
+
+                        const searchResult = document.getElementById('search-result');
+                        searchResult.setAttribute('id', 'search-result-top50');
+                    }
+                }
+            });
+
+            
+
         });
         createLeaderboard();
     </script>
+    <script type="text/javascript" src="search-player-input-handler.js"></script>
     <script type="text/javascript" src="mobile-nav-handler.js" ></script>
 </body>
 </html>
