@@ -187,6 +187,7 @@
 
         #global-stats-sorting-select {
             margin: 0 0 1rem 0;
+            font-size: 1.1rem;
         }
 
         #global-stats-section {
@@ -451,7 +452,7 @@
 
     <div id="leaderboard-section"></div>
     <div id="global-stats-section">
-        <p style="margin: 0;">Sorting:</p>
+        <p style="margin: 0; font-size: 1.1rem;">Sorting:</p>
         <select id="global-stats-sorting-select">
             <option selected value="champion">Alphabetical</option>
             <option value="playsPVP">Games played</option>
@@ -799,6 +800,23 @@
                             case 'player-search-section':
                                 clickedSection.style.display = 'block';    
                         }
+
+                        const hintsSection = document.getElementById('hint-list');
+                        const playerSearchResultSection = document.getElementById('player-search-result');
+                        let computedStyle = window.getComputedStyle(hintsSection);
+                        let displayValue = computedStyle.getPropertyValue('display');
+
+                        const searchUi = document.querySelector('.search-container');
+                        const searchAgainBtn = document.getElementById('search-again');
+                        const input = document.getElementById('search-input');
+                        
+
+                        if (sectionId === 'global-stats-section' || sectionId === 'leaderboard-section' && displayValue == 'block') {
+                            searchUi.style.display = 'block';
+                            searchAgainBtn.style.display = 'none';
+                            playerSearchResultSection.innerHTML = '';
+                            input.value = '';
+                        }
                     }
                 });
             });
@@ -841,7 +859,7 @@
                 const playerSearchResultSection = document.getElementById('player-search-result');
 
                 if (textContent.length > 0) {
-                    const res = await fetch('http://127.0.0.1:8000/data/player', {
+                    const res = await fetch('https://beta.openatbp.xyz/data/player', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -856,18 +874,18 @@
 
 
                     const searchUi = document.querySelector('.search-container');
-                        const searchAgainBtn = document.getElementById('search-again');
-                        const input = document.getElementById('search-input');
+                    const searchAgainBtn = document.getElementById('search-again');
+                    const input = document.getElementById('search-input');
 
-                        searchUi.style.display = 'none';
-                        searchAgainBtn.style.display = 'block';
+                    searchUi.style.display = 'none';
+                    searchAgainBtn.style.display = 'block';
 
-                        searchAgainBtn.addEventListener('click', () => {
-                            searchUi.style.display = 'block';
-                            searchAgainBtn.style.display = 'none';
-                            playerSearchResultSection.innerHTML = '';
-                            input.value = '';
-                        });
+                    searchAgainBtn.addEventListener('click', () => {
+                        searchUi.style.display = 'block';
+                        searchAgainBtn.style.display = 'none';
+                        playerSearchResultSection.innerHTML = '';
+                        input.value = '';
+                    });
 
                     if (data.player) {
 
@@ -937,9 +955,6 @@
                     }
                 }
             });
-
-            
-
         });
         createLeaderboard();
     </script>
