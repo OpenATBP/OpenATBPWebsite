@@ -329,10 +329,6 @@
             margin: 0;
         }
 
-        
-
-        
-
         #not-found-text {
             font-size: 1.5rem;
         }
@@ -341,7 +337,6 @@
             font-size: 1.1rem;
             font-weight: bold;
         }
-
 
         #search-interface {
             display: flex;
@@ -383,10 +378,6 @@
             display: none;
         }
         
-
-
-
-
         @media (max-width: 768px) {
             #leaderboard-section table {
                 width: 100%;
@@ -474,8 +465,6 @@
             </div>
         <div id="player-search-result"></div>
     </div>
-
-    
     <script>
         function getTop50Border(elo) {
             if (elo > 2433) return 'purple-border';
@@ -810,7 +799,6 @@
                         const searchAgainBtn = document.getElementById('search-again');
                         const input = document.getElementById('search-input');
                         
-
                         if (sectionId === 'global-stats-section' || sectionId === 'leaderboard-section' && displayValue == 'block') {
                             searchUi.style.display = 'block';
                             searchAgainBtn.style.display = 'none';
@@ -871,7 +859,6 @@
                     let innerContent;
                     let leaderboardPosition;
                     let elo;
-
 
                     const searchUi = document.querySelector('.search-container');
                     const searchAgainBtn = document.getElementById('search-again');
