@@ -73,11 +73,21 @@
 
         #leaderboard-section tr {
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         #leaderboard-section tr:hover {
             background-color: #122642;
+        }
+
+        .player-name {
+            transition: filter 0.3s ease;
+        }
+
+        .player-name:hover {
             cursor: pointer;
+            text-decoration: underline;
+            filter: brightness(1.5);
         }
 
         #leaderboard-section td {
@@ -101,7 +111,6 @@
         }
 
         .leaderboard-position {
-            font-weight: bold;
             font-size: 2em;
         }
 
@@ -241,6 +250,7 @@
 
         #search-result {
             margin-top: 2rem;
+            margin-bottom: 2rem;
             background-color: rgb(10, 29, 54);
             width: 350px;
             border-radius: 1rem;
@@ -261,7 +271,6 @@
             align-items: center;
             padding: 1rem;
             border: 1px solid;
-            width: fit-content;
             margin: 1rem;
             border-radius: 0.5rem;
         }
@@ -533,10 +542,25 @@
                             let imageCell = document.createElement('td');
                             let profilePicture = document.createElement('img');
                             profilePicture.setAttribute('src', 'img/profile-icons/180x180_profile_generic.jpg'); // default profile image until actual pfps are implemented
-                            profilePicture.className = 'profile-picture';
+                            profilePicture.classList.add('profile-picture');
                             imageCell.appendChild(profilePicture);
 
                             let nameCell = document.createElement('td');
+                            nameCell.classList.add('player-name');
+                            nameCell.style.color = getColor(elo);
+
+                            nameCell.addEventListener('click', () => {
+                                document.getElementById('leaderboard-section').style.display = 'none';
+                                document.getElementById('player-search-section').style.display = 'block';
+
+                                document.getElementById('leaderboard-btn').classList.remove('active');
+                                document.getElementById('leaderboard-btn').classList.add('inactive');
+                                document.getElementById('player-search-btn').classList.remove('inactive');
+                                document.getElementById('player-search-btn').classList.add('active');
+
+                                searchAndDisplay(false, dname);
+                            });
+
                             dname.split(' ').forEach((word, index, array) => {
                                 nameCell.appendChild(document.createTextNode(word));
                                 if (index < array.length - 1) {
@@ -561,7 +585,7 @@
                                 borderName = getTop50Border(elo);
                                 numberCell.classList.add(getTop50NumberColor(elo));
                             }
-                            row.className = borderName;
+                            row.classList.add(borderName);
                             
                             row.appendChild(numberCell);
                             row.appendChild(imageCell);
@@ -615,6 +639,10 @@
                 default:
                     return avatar.charAt(0).toUpperCase() + avatar.slice(1);                    
             }
+        }
+
+        function getColor(elo) {
+            return elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
         }
 
         function determineIfObjSmaller(obj, obj2, sorting) {
@@ -694,6 +722,119 @@
                 }
             } catch (err) {
                 console.log(err);
+            }
+        }
+
+        async function searchAndDisplay(fromInput, textToSearch) {
+            let textContent;
+
+            if (fromInput) {
+                textContent = document.getElementById('search-input').value;
+            } else {
+                textContent = textToSearch;
+            }
+            
+            if (textContent.charAt(textContent.length - 1) === ' ') {
+                textContent = textContent.substr(0, textContent.length - 1);
+            }
+        
+            const playerSearchSection = document.getElementById('player-search-section');
+            const playerSearchResultSection = document.getElementById('player-search-result');
+
+            if (textContent.length > 0) {
+                const res = await fetch('https://beta.openatbp.xyz/data/player', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({playerName: textContent}),
+                });
+                
+                const data = await res.json();
+                let innerContent;
+                let leaderboardPosition;
+                let elo;
+
+                const searchUi = document.querySelector('.search-container');
+                const searchAgainBtn = document.getElementById('search-again');
+                const input = document.getElementById('search-input');
+
+                searchUi.style.display = 'none';
+                searchAgainBtn.style.display = 'block';
+
+                searchAgainBtn.addEventListener('click', () => {
+                    searchUi.style.display = 'block';
+                    searchAgainBtn.style.display = 'none';
+                    playerSearchResultSection.innerHTML = '';
+                    input.value = '';
+                });
+
+                if (data.player) {
+
+                    let dname = data.user.dname;
+                    let level = data.player.rank;
+                    let gamesPlayed = data.player.playsPVP;
+                    let wins = data.player.winsPVP;
+                    let deaths = data.player.deaths;
+                    let kills = data.player.kills;
+                    let largestSpree = data.player.largestSpree;
+                    let largestMulti = data.player.largestMulti;
+
+                    elo = data.player.elo;
+                    leaderboardPosition = data.player.leaderboardPosition;
+
+                    let wr = gamesPlayed > 0 ? Math.round((wins / gamesPlayed) * 100) : 0;
+                    let avgKillsGame = gamesPlayed > 0 ? (kills / gamesPlayed).toFixed(2) : kills;
+                    let avgKillsLife = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
+
+                    let rankImagePath = getRankImage(elo);
+                    let tierName = getTierName(elo);
+
+                    innerContent = `
+                        <div id="search-result">
+                            <div id="player-header">
+                                <img src="img/profile-icons/180x180_profile_generic.jpg" alt="Player Image" class="player-image">
+                                <h2 id="player-name">${dname}</h2>
+                            </div>
+                            <div id="experience-section">
+                                <p>Player level: ${level}</p>
+                                <p>Games played: ${gamesPlayed}</p>
+                            </div>
+                            <div id="rank-section">
+                                <img src="${rankImagePath}" alt="Elo Image">
+                                <p id="tier-name">${tierName}</p>
+                            </div>
+                            <div id="stats-section">
+                                <p id='search-leaderboard-pos'>Position on the leadeboard: ${leaderboardPosition}</p>
+                                <p>Elo: ${elo}</p>
+                                <p>Win rate: ${wr}%</p>
+                                <p>Average kills per game: ${avgKillsGame}</p>
+                                <p>Average kills per life: ${avgKillsLife}</p>
+                                <p>Largest killing spree: ${largestSpree}</p>
+                                <p>Largest multi kill: ${largestMulti}</p>
+                            </div>
+                        </div>
+                    `;
+
+                } else {
+                    innerContent = `
+                        <p id='not-found-text'>${data.message}</p>
+                    `;
+                }
+
+                playerSearchResultSection.innerHTML = innerContent;
+
+                if (leaderboardPosition < 51 && data.player) {
+                    const leaderboardText = document.getElementById('search-leaderboard-pos');
+
+                    if (leaderboardText) {
+                        let color = elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
+                        leaderboardText.style.color = color;
+                    }
+
+                    const searchResult = document.getElementById('search-result');
+                    searchResult.setAttribute('id', 'search-result-top50');
+                }
             }
         }
 
@@ -782,12 +923,9 @@
                                 }
                                 break;
                             
-                            case 'leaderboard-section':
+                            default:
                                 clickedSection.style.display = 'block';
                                 break;
-
-                            case 'player-search-section':
-                                clickedSection.style.display = 'block';    
                         }
 
                         const hintsSection = document.getElementById('hint-list');
@@ -837,110 +975,7 @@
             const playerSearchBtn = document.getElementById('search-btn');
             
             playerSearchBtn.addEventListener('click', async () => {
-                let textContent = document.getElementById('search-input').value;
-
-                if (textContent.charAt(textContent.length - 1) === ' ') {
-                    textContent = textContent.substr(0, textContent.length - 1);
-                }
-            
-                const playerSearchSection = document.getElementById('player-search-section');
-                const playerSearchResultSection = document.getElementById('player-search-result');
-
-                if (textContent.length > 0) {
-                    const res = await fetch('https://beta.openatbp.xyz/data/player', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({playerName: textContent}),
-                    });
-                    
-                    const data = await res.json();
-                    let innerContent;
-                    let leaderboardPosition;
-                    let elo;
-
-                    const searchUi = document.querySelector('.search-container');
-                    const searchAgainBtn = document.getElementById('search-again');
-                    const input = document.getElementById('search-input');
-
-                    searchUi.style.display = 'none';
-                    searchAgainBtn.style.display = 'block';
-
-                    searchAgainBtn.addEventListener('click', () => {
-                        searchUi.style.display = 'block';
-                        searchAgainBtn.style.display = 'none';
-                        playerSearchResultSection.innerHTML = '';
-                        input.value = '';
-                    });
-
-                    if (data.player) {
-
-                        let dname = data.user.dname;
-                        let level = data.player.rank;
-                        let gamesPlayed = data.player.playsPVP;
-                        let wins = data.player.winsPVP;
-                        let deaths = data.player.deaths;
-                        let kills = data.player.kills;
-                        let largestSpree = data.player.largestSpree;
-                        let largestMulti = data.player.largestMulti;
-
-                        elo = data.player.elo;
-                        leaderboardPosition = data.player.leaderboardPosition;
-
-                        let wr = gamesPlayed > 0 ? Math.round((wins / gamesPlayed) * 100) : 0;
-                        let avgKillsGame = gamesPlayed > 0 ? (kills / gamesPlayed).toFixed(2) : kills;
-                        let avgKillsLife = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
-
-                        let rankImagePath = getRankImage(elo);
-                        let tierName = getTierName(elo);
-
-                        innerContent = `
-                            <div id="search-result">
-                                <div id="player-header">
-                                    <img src="img/profile-icons/180x180_profile_generic.jpg" alt="Player Image" class="player-image">
-                                    <h2 id="player-name">${dname}</h2>
-                                </div>
-                                <div id="experience-section">
-                                    <p>Player level: ${level}</p>
-                                    <p>Games played: ${gamesPlayed}</p>
-                                </div>
-                                <div id="rank-section">
-                                    <img src="${rankImagePath}" alt="Elo Image">
-                                    <p id="tier-name">${tierName}</p>
-                                </div>
-                                <div id="stats-section">
-                                    <p id='search-leaderboard-pos'>Position on the leadeboard: ${leaderboardPosition}</p>
-                                    <p>Elo: ${elo}</p>
-                                    <p>Win rate: ${wr}%</p>
-                                    <p>Average kills per game: ${avgKillsGame}</p>
-                                    <p>Average kills per life: ${avgKillsLife}</p>
-                                    <p>Largest killing spree: ${largestSpree}</p>
-                                    <p>Largest multi kill: ${largestMulti}</p>
-                                </div>
-                            </div>
-                        `;
-
-                    } else {
-                        innerContent = `
-                            <p id='not-found-text'>${data.message}</p>
-                        `;
-                    }
-
-                    playerSearchResultSection.innerHTML = innerContent;
-
-                    if (leaderboardPosition < 51 && data.player) {
-                        const leaderboardText = document.getElementById('search-leaderboard-pos');
-
-                        if (leaderboardText) {
-                            let color = elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
-                            leaderboardText.style.color = color;
-                        }
-
-                        const searchResult = document.getElementById('search-result');
-                        searchResult.setAttribute('id', 'search-result-top50');
-                    }
-                }
+                searchAndDisplay(true, null);
             });
         });
         createLeaderboard();
