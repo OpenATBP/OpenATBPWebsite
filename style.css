@@ -1,27 +1,85 @@
+html {
+    font-size: 16px;
+}
+
+#reddit-link-img {
+    display: none;
+    height: 5vh;
+    width: auto;
+}
+
+#mobile-nav-open-btn {
+    display: none;
+    height: 5vh;
+    width: auto;
+}
+
+#mobile-nav {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C0C0C;
+    text-align: left;
+    font-size: 1.5rem;
+    transition: left 0.3s ease;
+}
+
+#mobile-nav table {
+    border-collapse: collapse;
+}
+
+#mobile-nav tr:nth-child(2) td {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#mobile-nav tr:nth-child(n+3) td {
+    padding: 1rem;
+}
+
+#mobile-nav tr:nth-child(n+2) {
+    border-bottom: 1px solid white;
+}
+
+#mobile-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#mobile-nav-img {
+    height: 5vh;
+    width: auto;
+}
+
+#mobile-nav-close {
+    height: 5vh;
+    width: 5vh;
+    padding-top: 0.5rem;
+}
+
 body {
     font-family: "Rajdhani", sans-serif;
     font-weight: 500;
-    font-size: 0.95vw;
     margin: 0;
     padding: 0;
-    height: 100vh;
     background-color: rgb(7, 22, 41);
 }
 
-.navigation {
+#navigation {
     display: flex;
     align-items: center;
     width: 100%;
     background-color: #0C0C0C;
-    font-size: large;
     color: white;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
 }
 
 .navigation-a {
     text-decoration: none;
     color: inherit;
-    margin-right: 2em;
+    margin-right: 2rem;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -51,7 +109,7 @@ body {
 #nav-logo {
     height: 70px;
     width: auto;
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 #download-section {
@@ -63,6 +121,7 @@ body {
 }
 
 #atbp-logo {
+    max-width: 100%;
     height: 300px;
     width: auto;
     justify-content: center;
@@ -109,6 +168,7 @@ body {
 }
 
 #download-header {
+    text-align: center;
     margin-top: 2em;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -121,39 +181,8 @@ body {
 
 }
 
-.patch-box {
-    width: 20%;
-    height: 10vh;
-    text-align: center;
-    font-size: 1.3em;
-    margin: 1em;
-    border: 2px solid white;
-    background-color: #E9C874;
-    cursor: pointer;
-    border-radius: 0.5em;
-    opacity: 0.85;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Gigi Noob */
-}
-
-.patch-box:hover {
-    transform: scale(1.05); 
-    background-color: #E9B74C; 
-    opacity: 1;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.patch-box p {
-    margin-bottom: 0.3em;
-}
-
-#tools-img {
-    height: 30px;
-    width: auto;
-}
-
 .patch-notes-content {
-    margin: 1em 20% 100em 20%;
+    margin: 1em 20% 1em 20%;
     background-color: #0C0C0C;
     color: white;
     border-top-right-radius: 1em;
@@ -162,7 +191,7 @@ body {
 }
 
 .patch-notes-ul {
-    margin: 1em 0 0 0;
+    margin: 1em 0 1em 0;
 }
 
 .patch-notes-content h2 {
@@ -464,29 +493,9 @@ body {
     width: auto;
 }
 
-.wiki-champion-outfits {
-    text-align: center;
-    border-collapse: collapse;
-}
-
 .wiki-champion-outfit-img {
     height: 12vh;
     width: 12vh;
-}
-
-.wiki-champion-outfits td {
-    border: 1px solid #2b4050;
-    background-color: rgba(27, 67, 107, 0.1);
-}
-
-.wiki-champion-outfit-price {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.wiki-pb-coin-img {
-    margin-left: 0.3em
 }
 
 .wiki-backpacks-list li {
@@ -521,22 +530,21 @@ body {
     height: auto;
 }
 
-.wiki-backpacks-gallery {
+#wiki-backpacks-gallery {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-bottom: 2em;
-    border-collapse: collapse;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.wiki-backpacks-gallery img {
-    width: 25vw;
-    height: auto;
+#wiki-backpacks-gallery img {
+    max-width: 100%;
     transition: filter 0.2s ease-in-out;
 }
 
-.wiki-backpacks-gallery img:hover {
+#wiki-backpacks-gallery img:hover {
     filter: brightness(1.2);
 }
 
@@ -569,6 +577,7 @@ body {
 
 .wiki-monster-table th {
     padding-top: 1em;
+    color: #60bcc9;
 }
 
 .jungle-monster-section table {
@@ -577,7 +586,124 @@ body {
 
 .jungle-monster-section {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center
+}
+
+.outfit {
+    text-align: center;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 1rem;
+    font-weight: bold
+}
+
+.outfit p {
+    margin-bottom: 0.5rem;
+}
+
+.outfit img:first-of-type {
+    width: 135px;
+    height: 135px;
+}
+
+#wiki-champion-outfits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#wiki-navigation-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav-open-btn {
+        display: flex;
+    }
+
+    #nav-logo {
+        display: none;
+    }
+
+    #navigation {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    #reddit-link-img {
+        display: flex;
+        padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    }
+
+    .wiki-area {
+        margin: 1rem 5% 0 5%;
+    }
+
+    .wiki-navigation {
+        display: none;
+    }
+
+    #wiki-navigation-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #wiki-navigation-mobile a {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .wiki-champion {
+        flex-direction: column;
+    }
+
+    .wiki-champion-infobox img {
+        width: 50vw;
+        height: auto;
+    }
+
+    .wiki-champion-stat-table {
+        display: none;
+    }
+
+    .patch-notes-content {
+        margin: 1rem 5% 1rem 5%;
+    }
+
+    #wiki-backpacks-gallery img {
+        width: 70vw;
+        height: auto;
+    }
+    
+    .wiki-backpack-image {
+        width: 80vw;
+        height: auto;
+    }
+
+    .wiki-item-image {
+        width: 70px;
+        height: auto;
+    }
+
+    .wiki-monster-table img {
+        width: 40vw;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #navigation {
+        font-size: 1.15rem;
+    }
 }

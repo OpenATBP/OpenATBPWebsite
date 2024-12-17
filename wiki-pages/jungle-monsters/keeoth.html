@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -34,7 +63,7 @@
             <p>Kee-Oth is the strongest jungle monster in the Battle Lab. Upon being killed, the team that landed the killing blow heals  <span class="wiki-health">30% health</span> and get a buff that grants  <span class="wiki-attack-vamp">35% attack vamp</span>,  <span class="wiki-power-vamp">40% power vamp</span> and  <span class="wiki-crit">35% critical chance</span> bonus for 60 seconds. Keeoth spawns initially at 13:00 and respawns every 120 seconds after being killed.</p>
             <table class="wiki-monster-table">
                 <tr>
-                    <th colspan="2" class="wiki-mark-out">Kee-Oth</th>
+                    <th colspan="2">Kee-Oth</th>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -89,5 +118,6 @@
             </table>
         </div>
     </div>
+    <script type="text/javascript" src="../../mobile-nav-handler.js"></script>
 </body>
 </html>

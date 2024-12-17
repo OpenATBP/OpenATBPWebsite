@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -236,50 +265,29 @@
                 </table>
             </div>
             <h1>Outfits</h1>
-            <table class="wiki-champion-outfits">
-                <tr>
-                    <td>
-                        <p class="wiki-bold-text">Evil Eye Gunter</p>
-                    </td>
-                    <td>
-                        <p class="wiki-bold-text">Lady Gunter</p>
-                    </td>
-                    <td>
-                        <p class="wiki-bold-text">Jewel Thief Gunter</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-champion-outfit-img" src="../../img/wiki/champion-skins/evil-eye-gunter.png">
-                    </td>
-                    <td>
-                        <img class="wiki-champion-outfit-img" src="../../img/wiki/champion-skins/lady-gunter.png">
-                    </td>
-                    <td>
-                        <img class="wiki-champion-outfit-img" src="../../img/wiki/champion-skins/jewel-thief-gunter.png">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="wiki-champion-outfit-price">
-                            2500
-                            <img src="../../img/wiki/other/pb-coin.png" class="wiki-pb-coin-img">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="wiki-champion-outfit-price">
-                            500
-                            <img src="../../img/wiki/other/pb-coin.png" class="wiki-pb-coin-img">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="wiki-champion-outfit-price">
-                            2500
-                            <img src="../../img/wiki/other/pb-coin.png" class="wiki-pb-coin-img">
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <div id="wiki-champion-outfits">
+                <div class="outfit">
+                    <p>Evil Eye Gunter</p>
+                    <img src="../../img/wiki/champion-skins/evil-eye-gunter.png">
+                    <br>
+                    <span>2500</span>
+                    <img src="../../img/wiki/other/pb-coin.png">
+                </div>
+                <div class="outfit">
+                    <p>Lady Gunter</p>
+                    <img src="../../img/wiki/champion-skins/lady-gunter.png">
+                    <br>
+                    <span>500</span>
+                    <img src="../../img/wiki/other/pb-coin.png">
+                </div>
+                <div class="outfit">
+                    <p>Jewel Thief Gunter</p>
+                    <img src="../../img/wiki/champion-skins/jewel-thief-gunter.png">
+                    <br>
+                    <span>2500</span>
+                    <img src="../../img/wiki/other/pb-coin.png">
+                </div>
+            </div>
             <h1>Recommended backpacks</h1>
             <ul class="wiki-list wiki-backpacks-list">
                 <li><a class="wiki-link" href="../backpacks/fridjitsu-ninjas-of-the-ice.html">Fridjitsu: Ninjas of the Ice</a>: 1>1>5>5>1>5>1>5>2>2 (4/2/0/0/4)</li>

@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="patch-notes-content">
         <h2>MATCHMAKING</h2>
@@ -50,7 +79,7 @@
             <li>Removed AI players</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/billy.png" alt="billy image">
+            <img src="../img/champions/billy.png" alt="billy image">
             <p>Billy</p>
         </div>
         <ul class="balance-ul">
@@ -59,7 +88,7 @@
             <li>Increased W cooldown at level 10 by 2 seconds (this was just missed from last patch)</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/bmo.png" alt="bmo image">
+            <img src="../img/champions/bmo.png" alt="bmo image">
             <p>BMO</p>
         </div>
         <ul class="balance-ul">
@@ -67,7 +96,7 @@
             <li>Increased AP ratio on W from 20% to 40%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/cb.png" alt="cb image">
+            <img src="../img/champions/cb.png" alt="cb image">
             <p>Cinnamon Bun</p>
         </div>
         <ul class="balance-ul">
@@ -79,7 +108,7 @@
             <li>[NOTE] CB's ult was not impacted in this patch because the belief is that his tankiness and movement is likely the cause of his strength rather than the ult. We will monitor as the games go on. #dontstandinthecircle</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/finn.png" alt="finn image">
+            <img src="../img/champions/finn.png" alt="finn image">
             <p>Finn</p>
         </div>
         <ul class="balance-ul">
@@ -88,7 +117,7 @@
             <li>Reduced health scaling from 50 per level to 25</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/fionna.png" alt="fionna image">
+            <img src="../img/champions/fionna.png" alt="fionna image">
             <p>Fionna</p>
         </div>
         <ul class="balance-ul">
@@ -96,21 +125,21 @@
             <li>Increased speed from 2.65 to 2.8</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/fp.png" alt="fp image">
+            <img src="../img/champions/fp.png" alt="fp image">
             <p>Flame Princess</p>
         </div>
         <ul class="balance-ul">
             <li>Decreased attack range by 0.1</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/gunter.png" alt="gunter image">
+            <img src="../img/champions/gunter.png" alt="gunter image">
             <p>Gunter</p>
         </div>
         <ul class="balance-ul">
             <li>Decreased crit damage from 250% to 225%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/hunson.png" alt="hunson image">
+            <img src="../img/champions/hunson.png" alt="hunson image">
             <p>Hunson</p>
         </div>
         <ul class="balance-ul">
@@ -120,28 +149,28 @@
             <li>Reduced passive duration from 5 seconds to 3.5 seconds</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/iceking.png" alt="ice king image">
+            <img src="../img/champions/iceking.png" alt="ice king image">
             <p>Ice King</p>
         </div>
         <ul class="balance-ul">
             <li>Ice Shield (passive) now reduces the damage from the first hit taken by 50%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/jake.png" alt="jake image">
+            <img src="../img/champions/jake.png" alt="jake image">
             <p>Jake</p>
         </div>
         <ul class="balance-ul">
             <li>Passive now roots for one second instead of applying a slow</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lich.png" alt="lich image">
+            <img src="../img/champions/lich.png" alt="lich image">
             <p>The Lich</p>
         </div>
         <ul class="balance-ul">
             <li>Decreased Skully's attack rate from 1s (1000) to 1.25s (1250)</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/magicman.png" alt="magic man image">
+            <img src="../img/champions/magicman.png" alt="magic man image">
             <p>Magic Man</p>
         </div>
         <ul class="balance-ul">
@@ -150,21 +179,21 @@
             <li>Increased AP ratio on W from 50% to 70%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/marceline.png" alt="marceline image">
+            <img src="../img/champions/marceline.png" alt="marceline image">
             <p>Marceline</p>
         </div>
         <ul class="balance-ul">
             <li>Increased HP scaling from 35 per level to 50</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/pb.png" alt="princess bubblegum image">
+            <img src="../img/champions/pb.png" alt="princess bubblegum image">
             <p>Princess Bubblegum</p>
         </div>
         <ul class="balance-ul">
             <li>Enemies hit by all 3 passive stacks will also be slowed by 25% for 2.5 seconds</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/rattleballs.png" alt="rattleballs image">
+            <img src="../img/champions/rattleballs.png" alt="rattleballs image">
             <p>Rattleballs</p>
         </div>
         <ul class="balance-ul">
@@ -179,5 +208,6 @@
             <li>[NOTE] In the bug reporting forum, if you notice a tag that says "need more info" - it means I am unable to replicate the bug and would like more details on how to replicate it. Videos are greatly appreciated!</li>
         </ul>
     </div>
+    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
 </body>
 </html>

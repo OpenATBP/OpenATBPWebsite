@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -37,69 +66,69 @@
                 <li>CONs: Power Damage, Armor.</li>
             </ul>
             <h1>Items</h1>
-            <table class="wiki-backpack-items-table">
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/nothung.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Nothung</p>
-                        <p>Billy's legendary sword.</p>
-                        <ul class="wiki-list wiki-item-list nothung">
+        </div>
+        <table class="wiki-backpack-items-table">
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/nothung.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Nothung</p>
+                    <p>Billy's legendary sword.</p>
+                    <ul class="wiki-list wiki-item-list nothung">
 
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/the-gauntlet-of-the-hero.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">The Gauntlet of the Hero</p>
-                        <p>This gauntlet lets you penetrate magical defenses. Legend has it that this is the only item able to harm The Lich.</p>
-                        <ul class="wiki-list wiki-item-list the-gauntlet-of-the-hero">
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/the-gauntlet-of-the-hero.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">The Gauntlet of the Hero</p>
+                    <p>This gauntlet lets you penetrate magical defenses. Legend has it that this is the only item able to harm The Lich.</p>
+                    <ul class="wiki-list wiki-item-list the-gauntlet-of-the-hero">
 
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/billys-loincloth.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Billy's Loincloth</p>
-                        <p>Armor yourself in the most basic gear of the most legendary hero!</p>
-                        <ul class="wiki-list wiki-item-list billys-loincloth">
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/billys-loincloth.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Billy's Loincloth</p>
+                    <p>Armor yourself in the most basic gear of the most legendary hero!</p>
+                    <ul class="wiki-list wiki-item-list billys-loincloth">
 
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/wizards-cloak.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Wizard's Cloak</p>
-                        <p>A shiny Magic resistant cloak.</p>
-                        <ul class="wiki-list wiki-item-list wizards-cloak">
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/wizards-cloak.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Wizard's Cloak</p>
+                    <p>A shiny Magic resistant cloak.</p>
+                    <ul class="wiki-list wiki-item-list wizards-cloak">
 
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/enchiridion.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">The Enchiridion</p>
-                        <p>Teaches one the Art of being a Hero!</p>
-                        <ul class="wiki-list wiki-item-list enchiridion">
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/enchiridion.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">The Enchiridion</p>
+                    <p>Teaches one the Art of being a Hero!</p>
+                    <ul class="wiki-list wiki-item-list enchiridion">
 
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-        </div>  
+                    </ul>
+                </td>
+            </tr>
+        </table>  
     </div>
     <script type="text/javascript" src="../../item-stat-handler.js"></script>
 </body>

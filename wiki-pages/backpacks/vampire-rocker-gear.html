@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -37,69 +66,69 @@
                 <li>CONs: Slightly less Attack Damage & Power Damage.</li>
             </ul>
             <h1>Items</h1>
-            <table class="wiki-backpack-items-table">
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/ax-bass.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Ax Bass</p>
-                        <p>This sweet ax is an Abadeer family heirloom.</p>
-                        <ul class="wiki-list wiki-item-list ax-bass">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/marcelines-amp.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Marceline's Amp</p>
-                        <p>Blasting magical music that siphons your soul, or at least any red in it.</p>
-                        <ul class="wiki-list wiki-item-list marcelines-amp">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/billys-loincloth.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Billy's Loincloth</p>
-                        <p>Armor yourself in the most basic gear of the most legendary hero!</p>
-                        <ul class="wiki-list wiki-item-list billys-loincloth">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/bubblegums-t-shirt.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Bubblegum's T-Shirt</p>
-                        <p>T-Shirt gifted to the Candy Kingdom Monarch from the Vampire Queen of Rock.</p>
-                        <ul class="wiki-list wiki-item-list bubblegums-t-shirt">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/nightosphere-amulet.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Nightosphere Amulet</p>
-                        <p>Amulet worn by rulers of the Nightosphere.</p>
-                        <ul class="wiki-list wiki-item-list nightosphere-amulet">
-
-                        </ul>
-                    </td>
-                </tr>
-            </table>
         </div>  
+        <table class="wiki-backpack-items-table">
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/ax-bass.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Ax Bass</p>
+                    <p>This sweet ax is an Abadeer family heirloom.</p>
+                    <ul class="wiki-list wiki-item-list ax-bass">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/marcelines-amp.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Marceline's Amp</p>
+                    <p>Blasting magical music that siphons your soul, or at least any red in it.</p>
+                    <ul class="wiki-list wiki-item-list marcelines-amp">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/billys-loincloth.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Billy's Loincloth</p>
+                    <p>Armor yourself in the most basic gear of the most legendary hero!</p>
+                    <ul class="wiki-list wiki-item-list billys-loincloth">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/bubblegums-t-shirt.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Bubblegum's T-Shirt</p>
+                    <p>T-Shirt gifted to the Candy Kingdom Monarch from the Vampire Queen of Rock.</p>
+                    <ul class="wiki-list wiki-item-list bubblegums-t-shirt">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/nightosphere-amulet.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Nightosphere Amulet</p>
+                    <p>Amulet worn by rulers of the Nightosphere.</p>
+                    <ul class="wiki-list wiki-item-list nightosphere-amulet">
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript" src="../../item-stat-handler.js"></script>
 </body>

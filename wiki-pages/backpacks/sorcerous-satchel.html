@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -37,69 +66,69 @@
                 <li>CONs: Attack Damage, Health.</li>
             </ul>
             <h1>Items</h1>
-            <table class="wiki-backpack-items-table">
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/eyeball-whip.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Eyeball Whip</p>
-                        <p>Lash your foes with this whip of eyeballs. Eyes all in a line .. like an eye queue?</p>
-                        <ul class="wiki-list wiki-item-list eyeball-whip">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/magic-wand.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Magic Wand</p>
-                        <p>A compact and potent wand.</p>
-                        <ul class="wiki-list wiki-item-list magic-wand">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/armor-of-zelderon.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Armor of Zeldron</p>
-                        <p>Good protective wear with wings. Looks a little silly on some people, though.</p>
-                        <ul class="wiki-list wiki-item-list armor-of-zelderon">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/flame-cloak.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Flame Cloak</p>
-                        <p>A cloak of pure flame to protect you and discourage your foes!</p>
-                        <ul class="wiki-list wiki-item-list flame-cloak">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/glasses-of-nerdicon.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Glasses of Nerdicon</p>
-                        <p>These glasses enhance one's mental speed and learning capacity ... at the cost of just a little sanity.</p>
-                        <ul class="wiki-list wiki-item-list glasses-of-nerdicon">
-
-                        </ul>
-                    </td>
-                </tr>
-            </table>
         </div>  
+        <table class="wiki-backpack-items-table">
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/eyeball-whip.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Eyeball Whip</p>
+                    <p>Lash your foes with this whip of eyeballs. Eyes all in a line .. like an eye queue?</p>
+                    <ul class="wiki-list wiki-item-list eyeball-whip">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/magic-wand.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Magic Wand</p>
+                    <p>A compact and potent wand.</p>
+                    <ul class="wiki-list wiki-item-list magic-wand">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/armor-of-zelderon.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Armor of Zeldron</p>
+                    <p>Good protective wear with wings. Looks a little silly on some people, though.</p>
+                    <ul class="wiki-list wiki-item-list armor-of-zelderon">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/flame-cloak.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Flame Cloak</p>
+                    <p>A cloak of pure flame to protect you and discourage your foes!</p>
+                    <ul class="wiki-list wiki-item-list flame-cloak">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/glasses-of-nerdicon.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Glasses of Nerdicon</p>
+                    <p>These glasses enhance one's mental speed and learning capacity ... at the cost of just a little sanity.</p>
+                    <ul class="wiki-list wiki-item-list glasses-of-nerdicon">
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript" src="../../item-stat-handler.js"></script>
 </body>

@@ -19,15 +19,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navigation">
-      <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-      <a class="navigation-a" href="index.html">DOWNLOAD</a>
-      <a class="navigation-a" href="notes.html">PATCH NOTES</a>
-      <a class="navigation-a" href="wiki-home.html">WIKI</a>
-      <a class="navigation-a" href="rankings.html">RANKINGS</a>
-      <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-      <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-  </div>
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
+        <img src="img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <img src="img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
+    </div>
     <div class="wiki-area">
         <div class="wiki-page-header">
             <h1>Welcome, Adventurer!</h1>
@@ -35,7 +60,7 @@
         </div>
         <div class="wiki-navigation">
             <div class="item">
-                <a href="wiki-pages/champions.html"><img src="img/finn.png"></a>
+                <a href="wiki-pages/champions.html"><img src="img/champions/finn.png"></a>
                 <a href="wiki-pages/champions.html" class="wiki-link">Champions</a>
             </div>
             <div class="item">
@@ -47,6 +72,15 @@
                 <a href="wiki-pages/junglemonsters.html" class="wiki-link">Monsters</a>
             </div>
         </div>
+        <div id="wiki-navigation-mobile">
+            <a href="wiki-pages/champions.html"><img src="img/champions/finn.png"></a>
+            <a href="wiki-pages/champions.html" class="wiki-link">Champions</a>
+            <a href="wiki-pages/backpacks.html"><img src="img/Backpack.png"></a>
+            <a href="wiki-pages/backpacks.html" class="wiki-link">Backpacks</a>
+            <a href="wiki-pages/junglemonsters.html"><img src="img/jungle-monters.png"></a>
+            <a href="wiki-pages/junglemonsters.html" class="wiki-link">Monsters</a>
+        </div>
     </div>
+    <script type="text/javascript" src="mobile-nav-handler.js" ></script>
 </body>
 </html>

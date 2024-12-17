@@ -19,14 +19,43 @@
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <div class="navigation">
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
         <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
-        <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
-        <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="">RANKINGS</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
     </div>
     <div class="wiki-area">
         <div class="wiki-text">
@@ -37,69 +66,69 @@
                 <li>CONs: Attack Damage, Power Damage.</li>
             </ul>
             <h1>Items</h1>
-            <table class="wiki-backpack-items-table">
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/jakes-mace.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Jake's Mace</p>
-                        <p>Jake's mace is good for keeping you healthy and discouraging bad guys.</p>
-                        <ul class="wiki-list wiki-item-list jakes-mace">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/simon-petrikovs-glasses.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Simon Petrikov's Glasses</p>
-                        <p>Glasses of the brilliant scientists and eventual wizard, Simon Petrikov.</p>
-                        <ul class="wiki-list wiki-item-list simon-petrikovs-glasses">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/robo-suit.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Robo Suit</p>
-                        <p>A tough, resistant robotic suit of armor.</p>
-                        <ul class="wiki-list wiki-item-list robo-suit">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/grob-gob-glob-grods-device.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Grob Gob Glob Grod's Device</p>
-                        <p>This Martian device does many things including draining magic juices.</p>
-                        <ul class="wiki-list wiki-item-list grob-gob-glob-grods-device">
-
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="wiki-item-image" src="../../img/wiki/items/anti-gravity-tote-chamber.png">
-                    </td>
-                    <td>
-                        <p class="wiki-colored-text">Anti-Gravity Tote Chamber</p>
-                        <p>This miraculous device is used to safely store the most perfect of snacks.</p>
-                        <ul class="wiki-list wiki-item-list anti-gravity-tote-chamber">
-
-                        </ul>
-                    </td>
-                </tr>
-            </table>
         </div>  
+        <table class="wiki-backpack-items-table">
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/jakes-mace.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Jake's Mace</p>
+                    <p>Jake's mace is good for keeping you healthy and discouraging bad guys.</p>
+                    <ul class="wiki-list wiki-item-list jakes-mace">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/simon-petrikovs-glasses.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Simon Petrikov's Glasses</p>
+                    <p>Glasses of the brilliant scientists and eventual wizard, Simon Petrikov.</p>
+                    <ul class="wiki-list wiki-item-list simon-petrikovs-glasses">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/robo-suit.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Robo Suit</p>
+                    <p>A tough, resistant robotic suit of armor.</p>
+                    <ul class="wiki-list wiki-item-list robo-suit">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/grob-gob-glob-grods-device.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Grob Gob Glob Grod's Device</p>
+                    <p>This Martian device does many things including draining magic juices.</p>
+                    <ul class="wiki-list wiki-item-list grob-gob-glob-grods-device">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="wiki-item-image" src="../../img/wiki/items/anti-gravity-tote-chamber.png">
+                </td>
+                <td>
+                    <p class="wiki-colored-text">Anti-Gravity Tote Chamber</p>
+                    <p>This miraculous device is used to safely store the most perfect of snacks.</p>
+                    <ul class="wiki-list wiki-item-list anti-gravity-tote-chamber">
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript" src="../../item-stat-handler.js"></script>
 </body>

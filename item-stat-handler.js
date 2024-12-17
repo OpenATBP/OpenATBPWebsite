@@ -15,8 +15,8 @@ const ITEMS = {
         "stat3": "Power Damage (-10/-20/-30/-50)"
     },
     "armor-of-zelderon": {
-        "stat1": "Shields (10/20/30/50)",
-        "stat2": "Shield Breach (10/20/30/50)"
+        "stat1": "Armor (10/20/30/50)",
+        "stat2": "Speed (.10/.15/.20/.30)"
     },
     "ax-bass": {
         "stat1": "Attack Damage (10/25/45/75)",
@@ -208,4 +208,19 @@ window.onload = function() {
             }
         }
     }
+
+    // add mobile nav handler here cause two window.onload scripts cant be used on one page
+    const mobileNavOpenBtn = document.getElementById('mobile-nav-open-btn');
+    const mobileNavCloseBtn = document.getElementById('mobile-nav-close');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileNavOpenBtn.addEventListener('click', function() {
+        mobileNav.style.left = '0';
+        mobileNavOpenBtn.style.display = 'none';
+    });
+
+    mobileNavCloseBtn.addEventListener('click', function() {
+        mobileNav.style.left = '-100%';
+        mobileNavOpenBtn.style.display = 'flex';
+    });
 }
