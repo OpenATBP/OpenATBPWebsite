@@ -64,6 +64,7 @@
             <li>Removed old elo system and replaced it with a net positive system.</li>
             <li>Elo is now based on your total wins. Every game won/tied is +1 elo and every game lost simply prevents elo gain.</li>
             <li>Elo can only be lost through dodging or leaving games.</li>
+            <li>Elo tiers are now as follows: [Tier 1] 0-25; [Tier 2] 26-75; [Tier 3] 76-200; [Tier 4] 201-500+</li>
             <li>Matchmaking is now indefinitely randomized, as skilled based matchmaking cannot exist with the new system.</li>
             <li>The rule preventing alts is temporarily halted as there should be no reason to make alts outside of anonymity.</li>
             <li>Indefinitely, your friends list will now show everyone who is online, effectively removing the functionality of a "friends list."</li>
@@ -123,14 +124,14 @@
             <li>Removed Herobrine</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/cb.png" alt="cb image">
+            <img src="../img/champions/cb.png" alt="cb image">
             <p>Cinnamon Bun</p>
         </div>
         <ul class="balance-ul">
             <li>BUFF: Ability damage reduction to towers decreased from 50% to 25%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/fp.png" alt="fp image">
+            <img src="../img/champions/fp.png" alt="fp image">
             <p>Flame Princess</p>
         </div>
         <ul class="balance-ul">
@@ -138,7 +139,7 @@
             <li>NERF: Abilities now need to damage something to activate FP's passive</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/hunson.png" alt="hunson image">
+            <img src="../img/champions/hunson.png" alt="hunson image">
             <p>Hunson</p>
         </div>
         <ul class="balance-ul">
@@ -146,7 +147,7 @@
             <li>BUFF: Third hit with Q now does 75% increased damage</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/iceking.png" alt="ice king image">
+            <img src="../img/champions/iceking.png" alt="ice king image">
             <p>Ice King</p>
         </div>
         <ul class="balance-ul">
@@ -154,30 +155,41 @@
             <li>BUFF: Increased E PD scaling from 20% to 50%</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/lich.png" alt="lich image">
+            <img src="../img/champions/lemongrab.png" alt="lemongrab image">
+            <p>Lemongrab</p>
+        </div>
+        <ul class="balance-ul">
+            <li>BUFF: Increased health scaling from 35 to 50</li>
+        </ul>
+        <div class="patch-notes-image-section">
+            <img src="../img/champions/lich.png" alt="lich image">
             <p>The Lich</p>
         </div>
         <ul class="balance-ul">
-            <li>CHANGE: Skully's basic attack damage is now 10 + 50% Lich's AP</li>
+            <li>CHANGE: Skully's basic attack damage is now 10 + 40% Lich's AP</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/marceline.png" alt="marceline image">
+            <img src="../img/champions/marceline.png" alt="marceline image">
             <p>Marceline</p>
         </div>
         <ul class="balance-ul">
-            <li>NERF: Reduced Q damage scaling from 80% to 55%</li>
+            <li>NERF: Reduced Q damage scaling from 80% to 60%</li>
+            <li>NERF: Reduced Beast Form Q root duration from 3 seconds to 2 seconds</li>
         </ul>
         <div class="patch-notes-image-section">
-            <img src="../img/pb.png" alt="princess bubblegum image">
+            <img src="../img/champions/pb.png" alt="princess bubblegum image">
             <p>Princess Bubblegum</p>
         </div>
         <ul class="balance-ul">
-            <li>PB's Turret now does 10 + 50% PB's AP</li>
+            <li>CHANGE: PB's Turret now does 10 + 40% PB's AP</li>
         </ul>
         <h2>BUG FIXES</h2>
         <ul class="patch-notes-ul">
             <li>Fixed minion pathing where they would frequently walk backwards. Now minions should walk to the closest point going towards the enemy base</li>
             <li>Fixed numerous bugs over the course of multiple hotfixes during the 1.4 playtest</li>
+            <li>Fixed an issue where FP's passive would always proc on hitting a tower, even when the passive was on cooldown</li>
+            <li>Fixed an issue where Fionna's blue sword would cause weird rounding values for defensive stats</li>
+            <li>Fixed an issue where chaining fear would not worked on rooted/stunned characters</li>
             <li>[NOTE] Reminder that we exclusively work on bugs that are reported in the Discord's bug reporting channel. If it is not there, it does not exist.</li>
         </ul>
     </div>
