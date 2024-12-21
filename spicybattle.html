@@ -476,46 +476,46 @@
     </div>
     <script>
         function getTop50Border(elo) {
-            if (elo > 2433) return 'purple-border';
-            else if (elo > 2225) return 'teal-border';
-            else if (elo > 2017) return 'gold-border';
-            else if (elo > 1809) return 'silver-border';
-            else if (elo > 1600) return 'bronze-border';
-            else if (elo > 1348) return 'master-border';
-            else if (elo > 1147) return 'royal-border';
+            if (elo > 439) return 'purple-border';
+            else if (elo > 379) return 'teal-border';
+            else if (elo > 319) return 'gold-border';
+            else if (elo > 259) return 'silver-border';
+            else if (elo > 198) return 'bronze-border';
+            else if (elo > 72) return 'master-border';
+            else if (elo > 23) return 'royal-border';
         }
 
         function getTop50NumberColor(elo) {
-            if (elo > 2433) return 'purple';
-            else if (elo > 2225) return 'teal';
-            else if (elo > 2017) return 'gold';
-            else if (elo > 1809) return 'silver';
-            else if (elo > 1600) return 'bronze';
-            else if (elo > 1348) return 'master';
-            else if (elo > 1147) return 'royal';
+            if (elo > 439) return 'purple';
+            else if (elo > 379) return 'teal';
+            else if (elo > 319) return 'gold';
+            else if (elo > 259) return 'silver';
+            else if (elo > 198) return 'bronze';
+            else if (elo > 72) return 'master';
+            else if (elo > 23) return 'royal';
         }
 
         function getRankImage(elo) {
-            if (elo > 2433) return 'img/ranks/4-4.png';
-            else if (elo > 2225) return 'img/ranks/4-3.png';
-            else if (elo > 2017) return 'img/ranks/4-2.png';
-            else if (elo > 1809) return 'img/ranks/4-1.png';
-            else if (elo > 1600) return 'img/ranks/4-0.png';
-            else if (elo > 1538) return 'img/ranks/3-3.png';
-            else if (elo > 1475) return 'img/ranks/3-2.png';
-            else if (elo > 1412) return 'img/ranks/3-1.png';
-            else if (elo > 1348) return 'img/ranks/3-0.png';
-            else if (elo > 1282) return 'img/ranks/2-2.png';
-            else if (elo > 1215) return 'img/ranks/2-1.png';
-            else if (elo > 1147) return 'img/ranks/2-0.png';
-            else if (elo > 573) return 'img/ranks/1-1.png';
+            if (elo > 439) return 'img/ranks/4-4.png';
+            else if (elo > 379) return 'img/ranks/4-3.png';
+            else if (elo > 319) return 'img/ranks/4-2.png';
+            else if (elo > 259) return 'img/ranks/4-1.png';
+            else if (elo > 198) return 'img/ranks/4-0.png';
+            else if (elo > 167) return 'img/ranks/3-3.png';
+            else if (elo > 136) return 'img/ranks/3-2.png';
+            else if (elo > 105) return 'img/ranks/3-1.png';
+            else if (elo > 72) return 'img/ranks/3-0.png';
+            else if (elo > 56) return 'img/ranks/2-2.png';
+            else if (elo > 40) return 'img/ranks/2-1.png';
+            else if (elo > 23) return 'img/ranks/2-0.png';
+            else if (elo > 11) return 'img/ranks/1-1.png';
             else return 'img/ranks/1-0.png';
         }
 
         function getTierName(elo) {
-            if (elo < 1148) return 'BRAVE HERO';
-            else if (elo < 1349) return 'ROYAL LEGEND';
-            else if (elo < 1601) return 'MASTER OF BATTLE';
+            if (elo < 24) return 'BRAVE HERO';
+            else if (elo < 73) return 'ROYAL LEGEND';
+            else if (elo < 199) return 'MASTER OF BATTLE';
             else return 'IMMORTAL WARRIOR';
         }
 
@@ -642,7 +642,7 @@
         }
 
         function getColor(elo) {
-            return elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
+            return elo < 24 ? '#9b5f0f' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
         }
 
         function determineIfObjSmaller(obj, obj2, sorting) {
@@ -828,7 +828,7 @@
                     const leaderboardText = document.getElementById('search-leaderboard-pos');
 
                     if (leaderboardText) {
-                        let color = elo < 1148 ? '#9b5f0f' : elo < 1349 ? '#42c2d9' : elo < 1601 ? '#7b286b' : elo < 1810 ? '#ffa900' : elo < 2018 ? '#81acdc' : elo < 2226 ? '#ffe504' : elo < 2434 ? '#29dddd' : '#e600ff';
+                        let color = elo < 24 ? '#9b5f0f' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
                         leaderboardText.style.color = color;
                     }
 
