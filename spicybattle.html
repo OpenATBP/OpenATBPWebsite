@@ -135,15 +135,15 @@
         }
 
         .master-border {
-            border-bottom: 2px solid #7b286b;
+            border-bottom: 2px solid #D947BC;
         }
 
         .royal-border {
-            border-bottom: 2px solid #42c2d9;
+            border-bottom: 2px solid #CE8526;
         }
 
         .brave-border {
-            border-bottom: 2px solid #367EAB;
+            border-bottom: 2px solid #53AAE0;
         }
 
         .regular-border {
@@ -177,17 +177,17 @@
 
         .master {
             color: transparent;
-            -webkit-text-stroke: 1px #7b286b;
+            -webkit-text-stroke: 1px #D947BC;
         }
 
         .royal {
             color: transparent;
-            -webkit-text-stroke: 1px #42c2d9;
+            -webkit-text-stroke: 1px #CE8526;
         }
 
         .brave {
             color: transparent;
-            -webkit-text-stroke: 1px #367EAB;
+            -webkit-text-stroke: 1px #53AAE0;
         }
 
         #page-header {
@@ -196,7 +196,7 @@
         }
 
         #page-header h1 {
-            margin: 0.5rem 0;
+            margin: 2rem 0 1rem 0;
         }
 
         #page-header p {
@@ -359,7 +359,7 @@
         #search-interface {
             display: flex;
             justify-content: center;
-            margin-top: .5rem;
+            margin-top: 2rem;
         }
 
         #search-interface input, button {
@@ -653,7 +653,7 @@
         }
 
         function getColor(elo) {
-            return elo < 24 ? '#367EAB' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+            return elo < 24 ? '#53AAE0' : elo < 73 ? '#CE8526' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
         }
 
         function determineIfObjSmaller(obj, obj2, sorting) {
@@ -839,7 +839,7 @@
                     const leaderboardText = document.getElementById('search-leaderboard-pos');
 
                     if (leaderboardText) {
-                        let color = elo < 24 ? '#367EAB' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+                        let color = elo < 24 ? '#53AAE0' : elo < 73 ? '#42c2d9' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
                         leaderboardText.style.color = color;
                     }
 
