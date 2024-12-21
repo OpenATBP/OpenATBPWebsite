@@ -182,12 +182,12 @@ body {
 }
 
 .patch-notes-content {
-    margin: 1em 20% 1em 20%;
-    background-color: #0C0C0C;
+    margin: 2em 20% 1em 20%;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
-    border: 1px solid white;
+    border: 1px solid #335279;
 }
 
 .patch-notes-ul {
@@ -223,12 +223,12 @@ body {
 
 .wiki-area {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 1em 15% 0 15%;
-    background-color: #0C0C0C;
+    margin: 2em 15% 0 15%;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
-    border: 1px solid #e4be35;
+    border: 1px solid #335279;
 }
 
 .wiki-page-header {
