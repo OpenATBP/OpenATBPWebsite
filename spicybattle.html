@@ -142,6 +142,10 @@
             border-bottom: 2px solid #42c2d9;
         }
 
+        .brave-border {
+            border-bottom: 2px solid #367EAB;
+        }
+
         .regular-border {
             border-bottom: 2px solid white;
         }
@@ -179,6 +183,11 @@
         .royal {
             color: transparent;
             -webkit-text-stroke: 1px #42c2d9;
+        }
+
+        .brave {
+            color: transparent;
+            -webkit-text-stroke: 1px #367EAB;
         }
 
         #page-header {
@@ -483,6 +492,7 @@
             else if (elo > 198) return 'bronze-border';
             else if (elo > 72) return 'master-border';
             else if (elo > 23) return 'royal-border';
+            else return 'brave-border';
         }
 
         function getTop50NumberColor(elo) {
@@ -493,6 +503,7 @@
             else if (elo > 198) return 'bronze';
             else if (elo > 72) return 'master';
             else if (elo > 23) return 'royal';
+            else return 'brave';
         }
 
         function getRankImage(elo) {
@@ -642,7 +653,7 @@
         }
 
         function getColor(elo) {
-            return elo < 24 ? '#9b5f0f' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+            return elo < 24 ? '#367EAB' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
         }
 
         function determineIfObjSmaller(obj, obj2, sorting) {
@@ -828,7 +839,7 @@
                     const leaderboardText = document.getElementById('search-leaderboard-pos');
 
                     if (leaderboardText) {
-                        let color = elo < 24 ? '#9b5f0f' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+                        let color = elo < 24 ? '#367EAB' : elo < 73 ? '#42c2d9' : elo < 199 ? '#7b286b' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
                         leaderboardText.style.color = color;
                     }
 
