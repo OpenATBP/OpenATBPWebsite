@@ -20,9 +20,9 @@ const ITEMS = {
         "stat3": "Shield Breach (5/10/15/20)"
     },
     "ax-bass": {
-        "stat1": "Attack Damage (25/50/75/125)",
+        "stat1": "Attack Damage (35/55/100/150)",
         "stat2": "Attack Vamp (10%/15%/15%/20%)",
-        "stat3": "Cannot heal from usual means"
+        "stat3": "Cannot heal from usual means. Gain 15% Max HP on Champion KO."
     },
     "bacon-pancakes": {
         "stat1": "Health (100/225/350/500)"
@@ -48,19 +48,19 @@ const ITEMS = {
         "stat3": "Attack Range (-.2/-.3/-.4/-.5)"
     },
     "cosmic-gauntlet": {
-        "stat1": "Power Damage (15/30/45/75)",
+        "stat1": "Power Damage (15/40/75/115)",
         "stat2": "Attack Damage (5/10/15/25)",
         "stat3": "Spells enhance your next basic attack (+20 AD per stack), if used quick enough (decays in 1/2/3/4 seconds)"
     },
     "crystal-gem-apple": {
         "stat1": "Armor (10/20/30/40)",
-        "stat2": "Power Damage (10/20/30/50)",
+        "stat2": "Power Damage (5/10/20/35)",
         "stat3": "Cooldown Reduction (5%/7%/10%/15%)"
     },
     "demon-blood-sword": {
         "stat1": "Attack Damage (10/25/45/75)",
         "stat2": "Bonus damage to jungle monsters (15%/20%/25%/30%)",
-        "stat3": "Gain additional xp (10%) and unique buffs from monsters. (+15 AD from Owls, +30 AP from Gnomes, +5 Armor from Grassbear, +5 MR from Hugwolf, +0.15 MS from Goo, +5% Crit from Keeoth)"
+        "stat3": "Gain additional xp (10%) and unique buffs from monsters for 60s. (+25 AD and +50 PD from Owls and Gnomes | +5 Armor and +5 MR from Grassbear and Hugwolf | +0.15 MS from Goo | +5% Crit from Keeoth)"
     },
     "demonic-wishing-eye": {
         "stat1": "Power Damage (15/35/75/150)",
@@ -73,9 +73,9 @@ const ITEMS = {
         "stat3": "25% chance to deal chain damage to enemies (25%/30%/40%/50% of damage)"
     },
     "enchiridion": {
-        "stat1": "Health (25/75/100/150)",
-        "stat2": "Attack Speed (75/125/200/275)",
-        "stat3": "Critical Chance (3%/5%/7%/10%)"
+        "stat1": "Health (75/125/200/275)",
+        "stat2": "Attack Damage (5/10/15/25)",
+        "stat3": "Critical Chance (1%/2%/4%/8%)"
     },
     "eyeball-whip": {
         "stat1": "Attack Damage (10/20/30/50)",
@@ -83,7 +83,7 @@ const ITEMS = {
         "stat3": "Attack Range (-10%/-20%/-30%/-35%)"
     },
     "fight-king-sword": {
-        "stat1": "Attack Damage (5/10/25/50)",
+        "stat1": "Attack Damage (10/25/50/80)",
         "stat2": "Power Damage (10/20/30/50)",
         "stat3": "Basic attacks enhance your next ability (+15 PD per stack) if used quickly (decays in 2/4/7/12 seconds)"
     },
@@ -93,7 +93,7 @@ const ITEMS = {
     "flame-cloak": {
         "stat1": "Shields (10/15/25/40)",
         "stat2": "Health (50/100/150/250)",
-        "stat3": "Periodic spell damage (5% Max HP) to nearby enemies"
+        "stat3": "Periodic spell damage (3.5% Max HP) to nearby enemies"
     },
     "future-crystal": {
         "stat1": "Shields (5/10/15/25)",
@@ -108,7 +108,7 @@ const ITEMS = {
     "glasses-of-nerdicon": {
         "stat1": "Regenerate (2/4/6/8)",
         "stat2": "Health (25/50/100/200)",
-        "stat3": "Gain XP (10%/20%/25%/30%) faster"
+        "stat3": "Gain XP (15%/25%/35%/35%) faster. Max level in this item grants +1 Spell Point."
     },
     "glob-helmet": {
         "stat1": "Armor (10/15/25/50)",
@@ -153,22 +153,22 @@ const ITEMS = {
         "stat3": "Health (25/50/75/100)"
     },
     "lich-hand": {
-        "stat1": "Power Damage (15/25/50/100)",
+        "stat1": "Power Damage (20/45/90/165)",
         "stat2": "Shield Breach (5/10/15/20)",
         "stat3": "Deal increased spell damage when hitting the same target. (10% per stack). 1 second cooldown on obtaining new stacks."
     },
     "lightning-sword": {
         "stat1": "Power Damage (10/32/50/75)",
-        "stat2": "Getting KO's add bonus Spell Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 35 Spell Damage per level in Lightning Sword."
+        "stat2": "Getting KO's add bonus Spell Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 55 Spell Damage per level in Lightning Sword."
     },
     "magic-nail": {
         "stat1": "Attack Damage (5/10/20/35)",
         "stat2": "Speed (.05/.10/.15/.20)",
-        "stat3": "Getting KO's adds bonus Attack Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 25 Attack Damage per level in Magic Nail."
+        "stat3": "Getting KO's adds bonus Attack Damage (+5 for champions, +2 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 40 Attack Damage per level in Magic Nail."
     },
     "magic-carpet": {
         "stat1": "Cooldown (5%/10%/15%/20%)",
-        "stat2": "Speed (.05/.10/.15/.20)",
+        "stat2": "Speed (.05/.10/.20/.40)",
         "stat3": "Power Damage (10/15/30/50)"
     },
     "magic-wand": {
@@ -180,16 +180,16 @@ const ITEMS = {
     },
     "medal-of-bravery": {
         "stat1": "Armor (10/10/10/25)",
-        "stat2": "Attack Speed (75/150/250/350)",
-        "stat3": "Critical Chance (5%/7%/10%/15%)"
+        "stat2": "Attack Speed (75/125/200/275)",
+        "stat3": "Critical Chance (5%/10%/15%/30%)"
     },
     "me-mows-dagger": {
         "stat1": "Attack Damage (10/20/30/50)",
-        "stat2": "Critical Chance (5%/10%/15%/20%)",
+        "stat2": "Critical Chance (5%/15%/30%/60%)",
         "stat3": "Attack Speed (75/150/250/350)"
     },
     "night-sword": {
-        "stat1": "Attack Damage (25/50/75/125)",
+        "stat1": "Attack Damage (10/25/55/110)",
         "stat2": "Armor (-5/-10/-15/-25)",
         "stat3": "Briefly enter stealth (2 seconds) after each kill"
     },
@@ -225,7 +225,7 @@ const ITEMS = {
     "the-art-of-fridjitsu": {
         "stat1": "Cooldown (5%/10%/15%/20%)",
         "stat2": "Speed (.05/.10/.15/.20)",
-        "stat3": "Critical Chance (3%/5%/7%/10%)"
+        "stat3": "Critical Chance (5%/10%/15%/20%)"
     },
     "the-gauntlet-of-the-hero": {
         "stat1": "Power Damage (15/25/50/100)",

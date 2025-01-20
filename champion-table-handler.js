@@ -19,7 +19,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "bmo": {
         "attack-damage": 33,
@@ -30,13 +30,13 @@ BASE_STATS = {
         "health": 407,
         "regenerate": 3,
         "attack-range": 5.5,
-        "speed": 2.95,
+        "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "cb": {
         "attack-damage": 49,
@@ -53,7 +53,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "finn": {
         "attack-damage": 55,
@@ -70,7 +70,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "fionna": {
         "attack-damage": 55,
@@ -87,7 +87,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "fp": {
         "attack-damage": 34,
@@ -104,12 +104,12 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "gunter": {
         "attack-damage": 54,
         "armor": 0,
-        "attack-speed": 1425,
+        "attack-speed": 1445,
         "power-damage": 33,
         "shields": 1,
         "health": 350,
@@ -118,10 +118,10 @@ BASE_STATS = {
         "speed": 2.85,
         "attack-vamp": "0%",
         "power-vamp": "0%",
-        "armor-breach": 5,
+        "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "1%",
-        "critical-damage": "225%"
+        "critical-damage": "150%"
     },
     "hunson": {
         "attack-damage": 59,
@@ -138,12 +138,12 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "iceking": {
-        "attack-damage": 22,
+        "attack-damage": 42,
         "armor": 1,
-        "attack-speed": 1200,
+        "attack-speed": 1235,
         "power-damage": 63,
         "shields": 6,
         "health": 385,
@@ -155,7 +155,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "jake": {
         "attack-damage": 43,
@@ -172,7 +172,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "lemongrab": {
         "attack-damage": 53,
@@ -189,7 +189,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "lich": {
         "attack-damage": 37,
@@ -206,7 +206,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "lsp": {
         "attack-damage": 28,
@@ -223,7 +223,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "magicman": {
         "attack-damage": 47,
@@ -240,7 +240,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "marceline": {
         "attack-damage": 53,
@@ -248,7 +248,7 @@ BASE_STATS = {
         "attack-speed": 1650,
         "power-damage": 30,
         "shields": 1,
-        "health": 450,
+        "health": 425,
         "regenerate": 3,
         "attack-range": 2,
         "speed": 3,
@@ -257,7 +257,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "neptr": {
         "attack-damage": 40,
@@ -274,7 +274,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "pb": {
         "attack-damage": 38,
@@ -291,7 +291,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "pepbut": {
         "attack-damage": 55,
@@ -308,7 +308,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
     "rattleballs": {
         "attack-damage": 55,
@@ -325,7 +325,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "200%"
+        "critical-damage": "125%"
     },
 }
 
@@ -387,7 +387,7 @@ STATS_PER_LEVEL = {
     "gunter": {
         "attack-damage": 4,
         "armor": 0,
-        "attack-speed": 75,
+        "attack-speed": 55,
         "power-damage": 3,
         "shields": 1,
         "health": 25,
@@ -405,7 +405,7 @@ STATS_PER_LEVEL = {
     "iceking": {
         "attack-damage": 2,
         "armor": 1,
-        "attack-speed": 50,
+        "attack-speed": 15,
         "power-damage": 3,
         "shields": 1,
         "health": 35,
@@ -462,7 +462,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 5,
         "shields": 1,
-        "health": 50,
+        "health": 25,
         "regenerate": 1,
     },
     "neptr": {
