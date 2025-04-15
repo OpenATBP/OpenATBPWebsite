@@ -33,7 +33,7 @@ const ITEMS = {
         "stat3": "Have random chance (3%/5%/10%/15%) to negate all damage"
     },
     "billys-loincloth": {
-        "stat1": "Armor (10/20/30/50)",
+        "stat1": "Armor (5/10/20/30)",
         "stat2": "Regenerate (2/4/6/8)",
         "stat3": "Speed (.05/.10/.15/.20)"
     },

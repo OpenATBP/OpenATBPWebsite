@@ -223,11 +223,12 @@ body {
     list-style-type: square;
 }
 
+/*-----------------------------WIKI-----------------------------------------------------------*/
 .wiki-area {
     font-family: Arial, Helvetica, sans-serif;
     margin: 2em 15% 0 15%;
     background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+    color: #ffffff;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
     border: 1px solid #335279;
@@ -286,6 +287,8 @@ body {
 
 .wiki-text {
     margin-left: 1em;
+    text-align: left;
+    line-height: 1.6;
 }
 
 .wiki-champion-gallery {
@@ -303,11 +306,125 @@ body {
     border: 1px solid white;
     border-radius: 0.3em;
     transition: transform 0.3s ease;
+    overflow: hidden;
+    display: block; 
 }
 
 .wiki-champion-gallery img:hover {
     transform: scale(1.1);
 }
+
+
+.wiki-monster-gallery {
+    margin: 0 1em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.monster-gallery-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color, #EAEAEA);
+    transition: transform 0.3s ease;
+}
+
+.monster-gallery-item img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover; 
+    border: 1px solid var(--border-color, white); 
+    border-radius: 0.3em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.monster-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.monster-gallery-item:hover {
+    transform: scale(1.1);
+
+}
+
+
+
+
+.wiki-navigation-gallery {
+    margin: 0 1em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navigation-gallery-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color, #EAEAEA);
+    transition: transform 0.3s ease;
+}
+
+.navigation-gallery-item img {
+    width: 10vh;
+    height: 10vh;
+    object-fit: cover; 
+    border: 1px solid var(--border-color, white); 
+    border-radius: 0.3em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.navigation-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navigation-gallery-item:hover {
+    transform: scale(1.02);
+
+}
+
+#wiki-home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wiki-home-logo img {
+    width: 10vw;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .wiki-colored-text {
     color: #e4be35;
@@ -596,7 +713,8 @@ body {
 
 .outfit {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
     width: fit-content;
     padding: 1rem;
     font-weight: bold
@@ -637,6 +755,8 @@ details ul li {
 #wiki-navigation-mobile {
     display: none;
 }
+
+/*-----------------------------/WIKI-----------------------------------------------------------*/
 
 @media (max-width: 768px) {
     #desktop-nav {
