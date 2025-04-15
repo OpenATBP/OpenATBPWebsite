@@ -44,12 +44,12 @@ const SKINS = {
         "Lute Finn": {
             "img": "../img/wiki/champion-skins/lute-finn.png",
             "cost": "1250 coins",
-            "released": "2015-06-23"
+            "released": "2014-06-23"
         },
         "Prince Hotbod": {
             "img": "../img/wiki/champion-skins/prince-hotbod.png",
             "cost": "1250 coins",
-            "released": "2015-06-23"
+            "released": "2014-06-23"
         },
         "Guardian Finn": {
             "img": "../img/wiki/champion-skins/guardian-finn.png",
@@ -86,14 +86,14 @@ const SKINS = {
         "PJ Fionna": {
             "img": "../img/wiki/champion-skins/pj-fionna.png",
             "cost": "500 coins",
-            "released": "2015-06-23"
+            "released": "2014-06-23"
         }
     },
     "fp": {
         "Dungeoneering Flame": {
             "img": "../img/wiki/champion-skins/dungeoneering-flame.png",
             "cost": "500 coins",
-            "released": "2015-06-23"
+            "released": "2014-06-23"
         },
         "Flame Queen": {
             "img": "../img/wiki/champion-skins/flame-queen.png",
@@ -105,7 +105,7 @@ const SKINS = {
         "Evil Eye Gunter": {
             "img": "../img/wiki/champion-skins/evil-eye-gunter.png",
             "cost": "1250 coins",
-            "released": "2015-06-23"
+            "released": "2014-06-23"
         },
         "Lady Gunter": {
             "img": "../img/wiki/champion-skins/lady-gunter.png",
