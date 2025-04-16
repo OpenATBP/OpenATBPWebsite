@@ -663,10 +663,6 @@ body {
     transition: filter 0.2s ease-in-out;
 }
 
-#wiki-backpacks-gallery img:hover {
-    filter: brightness(1.2);
-}
-
 .wiki-link {
     color: #e4be35;
     text-decoration: none;
@@ -677,38 +673,13 @@ body {
     text-decoration: underline;
 }
 
-.wiki-monster-table {
-    border-collapse: collapse;
-    background-color: rgba(58, 95, 133, 0.2);
-    margin-bottom: 2em;
-    margin-top: 2em;
 
-}
-.wiki-monster-table img {
-    width: 10vw;
-    height: auto;
-}
-
-.wiki-monster-table td {
-    padding: 1em;
-    border-bottom: 1px dashed rgb(105, 179, 166);
-}
-
-.wiki-monster-table th {
-    padding-top: 1em;
-    color: #60bcc9;
-}
-
-.jungle-monster-section table {
-    margin-right: 2em;
-}
 
 .jungle-monster-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center
+    width: fit-content;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
+    padding: 1rem;
 }
 
 .outfit {
@@ -754,6 +725,37 @@ details ul li {
 
 #wiki-navigation-mobile {
     display: none;
+}
+
+#wiki-backpacks-gallery img:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    filter: brightness(1.1);
+}
+
+.monster {
+    padding: 10px;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.monster img {
+    width: 70%;
+    height: auto;
+}
+
+.monster h3 {
+    margin-bottom: 0;
+}
+
+.monster-group {
+    display: flex;
 }
 
 /*-----------------------------/WIKI-----------------------------------------------------------*/

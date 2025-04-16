@@ -199,11 +199,6 @@ const SKINS = {
             "cost": "1250 coins",
             "released": "2014-07-16"
         },
-        "Quinciera LSP": {
-            "img": "../img/wiki/champion-skins/quinciera-lsp.png",
-            "cost": "“Can’t have these lumps!”",
-            "released": "2015-02-09"
-        },
         "Lumpy Space Prince": {
             "img": "../img/wiki/champion-skins/lumpy-space-prince.png",
             "cost": "2500 coins",
