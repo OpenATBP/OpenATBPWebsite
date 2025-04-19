@@ -17,7 +17,7 @@ const SKINS = {
             "cost": "2000 coins",
             "released": "2014-08-18"
         },
-        "Puhouy Beemo": {
+        "Puhoy Beemo": {
             "img": "../img/wiki/champion-skins/puhoy-bmo.png",
             "cost": "1250 coins",
             "released": "2015-02-09"
@@ -185,7 +185,7 @@ const SKINS = {
         "Skeletal Lich": {
             "img": "../img/wiki/champion-skins/skeletal-lich.png",
             "cost": "1250 coins",
-            "released": "2015-03-09"
+            "released": "2014-06-23"
         }
     },
     "lsp": {
@@ -209,7 +209,7 @@ const SKINS = {
         "Mystery Man": {
             "img": "../img/wiki/champion-skins/mystery-man.png",
             "cost": "1250 coins",
-            "released": "2014-03-19"
+            "released": "2014-06-23"
         }
     },
     "marceline": {
@@ -240,7 +240,7 @@ const SKINS = {
         "Xmas Sweater Pep": {
             "img": "../img/wiki/champion-skins/xmas-sweater-pep.png",
             "cost": "1250 coins",
-            "released": "2014-03-19"
+            "released": "2014-06-23"
         },
         "Zombie Butler": {
             "img": "../img/wiki/champion-skins/zombie-butler.png",
@@ -262,7 +262,7 @@ const SKINS = {
         "Parka Peebles": {
             "img": "../img/wiki/champion-skins/parka-peebles.png",
             "cost": "1250 coins",
-            "released": "2014-03-19"
+            "released": "2014-06-23"
         },
         "Prince Gumball": {
             "img": "../img/wiki/champion-skins/prince-gumball.png",
@@ -284,7 +284,7 @@ const SKINS = {
         "Cloaked Rattleballs": {
             "img": "../img/wiki/champion-skins/cloaked-rattleballs.png",
             "cost": "1250 coins",
-            "released": "2014-03-19"
+            "released": "2014-06-23"
         },
         "Spi-do-tron Rattleballs": {
             "img": "../img/wiki/champion-skins/spi-do-tron-rattleballs.png",
