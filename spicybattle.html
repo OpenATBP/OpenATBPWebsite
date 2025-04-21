@@ -900,7 +900,7 @@
 <main id="main-content">
     <header id="page-header">
         <h1>Spicy Battle</h1>
-        <p>Explore the leaderboard, player profiles, and champion statistics.</p>
+        <p>Explore the leaderboard, player profiles, and champion statistics</p>
     </header>
 
 
@@ -1305,11 +1305,10 @@
 
 
                     const isTop15 = leaderboardPosition && leaderboardPosition < 16;
-                    const cardBorderStyle = isTop15 ? `border-color: ${getColor(elo)}; border-width: 3px;` : '';
                     const headerBorderStyle = `border-color: ${getColor(elo)};`;
 
                     playerSearchResultSection.innerHTML = `
-                            <article id="search-result" class="player-card" style="${cardBorderStyle}">
+                            <article id="search-result" class="player-card">
                                 <header id="player-header" class="player-card-section">
                                      <img src="${profilePicUrl}" alt="${user.dname}'s profile picture" style="${headerBorderStyle}"
                                           onerror="this.onerror=null; this.src='img/profile-icons/Default.jpg'; this.alt='Default profile picture';">
@@ -1319,9 +1318,9 @@
                                 </header>
                                 <section id="stats-section" class="player-card-section">
                                     <p style="margin-top: 1rem"><strong>Current Rank</strong></p>
-                                    <p id="search-leaderboard-pos" style="color: ${isTop15 ? rankColor : 'inherit'};">Rank: #${leaderboardPosition}</p>
-                                    <p id="tier-name" style="color: ${rankColor};">Tier: ${tierName}</p>
-                                    <img src="${rankImageUrl}" alt="Rank: ${tierName}" style="width: 3vw; height: auto;">
+                                    <img src="${rankImageUrl}" alt="Rank: ${tierName}" style="width: 4vw; height: auto;">
+                                    <p id="search-leaderboard-pos">Rank: #${leaderboardPosition}</p>
+                                    <p id="tier-name"">Tier: ${tierName}</p>
                                     <p>Elo: ${elo}</p>
                                 </section>
                                 <section id="stats-section" class="player-card-section">
