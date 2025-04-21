@@ -3,58 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta name="description"
+          content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords"
+          content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
     <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:description"
+          content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
     <meta property="og:image" content="atbp-bee.png">
     <meta property="og:url" content="https://www.openatbp.xyz/spicybattle.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
-    <title>OpenATBP Spicy Battle</title>
+    <title>OpenATBP Spicy Battle - Leaderboards & Stats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="top-50-border.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-bg: #0a192f;
+            --secondary-bg: #112240;
+            --card-bg: rgba(21, 45, 82, 0.5);
+            --card-bg-hover: #122642;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --accent-color: #64ffda;
+            --border-color: #233554;
+            --rank-purple: #e600ff;
+            --rank-teal: #29dddd;
+            --rank-gold: #ffe504;
+            --rank-silver: #81acdc;
+            --rank-bronze: #ffa900;
+            --rank-master: #D947BC;
+            --rank-royal: #CE8526;
+            --rank-brave: #53AAE0;
+            --white: #ffffff;
+            --grey: #a0a0a0;
+
+            --font-sans: 'Rajdhani', sans-serif;
+            --border-radius: 8px;
+            --transition-speed: 0.3s;
+        }
+
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        #navigation {
+            background-color: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        #page-header {
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        #page-header h1 {
+            margin: 2rem 0 0.5rem 0;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        #page-header p {
+            margin-top: 0.5em;
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+
+
         #spicy-battle-menu {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.4em;
+            margin-bottom: 2.5rem;
+            background-color: var(--secondary-bg);
+            padding: 0.75rem 0;
+            border-radius: var(--border-radius);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         #spicy-battle-menu div {
-            margin: 0.5rem 1rem;
-            transition: color 0.3s;
-        }
-
-        #global-stats-btn,
-        #player-search-btn {
-            color: grey;
-        }
-
-        #leaderboard-btn {
-            color: white;
+            margin: 0 1.5rem;
+            transition: color var(--transition-speed), transform var(--transition-speed);
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
         }
 
         #spicy-battle-menu div:hover {
-            color: white;
+            color: var(--accent-color);
+            transform: translateY(-2px);
         }
 
         #spicy-battle-menu .active {
-            color: white;
+            color: var(--accent-color);
             cursor: default;
+            border-bottom: 3px solid var(--accent-color);
+            transform: translateY(-2px);
         }
 
         #spicy-battle-menu .inactive {
-            color: grey;
+            color: var(--text-secondary);
             cursor: pointer;
         }
+
 
         #leaderboard-section {
             margin-top: 2rem;
@@ -62,952 +133,3309 @@
 
         #leaderboard-section table {
             width: 30%;
-            border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            background-color: rgba(21, 45, 82, 0.2);
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
             margin: auto;
             overflow: hidden;
-            color: white;
-        }
-
-        #leaderboard-section tr {
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        #leaderboard-section tr:hover {
-            background-color: #122642;
-        }
-
-        .player-name {
-            transition: filter 0.3s ease;
-        }
-
-        .player-name:hover {
-            cursor: pointer;
-            text-decoration: underline;
-            filter: brightness(1.5);
+            color: var(--text-primary);
         }
 
         #leaderboard-section td {
-            padding: 10px;
+            padding: 12px 10px;
             text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
         }
 
-        .bottom-border-cell {
-            border-bottom: 1px solid #ddd;
+        #leaderboard-section td.player-name {
+
+            width: auto;
         }
+
+
+        #leaderboard-section td.leaderboard-position {
+            width: 10%;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        #leaderboard-section td.player-name {
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+
+        #leaderboard-section td:nth-child(2) {
+            width: 15%;
+        }
+
+
+        #leaderboard-section td:nth-child(4) {
+            width: 12%;
+            font-weight: 600;
+        }
+
+        #leaderboard-section td:nth-child(5) {
+            width: 15%;
+        }
+
+        #leaderboard-section tr:last-child td {
+            border-bottom: none;
+        }
+
+        #leaderboard-section tr {
+            transition: background-color var(--transition-speed);
+            font-weight: 500;
+        }
+
+        #leaderboard-section tr:hover {
+            background-color: var(--card-bg-hover);
+        }
+
 
         .profile-picture {
-            height: 8vh;
-            width: auto;
+            height: 55px;
+            width: 55px;
             border-radius: 50%;
+            border: 2px solid var(--border-color);
+            object-fit: cover;
+            vertical-align: middle;
         }
 
         .rank-image {
-            height: 7vh;
+            height: 50px;
             width: auto;
+            vertical-align: middle;
         }
 
         .leaderboard-position {
-            font-size: 2em;
+            font-size: 1.8em;
+            font-weight: 700;
+            width: 50px;
+            color: var(--text-secondary);
         }
 
-        .purple-border {
-            border-bottom: 2px solid #e600ff;
-        }
 
-        .teal-border {
-            border-bottom: 2px solid #29dddd;
-        }
-
-        .gold-border {
-            border-bottom: 2px solid #ffe504;
-        }
-
-        .silver-border {
-            border-bottom: 2px solid #81acdc;
-        }
-
-        .bronze-border {
-            border-bottom: 2px solid #ffa900;
-        }
-
-        .master-border {
-            border-bottom: 2px solid #D947BC;
-        }
-
-        .royal-border {
-            border-bottom: 2px solid #CE8526;
-        }
-
-        .brave-border {
-            border-bottom: 2px solid #53AAE0;
+        .purple-border, .teal-border, .gold-border, .silver-border, .bronze-border, .master-border, .royal-border, .brave-border, .regular-border {
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
         }
 
         .regular-border {
-            border-bottom: 2px solid white;
+            border-bottom-color: var(--border-color);
+        }
+
+
+        .purple-border {
+            border-bottom-color: var(--rank-purple);
+        }
+
+        .teal-border {
+            border-bottom-color: var(--rank-teal);
+        }
+
+        .gold-border {
+            border-bottom-color: var(--rank-gold);
+        }
+
+        .silver-border {
+            border-bottom-color: var(--rank-silver);
+        }
+
+        .bronze-border {
+            border-bottom-color: var(--rank-bronze);
+        }
+
+        .master-border {
+            border-bottom-color: var(--rank-master);
+        }
+
+        .royal-border {
+            border-bottom-color: var(--rank-royal);
+        }
+
+        .brave-border {
+            border-bottom-color: var(--rank-brave);
+        }
+
+
+        .purple, .teal, .gold, .silver, .bronze, .master, .royal, .brave {
+            text-decoration: none;
+            font-weight: 700;
+
+
         }
 
         .purple {
-            color: #e600ff;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-purple);
         }
 
         .teal {
-            color: #29dddd;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-teal);
         }
 
         .gold {
-            color: #ffe504;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-gold);
         }
 
         .silver {
-            color: #81acdc;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-silver);
         }
 
         .bronze {
-            color: #ffa900;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-bronze);
         }
 
         .master {
-            color: #D947BC;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-master);
         }
 
         .royal {
-            color: #CE8526;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-royal);
         }
 
         .brave {
-            color: #53AAE0;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 5px;
+            color: var(--rank-brave);
         }
 
-        #page-header {
-            text-align: center;
-            color: white;
-        }
-
-        #page-header h1 {
-            margin: 2rem 0 1rem 0;
-        }
-
-        #page-header p {
-            margin-top: 0.5em;
-        }
-
-        #global-stats-sorting-select {
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
 
         #global-stats-section {
-            color: white;
+            color: var(--text-primary);
             display: none;
             flex-direction: column;
             align-items: center;
+            padding: 0 1rem;
         }
 
-        .champion-card {
-            margin-bottom: 0.5rem;
+        #global-stats-sorting-select {
+            margin: 1rem 0 2rem 0;
+            font-size: 1.1rem;
+            padding: 0.5rem 0.8rem;
+            background-color: var(--secondary-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-weight: 600;
         }
 
-        .champion-card:nth-child(odd) {
-           background-color: rgb(10, 30, 56);
+
+        #global-stats-section > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .champion-card {
             display: flex;
             align-items: center;
-            border: 1px solid;
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 0;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .champion-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .champion-card img {
+            width: 5vw;
+            height: auto;
+            object-fit: contain;
+            margin-right: 1rem;
+            border-radius: 4px;
         }
 
         .champion-card p {
-            margin: 0;
+            margin: 0.2rem 0;
+            font-size: 0.95em;
         }
 
         .champion-stats {
             display: flex;
             flex-direction: column;
-            margin-left: 0.5rem;
-            margin-right: 1rem;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .champion-stats p:nth-child(1) {
-            font-size: 1.5rem;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+
+        #player-search-section {
+            color: var(--text-primary);
+            text-align: center;
+            display: none;
+            padding: 0 1rem;
+        }
+
+
+        #search-interface {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        #search-input {
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--border-color);
+            border-right: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            min-width: 250px;
+            outline: none;
+            transition: border-color var(--transition-speed);
+        }
+
+        #search-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        #search-btn {
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            background-color: var(--secondary-bg);
+            color: var(--accent-color);
+            cursor: pointer;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
             font-weight: bold;
         }
 
-        #player-search-section {
-            color: white;
-            text-align: center;
-            display: none;
-            list-style: none;
+        #search-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
         }
+
+        #search-again {
+            display: none;
+            font-size: 1.1rem;
+            padding: 0.7rem 1.2rem;
+            margin-left: 1rem;
+            background-color: var(--secondary-bg);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            font-weight: bold;
+        }
+
+        #search-again:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+        }
+
+
+        #hint-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            width: 100%;
+
+
+            box-sizing: border-box;
+
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            z-index: 10;
+            max-height: 250px;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        #hint-list li {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.6rem 1rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #hint-list li:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        #hint-list li:hover,
+        #hint-list li.active-hint {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+        }
+
 
         #player-search-result {
             display: flex;
             justify-content: center;
+            margin-top: 2rem;
         }
 
         #search-result {
-            margin-top: 2rem;
+            margin-top: 1rem;
             margin-bottom: 2rem;
-            background-color: rgb(10, 29, 54);
-            width: 350px;
-            border-radius: 1rem;
-            border: 0.3rem solid;
+            background-color: var(--secondary-bg);
+            width: 100%;
+            max-width: 450px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
             position: relative;
+            padding: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        #search-result div:nth-child(odd) {
-            background-color: rgb(13, 36, 66);
-        }
 
-        #search-result div {
+        #search-result > div {
             font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--primary-bg);
+        }
+
+        #search-result > div:last-child {
+            margin-bottom: 0;
         }
 
         #player-header {
             display: flex;
             align-items: center;
-            padding: 1rem;
-            border: 1px solid;
-            margin: 1rem;
-            border-radius: 0.5rem;
+
         }
 
         #player-header img {
-            width: 115px;
-            height: auto;
-            border-radius: 0.5rem;
-            border: 2px solid;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid;
+            object-fit: cover;
         }
 
         #player-name {
-            padding-left: 1rem;
+            padding-left: 1.5rem;
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
         #tier-name {
-            margin-left: 1rem;
+            margin: 0;
             font-weight: bold;
+            font-size: 1em;
+
+            text-transform: uppercase;
         }
 
-        #experience-section {
+        #experience-section,
+        #rank-section,
+        #stats-section {
+
+            text-align: left;
+        }
+
+        #rank-section .rank-details-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+            justify-content: center;
+
+
+        }
+
+
+        #rank-section .rank-text-details {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
-            margin: 1rem;
-            border: 1px solid;
-            text-align: center;
-            border-radius: 0.5rem;
+            align-items: flex-start;
+            gap: 0.2rem;
         }
 
-        #experience-section p:not(:last-child) {
-            margin: 0 0 0.3rem 0;
+        #rank-section .rank-image {
+            width: 60px;
+            height: auto;
+            flex-shrink: 0;
         }
 
-        #experience-section p:last-child {
+
+        #rank-section .rank-text-details p {
             margin: 0;
+            line-height: 1.4;
+        }
+
+        #rank-section .rank-text-details #tier-name {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1em;
+        }
+
+        #rank-section .rank-text-details #search-leaderboard-pos {
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        #experience-section p,
+        #stats-section p {
+            margin: 0.4rem 0;
+        }
+
+        #experience-section p:first-child,
+        #rank-section p:first-child,
+        #stats-section p:first-child {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
         }
 
         #rank-section {
             display: flex;
-            align-items: center;
-            padding: 1rem;
-            border: 1px solid;
-            margin: 1rem;
-            justify-content: center;
-            border-radius: 0.5rem;
-        }
-        
-        #stats-section {
-            display: flex;
             flex-direction: column;
-            padding: 1rem;
-            margin: 1rem;
-            border: 1px solid;
-            text-align: center;
-            border-radius: 0.5rem;
-            
+            width: fit-content;
         }
 
-        #stats-section p:not(:last-child) {
-            margin: 0 0 0.3rem 0;
+        #rank-section p {
+            margin: 0.5rem 0 0 0;
         }
 
-        #stats-section p:last-child {
-            margin: 0;
+        #rank-section img {
+            width: 60px;
+            height: auto;
         }
 
         #not-found-text {
             font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-top: 2rem;
         }
 
         #search-leaderboard-pos {
             font-size: 1.1rem;
             font-weight: bold;
+            display: block;
         }
 
-        #search-interface {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-        }
 
-        #search-interface input, button {
-            font-weight: bold;
-        }
-
-        #search-input, button {
-            font-size: 1.25rem;
-        }
-
-        #hint-list {
-            list-style: none;
-            margin: 1rem 0 0 0;
-        }
-
-        #hint-list li:not(:last-child) {
-            margin-bottom: 1rem;
-        }
-
-        #hint-list li {
-            font-size: 1.1rem;
-            font-weight: bold;
-            background-color: rgb(15, 40, 73);
-            width: fit-content;
-            padding: .5rem;
-            border-radius: .5rem;
-        }
-
-        #hint-list li:hover {
-            cursor: pointer;
-        }
-
-        #search-again {
-            display: none;
-        }
-        
         @media (max-width: 768px) {
+            #page-header h1 {
+                font-size: 2.2em;
+            }
+
+            #spicy-battle-menu {
+                font-size: 1.1em;
+                max-width: 95%;
+                padding: 0.5rem 0;
+            }
+
+            #spicy-battle-menu div {
+                margin: 0 0.8rem;
+            }
+
             #leaderboard-section table {
-                width: 100%;
-                max-width: 100%;
                 table-layout: fixed;
+                width: 90%;
+                max-width: 800px;
+                font-size: 0.9em;
+            }
+
+            #leaderboard-section td, #leaderboard-section th {
+                padding: 8px 5px;
             }
 
             .profile-picture {
-                width: 65px;
-                height: auto;
+                width: 45px;
+                height: 45px;
             }
 
             .rank-image {
-                width: 50px;
-                height: auto;
+                height: 40px;
             }
+
+            .leaderboard-position {
+                font-size: 1.5em;
+            }
+
+            #global-stats-section > div {
+                grid-template-columns: 1fr;
+            }
+
+            #search-input {
+                min-width: 180px;
+            }
+
+            #search-result {
+                max-width: 95%;
+            }
+
+            #player-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #player-header img {
+                margin-bottom: 0.5rem;
+                width: 80px;
+                height: 80px;
+            }
+
+            #player-name {
+                padding-left: 0;
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #spicy-battle-menu {
+                font-size: 1em;
+            }
+
+            #spicy-battle-menu div {
+                margin: 0 0.5rem;
+            }
+
+            .profile-picture {
+                width: 40px;
+                height: 40px;
+            }
+
+            .rank-image {
+                height: 35px;
+            }
+
+            .leaderboard-position {
+                font-size: 1.3em;
+                width: 35px;
+            }
+
+            #search-interface {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            #search-input {
+                min-width: 0;
+                flex-grow: 1;
+            }
+
+            #search-again {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+
+            #hint-list {
+                width: calc(100% - 52px);
+            }
+
+            #player-header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            #player-name {
+                font-size: 1.3em;
+            }
+
+            #search-result > div {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+
+        #spicy-battle-menu button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0 1.5rem;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color var(--transition-speed), transform var(--transition-speed);
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+        }
+
+        #spicy-battle-menu button:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        #spicy-battle-menu button.active {
+            color: var(--accent-color);
+            cursor: default;
+            border-bottom: 3px solid var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        #spicy-battle-menu button.inactive {
+            color: var(--text-secondary);
+        }
+
+
+        #player-search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            position: relative;
+        }
+
+
+        #player-search-form .search-container {
+            display: flex;
+        }
+
+
+        #player-search-form #hint-list {
+
+            left: 0;
+            width: auto;
+            min-width: 250px;
         }
     </style>
 </head>
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="img/atbp-bee.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="index.html">HOME PAGE</a>
-            <a class="navigation-a" href="notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="wiki-home.html">WIKI</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div id="page-header">
-        <h1>Spicy Battle</h1>
-    </div>
-    <div id="spicy-battle-menu">
-        <div id="leaderboard-btn">Leaderboard</div>
-        <div id="global-stats-btn" class="inactive">Global Stats</div>
-        <div id="player-search-btn" class="inactive">Player Search</div>
-    </div>
 
-    <div id="leaderboard-section"></div>
-    <div id="global-stats-section">
+<header id="navigation" class="site-header">
+
+    <a href="https://www.reddit.com/r/battleparty/" target="_blank" aria-label="OpenATBP on Reddit">
+        <img src="img/reddit.png" alt="r/battleparty Reddit Icon" id="reddit-link-img">
+    </a>
+    <a href="index.html" aria-label="OpenATBP Home">
+        <img src="img/atbp-bee.png" id="nav-logo" alt="OpenATBP Logo">
+    </a>
+
+    <button id="mobile-nav-open-btn" aria-label="Open Menu" aria-controls="mobile-nav" aria-expanded="false">
+        <img src="img/menu.png" alt="">
+    </button>
+
+
+    <nav id="mobile-nav" aria-label="Mobile Main Menu">
+
+        <button id="mobile-nav-close" aria-label="Close Menu">
+            <img src="img/close.png" alt="">
+        </button>
+        <ul>
+            <li><a href="index.html">HOME PAGE</a></li>
+            <li><a href="notes.html">PATCH NOTES</a></li>
+            <li><a href="wiki-home.html">WIKI</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></li>
+        </ul>
+    </nav>
+
+
+    <nav id="desktop-nav" aria-label="Desktop Main Menu">
+        <a class="navigation-a" href="index.html">HOME PAGE</a>
+        <a class="navigation-a" href="notes.html">PATCH NOTES</a>
+        <a class="navigation-a" href="wiki-home.html">WIKI</a>
+        <a class="navigation-a" target="_blank" rel="noopener noreferrer" href="https://discord.gg/YzJkPDjZxG">DISCORD
+            SERVER</a>
+        <a class="navigation-a" target="_blank" rel="noopener noreferrer" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+    </nav>
+</header>
+
+<main id="main-content">
+    <header id="page-header">
+        <h1>Spicy Battle</h1>
+        <p>Explore the leaderboard, player profiles, and champion statistics.</p>
+    </header>
+
+
+    <nav id="spicy-battle-menu" aria-label="Spicy Battle Sections">
+
+        <button type="button" id="leaderboard-btn" class="active" aria-controls="leaderboard-section">Leaderboard
+        </button>
+        <button type="button" id="global-stats-btn" class="inactive" aria-controls="global-stats-section">Global Stats
+        </button>
+        <button type="button" id="player-search-btn" class="inactive" aria-controls="player-search-section">Player
+            Search
+        </button>
+    </nav>
+
+
+    <section id="leaderboard-section" aria-labelledby="leaderboard-btn"></section>
+
+    <section id="global-stats-section" aria-labelledby="global-stats-btn" style="display: none;">
         <p style="margin: 0; font-size: 1.1rem;">Sorting:</p>
-        <select id="global-stats-sorting-select">
+        <select id="global-stats-sorting-select" aria-label="Sort Champion Stats By">
             <option selected value="champion">Alphabetical</option>
             <option value="playsPVP">Games played</option>
             <option value="wr">Win rate</option>
             <option value="avgKills">Average kills per game</option>
             <option value="avgDmg">Average damage per game</option>
         </select>
-    </div>
-    <div id="player-search-section">
-            <div id="search-interface">
+
+
+    </section>
+
+    <section id="player-search-section" aria-labelledby="player-search-btn" style="display: none;">
+        <div id="search-interface">
+
+            <form id="player-search-form" role="search" action="#" method="get" onsubmit="return false;">
+
+                <label for="search-input" class="visually-hidden">Search Player Name</label>
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Enter player's display name" autocomplete="off">
-                    <button type="submit" id="search-btn">
-                        <i class="fa fa-search"></i>
+                    <input type="text" id="search-input" name="playerName" placeholder="Enter player's display name"
+                           autocomplete="off">
+                    <button type="submit" id="search-btn" aria-label="Search Player">
+                        <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                     <ul id="hint-list"></ul>
                 </div>
-                <button type="button" id="search-again">Search another player</button>
-            </div>
-        <div id="player-search-result"></div>
-    </div>
-    <script>
-        function getTop50Border(elo) {
-            if (elo > 439) return 'purple-border';
-            else if (elo > 379) return 'teal-border';
-            else if (elo > 319) return 'gold-border';
-            else if (elo > 259) return 'silver-border';
-            else if (elo > 198) return 'bronze-border';
-            else if (elo > 72) return 'master-border';
-            else if (elo > 23) return 'royal-border';
-            else return 'brave-border';
-        }
+            </form>
+            <button type="button" id="search-again" style="display: none;">Search another player</button>
+        </div>
 
-        function getTop50NumberColor(elo) {
-            if (elo > 439) return 'purple';
-            else if (elo > 379) return 'teal';
-            else if (elo > 319) return 'gold';
-            else if (elo > 259) return 'silver';
-            else if (elo > 198) return 'bronze';
-            else if (elo > 72) return 'master';
-            else if (elo > 23) return 'royal';
-            else return 'brave';
-        }
+        <div id="player-search-result" aria-live="polite">
 
-        function getRankImage(elo) {
-            if (elo > 439) return 'img/ranks/4-4.png';
-            else if (elo > 379) return 'img/ranks/4-3.png';
-            else if (elo > 319) return 'img/ranks/4-2.png';
-            else if (elo > 259) return 'img/ranks/4-1.png';
-            else if (elo > 198) return 'img/ranks/4-0.png';
-            else if (elo > 167) return 'img/ranks/3-3.png';
-            else if (elo > 136) return 'img/ranks/3-2.png';
-            else if (elo > 105) return 'img/ranks/3-1.png';
-            else if (elo > 72) return 'img/ranks/3-0.png';
-            else if (elo > 56) return 'img/ranks/2-2.png';
-            else if (elo > 40) return 'img/ranks/2-1.png';
-            else if (elo > 23) return 'img/ranks/2-0.png';
-            else if (elo > 11) return 'img/ranks/1-1.png';
-            else return 'img/ranks/1-0.png';
-        }
+        </div>
+    </section>
 
-        function getTierName(elo) {
-            if (elo < 24) return 'BRAVE HERO';
-            else if (elo < 73) return 'ROYAL LEGEND';
-            else if (elo < 199) return 'MASTER OF BATTLE';
-            else return 'IMMORTAL WARRIOR';
-        }
+</main>
 
-        async function createLeaderboard() {
-            try {
-                const res = await fetch('https://beta.openatbp.xyz/data/rankings');
-                const data = await res.json();
 
-                if (data.length > 0) {
-                    const leaderboardSection = document.getElementById('leaderboard-section');
-                    if (leaderboardSection) {
-                        const table = document.createElement('table');
+<script>
 
-                        data.forEach((object, index, array) => {
-                            let elo = object.player.elo;
-                            let dname = object.user.dname;
 
-                            let row = document.createElement('tr'); 
+    function getTop50Border(elo) {
+        if (elo > 439) return 'purple-border';
+        else if (elo > 379) return 'teal-border';
+        else if (elo > 319) return 'gold-border';
+        else if (elo > 259) return 'silver-border';
+        else if (elo > 198) return 'bronze-border';
+        else if (elo > 72) return 'master-border';
+        else if (elo > 23) return 'royal-border';
+        else return 'brave-border';
+    }
 
-                            let numberCell = document.createElement('td');
-                            numberCell.textContent = index + 1;
-                            numberCell.className = 'leaderboard-position';
+    function getTop50NumberColor(elo) {
+        if (elo > 439) return 'purple';
+        else if (elo > 379) return 'teal';
+        else if (elo > 319) return 'gold';
+        else if (elo > 259) return 'silver';
+        else if (elo > 198) return 'bronze';
+        else if (elo > 72) return 'master';
+        else if (elo > 23) return 'royal';
+        else return 'brave';
+    }
 
-                            let imageCell = document.createElement('td');
-                            let profilePicture = document.createElement('img');
-                            profilePicture.setAttribute('src', 'img/profile-icons/Default.jpg'); // default profile image until actual pfps are implemented
-                            profilePicture.classList.add('profile-picture');
-                            imageCell.appendChild(profilePicture);
+    function getRankImage(elo) {
+        if (elo > 439) return 'img/ranks/4-4.png';
+        else if (elo > 379) return 'img/ranks/4-3.png';
+        else if (elo > 319) return 'img/ranks/4-2.png';
+        else if (elo > 259) return 'img/ranks/4-1.png';
+        else if (elo > 198) return 'img/ranks/4-0.png';
+        else if (elo > 167) return 'img/ranks/3-3.png';
+        else if (elo > 136) return 'img/ranks/3-2.png';
+        else if (elo > 105) return 'img/ranks/3-1.png';
+        else if (elo > 72) return 'img/ranks/3-0.png';
+        else if (elo > 56) return 'img/ranks/2-2.png';
+        else if (elo > 40) return 'img/ranks/2-1.png';
+        else if (elo > 23) return 'img/ranks/2-0.png';
+        else if (elo > 11) return 'img/ranks/1-1.png';
+        else return 'img/ranks/1-0.png';
+    }
 
-                            let nameCell = document.createElement('td');
-                            nameCell.classList.add('player-name');
-                        
-                            nameCell.addEventListener('click', () => {
-                                document.getElementById('leaderboard-section').style.display = 'none';
-                                document.getElementById('player-search-section').style.display = 'block';
+    function getTierName(elo) {
+        if (elo < 24) return 'BRAVE HERO';
+        else if (elo < 73) return 'ROYAL LEGEND';
+        else if (elo < 199) return 'MASTER OF BATTLE';
+        else return 'IMMORTAL WARRIOR';
+    }
 
-                                document.getElementById('leaderboard-btn').classList.remove('active');
-                                document.getElementById('leaderboard-btn').classList.add('inactive');
-                                document.getElementById('player-search-btn').classList.remove('inactive');
-                                document.getElementById('player-search-btn').classList.add('active');
+    function getColor(elo) {
 
-                                searchAndDisplay(false, dname);
-                            });
+        return elo < 24 ? '#53AAE0' : elo < 73 ? '#CE8526' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+    }
 
-                            dname.split(' ').forEach((word, index, array) => {
-                                nameCell.appendChild(document.createTextNode(word));
-                                if (index < array.length - 1) {
-                                    nameCell.appendChild(document.createElement('br'));
-                                }
-                            });
+    async function createLeaderboard() {
+        try {
+            const res = await fetch('https://beta.openatbp.xyz/data/rankings');
+            const data = await res.json();
 
-                            let eloCell = document.createElement('td');
-                            eloCell.textContent = elo;
+            console.log("Leaderboard Data:", data);
 
-                            let rankImageCell = document.createElement('td');
-                            let rankImage = document.createElement('img');
+            if (data.length > 0) {
+                const leaderboardSection = document.getElementById('leaderboard-section');
+                if (leaderboardSection) {
 
-                            rankImage.setAttribute('src', getRankImage(elo));
-                            rankImage.className = 'rank-image';
-                            rankImageCell.appendChild(rankImage);
+                    leaderboardSection.innerHTML = '';
+                    const table = document.createElement('table');
 
-                            // styling based on position
-                            let position = index + 1;
-                            let borderName = 'regular-border';
-                            if (position < 16) {
-                                borderName = getTop50Border(elo);
-                                numberCell.classList.add(getTop50NumberColor(elo));
-                                nameCell.style.color = getColor(elo);
-                            }
-                            row.classList.add(borderName);
-                            
-                            row.appendChild(numberCell);
-                            row.appendChild(imageCell);
-                            row.appendChild(nameCell);
-                            row.appendChild(eloCell);
-                            row.appendChild(rankImageCell);
+                    const tbody = document.createElement('tbody');
 
-                            table.appendChild(row);
+                    data.forEach((object, index) => {
+                        let elo = object.player?.elo ?? 0;
+                        let dname = object.user?.dname ?? 'Unknown Player';
+
+                        let row = tbody.insertRow();
+
+                        let numberCell = row.insertCell();
+                        numberCell.textContent = index + 1;
+                        numberCell.className = 'leaderboard-position';
+
+                        let imageCell = row.insertCell();
+                        let profilePicture = document.createElement('img');
+                        let pfp = object.user?.pfp || 'Default.jpg';
+                        profilePicture.src = `img/profile-icons/${pfp}`;
+                        profilePicture.alt = `${dname} profile picture`;
+                        profilePicture.classList.add('profile-picture');
+
+                        profilePicture.onerror = function () {
+                            this.src = 'img/profile-icons/Default.jpg';
+                            this.alt = 'Default profile picture';
+                        };
+                        imageCell.appendChild(profilePicture);
+
+                        let nameCell = row.insertCell();
+                        nameCell.classList.add('player-name');
+
+                        nameCell.dataset.playerName = dname;
+
+
+                        nameCell.addEventListener('click', () => {
+                            document.getElementById('leaderboard-section').style.display = 'none';
+                            document.getElementById('global-stats-section').style.display = 'none';
+                            document.getElementById('player-search-section').style.display = 'block';
+
+
+                            document.getElementById('leaderboard-btn').classList.remove('active');
+                            document.getElementById('leaderboard-btn').classList.add('inactive');
+                            document.getElementById('global-stats-btn').classList.remove('active');
+                            document.getElementById('global-stats-btn').classList.add('inactive');
+                            document.getElementById('player-search-btn').classList.add('active');
+                            document.getElementById('player-search-btn').classList.remove('inactive');
+
+
+                            searchAndDisplay(false, dname);
+
+
+                            document.getElementById('player-search-section').scrollIntoView({behavior: 'smooth'});
                         });
-                        leaderboardSection.appendChild(table);
-                    }
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
 
-        function getChampionImage(avatar) {
-            switch (avatar) {
-                case "cinnamonbun":
-                    return "img/champions/cb.png";
-                case "flame":
-                    return "img/champions/fp.png";
-                case "princessbubblegum":
-                    return "img/champions/pb.png";
-                case "peppermintbutler":
-                    return "img/champions/pepbut.png";
-                default:
-                    return `img/champions/${avatar}.png`;                 
-            }
-        }
 
-        function getFormalName(avatar) {
-            switch (avatar) {
-                case "bmo":
-                    return "Beemo";
-                case "cinnamonbun":
-                    return "Cinnamon Bun";
-                case "flame":
-                    return "Flame Princess";
-                case "iceking":
-                    return "Ice King";
-                case "lsp": 
-                    return "Lumpy Space Princess";
-                case "magicman":
-                    return "Magic Man";
-                case "peppermintbutler":
-                    return "Peppermint Butler";
-                case "princessbubblegum":  
-                    return "Princess Bubblegum";
-                default:
-                    return avatar.charAt(0).toUpperCase() + avatar.slice(1);                    
-            }
-        }
-
-        function getColor(elo) {
-            return elo < 24 ? '#53AAE0' : elo < 73 ? '#CE8526' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
-        }
-
-        function determineIfObjSmaller(obj, obj2, sorting) {
-            let objGamesPlayed = obj.playsPVP;
-            let objWins = obj.winsPVP;
-            let objKills = obj.kills;
-            let objDeaths = obj.deaths;
-            let objDamage = obj.damage;
-
-            let obj2GamesPlayed = obj2.playsPVP;
-            let obj2Wins = obj2.winsPVP;
-            let obj2Kills = obj2.kills;
-            let obj2Deaths = obj2.deaths;
-            let obj2Damage = obj2.damage;
-
-            switch (sorting) {
-                case 'champion': //alphabetical sorting
-                    let objChar1 = obj.champion.charCodeAt(0);
-                    let obj2Char1 = obj2.champion.charCodeAt(0);
-                    let objChar2 = obj.champion.charCodeAt(1);
-                    let obj2Char2 = obj2.champion.charCodeAt(1);
-                    let objChar3 = obj.champion.charCodeAt(2);
-                    let obj2Char3 = obj2.champion.charCodeAt(2);
-
-                    if (objChar1 < obj2Char1) return false;
-                    else if (objChar1 > obj2Char1) return true;
-                    else if (objChar1 == obj2Char1) {
-                        if (objChar2 < obj2Char2) return false;
-                        else if (objChar2 > obj2Char2) return true;
-                        else if (objChar2 == obj2Char2) {
-                            if (objChar3 < obj2Char3) return false;
-                            else return true;
-                        }
-                    }
-
-                case 'playsPVP':
-                    return objGamesPlayed < obj2GamesPlayed;
-
-                case 'wr':
-                    let objWr = objGamesPlayed > 0 ? Math.round((objWins / objGamesPlayed) * 100) : 0; 
-                    let obj2Wr = obj2GamesPlayed > 0 ? Math.round((obj2Wins / obj2GamesPlayed) * 100) : 0; 
-                    return objWr < obj2Wr;
-
-                case 'avgKills':
-                    let objAvgKills = objGamesPlayed > 0 ? (objKills / objGamesPlayed).toFixed(2) : objKills;
-                    let obj2AvgKills = obj2GamesPlayed > 0 ? (obj2Kills / obj2GamesPlayed).toFixed(2) : obj2Kills;
-                    return objAvgKills < obj2AvgKills;
-
-                case 'avgDmg':
-                    let objAvgDmg = objGamesPlayed > 0 ? Math.round(objDamage / objGamesPlayed) : 0;
-                    let obj2AvgDmg = obj2GamesPlayed > 0 ? Math.round(obj2Damage / obj2GamesPlayed) : 0;
-                    return objAvgDmg < obj2AvgDmg;
-            }
-        }
-
-        async function getSortedChampStatsArray(sorting) { 
-            try {
-                let array = [];
-                const res = await fetch('https://beta.openatbp.xyz/data/champstats');
-                const data = await res.json();
-
-                if (data.length > 0) {
-                    for (let i = 0; i < data.length; i++) {
-                        for (let n = 0; n < data.length - 1; n++) {
-                            let obj = data[n];
-                            let obj2 = data[n + 1];
-
-                            let objSmaller = determineIfObjSmaller(obj, obj2, sorting);
-                            if (objSmaller) {
-                                let temp = data[n];
-                                data[n] = data[n + 1];
-                                data[n + 1] = temp;
+                        dname.split(' ').forEach((word, idx, arr) => {
+                            nameCell.appendChild(document.createTextNode(word));
+                            if (idx < arr.length - 1) {
+                                nameCell.appendChild(document.createElement('br'));
                             }
+                        });
+
+                        let eloCell = row.insertCell();
+                        eloCell.textContent = elo;
+
+                        let rankImageCell = row.insertCell();
+                        let rankImage = document.createElement('img');
+                        rankImage.src = getRankImage(elo);
+                        rankImage.alt = `Rank: ${getTierName(elo)}`;
+                        rankImage.className = 'rank-image';
+                        rankImageCell.appendChild(rankImage);
+
+
+                        let position = index + 1;
+                        let borderName = 'regular-border';
+                        if (position < 16) {
+                            borderName = getTop50Border(elo);
+                            numberCell.classList.add(getTop50NumberColor(elo));
+                            nameCell.style.color = getColor(elo);
+                        } else {
+                            nameCell.style.color = '';
                         }
-                    }
-                    return data;
+
+                        row.classList.add(borderName);
+
+                    });
+                    table.appendChild(tbody);
+                    leaderboardSection.appendChild(table);
+                } else {
+                    console.error("Leaderboard section not found!");
                 }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        async function searchAndDisplay(fromInput, textToSearch) {
-            let textContent;
-
-            if (fromInput) {
-                textContent = document.getElementById('search-input').value;
             } else {
-                textContent = textToSearch;
-            }
-            
-            if (textContent.charAt(textContent.length - 1) === ' ') {
-                textContent = textContent.substr(0, textContent.length - 1);
-            }
-        
-            const playerSearchSection = document.getElementById('player-search-section');
-            const playerSearchResultSection = document.getElementById('player-search-result');
 
-            if (textContent.length > 0) {
-                const res = await fetch('https://beta.openatbp.xyz/data/player', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({playerName: textContent}),
-                });
-                
-                const data = await res.json();
-                let innerContent;
-                let leaderboardPosition;
-                let elo;
-
-                const searchUi = document.querySelector('.search-container');
-                const searchAgainBtn = document.getElementById('search-again');
-                const input = document.getElementById('search-input');
-
-                searchUi.style.display = 'none';
-                searchAgainBtn.style.display = 'block';
-
-                searchAgainBtn.addEventListener('click', () => {
-                    searchUi.style.display = 'block';
-                    searchAgainBtn.style.display = 'none';
-                    playerSearchResultSection.innerHTML = '';
-                    input.value = '';
-                });
-
-                if (data.player) {
-
-                    let dname = data.user.dname;
-                    let level = data.player.rank;
-                    let gamesPlayed = data.player.playsPVP;
-                    let wins = data.player.winsPVP;
-                    let deaths = data.player.deaths;
-                    let kills = data.player.kills;
-                    let largestSpree = data.player.largestSpree;
-                    let largestMulti = data.player.largestMulti;
-
-                    elo = data.player.elo;
-                    leaderboardPosition = data.player.leaderboardPosition;
-
-                    let wr = gamesPlayed > 0 ? Math.round((wins / gamesPlayed) * 100) : 0;
-                    let avgKillsGame = gamesPlayed > 0 ? (kills / gamesPlayed).toFixed(2) : kills;
-                    let avgKillsLife = deaths > 0 ? (kills / deaths).toFixed(2) : kills;
-
-                    let rankImagePath = getRankImage(elo);
-                    let tierName = getTierName(elo);
-
-                    innerContent = `
-                        <div id="search-result">
-                            <div id="player-header">
-                                <img src="img/profile-icons/Default.jpg" alt="Player Image" class="player-image">
-                                <h2 id="player-name">${dname}</h2>
-                            </div>
-                            <div id="experience-section">
-                                <p>Player level: ${level}</p>
-                                <p>Games played: ${gamesPlayed}</p>
-                            </div>
-                            <div id="rank-section">
-                                <img src="${rankImagePath}" alt="Elo Image">
-                                <p id="tier-name">${tierName}</p>
-                            </div>
-                            <div id="stats-section">
-                                <p id='search-leaderboard-pos'>Position on the leadeboard: ${leaderboardPosition}</p>
-                                <p>Elo: ${elo}</p>
-                                <p>Win rate: ${wr}%</p>
-                                <p>Average kills per game: ${avgKillsGame}</p>
-                                <p>Average kills per life: ${avgKillsLife}</p>
-                                <p>Largest killing spree: ${largestSpree}</p>
-                                <p>Largest multi kill: ${largestMulti}</p>
-                            </div>
-                        </div>
-                    `;
-
-                } else {
-                    innerContent = `
-                        <p id='not-found-text'>${data.message}</p>
-                    `;
+                const leaderboardSection = document.getElementById('leaderboard-section');
+                if (leaderboardSection) {
+                    leaderboardSection.innerHTML = '<p>Leaderboard data is currently unavailable.</p>';
                 }
-
-                playerSearchResultSection.innerHTML = innerContent;
-
-                if (leaderboardPosition < 16 && data.player) {
-                    const leaderboardText = document.getElementById('search-leaderboard-pos');
-
-                    if (leaderboardText) {
-                        let color = elo < 24 ? '#53AAE0' : elo < 73 ? '#42c2d9' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
-                        leaderboardText.style.color = color;
-                    }
-
-                    const searchResult = document.getElementById('search-result');
-                    searchResult.setAttribute('id', 'search-result-top50');
-                }
+            }
+        } catch (error) {
+            console.error("Error fetching or creating leaderboard:", error);
+            const leaderboardSection = document.getElementById('leaderboard-section');
+            if (leaderboardSection) {
+                leaderboardSection.innerHTML = '<p>Could not load leaderboard data. Please try again later.</p>';
             }
         }
+    }
 
-        async function createGlobalStats(sorting) {
-            try {
-                const data = await getSortedChampStatsArray(sorting);
-                const globalStatsSection = document.getElementById('global-stats-section');
-                const parentDiv = document.createElement('div');
-                parentDiv.setAttribute('id', `${sorting}`);
 
-                if (Array.isArray(data)) {
-                    data.forEach((element) => {
-                        let champName = element.champion;
-                        let playsPVP = element.playsPVP;
-                        let winsPVP = element.winsPVP;
-                        let kills = element.kills;
-                        let assists = element.assists;
-                        let damage = element.damage;
+    function getChampionImage(avatar) {
 
-                        let div = document.createElement('div');
-                        div.className = 'champion-card';
-                        
-                        let wr = playsPVP > 0 ? Math.round((winsPVP / playsPVP) * 100) : 0;
-                        let avgKills = playsPVP > 0 ? (kills / playsPVP).toFixed(2) : kills;
-                        let avgDmg = playsPVP > 0 ? Math.round(damage / playsPVP) : 0;
+        const basePath = "img/champions/";
+        let imageName;
+        switch (avatar) {
+            case "cinnamonbun":
+                imageName = "cb.png";
+                break;
+            case "flame":
+                imageName = "fp.png";
+                break;
+            case "princessbubblegum":
+                imageName = "pb.png";
+                break;
+            case "peppermintbutler":
+                imageName = "pepbut.png";
+                break;
 
-                        let championImage = getChampionImage(champName);
-                        let formalName = getFormalName(champName);
-                        
-                        div.innerHTML = `
-                            <img src="${championImage}">
-                            <div class="champion-stats">
-                                <p>${formalName}</p>
-                                <p>Games played: ${playsPVP}</p>
-                                <p>Win rate: ${wr}%</p>
-                                <p>Average kills per game: ${avgKills}</p>
-                                <p>Average damage per game: ${avgDmg}</p>
-                            </div>
-                        `;
-                        parentDiv.appendChild(div);
-                    });
-                    globalStatsSection.appendChild(parentDiv);
-                }
-            } catch (error) {
-                console.log(error);
-            }
+            default:
+                imageName = `${avatar}.png`;
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const buttons = document.querySelectorAll('#spicy-battle-menu div');
-            const sections = document.querySelectorAll('[id$="-section"]'); // Select all sections ending with "-section"
+        if (!avatar || typeof avatar !== 'string' || avatar.length === 0) {
+            console.warn("Invalid avatar name provided for image:", avatar);
+            return "img/champions/default.png";
+        }
+        return basePath + imageName;
+    }
 
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    // If the clicked button is already active, do nothing
-                    if (this.classList.contains('active')) return;
+    function getFormalName(avatar) {
+        if (!avatar || typeof avatar !== 'string') return "Unknown Champion";
+        switch (avatar) {
+            case "bmo":
+                return "Beemo";
+            case "cinnamonbun":
+                return "Cinnamon Bun";
+            case "flame":
+                return "Flame Princess";
+            case "iceking":
+                return "Ice King";
+            case "lsp":
+                return "Lumpy Space Princess";
+            case "magicman":
+                return "Magic Man";
+            case "peppermintbutler":
+                return "Peppermint Butler";
+            case "princessbubblegum":
+                return "Princess Bubblegum";
 
-                    // Remove 'active' class from all buttons and add 'inactive'
-                    buttons.forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.classList.add('inactive');
-                    });
+            default:
 
-                    // Add 'active' class to the clicked button and remove 'inactive'
-                    this.classList.add('active');
-                    this.classList.remove('inactive');
+                return avatar.charAt(0).toUpperCase() + avatar.slice(1);
+        }
+    }
 
-                    // Get the button's id and corresponding section
-                    const btnId = this.id;
-                    const sectionId = btnId.split('-btn')[0] + '-section';
-                    const clickedSection = document.getElementById(sectionId);
 
-                    // hide all inactive sections
-                    sections.forEach(section => {
-                        section.style.display = 'none';
-                    })
+    function determineIfObjSmaller(obj, obj2, sorting) {
 
-                    // display active section after the button was clicked
-                    if (clickedSection) {
-                        switch (sectionId) {
-                            case 'global-stats-section':
-                                clickedSection.style.display = 'flex';
-                                if (clickedSection.children.length < 3) {
-                                    let defaultSorting = 'champion'; //alphabetical sorting
-                                    createGlobalStats(defaultSorting);
-                                }
+
+        const getValue = (playerObj, key) => playerObj?.[key] ?? 0;
+
+        const plays1 = getValue(obj, 'playsPVP');
+        const plays2 = getValue(obj2, 'playsPVP');
+        const wins1 = getValue(obj, 'winsPVP');
+        const wins2 = getValue(obj2, 'winsPVP');
+        const kills1 = getValue(obj, 'kills');
+        const kills2 = getValue(obj2, 'kills');
+        const damage1 = getValue(obj, 'damage');
+        const damage2 = getValue(obj2, 'damage');
+        const champ1 = obj?.champion ?? '';
+        const champ2 = obj2?.champion ?? '';
+
+        switch (sorting) {
+            case 'champion':
+                return champ1.toLowerCase() > champ2.toLowerCase();
+
+            case 'playsPVP':
+                return plays1 < plays2;
+
+            case 'wr':
+                let wr1 = plays1 > 0 ? (wins1 / plays1) : 0;
+                let wr2 = plays2 > 0 ? (wins2 / plays2) : 0;
+                return wr1 < wr2;
+
+            case 'avgKills':
+                let avgKills1 = plays1 > 0 ? (kills1 / plays1) : 0;
+                let avgKills2 = plays2 > 0 ? (kills2 / plays2) : 0;
+                return avgKills1 < avgKills2;
+
+            case 'avgDmg':
+                let avgDmg1 = plays1 > 0 ? (damage1 / plays1) : 0;
+                let avgDmg2 = plays2 > 0 ? (damage2 / plays2) : 0;
+                return avgDmg1 < avgDmg2;
+
+            default:
+                return false;
+        }
+    }
+
+    async function getSortedChampStatsArray(sorting) {
+        try {
+            const res = await fetch('https://beta.openatbp.xyz/data/champstats');
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            const data = await res.json();
+
+            if (Array.isArray(data) && data.length > 0) {
+
+                data.sort((a, b) => {
+
+
+                    if (sorting === 'champion') {
+
+                        return a.champion.toLowerCase().localeCompare(b.champion.toLowerCase());
+                    } else {
+
+                        const playsA = a?.playsPVP ?? 0;
+                        const playsB = b?.playsPVP ?? 0;
+                        let valA, valB;
+
+                        switch (sorting) {
+                            case 'playsPVP':
+                                valA = playsA;
+                                valB = playsB;
                                 break;
-                            
+                            case 'wr':
+                                valA = playsA > 0 ? (a.winsPVP / playsA) : 0;
+                                valB = playsB > 0 ? (b.winsPVP / playsB) : 0;
+                                break;
+                            case 'avgKills':
+                                valA = playsA > 0 ? (a.kills / playsA) : 0;
+                                valB = playsB > 0 ? (b.kills / playsB) : 0;
+                                break;
+                            case 'avgDmg':
+                                valA = playsA > 0 ? (a.damage / playsA) : 0;
+                                valB = playsB > 0 ? (b.damage / playsB) : 0;
+                                break;
                             default:
-                                clickedSection.style.display = 'block';
-                                break;
+                                return 0;
                         }
-
-                        const hintsSection = document.getElementById('hint-list');
-                        const playerSearchResultSection = document.getElementById('player-search-result');
-                        let computedStyle = window.getComputedStyle(hintsSection);
-                        let displayValue = computedStyle.getPropertyValue('display');
-
-                        const searchUi = document.querySelector('.search-container');
-                        const searchAgainBtn = document.getElementById('search-again');
-                        const input = document.getElementById('search-input');
-                        
-                        if (sectionId === 'global-stats-section' || sectionId === 'leaderboard-section' && displayValue == 'block') {
-                            searchUi.style.display = 'block';
-                            searchAgainBtn.style.display = 'none';
-                            playerSearchResultSection.innerHTML = '';
-                            input.value = '';
-                        }
+                        return valB - valA;
                     }
                 });
+                return data;
+            } else {
+                console.warn("No champion stats data received or data is not an array.");
+                return [];
+            }
+        } catch (err) {
+            console.error("Error fetching or sorting champion stats:", err);
+            return [];
+        }
+    }
+
+
+    async function searchAndDisplay(fromInput, textToSearch) {
+        const playerSearchSection = document.getElementById('player-search-section');
+        const playerSearchResultSection = document.getElementById('player-search-result');
+        const input = document.getElementById('search-input');
+        const searchUi = document.querySelector('#player-search-form .search-container');
+        const searchAgainBtn = document.getElementById('search-again');
+        const hintList = document.getElementById('hint-list');
+
+        let searchTerm = fromInput ? input.value.trim() : textToSearch.trim();
+
+
+        playerSearchResultSection.innerHTML = '<p>Searching...</p>';
+        hintList.innerHTML = '';
+        hintList.style.display = 'none';
+
+        if (searchTerm.length === 0) {
+            playerSearchResultSection.innerHTML = '<p>Please enter a player name to search.</p>';
+            return;
+        }
+
+        try {
+            const res = await fetch('https://beta.openatbp.xyz/data/player', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({playerName: searchTerm}),
             });
 
-            const select = document.getElementById('global-stats-sorting-select');
+            if (!res.ok) {
 
-            select.addEventListener('change', () => {
-                let option = select.value;
-                let sortedSection = document.getElementById(option);
-
-                if (!sortedSection) {
-                    createGlobalStats(option); // create global stats with the selected sorting option
+                if (res.status === 404) {
+                    playerSearchResultSection.innerHTML = `<p id="not-found-text">Player "${searchTerm}" not found.</p>`;
                 } else {
-                    sortedSection.style.display = 'block';
+                    throw new Error(`HTTP error! status: ${res.status}`);
                 }
+            } else {
+                const data = await res.json();
+                console.log("Player Data:", data);
 
-                let allSortedSections = ['champion', 'playsPVP', 'wr', 'avgKills', 'avgDmg'];
-                const index = allSortedSections.indexOf(option);
+                if (data && data.player && data.user) {
 
-                if (index > -1) allSortedSections.splice(index, 1);
+                    const {player, user} = data;
+                    const elo = player.elo ?? 0;
+                    const leaderboardPosition = player.leaderboardPosition;
 
-                allSortedSections.forEach((id) => {
-                    let element = document.getElementById(id);
-                    if (element) {
-                        element.style.display = 'none';
-                    }
+
+                    const pfp = user.pfp || 'Default.jpg';
+                    const profilePicUrl = `img/profile-icons/${pfp}`;
+                    const rankImageUrl = getRankImage(elo);
+                    const tierName = getTierName(elo);
+                    const rankColor = getColor(elo);
+
+                    const gamesPlayed = player.playsPVP ?? 0;
+                    const wins = player.winsPVP ?? 0;
+                    const deaths = player.deaths ?? 0;
+                    const kills = player.kills ?? 0;
+
+                    const wr = gamesPlayed > 0 ? Math.round((wins / gamesPlayed) * 100) : 0;
+                    const avgKillsGame = gamesPlayed > 0 ? (kills / gamesPlayed).toFixed(2) : kills.toFixed(2);
+                    const kdRatio = deaths > 0 ? (kills / deaths).toFixed(2) : kills.toFixed(2);
+
+
+                    const isTop15 = leaderboardPosition && leaderboardPosition < 16;
+                    const cardBorderStyle = isTop15 ? `border-color: ${getColor(elo)}; border-width: 3px;` : '';
+                    const headerBorderStyle = `border-color: ${getColor(elo)};`;
+
+                    playerSearchResultSection.innerHTML = `
+                            <article id="search-result" class="player-card" style="${cardBorderStyle}">
+                                <header id="player-header" class="player-card-section">
+                                     <img src="${profilePicUrl}" alt="${user.dname}'s profile picture" style="${headerBorderStyle}"
+                                          onerror="this.onerror=null; this.src='img/profile-icons/Default.jpg'; this.alt='Default profile picture';">
+                                     <div>
+                                         <h2 id="player-name">${user.dname}</h2>
+                                     </div>
+                                </header>
+                                <section id="stats-section" class="player-card-section">
+                                    <p style="margin-top: 1rem"><strong>Current Rank</strong></p>
+                                    <p id="search-leaderboard-pos" style="color: ${isTop15 ? rankColor : 'inherit'};">Rank: #${leaderboardPosition}</p>
+                                    <p id="tier-name" style="color: ${rankColor};">Tier: ${tierName}</p>
+                                    <img src="${rankImageUrl}" alt="Rank: ${tierName}" style="width: 3vw; height: auto;">
+                                    <p>Elo: ${elo}</p>
+                                </section>
+                                <section id="stats-section" class="player-card-section">
+                                    <p style="margin-top: 1rem"><strong>Ranked Statistics</strong></p>
+                                    <p>Player Level: ${player.rank}</p>
+                                    <p>Games Played: ${gamesPlayed}</p>
+                                    <p>Wins: ${wins}</p>
+                                    <p>Win Rate: ${wr}%</p>
+                                    <p>Total Kills: ${kills}</p>
+                                    <p>Total Deaths: ${deaths}</p>
+                                    <p>K/D Ratio: ${kdRatio}</p>
+                                    <p>Avg Kills per Game: ${avgKillsGame}</p>
+                                    ${player.largestSpree ? `<p>Largest Killing Spree: ${player.largestSpree}</p>` : ''}
+                                    ${player.largestMulti ? `<p>Largest Multi Kill: ${player.largestMulti}</p>` : ''}
+                                </section>
+                            </article>
+                         `;
+
+
+                    searchUi.style.display = 'none';
+                    searchAgainBtn.style.display = 'inline-block';
+
+                } else {
+
+                    playerSearchResultSection.innerHTML = `<p id="not-found-text">Could not retrieve data for "${searchTerm}". The player might not exist or data is incomplete.</p>`;
+                }
+            }
+
+        } catch (error) {
+            console.error("Error during player search:", error);
+            playerSearchResultSection.innerHTML = `<p>An error occurred while searching for "${searchTerm}". Please try again.</p>`;
+        } finally {
+
+            searchAgainBtn.onclick = () => {
+                searchUi.style.display = 'flex';
+                searchAgainBtn.style.display = 'none';
+                playerSearchResultSection.innerHTML = '';
+                input.value = '';
+                input.focus();
+            };
+        }
+    }
+
+
+    async function createGlobalStats(sorting) {
+        const globalStatsSection = document.getElementById('global-stats-section');
+        const existingContainer = globalStatsSection.querySelector('.champion-grid-container');
+        if (existingContainer) {
+            existingContainer.remove();
+        }
+
+
+        const loadingIndicator = document.createElement('p');
+        loadingIndicator.textContent = 'Loading champion stats...';
+        loadingIndicator.id = 'stats-loading';
+        globalStatsSection.appendChild(loadingIndicator);
+
+
+        try {
+            const data = await getSortedChampStatsArray(sorting);
+
+
+            const currentLoading = document.getElementById('stats-loading');
+            if (currentLoading) {
+                currentLoading.remove();
+            }
+
+
+            if (Array.isArray(data) && data.length > 0) {
+                const parentDiv = document.createElement('div');
+
+                parentDiv.className = 'champion-grid-container';
+                parentDiv.id = `stats-sorted-by-${sorting}`;
+
+                data.forEach((element) => {
+                    const {champion, playsPVP = 0, winsPVP = 0, kills = 0, damage = 0} = element;
+
+                    const div = document.createElement('div');
+                    div.className = 'champion-card';
+
+                    const wr = playsPVP > 0 ? Math.round((winsPVP / playsPVP) * 100) : 0;
+                    const avgKills = playsPVP > 0 ? (kills / playsPVP).toFixed(2) : kills.toFixed(2);
+                    const avgDmg = playsPVP > 0 ? Math.round(damage / playsPVP) : 0;
+
+                    const championImageUrl = getChampionImage(champion);
+                    const formalName = getFormalName(champion);
+
+
+                    div.innerHTML = `
+                             <img src="${championImageUrl}" alt="${formalName}" loading="lazy" onerror="this.onerror=null; this.src='img/champions/default.png'; this.alt='Default champion icon';">
+                             <div class="champion-stats">
+                                 <p>${formalName}</p>
+                                 <p>Games: ${playsPVP.toLocaleString()}</p>
+                                 <p>Win Rate: ${wr}%</p>
+                                 <p>Avg Kills: ${avgKills}</p>
+                                 <p>Avg Damage: ${avgDmg.toLocaleString()}</p>
+                             </div>
+                         `;
+                    parentDiv.appendChild(div);
                 });
-            });
+                globalStatsSection.appendChild(parentDiv);
+            } else {
+                globalStatsSection.innerHTML += '<p>No champion statistics available.</p>';
+            }
+        } catch (error) {
+            console.error("Error creating global stats display:", error);
+            const currentLoading = document.getElementById('stats-loading');
+            if (currentLoading) {
+                currentLoading.remove();
+            }
+            globalStatsSection.innerHTML += '<p>Could not load champion statistics due to an error.</p>';
+        }
+    }
 
-            const playerSearchBtn = document.getElementById('search-btn');
-            
-            playerSearchBtn.addEventListener('click', async () => {
-                searchAndDisplay(true, null);
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        createLeaderboard();
+
+
+        const menuButtons = document.querySelectorAll('#spicy-battle-menu button');
+
+        menuButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                if (this.classList.contains('active')) return;
+
+
+                menuButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.add('inactive');
+                    const section = document.getElementById(btn.getAttribute('aria-controls'));
+                    if (section) section.style.display = 'none';
+                });
+
+
+                this.classList.add('active');
+                this.classList.remove('inactive');
+                const targetSectionId = this.getAttribute('aria-controls');
+                const targetSection = document.getElementById(targetSectionId);
+
+                if (targetSection) {
+
+                    const displayStyle = (targetSectionId === 'global-stats-section') ? 'flex' : 'block';
+                    targetSection.style.display = displayStyle;
+
+
+                    if (targetSectionId === 'global-stats-section') {
+
+                        const select = document.getElementById('global-stats-sorting-select');
+                        const currentSort = select.value;
+                        if (!targetSection.querySelector(`#stats-sorted-by-${currentSort}`)) {
+                            createGlobalStats(currentSort);
+                        } else {
+
+                            const sectionsToSort = targetSection.querySelectorAll('.champion-grid-container');
+                            sectionsToSort.forEach(sec => {
+                                sec.style.display = (sec.id === `stats-sorted-by-${currentSort}`) ? 'grid' : 'none';
+                            });
+                        }
+                    } else if (targetSectionId === 'leaderboard-section') {
+
+
+                    }
+
+
+                    const searchUi = document.querySelector('#player-search-form .search-container');
+                    const searchAgainBtn = document.getElementById('search-again');
+                    const playerSearchResultSection = document.getElementById('player-search-result');
+                    const input = document.getElementById('search-input');
+
+                    if (targetSectionId !== 'player-search-section') {
+                        searchUi.style.display = 'flex';
+                        searchAgainBtn.style.display = 'none';
+                        playerSearchResultSection.innerHTML = '';
+                        input.value = '';
+                        document.getElementById('hint-list').style.display = 'none';
+                    }
+                }
             });
         });
-        createLeaderboard();
-    </script>
-    <script type="text/javascript" src="search-player-input-handler.js"></script>
-    <script type="text/javascript" src="mobile-nav-handler.js" ></script>
+
+
+        const select = document.getElementById('global-stats-sorting-select');
+        select.addEventListener('change', () => {
+            const selectedSorting = select.value;
+            const globalStatsSection = document.getElementById('global-stats-section');
+            const existingGrids = globalStatsSection.querySelectorAll('.champion-grid-container');
+
+
+            existingGrids.forEach(grid => grid.style.display = 'none');
+
+            const targetGrid = document.getElementById(`stats-sorted-by-${selectedSorting}`);
+            if (targetGrid) {
+                targetGrid.style.display = 'grid';
+            } else {
+                createGlobalStats(selectedSorting);
+            }
+        });
+
+
+        const searchForm = document.getElementById('player-search-form');
+        const searchButton = document.getElementById('search-btn');
+
+
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            searchAndDisplay(true, null);
+        });
+
+
+        searchButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            searchAndDisplay(true, null);
+        });
+
+        const listOne = [
+            "Able",
+            "Abnormal",
+            "Abstract",
+            "Absurd",
+            "Academic",
+            "Acoustic",
+            "Active",
+            "Adept",
+            "Adjacent",
+            "Admiral",
+            "Adorable",
+            "Aerobic",
+            "Agile",
+            "Alien",
+            "Amazing",
+            "Amusing",
+            "Ancient",
+            "Aromatic",
+            "Artful",
+            "Artistic",
+            "Aquatic",
+            "Athletic",
+            "Atomic",
+            "Average",
+            "Awesome",
+            "Awful",
+            "Babbling",
+            "Baffling",
+            "Barbaric",
+            "Baron",
+            "Baroness",
+            "Baroque",
+            "Bashful",
+            "Beastly",
+            "Bizarre",
+            "Blue",
+            "Blustery",
+            "Bogus",
+            "Bold",
+            "Bouncing",
+            "Brainy",
+            "Brave",
+            "Brawny",
+            "Bright",
+            "Brisk",
+            "Brutish",
+            "Bumbling",
+            "Burly",
+            "Cackling",
+            "Cagey",
+            "Capable",
+            "Captain",
+            "Carefree",
+            "Cartoony",
+            "Chaotic",
+            "Charming",
+            "Cheerful",
+            "Cheesy",
+            "Chilly",
+            "Classic",
+            "Clever",
+            "Colossal",
+            "Colonel",
+            "Colorful",
+            "Comical",
+            "Complex",
+            "Cosmic",
+            "Count",
+            "Countess",
+            "Crafty",
+            "Cranky",
+            "Crazy",
+            "Creative",
+            "Creepy",
+            "Crispy",
+            "Crunchy",
+            "Cunning",
+            "Curious",
+            "Cute",
+            "Dainty",
+            "Dandy",
+            "Dapper",
+            "Daring",
+            "Darling",
+            "Dashing",
+            "Dazzling",
+            "Defiant",
+            "Delicate",
+            "Devious",
+            "Diagonal",
+            "Digital",
+            "Diligent",
+            "Dizzy",
+            "Doctor",
+            "Dormant",
+            "Dramatic",
+            "Dreadful",
+            "Drowzy",
+            "Dubious",
+            "Duchess",
+            "Duke",
+            "Dynamic",
+            "Eager",
+            "Earnest",
+            "Eastern",
+            "Edgy",
+            "Eerie",
+            "Elastic",
+            "Electric",
+            "Elegant",
+            "Elite",
+            "Eloquent",
+            "Elusive",
+            "Emperor",
+            "Empress",
+            "Enormous",
+            "Epic",
+            "Evasive",
+            "Evil",
+            "Exciting",
+            "Expert",
+            "Extinct",
+            "Extreme",
+            "Fabulous",
+            "Fair",
+            "Famous",
+            "Fanciful",
+            "Feisty",
+            "Fearless",
+            "Fearsome",
+            "Feral",
+            "Fierce",
+            "Fiery",
+            "Fizzy",
+            "Flying",
+            "Foul",
+            "Fragrant",
+            "Frantic",
+            "Freakish",
+            "Freaky",
+            "Friendly",
+            "Frosty",
+            "Frugal",
+            "Funky",
+            "Funny",
+            "Fuzzy",
+            "Galactic",
+            "Gallant",
+            "General",
+            "Generous",
+            "Gentle",
+            "Genuine",
+            "Ghastly",
+            "Ghostly",
+            "Gigantic",
+            "Giggling",
+            "Gleeful",
+            "Gloomy",
+            "Glorious",
+            "Gnarly",
+            "Golden",
+            "Gorgeous",
+            "Gothic",
+            "Graceful",
+            "Gracious",
+            "Grand",
+            "Green",
+            "Grim",
+            "Grimy",
+            "Grizzly",
+            "Groovy",
+            "Gross",
+            "Grouchy",
+            "Grubby",
+            "Gruesome",
+            "Gullible",
+            "Handsome",
+            "Happy",
+            "Hardy",
+            "Haunted",
+            "Healthy",
+            "Hearty",
+            "Hectic",
+            "Hefty",
+            "Heroic",
+            "Hideous",
+            "Honest",
+            "Horrid",
+            "Howling",
+            "Humble",
+            "Humorous",
+            "Husky",
+            "Hyper",
+            "Hypnotic",
+            "Icy",
+            "Immense",
+            "Immortal",
+            "Imperial",
+            "Infamous",
+            "Infinite",
+            "Intrepid",
+            "Ironclad",
+            "Ironic",
+            "Itchy",
+            "Jingling",
+            "Jolly",
+            "Joyous",
+            "Juggling",
+            "Jumping",
+            "Keen",
+            "Kinetic",
+            "King",
+            "Kooky",
+            "Lanky",
+            "Leaping",
+            "Lively",
+            "Loony",
+            "Loopy",
+            "Loud",
+            "Lovely",
+            "Loyal",
+            "Lucky",
+            "Luminous",
+            "Lunar",
+            "Madcap",
+            "Magical",
+            "Magnetic",
+            "Majestic",
+            "Major",
+            "Massive",
+            "Mellow",
+            "Melodic",
+            "Merry",
+            "Messy",
+            "Metallic",
+            "Mighty",
+            "Mirthful",
+            "Modest",
+            "Mumbling",
+            "Musical",
+            "Mystic",
+            "Nautical",
+            "Negative",
+            "Nervous",
+            "Neutral",
+            "Nifty",
+            "Nimble",
+            "Noble",
+            "Noisy",
+            "Nomadic",
+            "Normal",
+            "Northern",
+            "Obscure",
+            "Obvious",
+            "Odd",
+            "Orange",
+            "Organic",
+            "Ornery",
+            "Peculiar",
+            "Peppy",
+            "Perilous",
+            "Pleasant",
+            "Plucky",
+            "Popular",
+            "Positive",
+            "Powerful",
+            "Precious",
+            "Pretty",
+            "Prickly",
+            "Prince",
+            "Princess",
+            "Profound",
+            "Prolific",
+            "Proper",
+            "Proud",
+            "Purple",
+            "Putrid",
+            "Puzzling",
+            "Quaint",
+            "Quantum",
+            "Queen",
+            "Quick",
+            "Quiet",
+            "Quirky",
+            "Radiant",
+            "Radical",
+            "Rancid",
+            "Rational",
+            "Reckless",
+            "Red",
+            "Regal",
+            "Regular",
+            "Reliable",
+            "Restless",
+            "Roaring",
+            "Robotic",
+            "Robust",
+            "Rowdy",
+            "Royal",
+            "Rude",
+            "Rugged",
+            "Ruthless",
+            "Sassy",
+            "Savage",
+            "Scary",
+            "Scruffy",
+            "Scurvy",
+            "Seismic",
+            "Sergeant",
+            "Shady",
+            "Shaggy",
+            "Sharp",
+            "Shifty",
+            "Shiny",
+            "Shrewd",
+            "Shy",
+            "Silent",
+            "Silly",
+            "Sincere",
+            "Singular",
+            "Sinister",
+            "Skinny",
+            "Sleek",
+            "Sleepy",
+            "Slimy",
+            "Sloppy",
+            "Sluggish",
+            "Sly",
+            "Smart",
+            "Smelly",
+            "Smooth",
+            "Sneaky",
+            "Snappy",
+            "Snarky",
+            "Snazzy",
+            "Soggy",
+            "Solar",
+            "Solid",
+            "Southern",
+            "Sparkly",
+            "Spectral",
+            "Speedy",
+            "Spicy",
+            "Spirited",
+            "Splendid",
+            "Spooky",
+            "Sporty",
+            "Spotted",
+            "Squishy",
+            "Stately",
+            "Steady",
+            "Stealthy",
+            "Stinky",
+            "Stormy",
+            "Stout",
+            "Strange",
+            "Strong",
+            "Stubborn",
+            "Stunning",
+            "Sturdy",
+            "Stylish",
+            "Suave",
+            "Sublime",
+            "Subtle",
+            "Sunny",
+            "Super",
+            "Superb",
+            "Superior",
+            "Surreal",
+            "Swift",
+            "Tacky",
+            "Talented",
+            "Tall",
+            "Tasteful",
+            "Ticklish",
+            "Tireless",
+            "Titanic",
+            "Tough",
+            "Towering",
+            "Toxic",
+            "Tricky",
+            "Twisty",
+            "Ultimate",
+            "Uncanny",
+            "Uncommon",
+            "Unknown",
+            "Unlucky",
+            "Unusual",
+            "Vague",
+            "Valiant",
+            "Valorous",
+            "Variable",
+            "Vast",
+            "Venomous",
+            "Verbose",
+            "Vibrant",
+            "Vigilant",
+            "Virtual",
+            "Visible",
+            "Volcanic",
+            "Wacky",
+            "Weird",
+            "Western",
+            "Wild",
+            "Wily",
+            "Wise",
+            "Witty",
+            "Wondrous",
+            "Yellow",
+            "Yelping",
+            "Yucky",
+            "Zany",
+            "Zippy"
+        ];
+
+        const listTwo = [
+            "Aaliyah",
+            "Aaron",
+            "Abigail",
+            "Achilles",
+            "Ace",
+            "Adam",
+            "Adrian",
+            "Adriana",
+            "Aidan",
+            "Aiden",
+            "Alan",
+            "Albert",
+            "Alex",
+            "Alexa",
+            "Alexis",
+            "Alfonso",
+            "Alice",
+            "Alicia",
+            "Allison",
+            "Alvin",
+            "Alyssa",
+            "Amanda",
+            "Amber",
+            "Amelia",
+            "Amy",
+            "Ana",
+            "Andre",
+            "Andrea",
+            "Andrew",
+            "Andy",
+            "Angel",
+            "Angela",
+            "Angelica",
+            "Angelina",
+            "Anna",
+            "Anthony",
+            "Antonio",
+            "Apollo",
+            "April",
+            "Ariana",
+            "Arianna",
+            "Ariel",
+            "Arthur",
+            "Ashley",
+            "Ashlyn",
+            "Ashton",
+            "Athena",
+            "Aubrey",
+            "Audrey",
+            "Augustus",
+            "Austin",
+            "Autumn",
+            "Ava",
+            "Avery",
+            "Bailey",
+            "Barney",
+            "Bart",
+            "Baxter",
+            "Beatrice",
+            "Beau",
+            "Becky",
+            "Bella",
+            "Ben",
+            "Benjamin",
+            "Benny",
+            "Benson",
+            "Benton",
+            "Beowulf",
+            "Bernard",
+            "Bert",
+            "Bertha",
+            "Bessie",
+            "Beth",
+            "Bethany",
+            "Betty",
+            "Beverly",
+            "Bianca",
+            "Biff",
+            "Bill",
+            "Billy",
+            "Bjorn",
+            "Blake",
+            "Bob",
+            "Bobby",
+            "Bobo",
+            "Brad",
+            "Brady",
+            "Bradley",
+            "Brandi",
+            "Brandon",
+            "Brandy",
+            "Brayden",
+            "Breanna",
+            "Brent",
+            "Brett",
+            "Brian",
+            "Briana",
+            "Brianna",
+            "Bridget",
+            "Bridgette",
+            "Brittany",
+            "Brittney",
+            "Brooke",
+            "Brooklyn",
+            "Bruce",
+            "Bryan",
+            "Bryce",
+            "Bubba",
+            "Bubbie",
+            "Bucky",
+            "Buffy",
+            "Buford",
+            "Bugsy",
+            "Buster",
+            "Caden",
+            "Caitlin",
+            "Caissa",
+            "Caleb",
+            "Calvin",
+            "Cameron",
+            "Candice",
+            "Carl",
+            "Carlos",
+            "Carol",
+            "Caroline",
+            "Carolyn",
+            "Carrie",
+            "Carson",
+            "Carter",
+            "Casey",
+            "Cassidy",
+            "Cathy",
+            "Celeste",
+            "Chad",
+            "Charles",
+            "Chase",
+            "Chelsea",
+            "Chester",
+            "Cheyenne",
+            "Chip",
+            "Chloe",
+            "Chowder",
+            "Chris",
+            "Chrissie",
+            "Chrissy",
+            "Christy",
+            "Chuck",
+            "Cindy",
+            "CJ",
+            "Claire",
+            "Clark",
+            "Clay",
+            "Clifford",
+            "Clyde",
+            "Coco",
+            "Cody",
+            "Cole",
+            "Colin",
+            "Collin",
+            "Colton",
+            "Connie",
+            "Connor",
+            "Conrad",
+            "Corey",
+            "Cory",
+            "Courtney",
+            "Craig",
+            "Crystal",
+            "Curtis",
+            "Cynthia",
+            "Daisy",
+            "Dakota",
+            "Dalton",
+            "Dan",
+            "Dana",
+            "Daniel",
+            "Daniela",
+            "Danielle",
+            "Danny",
+            "Daphne",
+            "Darla",
+            "Darlene",
+            "Dave",
+            "David",
+            "Dawn",
+            "Dean",
+            "Dennis",
+            "Derek",
+            "Derrick",
+            "Destiny",
+            "Devin",
+            "Devon",
+            "Dewey",
+            "Dexter",
+            "Diana",
+            "Diego",
+            "Dillon",
+            "Dinah",
+            "Dixie",
+            "DJ",
+            "Doc",
+            "Dolly",
+            "Dominic",
+            "Don",
+            "Donald",
+            "Dora",
+            "Dorothy",
+            "Doug",
+            "Douglas",
+            "Drake",
+            "Drew",
+            "Dudley",
+            "Duke",
+            "Duncan",
+            "Dustin",
+            "Dwayne",
+            "Dwight",
+            "Dylan",
+            "Earl",
+            "Ed",
+            "Edd",
+            "Eddie",
+            "Eddy",
+            "Edgar",
+            "Eduardo",
+            "Edward",
+            "Egbert",
+            "Eli",
+            "Elijah",
+            "Ella",
+            "Ellen",
+            "Elly",
+            "Elmer",
+            "Elroy",
+            "Emerson",
+            "Emily",
+            "Emma",
+            "Emmett",
+            "Eric",
+            "Erica",
+            "Erik",
+            "Erika",
+            "Erin",
+            "Ernest",
+            "Ernie",
+            "Ethan",
+            "Ethel",
+            "Eugene",
+            "Eva",
+            "Evan",
+            "Evelyn",
+            "Ezekiel",
+            "Faith",
+            "Fassy",
+            "Felicity",
+            "Felipe",
+            "Felix",
+            "Finn",
+            "Fiona",
+            "Flapjack",
+            "Flint",
+            "Florence",
+            "Floyd",
+            "Forrest",
+            "Frank",
+            "Franklin",
+            "Fred",
+            "Freddy",
+            "Gabe",
+            "Gabriel",
+            "Gage",
+            "Garrett",
+            "Gary",
+            "Gavin",
+            "Genghis",
+            "Geoff",
+            "George",
+            "Gerard",
+            "Gianna",
+            "Gigi",
+            "Gillian",
+            "Ginger",
+            "Gladys",
+            "Gloria",
+            "Goliath",
+            "Grace",
+            "Gracie",
+            "Grant",
+            "Greg",
+            "Gregory",
+            "Gretel",
+            "Grover",
+            "Gulliver",
+            "Gus",
+            "Gwen",
+            "Hailey",
+            "Haley",
+            "Hank",
+            "Hannah",
+            "Hansel",
+            "Harold",
+            "Harry",
+            "Harvey",
+            "Hayden",
+            "Hazel",
+            "Heather",
+            "Hector",
+            "Heidi",
+            "Helen",
+            "Helga",
+            "Henry",
+            "Herbert",
+            "Hercules",
+            "Herman",
+            "Holly",
+            "Homer",
+            "Horatio",
+            "Howard",
+            "Hugo",
+            "Hunter",
+            "Ian",
+            "Ichabod",
+            "Igor",
+            "Ilana",
+            "Ingrid",
+            "Iris",
+            "Irwin",
+            "Isaac",
+            "Isabel",
+            "Isabella",
+            "Isabelle",
+            "Isaiah",
+            "Ivan",
+            "Ivy",
+            "Izzy",
+            "Jack",
+            "Jackie",
+            "Jackson",
+            "Jacob",
+            "Jada",
+            "Jade",
+            "Jaden",
+            "Jake",
+            "James",
+            "Jamie",
+            "Jan",
+            "Janet",
+            "Janice",
+            "Jared",
+            "Jasmine",
+            "Jason",
+            "Jasper",
+            "Jay",
+            "Jayden",
+            "Jeff",
+            "Jeffrey",
+            "Jenn",
+            "Jenna",
+            "Jennifer",
+            "Jeremiah",
+            "Jeremy",
+            "Jesse",
+            "Jessica",
+            "Jill",
+            "Jillian",
+            "Jim",
+            "Jimbo",
+            "Jimmy",
+            "Jocelyn",
+            "Joe",
+            "Joel",
+            "Joey",
+            "John",
+            "Johnny",
+            "Jon",
+            "Jonas",
+            "Jonathan",
+            "Jordan",
+            "Jorge",
+            "Jose",
+            "Joseph",
+            "Joshua",
+            "Josiah",
+            "Joyce",
+            "Juan",
+            "Judith",
+            "Julia",
+            "Julian",
+            "Julie",
+            "Juliet",
+            "Julius",
+            "Juno",
+            "Justin",
+            "Kaden",
+            "Kaitlin",
+            "Kaitlyn",
+            "Kaleb",
+            "Kara",
+            "Karen",
+            "Karl",
+            "Kate",
+            "Katelyn",
+            "Kathleen",
+            "Kathryn",
+            "Katie",
+            "Kayla",
+            "Kaylee",
+            "Keith",
+            "Kelly",
+            "Kelsey",
+            "Ken",
+            "Kennedy",
+            "Kenneth",
+            "Kenny",
+            "Kevin",
+            "Kim",
+            "Kimberly",
+            "Kristen",
+            "Kristin",
+            "Kristina",
+            "Krystal",
+            "Kyle",
+            "Kylie",
+            "Lance",
+            "Lancelot",
+            "Landon",
+            "Larry",
+            "Latoya",
+            "Laura",
+            "Lauren",
+            "Lawrence",
+            "Layla",
+            "Lazlo",
+            "Leah",
+            "Lenny",
+            "Leo",
+            "Leon",
+            "Leonard",
+            "Leonardo",
+            "Leopold",
+            "Leroy",
+            "Leshawna",
+            "Leslie",
+            "Lester",
+            "Levi",
+            "Liam",
+            "Lila",
+            "Lillian",
+            "Lily",
+            "Lindsay",
+            "Lindsey",
+            "Lisa",
+            "Liz",
+            "Lloyd",
+            "Logan",
+            "Lois",
+            "Lorenzo",
+            "Lucas",
+            "Lucius",
+            "Ludwig",
+            "Luis",
+            "Luke",
+            "Lydia",
+            "Mac",
+            "Madeline",
+            "Madelyn",
+            "Madison",
+            "Maggie",
+            "Magnus",
+            "Makayla",
+            "Malcolm",
+            "Mandy",
+            "Marcia",
+            "Marco",
+            "Marcus",
+            "Margaret",
+            "Maria",
+            "Mariah",
+            "Marie",
+            "Marilyn",
+            "Mario",
+            "Marissa",
+            "Mark",
+            "Marsha",
+            "Marvin",
+            "Mary",
+            "Mason",
+            "Matt",
+            "Matthew",
+            "Max",
+            "Maxwell",
+            "Maya",
+            "Mckenzie",
+            "Medusa",
+            "Megan",
+            "Meghan",
+            "Mel",
+            "Melanie",
+            "Melissa",
+            "Melvin",
+            "Meredith",
+            "Merlin",
+            "Mia",
+            "Micah",
+            "Michael",
+            "Michelle",
+            "Miguel",
+            "Mikayla",
+            "Mike",
+            "Milo",
+            "Milton",
+            "Minerva",
+            "Miranda",
+            "Misty",
+            "Mitchell",
+            "Molly",
+            "Monica",
+            "Mordecai",
+            "Morgan",
+            "Mya",
+            "Naomi",
+            "Napoleon",
+            "Natalia",
+            "Natalie",
+            "Natasha",
+            "Nate",
+            "Nathan",
+            "Ned",
+            "Nelson",
+            "Nevaeh",
+            "Newton",
+            "Nicolas",
+            "Nicholas",
+            "Nick",
+            "Nicole",
+            "Noah",
+            "Noel",
+            "Norman",
+            "Olive",
+            "Oliver",
+            "Olivia",
+            "Omar",
+            "Orlando",
+            "Orville",
+            "Oscar",
+            "Othello",
+            "Otis",
+            "Otto",
+            "Owen",
+            "Paige",
+            "Pam",
+            "Parker",
+            "Patricia",
+            "Patrick",
+            "Payton",
+            "Payten",
+            "Paul",
+            "Paula",
+            "Pearl",
+            "Pedro",
+            "Penelope",
+            "Penny",
+            "Perseus",
+            "Pete",
+            "Peter",
+            "Phil",
+            "Phillip",
+            "Phyllis",
+            "Pierre",
+            "Polly",
+            "Poseidon",
+            "Preston",
+            "Ralph",
+            "Ricardo",
+            "Rigby",
+            "Quentin",
+            "Quincy",
+            "Quinn",
+            "Rachel",
+            "Ramona",
+            "Rapunzel",
+            "Ray",
+            "Raymond",
+            "Rebecca",
+            "Reginald",
+            "Reuben",
+            "Rex",
+            "Rhett",
+            "Rich",
+            "Richard",
+            "Rick",
+            "Riley",
+            "Rob",
+            "Robby",
+            "Robert",
+            "Roberto",
+            "Robin",
+            "Rocky",
+            "Rolf",
+            "Romeo",
+            "Ron",
+            "Ronald",
+            "Rosalie",
+            "Roscoe",
+            "Rosemary",
+            "Rosetta",
+            "Rowan",
+            "Roy",
+            "Ruby",
+            "Rudolph",
+            "Rufus",
+            "Russell",
+            "Ryan",
+            "Sabrina",
+            "Sadie",
+            "Salvador",
+            "Sam",
+            "Samantha",
+            "Samuel",
+            "Sandra",
+            "Sapphire",
+            "Sara",
+            "Sarah",
+            "Savannah",
+            "Scarlett",
+            "Scooby",
+            "Scooter",
+            "Scott",
+            "Sean",
+            "Selena",
+            "Seth",
+            "Shaggy",
+            "Shane",
+            "Shannon",
+            "Sharon",
+            "Shawn",
+            "Shelby",
+            "Sherman",
+            "Sherri",
+            "Shirley",
+            "Shnitzel",
+            "Sid",
+            "Sierra",
+            "Sigmund",
+            "Silvia",
+            "Simon",
+            "Skips",
+            "Sky",
+            "Skylar",
+            "Sofia",
+            "Sophia",
+            "Sophie",
+            "Spencer",
+            "Spike",
+            "Stacey",
+            "Stacy",
+            "Stanley",
+            "Stephen",
+            "Sterling",
+            "Steven",
+            "Suki",
+            "Sully",
+            "Summer",
+            "Susan",
+            "Susannah",
+            "Sydney",
+            "Tabitha",
+            "Tanner",
+            "Tara",
+            "Taylor",
+            "Ted",
+            "Terry",
+            "Tex",
+            "Theodore",
+            "Thomas",
+            "Thor",
+            "Tiffany",
+            "Tim",
+            "Timmy",
+            "Timothy",
+            "Todd",
+            "Tom",
+            "Tommy",
+            "Tony",
+            "Travis",
+            "Trent",
+            "Trevor",
+            "Trinity",
+            "Tristan",
+            "Tyler",
+            "Tyra",
+            "Tyrone",
+            "Ulysses",
+            "Ursula",
+            "Val",
+            "Valeria",
+            "Valerie",
+            "Vanessa",
+            "Velma",
+            "Vera",
+            "Vern",
+            "Veronica",
+            "Vicky",
+            "Victor",
+            "Victoria",
+            "Vince",
+            "Vincent",
+            "Vinny",
+            "Violet",
+            "Vivian",
+            "Vladimir",
+            "Waldo",
+            "Wallace",
+            "Wally",
+            "Wayne",
+            "Wes",
+            "Wesley",
+            "Whit",
+            "Whitney",
+            "Wilbur",
+            "Wilford",
+            "Will",
+            "Willard",
+            "William",
+            "Wilma",
+            "Wilt",
+            "Wolfgang",
+            "Wyatt",
+            "Xavier",
+            "Xerxes",
+            "Yancy",
+            "Yolanda",
+            "Yorick",
+            "Yvette",
+            "Yvonne",
+            "Zach",
+            "Zachary",
+            "Zeb",
+            "Zeke",
+            "Zelda",
+            "Zeus",
+            "Zoe"
+        ];
+
+        const listThree = [
+            "Aardvark",
+            "Acorn",
+            "Acrobat",
+            "Alien",
+            "Amethyst",
+            "Amoeba",
+            "Android",
+            "Anvil",
+            "Ape",
+            "Apple",
+            "Atlas",
+            "Atom",
+            "Aurora",
+            "Avatar",
+            "Aviator",
+            "Avocado",
+            "Baboon",
+            "Badger",
+            "Bagpipe",
+            "Balloon",
+            "Ballyhoo",
+            "Baloney",
+            "Bamboo",
+            "Banjo",
+            "Banshee",
+            "Banzai",
+            "Barnacle",
+            "Basilisk",
+            "Bayou",
+            "Bazooka",
+            "Beast",
+            "Beeswax",
+            "Behemoth",
+            "Bingo",
+            "Biscuit",
+            "Bison",
+            "Blade",
+            "Blammo",
+            "Blast",
+            "Blitz",
+            "Blizzard",
+            "Blob",
+            "Blubber",
+            "Boing",
+            "Bolt",
+            "Bonanza",
+            "Bongo",
+            "Bonkers",
+            "Bramble",
+            "Brick",
+            "Brine",
+            "Bronco",
+            "Brute",
+            "Buckaroo",
+            "Bucket",
+            "Buffalo",
+            "Bullfrog",
+            "Bungee",
+            "Burro",
+            "Burst",
+            "Buzzard",
+            "Cactus",
+            "Calamari",
+            "Calliope",
+            "Calypso",
+            "Camel",
+            "Carousel",
+            "Cartoon",
+            "Castle",
+            "Catapult",
+            "Celsius",
+            "Centaur",
+            "Chaos",
+            "Charger",
+            "Chimera",
+            "Chipmunk",
+            "Chutney",
+            "Cinnamon",
+            "Cipher",
+            "Citrus",
+            "Clang",
+            "Clone",
+            "Cobra",
+            "Cobweb",
+            "Coconut",
+            "Comet",
+            "Concrete",
+            "Confetti",
+            "Cookie",
+            "Corduroy",
+            "Cosmos",
+            "Cowboy",
+            "Crash",
+            "Crater",
+            "Creature",
+            "Crowbar",
+            "Crumpet",
+            "Cuckoo",
+            "Cumulus",
+            "Cupcake",
+            "Cutlass",
+            "Cyborg",
+            "Cyclone",
+            "Daffodil",
+            "Deadbolt",
+            "Denizen",
+            "Diamond",
+            "Dingbat",
+            "Dingo",
+            "Dinosaur",
+            "Dodo",
+            "Dogfish",
+            "Dolphin",
+            "Domino",
+            "Donkey",
+            "Doodad",
+            "Doodle",
+            "Dragon",
+            "Dragoon",
+            "Droid",
+            "Dumpling",
+            "Dwarf",
+            "Dynamite",
+            "Earwig",
+            "Eel",
+            "Eggplant",
+            "Electron",
+            "Elephant",
+            "Elf",
+            "Enigma",
+            "Equinox",
+            "Fandango",
+            "Fang",
+            "Fathom",
+            "Fez",
+            "Fiddle",
+            "Figment",
+            "Fireball",
+            "Firefly",
+            "Fishbowl",
+            "Fizz",
+            "Flamingo",
+            "Flatiron",
+            "Flipper",
+            "Flypaper",
+            "Flywheel",
+            "Foghorn",
+            "Fondue",
+            "Forklift",
+            "Fossil",
+            "Fox",
+            "Fritter",
+            "Frog",
+            "Frost",
+            "Funk",
+            "Fury",
+            "Fuzz",
+            "Galaxy",
+            "Galoot",
+            "Galosh",
+            "Gamer",
+            "Gargoyle",
+            "Garlic",
+            "Gator",
+            "Gazebo",
+            "Gazelle",
+            "Genius",
+            "Ghost",
+            "Ghoul",
+            "Gibbon",
+            "Giblets",
+            "Gimmick",
+            "Giraffe",
+            "Gizmo",
+            "Gizzard",
+            "Glacier",
+            "Glitch",
+            "Glop",
+            "Goblin",
+            "Golem",
+            "Gong",
+            "Goofball",
+            "Gorgon",
+            "Gorilla",
+            "Goulash",
+            "Grackle",
+            "Gremlin",
+            "Grouch",
+            "Gulch",
+            "Gullet",
+            "Gumbo",
+            "Gumdrop",
+            "Gumshoe",
+            "Hacksaw",
+            "Halibut",
+            "Halo",
+            "Hambone",
+            "Hawk",
+            "Haystack",
+            "Hedgehog",
+            "Hiccup",
+            "Hippo",
+            "Hogwash",
+            "Holler",
+            "Hologram",
+            "Hornet",
+            "Horsefly",
+            "Howler",
+            "Hydra",
+            "Iceberg",
+            "Icicle",
+            "Igloo",
+            "Iguana",
+            "Insect",
+            "Ion",
+            "Isotope",
+            "Jalapeno",
+            "Jamboree",
+            "Javelin",
+            "Jigsaw",
+            "Jingles",
+            "Jinx",
+            "Jungle",
+            "Jupiter",
+            "Kangaroo",
+            "Karate",
+            "Kayak",
+            "Kazoo",
+            "Ketchup",
+            "Kiwi",
+            "Klunk",
+            "Knight",
+            "Kook",
+            "Kudzu",
+            "Kumquat",
+            "Kungfu",
+            "Ladybug",
+            "Lard",
+            "Larva",
+            "Lavender",
+            "Lemon",
+            "Lemonade",
+            "Licorice",
+            "Lime",
+            "Lizard",
+            "Llama",
+            "Lobster",
+            "Macaroni",
+            "Macaw",
+            "Mackerel",
+            "Maestro",
+            "Maggot",
+            "Magician",
+            "Magma",
+            "Magnet",
+            "Magpie",
+            "Mahogany",
+            "Mallard",
+            "Mammoth",
+            "Manatee",
+            "Mango",
+            "Mantis",
+            "Marigold",
+            "Marmoset",
+            "Mars",
+            "Martian",
+            "Mastodon",
+            "Mercury",
+            "Meringue",
+            "Meteor",
+            "Midnight",
+            "Minotaur",
+            "Molecule",
+            "Monkey",
+            "Monolith",
+            "Monster",
+            "Moonbeam",
+            "Moppet",
+            "Mosquito",
+            "Moxie",
+            "Mumbles",
+            "Mummy",
+            "Mustang",
+            "Mustard",
+            "Mutant",
+            "Mystery",
+            "Nacho",
+            "Nanobot",
+            "Narwhal",
+            "Nebula",
+            "Neptune",
+            "Neutron",
+            "Nibbles",
+            "Ninja",
+            "Nonsense",
+            "Noob",
+            "Noodle",
+            "Nova",
+            "Nucleus",
+            "Obelisk",
+            "Octopus",
+            "Oddball",
+            "Ogre",
+            "Oink",
+            "Omelet",
+            "Ooze",
+            "Orbit",
+            "Orca",
+            "Orchid",
+            "Ostrich",
+            "Otter",
+            "Oyster",
+            "Paladin",
+            "Panda",
+            "Paprika",
+            "Paradox",
+            "Parallax",
+            "Parrot",
+            "Parsec",
+            "Parsnip",
+            "Particle",
+            "Pelican",
+            "Penguin",
+            "Phantom",
+            "Phoenix",
+            "Photon",
+            "Pinball",
+            "Pinwheel",
+            "Pirate",
+            "Pizza",
+            "Planet",
+            "Plankton",
+            "Plasma",
+            "Platypus",
+            "Polka",
+            "Polliwog",
+            "Pontoon",
+            "Popcorn",
+            "Porpoise",
+            "Porridge",
+            "Possum",
+            "Potato",
+            "Foul",
+            "Presto",
+            "Proton",
+            "Pudding",
+            "Pulsar",
+            "Pulse",
+            "Pumpkin",
+            "Pyramid",
+            "Python",
+            "Quack",
+            "Quake",
+            "Quark",
+            "Quarry",
+            "Quasar",
+            "Raptor",
+            "Rascal",
+            "Razor",
+            "Rebel",
+            "Recess",
+            "Renegade",
+            "Reptile",
+            "Rhino",
+            "Rhombus",
+            "Rhyme",
+            "Rhythm",
+            "Ricochet",
+            "Riddle",
+            "Robot",
+            "Rocket",
+            "Rooster",
+            "Ruckus",
+            "Rumble",
+            "Runner",
+            "Rutabaga",
+            "Saber",
+            "Safari",
+            "Samurai",
+            "Sardine",
+            "Saturn",
+            "Sawtooth",
+            "Scarab ",
+            "Scimitar",
+            "Scorpion",
+            "Scout",
+            "Scribble",
+            "Scythe",
+            "Seagull",
+            "Seesaw",
+            "Serpent",
+            "Shadow",
+            "Shamrock",
+            "Shinobi",
+            "Shark",
+            "Shock",
+            "Shogun",
+            "Shovel",
+            "Shuriken",
+            "Sizzle",
+            "Skater",
+            "Skeleton",
+            "Skunk",
+            "Skylark",
+            "Sludge",
+            "Slurp",
+            "Smidgen",
+            "Snake",
+            "Snorkel",
+            "Snowball",
+            "Snowshoe",
+            "Soldier",
+            "Sorcerer",
+            "Spark",
+            "Sparkle",
+            "Spatula",
+            "Sphere",
+            "Sphinx",
+            "Spider",
+            "Spiral",
+            "Splat",
+            "Spleen",
+            "Sprinkle",
+            "Sprocket",
+            "Sprout",
+            "Spumoni",
+            "Squawk",
+            "Squeegee",
+            "Squid",
+            "Squirrel",
+            "Squish",
+            "Stampede",
+            "Starfish",
+            "Steam",
+            "Steel",
+            "Storm",
+            "Sunrise",
+            "Sunset",
+            "Sunshine",
+            "Swarm",
+            "Sword",
+            "Taco",
+            "Talon",
+            "Tarmac",
+            "Tarragon",
+            "Techno",
+            "Tempest",
+            "Thing",
+            "Thorax",
+            "Thud",
+            "Thunder",
+            "Tiger",
+            "Tiptoe",
+            "Toboggan",
+            "Toenail",
+            "Tornado",
+            "Tractor",
+            "Trapeze",
+            "Troll",
+            "Trooper",
+            "Tsunami",
+            "Tugboat",
+            "Tundra",
+            "Turbo",
+            "Turnip",
+            "Turtle",
+            "Tusk",
+            "Tuxedo",
+            "Twilight",
+            "Twist",
+            "Typhoon",
+            "Ukulele",
+            "Umbrella",
+            "Unicorn",
+            "Unicycle",
+            "Universe",
+            "Vampire",
+            "Vapor",
+            "Varmint",
+            "Varnish",
+            "Vector",
+            "Venom",
+            "Venus",
+            "Vermin",
+            "Viking",
+            "Virtuoso",
+            "Vitamin",
+            "Vittles",
+            "Volcano",
+            "Vortex",
+            "Vulture",
+            "Waffle",
+            "Wallaby",
+            "Wallop",
+            "Walrus",
+            "Warp",
+            "Warrior",
+            "Warthog",
+            "Weasel",
+            "Werewolf",
+            "Whale",
+            "Whisper",
+            "Whizbang",
+            "Wiffle",
+            "Windmill",
+            "Wingding",
+            "Witch",
+            "Wizard",
+            "Wolf",
+            "Wombat",
+            "Worm",
+            "Wraith",
+            "Wyvern",
+            "Yak",
+            "Yam",
+            "Yodel",
+            "Yoyo",
+            "Zebra",
+            "Zephyr",
+            "Zeppelin",
+            "Zigzag",
+            "Zing",
+            "Zinger",
+            "Zip",
+            "Zombie"
+        ];
+
+        const searchInput = document.getElementById('search-input');
+        const hintListEl = document.getElementById('hint-list');
+        let debounceTimer;
+
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+
+            debounceTimer = setTimeout(() => {
+                let fullInputValue = searchInput.value;
+                clearHintList();
+
+
+                if (fullInputValue.trim().length === 0) {
+                    hintListEl.style.display = 'none';
+                    return;
+                }
+
+
+                const parts = fullInputValue.split(' ').filter(part => part.length > 0);
+                let currentPartIndex = parts.length - 1;
+
+                if (fullInputValue.endsWith(' ') && fullInputValue.trim().length > 0) {
+                    currentPartIndex++;
+                    textToCompare = "";
+                    textLength = 0;
+                } else {
+                    textToCompare = parts[currentPartIndex] || '';
+                    textLength = textToCompare.length;
+                }
+
+                const spaceChars = currentPartIndex;
+
+
+                if (textLength > 0) {
+                    let listToSearch = [];
+                    switch (spaceChars) {
+                        case 0:
+                            listToSearch = [...listOne, ...listTwo];
+                            break;
+                        case 1:
+                            listToSearch = [...listTwo, ...listThree];
+                            break;
+                        case 2:
+                            listToSearch = [...listThree];
+                            break;
+
+                    }
+
+                    if (listToSearch.length > 0) {
+                        let hintsFound = false;
+                        listToSearch.forEach((element) => {
+                            if (compareAndCreateHint(textToCompare, element)) {
+                                hintsFound = true;
+                            }
+                        });
+
+
+                        hintListEl.style.display = hintsFound ? 'block' : 'none';
+                    } else {
+                        hintListEl.style.display = 'none';
+                    }
+                } else {
+                    hintListEl.style.display = 'none';
+                }
+            }, 150);
+        });
+
+        function compareAndCreateHint(inputText, element) {
+            const textLength = inputText.length;
+
+            const lowerInputText = inputText.toLowerCase();
+            const lowerElement = element.toLowerCase();
+
+            if (lowerElement.startsWith(lowerInputText)) {
+                const li = document.createElement('li');
+                li.textContent = element;
+                li.classList.add('hint');
+                hintListEl.appendChild(li);
+
+                li.addEventListener('click', () => {
+                    const currentVal = searchInput.value;
+
+                    const lastSpaceIndex = currentVal.lastIndexOf(' ');
+                    const prefix = (lastSpaceIndex === -1) ? "" : currentVal.substring(0, lastSpaceIndex + 1);
+
+
+                    searchInput.value = prefix + element + ' ';
+                    clearHintList();
+                    searchInput.focus();
+                    hintListEl.style.display = 'none';
+                });
+                return true;
+            }
+            return false;
+        }
+
+        function clearHintList() {
+            hintListEl.innerHTML = '';
+
+
+        }
+
+
+        document.addEventListener('click', (event) => {
+            if (!searchInput.contains(event.target) && !hintListEl.contains(event.target)) {
+                hintListEl.style.display = 'none';
+            }
+        });
+
+
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    clearHintList();
+                    hintListEl.style.display = 'none';
+                    searchAndDisplay(false, searchTerm);
+
+
+                    const searchUiContainer = document.querySelector('.search-container');
+                    const searchAgainBtn = document.getElementById('search-again');
+                    if (searchUiContainer) searchUiContainer.style.display = 'none';
+                    if (searchAgainBtn) searchAgainBtn.style.display = 'inline-block';
+                }
+            }
+
+        });
+
+
+        const openBtn = document.getElementById('mobile-nav-open-btn');
+        const closeBtn = document.getElementById('mobile-nav-close');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (openBtn && closeBtn && mobileNav) {
+            openBtn.addEventListener('click', () => {
+                mobileNav.style.display = 'block';
+                openBtn.setAttribute('aria-expanded', 'true');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                mobileNav.style.display = 'none';
+                openBtn.setAttribute('aria-expanded', 'false');
+                openBtn.focus();
+            });
+
+
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.style.display = 'none';
+                    openBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileNav.style.display !== 'none') {
+                    closeBtn.click();
+                }
+            });
+        } else {
+            console.warn("Mobile navigation elements not found.");
+        }
+
+    });
+</script>
 </body>
 </html>

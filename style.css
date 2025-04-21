@@ -65,15 +65,16 @@ body {
     font-weight: 500;
     margin: 0;
     padding: 0;
-    background-color: rgb(7, 22, 41);
+    background-color: #0a192f;
 }
 
 #navigation {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #0C0C0C;
+    background-color: #112240;
     color: white;
+    border-bottom: 1px solid #233554;
 }
 
 .navigation-a {
@@ -185,7 +186,7 @@ body {
 
 .patch-notes-content {
     margin: 2em 20% 1em 20%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #081324;
     color: white;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
@@ -227,7 +228,7 @@ body {
 .wiki-area {
     font-family: Arial, Helvetica, sans-serif;
     margin: 2em 15% 0 15%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #081324;
     color: #ffffff;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
@@ -328,7 +329,7 @@ body {
     flex-direction: column; 
     align-items: center;
     text-decoration: none;
-    color: var(--text-color, #EAEAEA);
+    color: #EAEAEA;
     transition: transform 0.3s ease;
 }
 
@@ -353,9 +354,6 @@ body {
 
 }
 
-
-
-
 .wiki-navigation-gallery {
     margin: 0 1em 1em 1em;
     display: flex;
@@ -369,7 +367,7 @@ body {
     flex-direction: column; 
     align-items: center;
     text-decoration: none;
-    color: var(--text-color, #EAEAEA);
+    color: #EAEAEA;
     transition: transform 0.3s ease;
 }
 
