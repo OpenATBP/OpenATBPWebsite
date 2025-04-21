@@ -1185,50 +1185,6 @@
         }
     }
 
-
-    function determineIfObjSmaller(obj, obj2, sorting) {
-
-
-        const getValue = (playerObj, key) => playerObj?.[key] ?? 0;
-
-        const plays1 = getValue(obj, 'playsPVP');
-        const plays2 = getValue(obj2, 'playsPVP');
-        const wins1 = getValue(obj, 'winsPVP');
-        const wins2 = getValue(obj2, 'winsPVP');
-        const kills1 = getValue(obj, 'kills');
-        const kills2 = getValue(obj2, 'kills');
-        const damage1 = getValue(obj, 'damage');
-        const damage2 = getValue(obj2, 'damage');
-        const champ1 = obj?.champion ?? '';
-        const champ2 = obj2?.champion ?? '';
-
-        switch (sorting) {
-            case 'champion':
-                return champ1.toLowerCase() > champ2.toLowerCase();
-
-            case 'playsPVP':
-                return plays1 < plays2;
-
-            case 'wr':
-                let wr1 = plays1 > 0 ? (wins1 / plays1) : 0;
-                let wr2 = plays2 > 0 ? (wins2 / plays2) : 0;
-                return wr1 < wr2;
-
-            case 'avgKills':
-                let avgKills1 = plays1 > 0 ? (kills1 / plays1) : 0;
-                let avgKills2 = plays2 > 0 ? (kills2 / plays2) : 0;
-                return avgKills1 < avgKills2;
-
-            case 'avgDmg':
-                let avgDmg1 = plays1 > 0 ? (damage1 / plays1) : 0;
-                let avgDmg2 = plays2 > 0 ? (damage2 / plays2) : 0;
-                return avgDmg1 < avgDmg2;
-
-            default:
-                return false;
-        }
-    }
-
     async function getSortedChampStatsArray(sorting) {
         try {
             const res = await fetch('https://beta.openatbp.xyz/data/champstats');
@@ -1287,7 +1243,6 @@
 
 
     async function searchAndDisplay(fromInput, textToSearch) {
-        const playerSearchSection = document.getElementById('player-search-section');
         const playerSearchResultSection = document.getElementById('player-search-result');
         const input = document.getElementById('search-input');
         const searchUi = document.querySelector('#player-search-form .search-container');
@@ -3339,7 +3294,6 @@
         });
 
         function compareAndCreateHint(inputText, element) {
-            const textLength = inputText.length;
 
             const lowerInputText = inputText.toLowerCase();
             const lowerElement = element.toLowerCase();
