@@ -153,7 +153,6 @@
         }
 
         #leaderboard-section td.player-name {
-
             width: auto;
         }
 
@@ -166,8 +165,6 @@
 
         #leaderboard-section td.player-name {
             cursor: pointer;
-            font-weight: bold;
-
         }
 
         #leaderboard-section td:nth-child(2) {
@@ -183,6 +180,37 @@
         #leaderboard-section td:nth-child(5) {
             width: 15%;
         }
+
+        #leaderboard-section .player-name-text-span {
+            display: inline-block;
+            position: relative; /* Needed for absolute positioning of ::after */
+            transition: color var(--transition-speed); /* Optional: transition color too */
+            font-weight: bold;
+            padding-bottom: 3px; /* Add space for the underline */
+            cursor: pointer;
+        }
+
+        /* Underline Element (Hidden Initially) */
+        #leaderboard-section .player-name-text-span::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px; /* Thickness of the underline */
+            background-color: #3069BF; /* Example: Gold color for underline */
+            bottom: 0; /* Position at the bottom */
+            left: 0;
+            transform: scaleX(0); /* Start scaled down to 0 width */
+            transform-origin: center; /* Animate from the center outwards */
+            /* Use transform-origin: left; to animate from left to right */
+            /* Use transform-origin: right; to animate from right to left */
+            transition: transform var(--transition-speed);
+        }
+
+        #leaderboard-section .player-name-text-span:hover::after {
+            transform: scaleX(1); /* Scale underline to full width */
+        }
+
+
 
         #leaderboard-section tr:last-child td {
             border-bottom: none;
@@ -1052,9 +1080,11 @@
 
                         let nameCell = row.insertCell();
                         nameCell.classList.add('player-name');
+                        let playerNameText = document.createElement('span');
+                        playerNameText.classList.add('player-name-text-span');
+                        nameCell.appendChild(playerNameText);
 
                         nameCell.dataset.playerName = dname;
-
 
                         nameCell.addEventListener('click', () => {
                             document.getElementById('leaderboard-section').style.display = 'none';
@@ -1078,9 +1108,9 @@
 
 
                         dname.split(' ').forEach((word, idx, arr) => {
-                            nameCell.appendChild(document.createTextNode(word));
+                            playerNameText.appendChild(document.createTextNode(word));
                             if (idx < arr.length - 1) {
-                                nameCell.appendChild(document.createElement('br'));
+                                playerNameText.appendChild(document.createElement('br'));
                             }
                         });
 
