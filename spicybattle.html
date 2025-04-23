@@ -42,6 +42,7 @@
             --rank-brave: #53AAE0;
             --white: #ffffff;
             --grey: #a0a0a0;
+            --rankColor: white;
 
             --font-sans: 'Rajdhani', sans-serif;
             --border-radius: 8px;
@@ -183,33 +184,32 @@
 
         #leaderboard-section .player-name-text-span {
             display: inline-block;
-            position: relative; /* Needed for absolute positioning of ::after */
-            transition: color var(--transition-speed); /* Optional: transition color too */
+            position: relative;
+            transition: color var(--transition-speed);
             font-weight: bold;
-            padding-bottom: 3px; /* Add space for the underline */
+            padding-bottom: 3px;
             cursor: pointer;
         }
 
-        /* Underline Element (Hidden Initially) */
+
         #leaderboard-section .player-name-text-span::after {
             content: '';
             position: absolute;
             width: 100%;
-            height: 2px; /* Thickness of the underline */
-            background-color: #3069BF; /* Example: Gold color for underline */
-            bottom: 0; /* Position at the bottom */
+            height: 2px;
+            background-color: #3069BF;
+            bottom: 0;
             left: 0;
-            transform: scaleX(0); /* Start scaled down to 0 width */
-            transform-origin: center; /* Animate from the center outwards */
-            /* Use transform-origin: left; to animate from left to right */
-            /* Use transform-origin: right; to animate from right to left */
+            transform: scaleX(0);
+            transform-origin: center;
+
+
             transition: transform var(--transition-speed);
         }
 
         #leaderboard-section .player-name-text-span:hover::after {
-            transform: scaleX(1); /* Scale underline to full width */
+            transform: scaleX(1);
         }
-
 
 
         #leaderboard-section tr:last-child td {
@@ -534,19 +534,30 @@
             display: flex;
             justify-content: center;
             margin-top: 2rem;
+            padding: 0 1rem;
         }
 
         #search-result {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
             background-color: var(--secondary-bg);
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
-            position: relative;
-            padding: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+
+        #search-result > header,
+        #search-result > section {
+            padding: 0;
+            margin-bottom: 0;
+            border: none;
+            background-color: transparent;
         }
 
 
@@ -566,56 +577,82 @@
         #player-header {
             display: flex;
             align-items: center;
-
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 0;
         }
 
+
         #player-header img {
-            width: 100px;
-            height: 100px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
-            border: 3px solid;
+            border: 4px solid;
+
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         #player-name {
-            padding-left: 1.5rem;
-            font-size: 1.6em;
+            font-size: 1.8em;
             font-weight: 700;
             color: var(--text-primary);
+            line-height: 1.2;
+            padding-left: 0;
         }
 
         #tier-name {
-            margin: 0;
+            font-size: 1.2em;
             font-weight: bold;
-            font-size: 1em;
-
             text-transform: uppercase;
+            color: var(--rankColor);
+            margin: 0;
+            order: 1;
         }
 
-        #experience-section,
-        #rank-section,
+
+
+        #rank-section p:first-of-type strong,
+        #stats-section p:first-of-type strong {
+            display: block;
+            font-weight: 700;
+            font-size: 1.3em;
+            color: var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
         #stats-section {
-
-            text-align: left;
+            background-color: var(--primary-bg);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            margin-top: 0.5rem;
         }
 
-        #rank-section .rank-details-container {
+
+        .rank-details-container {
             display: flex;
-            flex-direction: row;
             align-items: center;
             gap: 1.5rem;
             margin-top: 0.5rem;
-            justify-content: center;
+            background-color: var(--primary-bg);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
 
-
+        .rank-details-container .rank-image {
+            width: 70px;
+            height: auto;
+            flex-shrink: 0;
         }
 
 
-        #rank-section .rank-text-details {
+        .rank-text-details {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 0.2rem;
+            gap: 0.3rem;
         }
 
         #rank-section .rank-image {
@@ -641,10 +678,24 @@
             font-size: 1em;
         }
 
-        #experience-section p,
         #stats-section p {
-            margin: 0.4rem 0;
+            margin: 0.5rem 0;
+            font-size: 1em;
+            line-height: 1.5;
+            color: var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+            padding: 0.2rem 0;
         }
+
+        #stats-section p:not(:first-of-type) {
+            border-bottom: 1px solid #2335544a;
+        }
+
+        #stats-section p:last-child {
+            border-bottom: none;
+        }
+
 
         #experience-section p:first-child,
         #rank-section p:first-child,
@@ -658,18 +709,10 @@
         }
 
         #rank-section {
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-        }
 
-        #rank-section p {
-            margin: 0.5rem 0 0 0;
-        }
 
-        #rank-section img {
-            width: 60px;
-            height: auto;
+
+            text-align: left;
         }
 
         #not-found-text {
@@ -679,9 +722,18 @@
         }
 
         #search-leaderboard-pos {
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: block;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+            order: 2;
+        }
+
+        #rank-section .elo-text {
+            font-size: 1em;
+            color: var(--text-secondary);
+            margin: 0;
+            order: 3;
         }
 
 
@@ -1335,39 +1387,46 @@
 
 
                     const isTop15 = leaderboardPosition && leaderboardPosition < 16;
-                    const headerBorderStyle = `border-color: ${getColor(elo)};`;
+
+                    const headerBorderStyle = `border-color: ${rankColor};`;
+
+                    const cardStyleOverride = `--rankColor: ${rankColor};`;
 
                     playerSearchResultSection.innerHTML = `
-                            <article id="search-result" class="player-card">
-                                <header id="player-header" class="player-card-section">
-                                     <img src="${profilePicUrl}" alt="${user.dname}'s profile picture" style="${headerBorderStyle}"
-                                          onerror="this.onerror=null; this.src='img/profile-icons/Default.jpg'; this.alt='Default profile picture';">
-                                     <div>
-                                         <h2 id="player-name">${user.dname}</h2>
-                                     </div>
-                                </header>
-                                <section id="stats-section" class="player-card-section">
-                                    <p style="margin-top: 1rem"><strong>Current Rank</strong></p>
-                                    <img src="${rankImageUrl}" alt="Rank: ${tierName}" style="width: 4vw; height: auto;">
+                    <article id="search-result" class="player-card" style="${cardStyleOverride}">
+                        <header id="player-header" class="player-card-section">
+                             <img src="${profilePicUrl}" alt="${user.dname}'s profile picture" style="${headerBorderStyle}"
+                                  onerror="this.onerror=null; this.src='img/profile-icons/Default.jpg'; this.alt='Default profile picture';">
+                             <h2 id="player-name">${user.dname}</h2>
+                        </header>
+
+                        <section id="rank-section" class="player-card-section">
+                            <p><strong>Current Rank</strong></p>
+                            <div class="rank-details-container">
+                                <img src="${rankImageUrl}" alt="Rank: ${tierName}" class="rank-image">
+                                <div class="rank-text-details">
+                                    <p id="tier-name">${tierName}</p>
                                     <p id="search-leaderboard-pos">Rank: #${leaderboardPosition}</p>
-                                    <p id="tier-name"">Tier: ${tierName}</p>
-                                    <p>Elo: ${elo}</p>
-                                </section>
-                                <section id="stats-section" class="player-card-section">
-                                    <p style="margin-top: 1rem"><strong>Ranked Statistics</strong></p>
-                                    <p>Player Level: ${player.rank}</p>
-                                    <p>Games Played: ${gamesPlayed}</p>
-                                    <p>Wins: ${wins}</p>
-                                    <p>Win Rate: ${wr}%</p>
-                                    <p>Total Kills: ${kills}</p>
-                                    <p>Total Deaths: ${deaths}</p>
-                                    <p>K/D Ratio: ${kdRatio}</p>
-                                    <p>Avg Kills per Game: ${avgKillsGame}</p>
-                                    ${player.largestSpree ? `<p>Largest Killing Spree: ${player.largestSpree}</p>` : ''}
-                                    ${player.largestMulti ? `<p>Largest Multi Kill: ${player.largestMulti}</p>` : ''}
-                                </section>
-                            </article>
-                         `;
+                                    <p class="elo-text">Elo: ${elo}</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="stats-section" class="player-card-section">
+                            <p><strong>Ranked Statistics</strong></p>
+                            <p><span class="stat-label">Player Level:</span> <span class="stat-value">${player.rank}</span></p>
+                            <p><span class="stat-label">Games Played:</span> <span class="stat-value">${gamesPlayed}</span></p>
+                            <p><span class="stat-label">Wins:</span> <span class="stat-value">${wins}</span></p>
+                            <p><span class="stat-label">Win Rate:</span> <span class="stat-value">${wr}%</span></p>
+                            <p><span class="stat-label">Total Kills:</span> <span class="stat-value">${kills}</span></p>
+                            <p><span class="stat-label">Total Deaths:</span> <span class="stat-value">${deaths}</span></p>
+                            <p><span class="stat-label">K/D Ratio:</span> <span class="stat-value">${kdRatio}</span></p>
+                            <p><span class="stat-label">Avg Kills per Game:</span> <span class="stat-value">${avgKillsGame}</span></p>
+                            ${player.largestSpree ? `<p><span class="stat-label">Largest Killing Spree:</span> <span class="stat-value">${player.largestSpree}</span></p>` : ''}
+                            ${player.largestMulti ? `<p><span class="stat-label">Largest Multi Kill:</span> <span class="stat-value">${player.largestMulti}</span></p>` : ''}
+                        </section>
+                    </article>
+                 `;
 
 
                     searchUi.style.display = 'none';
