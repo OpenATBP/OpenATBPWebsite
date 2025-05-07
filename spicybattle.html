@@ -1045,9 +1045,9 @@
         else if (elo > 379) return 'teal-border';
         else if (elo > 319) return 'gold-border';
         else if (elo > 259) return 'silver-border';
-        else if (elo > 198) return 'bronze-border';
-        else if (elo > 72) return 'master-border';
-        else if (elo > 23) return 'royal-border';
+        else if (elo > 199) return 'bronze-border';
+        else if (elo > 74) return 'master-border';
+        else if (elo > 24) return 'royal-border';
         else return 'brave-border';
     }
 
@@ -1056,9 +1056,9 @@
         else if (elo > 379) return 'teal';
         else if (elo > 319) return 'gold';
         else if (elo > 259) return 'silver';
-        else if (elo > 198) return 'bronze';
-        else if (elo > 72) return 'master';
-        else if (elo > 23) return 'royal';
+        else if (elo > 199) return 'bronze';
+        else if (elo > 74) return 'master';
+        else if (elo > 24) return 'royal';
         else return 'brave';
     }
 
@@ -1067,28 +1067,28 @@
         else if (elo > 379) return 'img/ranks/4-3.png';
         else if (elo > 319) return 'img/ranks/4-2.png';
         else if (elo > 259) return 'img/ranks/4-1.png';
-        else if (elo > 198) return 'img/ranks/4-0.png';
+        else if (elo > 199) return 'img/ranks/4-0.png';
         else if (elo > 167) return 'img/ranks/3-3.png';
         else if (elo > 136) return 'img/ranks/3-2.png';
         else if (elo > 105) return 'img/ranks/3-1.png';
-        else if (elo > 72) return 'img/ranks/3-0.png';
+        else if (elo > 74) return 'img/ranks/3-0.png';
         else if (elo > 56) return 'img/ranks/2-2.png';
         else if (elo > 40) return 'img/ranks/2-1.png';
-        else if (elo > 23) return 'img/ranks/2-0.png';
+        else if (elo > 24) return 'img/ranks/2-0.png';
         else if (elo > 11) return 'img/ranks/1-1.png';
         else return 'img/ranks/1-0.png';
     }
 
     function getTierName(elo) {
-        if (elo < 24) return 'BRAVE HERO';
-        else if (elo < 73) return 'ROYAL LEGEND';
-        else if (elo < 199) return 'MASTER OF BATTLE';
+        if (elo < 25) return 'BRAVE HERO';
+        else if (elo < 75) return 'ROYAL LEGEND';
+        else if (elo < 200) return 'MASTER OF BATTLE';
         else return 'IMMORTAL WARRIOR';
     }
 
     function getColor(elo) {
 
-        return elo < 24 ? '#53AAE0' : elo < 73 ? '#CE8526' : elo < 199 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
+        return elo < 25 ? '#53AAE0' : elo < 75 ? '#CE8526' : elo < 200 ? '#D947BC' : elo < 260 ? '#ffa900' : elo < 320 ? '#81acdc' : elo < 380 ? '#ffe504' : elo < 440 ? '#29dddd' : '#e600ff';
     }
 
     async function createLeaderboard() {
