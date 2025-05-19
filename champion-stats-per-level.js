@@ -5,7 +5,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 30,
         "power-damage": 3,
         "shields": 1,
-        "health": 50,
+        "health": 30,
         "regenerate": 1,
     },
     "bmo": {
@@ -17,13 +17,22 @@ STATS_PER_LEVEL = {
         "health": 32,
         "regenerate": 1,
     },
+    "choosegoose": {
+        "attack-damage": 5,
+        "armor": 1,
+        "attack-speed": 35,
+        "power-damage": 2,
+        "shields": 1,
+        "health": 35,
+        "regenerate": 1,
+    },
     "cb": {
         "attack-damage": 4,
         "armor": 1,
-        "attack-speed": 30,
+        "attack-speed": 50,
         "power-damage": 3,
         "shields": 1,
-        "health": 25,
+        "health": 30,
         "regenerate": 1,
     },
     "finn": {
@@ -32,16 +41,16 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 2,
         "shields": 1,
-        "health": 25,
+        "health": 35,
         "regenerate": 1,
     },
     "fionna": {
         "attack-damage": 5,
         "armor": 1,
-        "attack-speed": 60,
+        "attack-speed": 15,
         "power-damage": 2,
         "shields": 1,
-        "health": 50,
+        "health": 35,
         "regenerate": 1,
     },
     "fp": {
@@ -50,7 +59,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 40,
         "power-damage": 3,
         "shields": 1,
-        "health": 35,
+        "health": 25,
         "regenerate": 1,
     },
     "gunter": {
@@ -68,8 +77,8 @@ STATS_PER_LEVEL = {
         "attack-speed": 40,
         "power-damage": 3,
         "shields": 1,
-        "health": 40,
-        "regenerate": 2,
+        "health": 30,
+        "regenerate": 1,
     },
     "iceking": {
         "attack-damage": 2,
@@ -77,7 +86,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 15,
         "power-damage": 3,
         "shields": 1,
-        "health": 35,
+        "health": 25,
         "regenerate": 1,
     },
     "jake": {
@@ -104,7 +113,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 20,
         "power-damage": 3,
         "shields": 1,
-        "health": 50,
+        "health": 25,
         "regenerate": 1,
     },
     "lsp": {
@@ -122,7 +131,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 40,
         "power-damage": 3,
         "shields": 0,
-        "health": 40,
+        "health": 25,
         "regenerate": 1,
     },
     "marceline": {
@@ -131,7 +140,7 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 5,
         "shields": 1,
-        "health": 25,
+        "health": 30,
         "regenerate": 1,
     },
     "neptr": {
@@ -155,10 +164,10 @@ STATS_PER_LEVEL = {
     "pepbut": {
         "attack-damage": 5,
         "armor": 1,
-        "attack-speed": 60,
+        "attack-speed": 50,
         "power-damage": 3,
         "shields": 1,
-        "health": 50,
+        "health": 35,
         "regenerate": 1,
     },
     "rattleballs": {

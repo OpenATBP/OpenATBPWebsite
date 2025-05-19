@@ -75,6 +75,11 @@ const SKINS = {
             "img": "../img/wiki/champion-skins/jake-hat-finn.png",
             "cost": "1250 coins",
             "released": "2024-08-09"
+        },
+        "Shadow Finn": {
+            "img": "../img/wiki/champion-skins/shadow-finn.png",
+            "cost": "500 coins",
+            "released": "2025-05-31"
         }
     },
     "fionna": {
