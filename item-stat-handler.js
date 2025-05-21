@@ -160,7 +160,7 @@ const ITEMS = {
     "lich-hand": {
         "stat1": "Power Damage (20/45/90/165)",
         "stat2": "Shield Breach (5/10/15/20)",
-        "stat3": "Deal increased spell damage when hitting the same target. (10% per stack). 1 second cooldown on obtaining new stacks."
+        "stat3": "Hitting the same target with abilities grants a stack, increasing spell damage dealt to that target by 10% per stack (up to 3 stacks). Cannot gain a new stack more than once per second."
     },
     "lightning-sword": {
         "stat1": "Power Damage (10/32/50/75)",
