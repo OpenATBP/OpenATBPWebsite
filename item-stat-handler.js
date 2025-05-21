@@ -2,7 +2,7 @@ const ITEMS = {
     "anti-anti-magic-potion": {
         "stat1": "Power Damage (25/50/125/250)",
         "stat2": "Power Vamp (3%/5%/7%/10%)",
-        "stat3": "Shields (5/-10/-20/-40)"
+        "stat3": "Shields (-5/-10/-20/-40)"
     },
     "anti-gravity-tote-chamber": {
         "stat1": "Health (25/75/100/150)",
@@ -17,7 +17,7 @@ const ITEMS = {
     "armor-of-zelderon": {
         "stat1": "Armor (5/10/15/20)",
         "stat2": "Shield Breach (5/10/15/25)",
-        "stat3": "After casting an ability, gain a temporary speed boost (0.05/ 0.1/ 0.15/ 0.2) for 2 seconds"
+        "stat3": "After casting an ability, gain a temporary speed boost (0.05/0.1/0.15/0.2) for 2 seconds."
     },
     "ax-bass": {
         "stat1": "Attack Damage (15/30/55/115)",
@@ -60,7 +60,7 @@ const ITEMS = {
     "demon-blood-sword": {
         "stat1": "Attack Damage (10/25/45/75)",
         "stat2": "Bonus damage to jungle monsters (15%/20%/25%/30%)",
-        "stat3": "Gain additional xp (10%) and unique buffs from monsters for 60s. (+25 AD and +50 PD from Owls and Gnomes | +5 Armor and +5 MR from Grassbear and Hugwolf | +0.15 MS from Goo | +5% Crit from Keeoth)"
+        "stat3": "Gain additional xp (10%) and unique buffs from monsters for 60s. (+15 AD and +40 PD from Owls and Gnomes | +5 Armor and +5 MR from Grassbear and Hugwolf | +0.15 MS from Goo | +5% Crit from Keeoth)"
     },
     "demonic-wishing-eye": {
         "stat1": "Power Damage (15/35/75/150)",
@@ -153,7 +153,7 @@ const ITEMS = {
         "stat1": "Armor (10/25/40/60)"
     },
     "jakes-mace": {
-        "stat1": "Attack Damage (10/20/30/50)",
+        "stat1": "Attack Damage (10/20/40/60)",
         "stat2": "Armor Breach (5/10/15/25)",
         "stat3": "Health (25/50/75/100)"
     },
@@ -195,7 +195,7 @@ const ITEMS = {
     },
     "night-sword": {
         "stat1": "Attack Damage (10/25/55/110)",
-        "stat2": "Armor (-5/-10/-15/-25)",
+        "stat2": "Armor (5/-10/-20/-40)",
         "stat3": "Briefly enter stealth (2 seconds) after each kill"
     },
     "nightosphere-amulet": {
@@ -219,8 +219,7 @@ const ITEMS = {
     },
     "robo-suit": {
         "stat1": "Armor (10/25/40/60)",
-        "stat2": "Shields (5/10/15/20)",
-        "stat3": "Increased speed (0.05 per stack, capping at 3 stacks) out of combat. When at three stacks, first hit removes stacks and slows target (20% for 3 seconds). 10 second cooldown."
+        "stat2": "Increased speed (0.05 per stack, capping at 3 stacks) out of combat. When at three stacks, first hit removes stacks and slows the attacker by 20% for 2 seconds. This slow effect has a 10 second cooldown."
     },
     "sai": {
         "stat1": "Attack Damage: 10/25/50/75",
@@ -238,8 +237,8 @@ const ITEMS = {
         "stat3": "Critical Chance (5%/10%/15%/20%)"
     },
     "the-gauntlet-of-the-hero": {
-        "stat1": "Power Damage (15/25/50/100)",
-        "stat2": "Shield Breach (10/20/30/45)"
+        "stat1": "Power Damage (15/35/70/125)",
+        "stat2": "Shield Breach (10/20/35/55)"
     },
     "wizard-robe": {
         "stat1": "Shields (5/10/15/20)",
