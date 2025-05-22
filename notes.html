@@ -18,74 +18,108 @@
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
+            /* ... (keep existing head styles, body styles, navigation styles) ... */
+
         #patch-section {
             margin-top: 2em;
             display: flex;
             flex-wrap: wrap;
-            flex-direction:row-reverse;
-            justify-content: center;
-            align-items: center;
+            flex-direction: row; /* Changed from row-reverse */
+            justify-content: center; /* Keeps rows centered if not full */
+            /* align-items: center; -- if all items should have same height and content centered */
+            align-items: flex-start; /* Aligns items to the start of the cross axis, good if heights vary */
+            gap: 1em; /* Modern way to add space between flex items */
+        }
+
+        /* Style the <a> tag which is the direct flex item */
+        #patch-section > a {
+            /* To ensure 4 items per row */
+            /* flex-grow, flex-shrink, flex-basis */
+            flex: 0 0 calc(25% - 0.75em - 2px); /* 0.75em = (3 gaps * 1em/gap) / 4 items. 2px for borders. */
+            /* Fallback for browsers not supporting calc well in flex, or simpler approach: */
+            /* flex-basis: 22%; */
+            /* max-width: 280px; /* Optional: prevent items from becoming too large on very wide screens */
+            box-sizing: border-box; /* Important for width/padding/border calculations */
+            text-decoration: none; /* Already in your global 'a' style, but good to be aware */
+        }
+
+        #patch-section > a:hover img { /* Apply hover to 'a' tag */
+            transform: scale(1.1);
         }
 
         #patch-section table {
-            margin-right: 1em;
+            /* margin-right: 1em; -- Remove, 'gap' on parent handles spacing */
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 100%; /* Make table fill the 'a' tag */
+            height: 100%; /* Make table fill the 'a' tag if you want them same height */
+            display: flex; /* To make table behave better for layout */
+            flex-direction: column;
         }
 
-        .patch-container {
+        .patch-container { /* This is the table */
             font-size: 1.5em;
             color: white;
             border-collapse: collapse;
-            table-layout: auto;
+            /* table-layout: auto; -- 'fixed' might be better if 'a' has fixed width */
+            table-layout: fixed;
             background-color: rgb(6, 17, 31);
         }
 
         .patch-container td {
             border: 1px solid white;
             text-align: center;
-            overflow: hidden;
+            overflow: hidden; /* Keep this */
         }
 
-        .patch-container img {
-            display: block;
-            width: 15vw;
-            height: auto;
-            overflow: hidden;
-            transition: transform 0.2s ease;
-        }
-
-        .patch-container tr:nth-child(1) td {
+        .patch-container tr:nth-child(1) td { /* Image row */
             padding: 0;
+            /* flex-grow: 1; /* Allow image cell to take more space if needed */
         }
 
-        .patch-container tr:nth-child(2) td, 
+        .patch-container tr:nth-child(2) td,
         .patch-container tr:nth-child(3) td {
             padding: 0.3em;
         }
 
-        a {
-            text-decoration: none;
+        .patch-container img {
+            display: block;
+            width: 100%; /* Image fills its container cell, which scales with table */
+            height: auto; /* Maintain aspect ratio */
+            /* overflow: hidden; -- Not needed on img itself if cell has it */
+            transition: transform 0.2s ease;
         }
 
-        a:hover img {
-            transform: scale(1.1);
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) { /* Adjust breakpoint for when to switch to 2 per row */
+            #patch-section > a {
+                flex-basis: calc(50% - 0.5em - 2px); /* 2 items per row, 0.5em = (1 gap * 1em/gap) / 2 items */
+                /* flex-basis: 45%; */ /* Simpler */
+            }
         }
 
         @media (max-width: 768px) {
-            .patch-container img {
-                width: 60vw;
-                height: auto;
-            }
-
-            #patch-section table {
-                margin-right: 0;
-                margin-top: 1rem;
-            }
-
             #patch-section {
-                flex-direction: column-reverse;
+                flex-direction: column; /* Stack them vertically */
+                align-items: center; /* Center items in the column */
             }
+
+            #patch-section > a {
+                flex-basis: auto; /* Reset flex-basis for column layout */
+                width: 80%;       /* Or some other suitable width for mobile */
+                max-width: 400px; /* Optional: max width for single column items */
+                /* margin-bottom: 1em; /* If 'gap' doesn't provide enough vertical space */
+            }
+
+            /* .patch-container img { */
+            /* width: 60vw; -- Remove this, img is now 100% of its 'a' parent's width */
+            /* height: auto; */
+            /* } */
+
+            /* #patch-section table { */
+            /* margin-right: 0; -- Not needed due to column layout and centering */
+            /* margin-top: 1rem; -- Handled by parent 'gap' or margin on 'a' */
+            /* } */
         }
     </style>
 </head>
@@ -124,75 +158,92 @@
         <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
     </div>
 </div>
-    <div id="patch-section">
-        <a href="patch-notes/1.1.html">
-            <table class="patch-container">
-                <tr>
-                    <td>
-                        <img src="img/patch-images/billy.png">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Patch Notes 1.1</td>
-                </tr>
-                <tr>
-                    <td>08/10/2024</td>
-                </tr>
-            </table>
-        </a>
-        <a href="patch-notes/1.2.html">
-            <table class="patch-container">
-                <tr>
-                    <td><img src="img/patch-images/hunson.png"></td>
-                </tr>
-                <tr>
-                    <td>Patch Notes 1.2</td>
-                </tr>
-                <tr>
-                    <td>08/13/2024</td>
-                </tr>
-            </table>
-        </a>
-        <a href="patch-notes/1.3.html">
-            <table class="patch-container">
-                <tr>
-                    <td><img src="img/patch-images/cinnamon-bun.png"></td>
-                </tr>
-                <tr>
-                    <td>Patch Notes 1.3</td>
-                </tr>
-                <tr>
-                    <td>09/07/2024</td>
-                </tr>
-            </table>
-        </a>
-        <a href="patch-notes/1.4.html">
-            <table class="patch-container">
-                <tr>
-                    <td><img src="img/patch-images/ice-king.png"></td>
-                </tr>
-                <tr>
-                    <td>Patch Notes 1.4</td>
-                </tr>
-                <tr>
-                    <td>12/20/2024</td>
-                </tr>
-            </table>
-        </a>
-        <a href="patch-notes/1.4.1.html">
-            <table class="patch-container">
-                <tr>
-                    <td><img src="img/patch-images/gunter.png"></td>
-                </tr>
-                <tr>
-                    <td>Patch Notes 1.4.1</td>
-                </tr>
-                <tr>
-                    <td>01/20/2025</td>
-                </tr>
-            </table>
-        </a>
-    </div>
+<!-- SNIP: head and existing navigation -->
+<div id="patch-section">
+    <!-- LATEST PATCH FIRST -->
+    <a href="patch-notes/1.5.html">
+        <table class="patch-container">
+            <tr>
+                <td><img src="img/patch-images/choosegoose.png" alt="Patch 1.5 Image"></td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.5</td>
+            </tr>
+            <tr>
+                <td>05/31/2025</td>
+            </tr>
+        </table>
+    </a>
+    <a href="patch-notes/1.4.1.html">
+        <table class="patch-container">
+            <tr>
+                <td><img src="img/patch-images/gunter.png" alt="Patch 1.4.1 Image"></td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.4.1</td>
+            </tr>
+            <tr>
+                <td>01/20/2025</td>
+            </tr>
+        </table>
+    </a>
+    <a href="patch-notes/1.4.html">
+        <table class="patch-container">
+            <tr>
+                <td><img src="img/patch-images/ice-king.png" alt="Patch 1.4 Image"></td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.4</td>
+            </tr>
+            <tr>
+                <td>12/20/2024</td>
+            </tr>
+        </table>
+    </a>
+    <a href="patch-notes/1.3.html">
+        <table class="patch-container">
+            <tr>
+                <td><img src="img/patch-images/cinnamon-bun.png" alt="Patch 1.3 Image"></td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.3</td>
+            </tr>
+            <tr>
+                <td>09/07/2024</td>
+            </tr>
+        </table>
+    </a>
+    <a href="patch-notes/1.2.html">
+        <table class="patch-container">
+            <tr>
+                <td><img src="img/patch-images/hunson.png" alt="Patch 1.2 Image"></td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.2</td>
+            </tr>
+            <tr>
+                <td>08/13/2024</td>
+            </tr>
+        </table>
+    </a>
+    <a href="patch-notes/1.1.html">
+        <table class="patch-container">
+            <tr>
+                <td>
+                    <img src="img/patch-images/billy.png" alt="Patch 1.1 Image">
+                </td>
+            </tr>
+            <tr>
+                <td>Patch Notes 1.1</td>
+            </tr>
+            <tr>
+                <td>08/10/2024</td>
+            </tr>
+        </table>
+    </a>
+    <!-- Add more patches here, newest first -->
+</div>
+<!-- SNIP: script and closing body/html -->
     <script type="text/javascript" src="mobile-nav-handler.js" ></script>   
 </body>
 </html>

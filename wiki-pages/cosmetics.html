@@ -198,7 +198,7 @@
         <div id="page-extender"></div>
     </div>
 
-    <div class="wiki-page-header" style="margin-top: 2rem;">-
+    <div class="wiki-page-header" style="margin-top: 2rem;">
         <h2>User Profile Icons</h2>
     </div>
     <div class="wiki-text">
@@ -251,9 +251,11 @@
         <img src="../img/profile-icons/Tops%20Blooby.jpg" alt="Tops Blooby User Icon">
         <img src="../img/profile-icons/Radiant%20Victory.jpg" alt="Radiant Victory User Icon">
     </div>
+    <div style="margin: 5rem"></div>
 </div>
 
 <div id="icon-tooltip">
+    <p id="tooltip-name"></p>
     <p id="tooltip-rarity"></p>
     <p id="tooltip-unlock"></p>
 </div>
@@ -343,6 +345,7 @@
     };
 
     const iconTooltipElement = document.getElementById('icon-tooltip');
+    const tooltipNameElement = document.getElementById('tooltip-name');
     const tooltipRarityElement = document.getElementById('tooltip-rarity');
     const tooltipUnlockElement = document.getElementById('tooltip-unlock');
     const iconImages = document.querySelectorAll('.wiki-icons-gallery img');
@@ -363,7 +366,8 @@
 
             const iconInfo = ICON_DATA[iconKey];
 
-            if (iconInfo && iconTooltipElement && tooltipRarityElement && tooltipUnlockElement) {
+            if (iconInfo && iconTooltipElement && tooltipNameElement && tooltipRarityElement && tooltipUnlockElement) {
+                tooltipNameElement.textContent = iconKey;
                 tooltipRarityElement.textContent = `Rarity: ${iconInfo.rarity}`;
                 tooltipUnlockElement.textContent = `Unlock: ${iconInfo.unlock}`;
                 iconTooltipElement.style.display = 'block';
