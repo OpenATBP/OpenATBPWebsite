@@ -95,6 +95,7 @@
             margin-bottom: 2.5rem;
             background-color: var(--secondary-bg);
             padding: 0.75rem 0;
+            gap: 2rem;
             border-radius: var(--border-radius);
             max-width: 600px;
             margin-left: auto;
@@ -146,49 +147,52 @@
         }
 
         #leaderboard-section td {
-            padding: 12px 10px;
+            padding: 1rem 0.8rem;
             text-align: center;
             vertical-align: middle;
             border-bottom: 1px solid var(--border-color);
             white-space: nowrap;
-        }
-
-        #leaderboard-section td.player-name {
-            width: auto;
+            font-size: 1.1rem;
         }
 
 
         #leaderboard-section td.leaderboard-position {
-            width: 10%;
-            font-size: 1.8em;
+            width: 60px;
+            font-size: 2rem;
             font-weight: 700;
+            color: var(--text-secondary);
         }
 
+
         #leaderboard-section td.player-name {
+            width: auto;
             cursor: pointer;
         }
 
+
         #leaderboard-section td:nth-child(2) {
-            width: 15%;
+            width: 85px;
         }
 
 
         #leaderboard-section td:nth-child(4) {
             width: 12%;
             font-weight: 600;
+
         }
 
+
         #leaderboard-section td:nth-child(5) {
-            width: 15%;
+            width: 80px;
         }
 
         #leaderboard-section .player-name-text-span {
             display: inline-block;
             position: relative;
             transition: color var(--transition-speed);
-            font-weight: bold;
+            font-weight: 600;
             padding-bottom: 3px;
-            cursor: pointer;
+
         }
 
 
@@ -202,8 +206,6 @@
             left: 0;
             transform: scaleX(0);
             transform-origin: center;
-
-
             transition: transform var(--transition-speed);
         }
 
@@ -225,10 +227,9 @@
             background-color: var(--card-bg-hover);
         }
 
-
         .profile-picture {
-            height: 55px;
-            width: 55px;
+            height: 65px;
+            width: 65px;
             border-radius: 50%;
             border: 2px solid var(--border-color);
             object-fit: cover;
@@ -236,17 +237,12 @@
         }
 
         .rank-image {
-            height: 50px;
+            height: 60px;
             width: auto;
             vertical-align: middle;
         }
 
-        .leaderboard-position {
-            font-size: 1.8em;
-            font-weight: 700;
-            width: 50px;
-            color: var(--text-secondary);
-        }
+
 
 
         .purple-border, .teal-border, .gold-border, .silver-border, .bronze-border, .master-border, .royal-border, .brave-border, .regular-border {
@@ -295,8 +291,6 @@
         .purple, .teal, .gold, .silver, .bronze, .master, .royal, .brave {
             text-decoration: none;
             font-weight: 700;
-
-
         }
 
         .purple {
@@ -490,12 +484,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-
             width: 100%;
-
-
             box-sizing: border-box;
-
             background-color: var(--secondary-bg);
             border: 1px solid var(--border-color);
             border-top: none;
@@ -589,7 +579,6 @@
             height: 85px;
             border-radius: 50%;
             border: 4px solid;
-
             object-fit: cover;
             flex-shrink: 0;
         }
@@ -610,7 +599,6 @@
             margin: 0;
             order: 1;
         }
-
 
 
         #rank-section p:first-of-type strong,
@@ -655,11 +643,8 @@
             gap: 0.3rem;
         }
 
-        #rank-section .rank-image {
-            width: 60px;
-            height: auto;
-            flex-shrink: 0;
-        }
+
+
 
 
         #rank-section .rank-text-details p {
@@ -709,9 +694,6 @@
         }
 
         #rank-section {
-
-
-
             text-align: left;
         }
 
@@ -751,29 +733,33 @@
             #spicy-battle-menu div {
                 margin: 0 0.8rem;
             }
+            #spicy-battle-menu button {
+                margin: 0 0.8rem;
+            }
 
             #leaderboard-section table {
                 table-layout: fixed;
                 width: 90%;
                 max-width: 800px;
-                font-size: 0.9em;
+                font-size: 0.95em;
             }
 
             #leaderboard-section td, #leaderboard-section th {
-                padding: 8px 5px;
+                padding: 0.8rem 0.5rem;
             }
 
             .profile-picture {
-                width: 45px;
-                height: 45px;
+                width: 55px;
+                height: 55px;
             }
 
             .rank-image {
-                height: 40px;
+                height: 50px;
             }
 
-            .leaderboard-position {
-                font-size: 1.5em;
+            #leaderboard-section td.leaderboard-position {
+                width: 50px;
+                font-size: 1.7rem;
             }
 
             #global-stats-section > div {
@@ -813,19 +799,30 @@
             #spicy-battle-menu div {
                 margin: 0 0.5rem;
             }
+            #spicy-battle-menu button {
+                margin: 0 0.5rem;
+            }
+
+            #leaderboard-section table {
+                font-size: 0.9em;
+            }
+            #leaderboard-section td, #leaderboard-section th {
+                padding: 0.7rem 0.3rem;
+            }
+
 
             .profile-picture {
-                width: 40px;
-                height: 40px;
+                width: 48px;
+                height: 48px;
             }
 
             .rank-image {
-                height: 35px;
+                height: 42px;
             }
 
-            .leaderboard-position {
-                font-size: 1.3em;
-                width: 35px;
+            #leaderboard-section td.leaderboard-position {
+                width: 40px;
+                font-size: 1.5rem;
             }
 
             #search-interface {
@@ -849,7 +846,7 @@
             }
 
             #hint-list {
-                width: calc(100% - 52px);
+
             }
 
             #player-header img {
@@ -885,7 +882,7 @@
             background: none;
             border: none;
             padding: 0;
-            margin: 0 1.5rem;
+
             font-family: inherit;
             font-size: inherit;
             font-weight: 600;
@@ -901,16 +898,7 @@
             transform: translateY(-2px);
         }
 
-        #spicy-battle-menu button.active {
-            color: var(--accent-color);
-            cursor: default;
-            border-bottom: 3px solid var(--accent-color);
-            transform: translateY(-2px);
-        }
 
-        #spicy-battle-menu button.inactive {
-            color: var(--text-secondary);
-        }
 
 
         #player-search-form {
@@ -928,11 +916,12 @@
 
 
         #player-search-form #hint-list {
-
             left: 0;
             width: auto;
             min-width: 250px;
+
         }
+    </style>
     </style>
 </head>
 <body>
@@ -1119,12 +1108,18 @@
 
                         let imageCell = row.insertCell();
                         let profilePicture = document.createElement('img');
-                        let pfp = object.user?.pfp || 'Default.jpg';
-                        profilePicture.src = `img/profile-icons/${pfp}`;
+                        let pfp = object.user?.pfp || 'Default';
+
+                        if (!pfp) {
+                            console.log(`Player ${dname} has no pfp!`);
+                        }
+
+                        profilePicture.src = `img/profile-icons/${pfp}.jpg`;
                         profilePicture.alt = `${dname} profile picture`;
                         profilePicture.classList.add('profile-picture');
 
                         profilePicture.onerror = function () {
+                            console.log('Error loading profile picture for ' + dname);
                             this.src = 'img/profile-icons/Default.jpg';
                             this.alt = 'Default profile picture';
                         };
