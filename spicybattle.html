@@ -1367,8 +1367,8 @@
                     const leaderboardPosition = player.leaderboardPosition;
 
 
-                    const pfp = user.pfp || 'Default.jpg';
-                    const profilePicUrl = `img/profile-icons/${pfp}`;
+                    const pfp = user.pfp || 'Default';
+                    const profilePicUrl = `img/profile-icons/${pfp}.jpg`;
                     const rankImageUrl = getRankImage(elo);
                     const tierName = getTierName(elo);
                     const rankColor = getColor(elo);
