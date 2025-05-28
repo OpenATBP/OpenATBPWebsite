@@ -219,7 +219,7 @@ const ITEMS = {
     },
     "robo-suit": {
         "stat1": "Armor (10/25/40/60)",
-        "stat2": "Increased speed (0.05 per stack, capping at 3 stacks) out of combat. When at three stacks, first hit removes stacks and slows the attacker by 20% for 2 seconds. This slow effect has a 10 second cooldown."
+        "stat2": "Increased speed (0.05 per stack, capping at 3 stacks) out of combat. When at three stacks, first hit removes stacks and slows the attacker by 20% for 2 seconds. This passive has a 10 second cooldown."
     },
     "sai": {
         "stat1": "Attack Damage: 10/25/50/75",
