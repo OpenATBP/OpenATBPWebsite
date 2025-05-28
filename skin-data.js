@@ -33,6 +33,8 @@ const SKINS = {
             "released": "2024-08-10"
         }
     },
+    "choosegoose": {
+    },
     "cb": {
         "Guy Farting": {
             "img": "../img/wiki/champion-skins/guy-farting.png",
