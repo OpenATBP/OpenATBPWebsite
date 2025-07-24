@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/bmo.html">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>Choose Goose | OpenATBP Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
+        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
+        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../../index.html">HOME PAGE</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
+            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
+    </div>
+    <div class="wiki-area">
+        <div class="wiki-text">
+            <h1>Statistics</h1>
+            <div class="wiki-champion">
+                <table class="wiki-champion-stat-table">
+                    <tr>
+                        <th colspan="2" class="wiki-champion-stat-table-top">Champion statistics</th>
+                        <th class="wiki-champion-stat-table-top">
+                            <select class="champion-level-select">
+                                <option>Level 1</option>
+                                <option>Level 2</option>
+                                <option>Level 3</option>
+                                <option>Level 4</option>
+                                <option>Level 5</option>
+                                <option>Level 6</option>
+                                <option>Level 7</option>
+                                <option>Level 8</option>
+                                <option>Level 9</option>
+                                <option>Level 10</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/attack-damage.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-damage-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/armor.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Armor</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value armor-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/attack-speed.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Speed</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-speed-value"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/power-damage.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Power Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value power-damage-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/shields.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Shields</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value shields-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/health.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Health</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value health-value"></p>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/regenerate.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Regenerate</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value regenerate-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/attack-range.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Range</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-range-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/speed.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Speed</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value speed-value"></p>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/attack-vamp.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Attack Vamp</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value attack-vamp-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/power-vamp.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Power Vamp</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value power-vamp-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/armor-breach.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Armor Breach</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value armor-breach-value"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/shield-breach.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Shield Breach</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value shield-breach-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Critical Chance</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value critical-chance-value"></p>
+                        </td>
+                        <td>
+                            <div class="wiki-champion-stat-div">
+                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
+                                <p class="wiki-champion-stat-p">Critical Damage</p><br>
+                            </div>
+                            <p class="wiki-champion-stat-value critical-damage-value"></p>
+                        </td>
+                    </tr>      
+                </table>
+                <table class="wiki-champion-infobox">
+                    <tr>
+                        <th colspan="2">Choose Goose</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="../../img/wiki/champion-portraits/choosegoose-portrait.png"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="wiki-champion-infobox-desc">A rhyming merchant with magical wares to share.</td>
+                    </tr>
+                    <tr>
+                        <td>Release date</td>
+                        <td>31-05-2025</td>
+                    </tr>
+                    <tr>
+                        <td>Attack range type</td>
+                        <td>Melee</td>
+                    </tr>
+                    <tr>
+                        <td>Roles</td>
+                        <td>Fighter, Jinxer</td>
+                    </tr>
+                </table>
+            </div>
+            <details>
+                <summary>Statistics per level</summary>
+                <ul>
+                    <li id="choosegoose-ad"></li>
+                    <li id="choosegoose-as"></li>
+                    <li id="choosegoose-armor"></li>
+                    <li id="choosegoose-health"></li>
+                    <li id="choosegoose-regen"></li>
+                    <li id="choosegoose-shields"></li>
+                    <li id="choosegoose-pd"></li>
+                </ul>
+            </details>
+            <h1>Abilities</h1>
+            <div class="wiki-champion-abilities">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="../../img/wiki/champion-abilities/choosegoose-passive.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Treasure Hoarder (Passive)</p>
+                            <p>Whenever Choose Goose scores a kill or assist on an enemy champion, a treasure chest spawns at the target’s death location for 10 seconds. If collected by Choose Goose or an ally, the collector is instantly <span class="wiki-power-vamp">healed</span> for 25% of their maximum <span class="wiki-health">health</span> and gains +20% <span class="wiki-speed">movement speed</span> and +20% <span class="wiki-armor">armor</span> for 6 seconds. Chest spawns have a 20-second cooldown. Each collected chest permanently grants Choose Goose +10 maximum <span class="wiki-health">health</span>.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 20s</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/wiki/champion-abilities/choosegoose-q.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Electric Charge (Q)</p>
+                            <p>Choose Goose charges his hands with electricity, empowering his basic attacks for 5 seconds. While this charge persists, Choose Goose gains +20% <span class="wiki-attack-speed">attack speed</span> and +10% <span class="wiki-attack-damage">attack damage</span>. His first empowered auto-attack against each unique enemy shocks them, dealing (<span class="wiki-power-damage">20 + 20% power damage</span>) per second over 3 seconds. If an enemy is struck three times by these empowered attacks during the effect, their <span class="wiki-armor">armor</span> is reduced by 20% for 3 seconds. Activating this ability resets the auto attack timer.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 11s (8s at level 10)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/wiki/champion-abilities/choosegoose-w.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Goose Leap (W)</p>
+                            <p>Choose Goose leaps to a target location, crashing down to deal (<span class="wiki-power-damage">50 + 40% power damage</span>) to enemies in the impact zone. Enemies caught at the epicenter of the impact are <span class="wiki-colored-text">silenced</span> for 1 second. Upon impact, Choose Goose gains a magical shield for 2.5 seconds, increasing his <span class="wiki-colored-text">armor</span> by 30% and granting <span class="wiki-colored-text">immunity</span> to crowd control during this time.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 15s (12s at level 10)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/wiki/champion-abilities/choosegoose-e.png" class="wiki-champion-ability-img">
+                        </td>
+                        <td>
+                            <p class="wiki-bold-text wiki-mark-out">Hexlash (E)</p>
+                            <p>Choose Goose swings his purple axe, launching a magical projectile that explodes on the first enemy hit (champion, jungle boss, or Nexus), dealing (<span class="wiki-power-damage">190 + 70% power damage</span>). The target is <span class="wiki-colored-text">rooted</span> for 2 seconds.</p>
+                            <p><span class="wiki-bold-text">Cooldown:</span> 55s (42s at level 10)</p>
+                        </td>
+                    </tr> 
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../../champion-base-stats.js" type="text/javascript"></script>
+    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
+    <script src="../../display-champion-stats.js" type="text/javascript"></script>
+    <script src="../../champion-table-handler.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/cosmetics.html">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>Shop | OpenATBP Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .wiki-champion-gallery img {
+            cursor: pointer;
+        }
+
+        #display-skins {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skin-card img {
+            width: 8vw;
+            height: auto;
+        }
+
+        .skin-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #5381b9;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .skin-card p {
+            margin: 0;
+        }
+
+        .skin-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+            box-shadow: 0 0 10px #303844;
+        }
+
+        #page-extender {
+            margin-bottom: 4rem;
+        }
+
+        .wiki-icons-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap:1rem;
+            margin:1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wiki-icons-gallery img {
+            width: 5vw;
+            height: auto;
+            border: 1px solid white;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .wiki-icons-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #303844;
+        }
+
+        #icon-tooltip {
+            display: none;
+            position: fixed;
+            background-color: #2a2f3b;
+            color: white;
+            border: 1px solid #5381b9;
+            border-radius: 5px;
+            padding: 8px 12px;
+            z-index: 1000;
+            pointer-events: none;
+            font-size: 0.85em;
+            line-height: 1.4;
+            max-width: 280px;
+            text-align: left;
+        }
+
+        #icon-tooltip p {
+            margin: 4px 0;
+        }
+
+        .wiki-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        .wiki-text li {
+            margin-bottom: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+<div id="navigation">
+    <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
+    <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
+    <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+    <div id="mobile-nav">
+        <table>
+            <tr>
+                <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
+            </tr>
+            <tr>
+                <td><a href="../index.html">HOME PAGE</a></td>
+            </tr>
+            <tr>
+                <td><a href="../notes.html">PATCH NOTES</a></td>
+            </tr>
+            <tr>
+                <td><a href="../wiki-home.html">WIKI</a></td>
+            </tr>
+            <tr>
+                <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
+            </tr>
+            <tr>
+                <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+            </tr>
+            <tr>
+                <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="desktop-nav">
+        <a class="navigation-a" href="../index.html">HOME PAGE</a>
+        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+        <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
+        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+    </div>
+</div>
+<div class="wiki-area">
+    <div class="wiki-page-header">
+        <h1>Welcome to the Cosmetics Hub!</h1>
+    </div>
+    <div class="wiki-text">
+        <p>Here in OpenATBP, you can personalize your experience with a variety of awesome cosmetic upgrades! While Coins are a key currency, some of the most prestigious items are earned through dedication and skill.</p>
+        <h3>How to Earn Coins</h3>
+        <p>You can earn Coins just by playing the game! Here's how it works:</p>
+        <ul>
+            <li>Win a Ranked Match (3v3): +100 Coins</li>
+            <li>Lose a Ranked Match (3v3): +80 Coins</li>
+            <li>Complete the Tutorial (first time only): +700 Coins</li>
+        </ul>
+        <p>Ranked matches can be entered via the 3vs3 Quick Match button or by using the Invite Friends option to team up.</p>
+        <p>No matter how the match ends, you're always earning progress!</p>
+        <h3>What Cosmetic Can You Get?</h3>
+        <p>Our cosmetics are divided into two main categories: Champion Skins and User Icons.</p>
+        <p>Each champion has their own collection of skins, which you can browse below.</p>
+        <h3>Browse Skins by Champion</h3>
+        <div class="wiki-champion-gallery">
+            <img src="../img/champions/billy.png" id="billy">
+            <img src="../img/champions/bmo.png" id="bmo">
+            <img src="../img/champions/choosegoose.png" id="choosegoose">
+            <img src="../img/champions/cb.png" id="cb">
+            <img src="../img/champions/finn.png" id="finn">
+            <img src="../img/champions/fionna.png" id="fionna">
+            <img src="../img/champions/fp.png" id="fp">
+            <img src="../img/champions/gunter.png" id="gunter">
+            <img src="../img/champions/hunson.png" id="hunson">
+            <img src="../img/champions/iceking.png" id="iceking">
+            <img src="../img/champions/jake.png" id="jake">
+            <img src="../img/champions/lemongrab.png" id="lemongrab">
+            <img src="../img/champions/lich.png" id="lich">
+            <img src="../img/champions/lsp.png" id="lsp">
+            <img src="../img/champions/magicman.png" id="magicman">
+            <img src="../img/champions/marceline.png" id="marceline">
+            <img src="../img/champions/neptr.png" id="neptr">
+            <img src="../img/champions/pepbut.png" id="pepbut">
+            <img src="../img/champions/pb.png" id="pb">
+            <img src="../img/champions/rattleballs.png" id="rattleballs">
+        </div>
+        <h1 id="display-skins-header"></h1>
+        <div id="display-skins"></div>
+        <div id="page-extender"></div>
+    </div>
+
+    <div class="wiki-page-header" style="margin-top: 2rem;">
+        <h2>User Profile Icons</h2>
+    </div>
+    <div class="wiki-text">
+        <p>Personalize your profile with unique icons! You can browse all available icons below. To acquire them, visit the "Icon Shop" in the OpenATBP client. Access it by clicking the three-line menu button in the top bar (next to your "Logged in as..." text) and selecting "Icon Shop."</p>
+        <p>Icons are categorized into four rarity tiers:</p>
+        <ul>
+            <li><strong>Common:</strong> Can be purchased for 200 coins each.</li>
+            <li><strong>Blooby:</strong> Unlocked by completing specific achievements.</li>
+            <li><strong>Algebraic:</strong> Unlocked by completing more difficult achievements.</li>
+            <li><strong>Legendary:</strong> Exclusive rewards from special events or community milestones.</li>
+        </ul>
+        <p>Hover over an icon below to see its rarity and how to unlock it!</p>
+    </div>
+
+    <div class="wiki-icons-gallery">
+        <img src="../img/profile-icons/Default.jpg" alt="Default User Icon">
+        <img src="../img/profile-icons/Billy.jpg" alt="Billy User Icon">
+        <img src="../img/profile-icons/BMO.jpg" alt="BMO User Icon">
+        <img src="../img/profile-icons/Choose%20Goose.jpg" alt="Choose Goose User Icon">
+        <img src="../img/profile-icons/Cinnamon%20Bun.jpg" alt="Cinnamon Bun User Icon">
+        <img src="../img/profile-icons/Finn.jpg" alt="Finn User Icon">
+        <img src="../img/profile-icons/Fionna.jpg" alt="Fionna User Icon">
+        <img src="../img/profile-icons/Flame%20Princess.jpg" alt="Flame Princess User Icon">
+        <img src="../img/profile-icons/Gunter.jpg" alt="Gunter User Icon">
+        <img src="../img/profile-icons/Hunson%20Abadeer.jpg" alt="Hunson Abadeer User Icon">
+        <img src="../img/profile-icons/Ice%20King.jpg" alt="Ice King User Icon">
+        <img src="../img/profile-icons/Jake.jpg" alt="Jake User Icon">
+        <img src="../img/profile-icons/Lady%20Rainicorn.jpg" alt="Lady Rainicorn User Icon">
+        <img src="../img/profile-icons/Lemongrab.jpg" alt="Lemongrab User Icon">
+        <img src="../img/profile-icons/LSP.jpg" alt="LSP User Icon">
+        <img src="../img/profile-icons/Magic%20Man.jpg" alt="Magic Man User Icon">
+        <img src="../img/profile-icons/Marceline.jpg" alt="Marceline User Icon">
+        <img src="../img/profile-icons/NEPTR.jpg" alt="NEPTR User Icon">
+        <img src="../img/profile-icons/Peppermint%20Butler.jpg" alt="Peppermint Butler User Icon">
+        <img src="../img/profile-icons/Prince%20Gumball.jpg" alt="Prince Gumball User Icon">
+        <img src="../img/profile-icons/Princess%20Bubblegum.jpg" alt="Princess Bubblegum User Icon">
+        <img src="../img/profile-icons/Rattleballs.jpg" alt="Rattleballs User Icon">
+        <img src="../img/profile-icons/Cake.jpg" alt="Cake User Icon">
+        <img src="../img/profile-icons/Ignition%20Point.jpg" alt="Ignition Point User Icon">
+        <img src="../img/profile-icons/Lord%20of%20Evil.jpg" alt="Lord of Evil User Icon">
+        <img src="../img/profile-icons/Marshall%20Lee.jpg" alt="Marshall Lee User Icon">
+        <img src="../img/profile-icons/Me-Mow.jpg" alt="Me-Mow User Icon">
+        <img src="../img/profile-icons/Rage.jpg" alt="Rage User Icon">
+        <img src="../img/profile-icons/Young%20Billy.jpg" alt="Young Billy User Icon">
+        <img src="../img/profile-icons/Ancient%20Evil.jpg" alt="Ancient Evil User Icon">
+        <img src="../img/profile-icons/Denial%20of%20Light.jpg" alt="Denial of Light User Icon">
+        <img src="../img/profile-icons/Mr.%20Death.jpg" alt="Mr. Death User Icon">
+        <img src="../img/profile-icons/Phoebe.jpg" alt="Phoebe User Icon">
+        <img src="../img/profile-icons/Simon.jpg" alt="Simon User Icon">
+        <img src="../img/profile-icons/Tops%20Blooby.jpg" alt="Tops Blooby User Icon">
+        <img src="../img/profile-icons/Radiant%20Victory.jpg" alt="Radiant Victory User Icon">
+    </div>
+    <div style="margin: 5rem"></div>
+</div>
+
+<div id="icon-tooltip">
+    <p id="tooltip-name"></p>
+    <p id="tooltip-rarity"></p>
+    <p id="tooltip-unlock"></p>
+</div>
+
+<script type="text/javascript" src="../skin-data.js"></script>
+<script type="text/javascript" src="../mobile-nav-handler.js" ></script>
+<script>
+    document.querySelectorAll('.wiki-champion-gallery img').forEach(img => {
+        img.addEventListener('click', function() {
+            const imgId = this.id;
+            if (imgId && typeof imgId === 'string' && imgId.trim() !== '') {
+                const skinsSection = document.getElementById("display-skins");
+                skinsSection.innerHTML = ""; // Clear previous skins
+                document.getElementById("display-skins-header").textContent = "Available outfits";
+
+                if (typeof SKINS !== 'undefined' && SKINS[imgId]) {
+                    const championObject = SKINS[imgId];
+
+                    for (let key in championObject) {
+                        const skinCard = document.createElement("div");
+                        const skinImageElement = document.createElement("img");
+                        const skinNameElement = document.createElement("p");
+                        const skinCostElement = document.createElement("p");
+                        const skinReleaseDateElement = document.createElement("p");
+
+                        skinCard.classList.add("skin-card");
+                        const skinDetails = championObject[key];
+
+                        skinImageElement.src = skinDetails.img;
+                        skinNameElement.textContent = key;
+                        skinCostElement.textContent = "Cost: " + skinDetails.cost;
+                        skinReleaseDateElement.textContent = "Released: " + skinDetails.released;
+
+                        skinCard.appendChild(skinImageElement);
+                        skinCard.appendChild(skinNameElement);
+                        skinCard.appendChild(skinCostElement);
+                        skinCard.appendChild(skinReleaseDateElement);
+                        skinsSection.appendChild(skinCard);
+                    }
+                } else {
+                    document.getElementById("display-skins-header").textContent = "No outfits found for this champion.";
+                }
+            }
+        });
+    });
+
+    const ICON_DATA = {
+        "Default": { rarity: "Common", unlock: "Create an account" },
+        "Billy": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "BMO": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Choose Goose": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Cinnamon Bun": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Finn": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Fionna": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Flame Princess": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Gunter": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Hunson Abadeer": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Ice King": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Jake": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Lady Rainicorn": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Lemongrab": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "LSP": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Magic Man": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Marceline": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "NEPTR": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Peppermint Butler": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Prince Gumball": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Princess Bubblegum": { rarity: "Common", unlock: "Purchased for 200 coins" },
+        "Rattleballs": { rarity: "Common", unlock: "Purchased for 200 coins" },
+
+        "Cake": { rarity: "Blooby", unlock: "Get a Triple KO" },
+        "Ignition Point": { rarity: "Blooby", unlock: "Reach the Master of Battle rank (at least 75 elo required)" },
+        "Lord of Evil": { rarity: "Blooby", unlock: "Reach player level 25" },
+        "Marshall Lee": { rarity: "Blooby", unlock: "Play 150 Ranked Matches" },
+        "Me-Mow": { rarity: "Blooby", unlock: "Score 500 total KOs in Ranked matches" },
+        "Rage": { rarity: "Blooby", unlock: "Achieve a 9-KO spree in a single Ranked match" },
+        "Young Billy": { rarity: "Blooby", unlock: "Reach player level 30" },
+
+        "Ancient Evil": { rarity: "Algebraic", unlock: "Reach Immortal Warrior rank (at least 200 elo required)" },
+        "Denial of Light": { rarity: "Algebraic", unlock: "Score 1000 total KOs in Ranked matches" },
+        "Mr. Death": { rarity: "Algebraic", unlock: "Achieve a 15-KO spree in a single Ranked match" },
+        "Phoebe": { rarity: "Algebraic", unlock: "Reach player level 50" },
+        "Simon": { rarity: "Algebraic", unlock: "Play 500 Ranked matches" },
+        "Tops Blooby": { rarity: "Algebraic", unlock: "Get a Quad KO" },
+
+        "Radiant Victory": { rarity: "Legendary", unlock: "Win the Community Highlight Contest" }
+    };
+
+    const iconTooltipElement = document.getElementById('icon-tooltip');
+    const tooltipNameElement = document.getElementById('tooltip-name');
+    const tooltipRarityElement = document.getElementById('tooltip-rarity');
+    const tooltipUnlockElement = document.getElementById('tooltip-unlock');
+    const iconImages = document.querySelectorAll('.wiki-icons-gallery img');
+
+    iconImages.forEach(img => {
+        const srcPathForAlt = img.src;
+        const filenameForAlt = decodeURIComponent(srcPathForAlt.substring(srcPathForAlt.lastIndexOf('/') + 1).replace(/\.[^/.]+$/, ""));
+        if (img.alt === "user icon" || !img.alt) {
+            img.alt = `${filenameForAlt} user icon`;
+        }
+
+
+        img.addEventListener('mousemove', function(event) {
+            const srcPath = this.src;
+            const filenameWithExt = srcPath.substring(srcPath.lastIndexOf('/') + 1);
+            const decodedFilenameWithExt = decodeURIComponent(filenameWithExt);
+            const iconKey = decodedFilenameWithExt.substring(0, decodedFilenameWithExt.lastIndexOf('.'));
+
+            const iconInfo = ICON_DATA[iconKey];
+
+            if (iconInfo && iconTooltipElement && tooltipNameElement && tooltipRarityElement && tooltipUnlockElement) {
+                tooltipNameElement.textContent = iconKey;
+                tooltipRarityElement.textContent = `Rarity: ${iconInfo.rarity}`;
+                tooltipUnlockElement.textContent = `Unlock: ${iconInfo.unlock}`;
+                iconTooltipElement.style.display = 'block';
+
+                const offsetX = 15;
+                const offsetY = 15;
+
+                let newX = event.clientX + offsetX;
+                let newY = event.clientY + offsetY;
+
+                if (newX + iconTooltipElement.offsetWidth > window.innerWidth) {
+                    newX = event.clientX - iconTooltipElement.offsetWidth - offsetX;
+                    if (newX < 0) newX = event.clientX + offsetX;
+                }
+                if (newY + iconTooltipElement.offsetHeight > window.innerHeight) {
+                    newY = event.clientY - iconTooltipElement.offsetHeight - offsetY;
+                    if (newY < 0) newY = event.clientY + offsetY;
+                }
+                if (newX < 0) newX = offsetX;
+                if (newY < 0) newY = offsetY;
+
+
+                iconTooltipElement.style.left = `${newX}px`;
+                iconTooltipElement.style.top = `${newY}px`;
+            } else {
+                if (iconTooltipElement) iconTooltipElement.style.display = 'none';
+            }
+        });
+
+        img.addEventListener('mouseout', function() {
+            if (iconTooltipElement) {
+                iconTooltipElement.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

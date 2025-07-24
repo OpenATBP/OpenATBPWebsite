@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/game-mechanics.html">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <title>Game Mechanics | OpenATBP Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #wiki-page-nav {
+            background-color: #1c1c2e;
+            border: 1px solid #6e94c4;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 20%;
+        }
+
+        #wiki-page-nav h3 {
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #444;
+            font-weight: 600;
+            color: #eee;
+            font-size: 1.2em;
+        }
+
+        #wiki-page-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #wiki-page-nav li {
+            margin-bottom: 8px;
+        }
+        #wiki-page-nav li:last-child {
+             margin-bottom: 0;
+        }
+
+        #wiki-page-nav a {
+            text-decoration: none;
+            color: #b0c4de;
+            font-weight: 500;
+            display: block; 
+            padding: 4px 0;
+            transition: color 0.2s ease, padding-left 0.2s ease; 
+        }
+
+        #wiki-page-nav a:hover,
+        #wiki-page-nav a:focus {
+            color: #ffffff; 
+            padding-left: 5px; 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="navigation">
+        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
+        <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
+        <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
+        <div id="mobile-nav">
+            <table>
+                <tr>
+                    <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
+                </tr>
+                <tr>
+                    <td><a href="../index.html">HOME PAGE</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../notes.html">PATCH NOTES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../wiki-home.html">WIKI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="desktop-nav">
+            <a class="navigation-a" href="../index.html">HOME PAGE</a>
+            <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
+            <a class="navigation-a" href="../wiki-home.html">WIKI</a>
+            <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
+            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
+            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
+        </div>
+    </div>
+
+    <div class="wiki-area">
+        <div class="wiki-page-header">
+            <h1>Game Mechanics</h1>
+        </div>
+        <div class="wiki-text">
+            <div id="wiki-page-nav">
+                 <h3>On This Page</h3>
+                 <ul>
+                    <li><a href="#player-controls">Player Controls and Actions</a></li>
+                    <li><a href="#damage-death">Damage and Death</a></li>
+                    <li><a href="#gain-exp">Gaining Experience & Leveling Up</a></li>
+                    <li><a href="#combat-system">Combat System</a></li>
+                    <li><a href="#dc-buffs">Disconnect Buffs (DC Buffs)</a></li>
+                    <li><a href="#crowd-control">Crowd Control Effects (CC)</a></li>
+                    <li><a href="#altars">Altars</a></li>
+                    <li><a href="#health-packs">Health Packs</a></li>
+                    <li><a href="#spawn-times">Spawn Times and Respawn Times</a></li>
+                </ul>
+            </div>
+
+            <h2 id="player-controls" class="wiki-mark-out">Player Controls and Actions</h2>
+            <p>In OpenATBP, controlling your champion is simple but full of depth. Here's how to command the battlefield:</p>
+            <ul>
+                <li>Left-Click on the ground - Your champion will move to the clicked location.</li>
+                <li>Left-Click on an enemy - Your champion will begin attacking that target.</li>
+                <li>Right-Click on the ground - Sends a ping to that location (useful for alerting allies).</li>
+            </ul>
+            <h3>Champion Abilities</h3>
+            <p>Each champion has a unique set of three active abilities, mapped to the Q, W, and E keys:</p>
+            <ul>
+                <li>These abilities can deal damage, apply debuffs, or create helpful effects.</li>
+                <li>Each ability has its own cooldown timer - once it's used, you'll need to wait for it to become available again.</li>
+            </ul>
+            <h3>No Mana in OpenATBP:</h3>
+            <p>OpenATBP does not use a mana system. You can cast abilities as long as they're off cooldown, giving you more freedom to focus on timing and positioning rather than resource management.</p>
+            <h3>Passive Powers</h3>
+            <p>Every champion also has a passive ability:</p>
+            <ul>
+                <li>These are always active or automatically trigger based on specific conditions.</li>
+                <li>Passives add flavor and power to each champion's identity.</li>
+            </ul>
+            <p>Mastering your champion's abilities and knowing when to strike (or retreat!) is key to winning matches.</p>
+
+            <h2 id="damage-death" class="wiki-mark-out">Damage and Death</h2>
+            <p>In OpenATBP, every unit (except <a href="champions/magicman.html" class="wiki-link">Magic Man's decoy</a>) has Health Points (HP) that decrease as they take damage. Once a unit's HP hits zero, it's knocked out (KO'd).</p>
+            <h3>Champion Knockouts & Respawning</h3>
+            <p>When a champion is KO'd, they will respawn at their team's base after a short delay.</p>
+            <p>Your champion's respawn time increases as the match progresses:</p>
+            <ul>
+                <li>Base time: 10 seconds</li>
+                <li>+1 extra second for every full minute the match has lasted</li>
+            </ul>
+            <p>For example:</p>
+            <ul>
+                <li>At 5 minutes → 15s respawn</li>
+            </ul>
+            <p>This mechanic helps speed up early-game action while adding tension to late-game fights.</p>
+
+            <h2 id="gain-exp" class="wiki-mark-out">Gaining Experience & Leveling Up</h2>
+            <p>Defeating enemy champions, minions, and jungle creeps earns your champion Experience Points (XP).</p>
+            <p>Earning enough XP will cause your champion to level up.</p>
+            <h3>Leveling Benefits</h3>
+            <p>Every level increases your base stats, like health or damage.</p>
+            <p>You also gain a Skill Point, which you can invest into Battle Junk — your champion's backpack of upgrades.</p>
+            <h3>Battle Junk Upgrades</h3>
+            <p>Each champion has a unique backpack that offers passive stat boosts. Investing skill points into these items improves:</p>
+            <ul>
+                <li>Attack damage</li>
+                <li>Power damage</li>
+                <li>Attack speed</li>
+                <li>Armor</li>
+                <li>Shields</li>
+                <li>Health</li>
+                <li>Health regen</li>
+                <li>Attack Vamp</li>
+                <li>Power Vamp</li>
+                <li>Armor breach</li>
+                <li>Shield breach</li>
+                <li>And more, depending on your champion's loadout</li>
+            </ul>
+            <p>Choosing how to upgrade your Battle Junk is key to tailoring your champion's strength in each match.</p>
+
+            <h2 id="combat-system" class="wiki-mark-out">Combat System</h2>
+            <p>In OpenATBP, all units deal damage, but not all damage is the same. Understanding how damage works is key to mastering battles.</p>
+            <h3>Damage Types</h3>
+            <p>There are two main types of damage in the game:</p>
+            <ul>
+                <li>Attack Damage (AD)</li>
+                <li>This is the basic physical damage dealt by auto-attacks and certain abilities. Used by:</li>
+                <ul>
+                    <li>Minions</li>
+                    <li>Jungle monsters</li>
+                    <li>Towers</li>
+                    <li>Some champion abilities</li>
+                </ul>
+                <li>Power Damage (PD)</li>
+                <li>This is magical or special ability-based damage. Used by:</li>
+                <ul>
+                    <li>Most champion abilities</li>
+                    <li>Jungle bosses (via special attacks)</li>
+                </ul>
+            </ul>
+            <p>Each champion may scale differently with these damage types, so knowing whether a skill deals AD or PD can influence how you build or counter them.</p>
+            <h2 id="dc-buffs" class="wiki-mark-out">Disconnect Buffs (DC Buffs)</h2>
+            <p>To help balance uneven matches caused by disconnects, OpenATBP provides stat boosts to players left behind when their teammates go offline.</p>
+            <p>These buffs are only active in real matches (not PvP test matches), and are automatically applied when teammates disconnect. If both teams have disconnected players, the buffs cancel each other out.</p>
+            <p>How It Works</p>
+            <p>If one teammate disconnects, all remaining players (and their minions) receive:</p>
+            <ul>
+                <li>+20% Armor</li>
+                <li>+20% Shields</li>
+                <li>+15% Movement Speed</li>
+            </ul>
+            <p>If two teammates disconnect, you gain an additional buff:</p>
+            <ul>
+                <li>+20% Attack Damage</li>
+                <li>+20% Power Damage</li>
+            </ul>
+            <p>If all three team members disconnect, that team will automatically forfeit the match.</p>
+            <p>These buffs are meant to give solo or outnumbered players a fighting chance - but winning a 1v3 still takes serious skill (and maybe a little luck).</p>
+
+            <h2 id="crowd-control" class="wiki-mark-out">Crowd Control Effects (CC)</h2>
+            <p>Crowd Control, often shortened to CC, refers to abilities that restrict a champion’s movement, actions, or both. OpenATBP features a variety of CC effects, each with different mechanics and counterplay.</p>
+            <p>Below is a breakdown of each type of crowd control effect you might encounter:</p>
+            <h3>Root</h3>
+            <ul>
+                <li>You cannot move or use movement abilities.</li>
+                <li>You can still attack and use non-movement abilities.</li>
+            </ul>
+            <h3>Stun</h3>
+            <ul>
+                <li>You are completely disabled.</li>
+                <li>You cannot move, attack, or use abilities.</li>
+            </ul>
+            <h3>Charm</h3>
+            <ul>
+                <li>You lose control of your champion, who automatically walks toward the charmer.</li>
+                <li>You cannot attack or use abilities during this time.</li>
+            </ul>
+            <h3>Slow</h3>
+            <ul>
+                <li>Your movement speed is reduced.</li>
+                <li>You can still attack and cast abilities normally.</li>
+            </ul>
+            <h3>Fear</h3>
+            <ul>
+                <li>You lose control of your champion.</li>
+                <li>Your champion runs in a straight random direction for a short period, then freezes at the endpoint until the effect ends.</li>
+                <li>You cannot use abilities during this.</li>
+            </ul>
+            <h3>Silence</h3>
+            <ul>
+                <li>You are unable to cast abilities.</li>
+                <li>You can still move and use basic attacks.</li>
+            </ul>
+            <h3>Blind</h3>
+            <ul>
+                <li>Your basic attacks deal no damage during the effect.</li>
+                <li>Movement and ability usage remain unaffected.</li>
+            </ul>
+            <h3>Polymorph</h3>
+            <ul>
+                <li>You are transformed into a Flambit.</li>
+                <li>While polymorphed:</li>
+                <ul>
+                    <li>You cannot use abilities and perform basic attacks.</li>
+                    <li>You damage nearby teammates if they are within a radius of 2 units.</li>
+                </ul>
+            </ul>
+            <h3>Airborne</h3>
+            <ul>
+                <li>You are either knocked back or pulled by an ability.</li>
+                <li>You cannot move or use abilities while airborne.</li>
+                <li>Your position shifts depending on the ability's direction and power.</li>
+            </ul>
+            <p>Pro tip: Some champions have passives or abilities that help reduce or cleanse crowd control effects — keep an eye out for them!</p>
+
+            <h2 id="altars" class="wiki-mark-out">Altars</h2>
+            <p>Altars are powerful control points that appear throughout the battlefield in OpenATBP. Securing them provides your team with strong temporary buffs and can swing the outcome of a match.</p>
+            <h3>Mid Altar (Offensive Buff)</h3>
+            <ul>
+                <li>Found at the center of the map, the Mid Altar is the most contested objective.</li>
+                <li>Capturing it grants your entire team +25% Attack Damage and Power Damage for a short duration.</li>
+                <li>Due to its impact on fights, always prioritize capturing the Mid Altar over any other objective.</li>
+            </ul>
+            <h3>Side Altars (Defensive Buffs)</h3>
+            <ul>
+                <li>Two Side Altars are positioned on opposite sides of the map.</li>
+                <li>Capturing one gives your team +25% Armor and Shields for a limited time.</li>
+                <li>While not as game-changing as the Mid Altar, these can give your team a defensive edge - especially in prolonged teamfights.</li>
+            </ul>
+            <h3>Altar Capture Speed</h3>
+            <p>The time it takes to capture an altar depends on how many more teammates are standing on it compared to enemies:</p>
+            <ul>
+                <li>If the difference is 1 player (e.g., 1 purple vs 0 blue, or 2 purple vs 1 blue), the altar is captured in <b>5 seconds.</b></li>
+                <li>If the difference is 2 or more, Fast Capture Mode activates, reducing the time to <b>2 seconds.</b></li>
+            </ul>
+            <h3>Re-Capture</h3>
+            <p>If an altar is captured, it will be available for capture again after 1.5 minutes.</p>
+            <h3>Goo Buff Synergy</h3>
+            <p>Players with the Goo Buff (earned from the Goo Monster) will amplify altar effects by 50%, giving:</p>
+            <ul>
+                <li>+37.5% Attack/Power Damage from the Mid Altar</li>
+                <li>+37.5% Armor/Shields from Side Altars</li>
+            </ul>
+            <p>Also, if a player has 0 Armor or Shields, Side Altar buffs grant a minimum of +5 to each, ensuring everyone benefits from the defense boost.</p>
+
+            <h2 id="health-packs" class="wiki-mark-out">Health Packs</h2>
+            <p>Health Packs are valuable pickups scattered throughout the battlefield in OpenATBP. These can be a lifesaver during intense moments, providing both instant healing and a temporary health regeneration boost.</p>
+            <h3>How Health Packs Work</h3>
+            <ul>
+                <li>Health Packs spawn at specific locations on the map, marked as accessible for all players.</li>
+                <li>Upon pickup, a Health Pack instantly restores 15% of your maximum HP.</li>
+                <li>In addition to immediate healing, it provides +15 Health Regeneration for the next minute.</li>
+            </ul>
+            <h3>Health Pack Timing</h3>
+            <ul>
+                <li>Initial spawn occurs at 14:00 into the match.</li>
+                <li>After a Health Pack is picked up, it will respawn in 60 seconds (1 minute).</li>
+                <li>This allows teams to keep fighting for control over these healing points and plan strategically.</li>
+            </ul>
+            <h3>Strategic Use</h3>
+            <li>Health Packs are limited, so always be aware of their locations and respawn times.</li>
+            <li>They're crucial for sustaining health in longer fights or when pushing objectives.</li>
+
+            <h2 id="spawn-times" class="wiki-mark-out">Spawn Times and Respawn Times</h2>
+            <p>Understanding spawn times and respawn intervals is crucial to mastering the flow of the match in OpenATBP. Below is a breakdown of the different units and their respective timings.</p>
+            <h3>Champions</h3>
+            <ul>
+                <li>Spawn Time: At the start of the match.</li>
+                <li>Respawn Time: 10 seconds + 1 second for every minute the match has lasted. (For example, after 5 minutes, respawn time is 15 seconds.)</li>
+            </ul>
+            <h3>Minions</h3>
+            <ul>
+                <li>First Wave Spawn: 14:30 into the match.</li>
+                <li>Respawn Time: A new wave of minions spawns every 30 seconds.</li>
+            </ul>
+            <h3>Jungle Monsters</h3>
+            <ul>
+                <li>Gnomes, Irow Owls, Grass Bear, and Hug Wolf</li>
+                <ul>
+                    <li>Spawn Time: 14:15 into the match.</li>
+                    <li>Respawn Time: 45 seconds after being killed.</li>
+                </ul>
+                <li>Goo Monster</li>
+                <ul>
+                    <li>Spawn Time: 13:30 into the match.</li>
+                    <li>Respawn Time: 1 minute 30 seconds after being killed.</li>
+                </ul>
+                <li>Kee Oth</li>
+                <ul>
+                    <li>Spawn Time: 13:00 into the match.</li>
+                    <li>Respawn Time: 2 minutes after being killed.</li>
+                </ul>
+            </ul>
+            <h3>Health Packs</h3>
+            <ul>
+                <li>Spawn Time: 14:00 into the match.</li>
+                <li>Respawn Time: 1 minute after being picked up.</li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
+</body>
+</html>

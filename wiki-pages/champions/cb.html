@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
-    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
-    <meta property="og:image" content="atbp-bee.png">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/cb.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
 <body>
     <div id="navigation">
         <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
         <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
         <div id="mobile-nav">
             <table>
@@ -29,7 +29,7 @@
                     <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
                 </tr>
                 <tr>
-                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                    <td><a href="../../index.html">HOME PAGE</a></td>
                 </tr>
                 <tr>
                     <td><a href="../../notes.html">PATCH NOTES</a></td>
@@ -49,7 +49,7 @@
             </table>
         </div>
         <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
             <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
             <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
             <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
@@ -219,6 +219,18 @@
                     </tr>
                 </table>
             </div>
+            <details>
+                <summary>Statistics per level</summary>
+                <ul>
+                    <li id="cb-ad"></li>
+                    <li id="cb-as"></li>
+                    <li id="cb-armor"></li>
+                    <li id="cb-health"></li>
+                    <li id="cb-regen"></li>
+                    <li id="cb-shields"></li>
+                    <li id="cb-pd"></li>
+                </ul>
+            </details>
             <h1>Abilities</h1>
             <div class="wiki-champion-abilities">
                 <table>
@@ -248,7 +260,7 @@
                         </td>
                         <td>
                             <p class="wiki-bold-text wiki-mark-out">Sticky Slide (W)</p>
-                            <p>Cinnamon Bun Dashes, creating a trail of sticky frosting for 5 seconds. The frosting damages (10 <span class="wiki-power-damage">+ 30% power damage</span> / sec) and <span class="wiki-colored-text">slows</span> 20 + (1*level)% for 2 + (0.1 * level) seconds.</p>
+                            <p>Cinnamon Bun Dashes, creating a trail of sticky frosting for 5 seconds. The frosting damages (10 <span class="wiki-power-damage">+ 30% power damage</span>) per second and <span class="wiki-colored-text">slows</span> enemies by 20% for 1 second.</p>
                             <p><span class="wiki-bold-text">Cooldown:</span> 17s (14s at level 10)</p>
                         </td>
                     </tr>
@@ -258,7 +270,7 @@
                         </td>
                         <td>
                             <p class="wiki-bold-text wiki-mark-out">Ring of Frosting (E)</p>
-                            <p>Cinnamon Bun place up to 2 rings that do (50 <span class="wiki-power-damage">+ 35% power damage</span>) per second AoE damage, with a final burst after 4.5 seconds or can be activated by a final press of E. These 2 rings can be placed on top one another to make a larger ring with 2x range and 1.5x damage. Cinnamon Bun can run into the ring to get a 20% buff to <span class="wiki-attack-speed">attack speed</span> and <span class="wiki-attack-damage">attack damage</span>.</p>
+                            <p>Cinnamon Bun can place up to 2 rings that do (50 <span class="wiki-power-damage">+ 35% power damage</span>) per-second AoE damage, with a final burst after 4.5 seconds or can be activated by a final press of E. These 2 rings can be placed on top of one another to make a larger ring with 2x range. Small rings deal 50% more damage. While Cinnamon Bun is standing inside a ring, he gains a 10% buff to <span class="wiki-colored-text">movement speed</span>.</p>
                             <p><span class="wiki-bold-text">Cooldown:</span> 55s (42s at level 10)</p>
                         </td>
                     </tr> 
@@ -274,12 +286,11 @@
                     <img src="../../img/wiki/other/pb-coin.png">
                 </div>
             </div>
-            <div id="recommended-backpacks">
-                <h1>Recommended backpacks</h1>
-                <script src="../../recommended-backpacks-maker.js" type="text/javascript"></script>
-            </div>
         </div>
     </div>
+    <script src="../../champion-base-stats.js" type="text/javascript"></script>
+    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
+    <script src="../../display-champion-stats.js" type="text/javascript"></script>
     <script src="../../champion-table-handler.js" type="text/javascript"></script>
 </body>
 </html>

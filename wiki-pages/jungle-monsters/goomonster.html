@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
-    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
-    <meta property="og:image" content="atbp-bee.png">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/jungle-monsters/goomonster.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
 <body>
     <div id="navigation">
         <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
         <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
         <div id="mobile-nav">
             <table>
@@ -29,7 +29,7 @@
                     <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
                 </tr>
                 <tr>
-                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                    <td><a href="../../index.html">HOME PAGE</a></td>
                 </tr>
                 <tr>
                     <td><a href="../../notes.html">PATCH NOTES</a></td>
@@ -49,7 +49,7 @@
             </table>
         </div>
         <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
             <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
             <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
             <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
@@ -61,61 +61,38 @@
         <div class="wiki-text">
             <h1>Goo Monster</h1>
             <p>The Goo Monster is a jungle boss found at the top of Battle Lab. Upon being killed, it grants 25 points and  <span class="wiki-speed">10% speed</span> buff that lasts 60 seconds. The Goo Monster spawns initially at 13:30 and respawns every 90 seconds after being killed.</p>
-            <table class="wiki-monster-table">
-                <tr>
-                    <th colspan="2">Goo Monster</th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="../../img/wiki/jungle-monsters/goo-monster.png">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Health</td>
-                    <td>1750</td>
-                </tr>
-                <tr>
-                    <td>Armor</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Shields</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Attack damage</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Attack speed</td>
-                    <td>1350</td>
-                </tr>
-                <tr>
-                    <td>Attack range</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Speed</td>
-                    <td>1.5</td>
-                </tr>
-                <tr>
-                    <td>Score value</td>
-                    <td>25</td>
-                </tr>
-            </table>
-            <h1 style="max-width: 30%;">Ability</h1>
-            <table class="wiki-monster-table" style="max-width: 35%;">
-                <tr>
-                    <td>
-                        <img style="height: 8vh; width: auto;" src="../../img/wiki/other/slimed.png">
-                    </td>
-                    <td>
-                        <p class="wiki-mark-out">Slimed</p>
-                        <p>The Goo Monster summons an ooze pool that persists for 3 seconds and deals <span class="wiki-power-damage">40 power damage</span> per second to all champions located in the ability area and also <span class="wiki-colored-text">slows</span> them by 25% for 1 second.</p>
-                        <p><span style="font-weight: bold;">Cooldown:</span> 5 seconds</p>
-                    </td>
-                </tr>
-            </table>
+            <div class="monster-group">
+                <div class="monster">
+                    <img src="../../img/wiki/jungle-monsters/goo-monster.png">
+                    <h3>Statistics:</h3>
+                    <ul>
+                        <li>Health: 1750</li>
+                        <li>Armor: 10</li>
+                        <li>Shields: 10</li>
+                        <li>Attack Damage: 50</li>
+                        <li>Attack Speed: 1350</li>
+                        <li>Attack Range: 3</li>
+                        <li>Speed: 1.5</li>
+                        <li>Score Value: 25</li>
+                        <li>Respawn Time Seconds: 90</li>
+                    </ul>
+                </div>    
+            </div>
+            <h3>Special Ability</h3>
+                <div class="wiki-champion-abilities" style="width: 50%; margin-top: 1rem;">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="../../img/wiki/other/slimed.png" class="wiki-champion-ability-img">
+                            </td>
+                            <td>
+                                <p class="wiki-bold-text wiki-mark-out">Slimed</p>
+                                <p>The Goo Monster summons an ooze pool that persists for 3 seconds and deals <span class="wiki-power-damage">40 power damage</span> per second to all champions located in the ability area and also <span class="wiki-colored-text">slows</span> them by 25% for 1 second.</p>
+                                <p><span class="wiki-bold-text">Cooldown:</span> 5 seconds</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>   
         </div>
     </div>
     <script type="text/javascript" src="../../mobile-nav-handler.js"></script>

@@ -65,18 +65,20 @@ body {
     font-weight: 500;
     margin: 0;
     padding: 0;
-    background-color: rgb(7, 22, 41);
+    background-color: #0a192f;
 }
 
 #navigation {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #0C0C0C;
+    background-color: #112240;
     color: white;
+    border-bottom: 1px solid #233554;
 }
 
 .navigation-a {
+    font-size: 1.3rem;
     text-decoration: none;
     color: inherit;
     margin-right: 2rem;
@@ -110,6 +112,7 @@ body {
     height: 70px;
     width: auto;
     margin-right: 1rem;
+    padding: 0.2rem;
 }
 
 #download-section {
@@ -134,12 +137,13 @@ body {
     margin-top: 1em;
     padding: 1em 3em;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.7em;
     border: 2px solid white;
     border-radius: 0.35em;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     display: inline-block;
     cursor: pointer;
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.2);
 }
 
 #button:hover {
@@ -183,7 +187,7 @@ body {
 
 .patch-notes-content {
     margin: 2em 20% 1em 20%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #081324;
     color: white;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
@@ -191,7 +195,7 @@ body {
 }
 
 .patch-notes-ul {
-    margin: 1em 0 1em 0;
+    margin: 0 0 1em 0;
 }
 
 .patch-notes-content h2 {
@@ -221,11 +225,12 @@ body {
     list-style-type: square;
 }
 
+/*-----------------------------WIKI-----------------------------------------------------------*/
 .wiki-area {
     font-family: Arial, Helvetica, sans-serif;
     margin: 2em 15% 0 15%;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+    background-color: #081324;
+    color: #ffffff;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
     border: 1px solid #335279;
@@ -284,6 +289,8 @@ body {
 
 .wiki-text {
     margin-left: 1em;
+    text-align: left;
+    line-height: 1.6;
 }
 
 .wiki-champion-gallery {
@@ -301,11 +308,122 @@ body {
     border: 1px solid white;
     border-radius: 0.3em;
     transition: transform 0.3s ease;
+    overflow: hidden;
+    display: block; 
 }
 
 .wiki-champion-gallery img:hover {
     transform: scale(1.1);
 }
+
+
+.wiki-monster-gallery {
+    margin: 0 1em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.monster-gallery-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: #EAEAEA;
+    transition: transform 0.3s ease;
+}
+
+.monster-gallery-item img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover; 
+    border: 1px solid var(--border-color, white); 
+    border-radius: 0.3em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.monster-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.monster-gallery-item:hover {
+    transform: scale(1.1);
+
+}
+
+.wiki-navigation-gallery {
+    margin: 0 1em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navigation-gallery-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: #EAEAEA;
+    transition: transform 0.3s ease;
+}
+
+.navigation-gallery-item img {
+    width: 10vh;
+    height: 10vh;
+    object-fit: cover; 
+    border: 1px solid var(--border-color, white); 
+    border-radius: 0.3em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.navigation-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navigation-gallery-item:hover {
+    transform: scale(1.02);
+
+}
+
+#wiki-home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wiki-home-logo img {
+    width: 10vw;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .wiki-colored-text {
     color: #e4be35;
@@ -544,10 +662,6 @@ body {
     transition: filter 0.2s ease-in-out;
 }
 
-#wiki-backpacks-gallery img:hover {
-    filter: brightness(1.2);
-}
-
 .wiki-link {
     color: #e4be35;
     text-decoration: none;
@@ -558,43 +672,19 @@ body {
     text-decoration: underline;
 }
 
-.wiki-monster-table {
-    border-collapse: collapse;
-    background-color: rgba(58, 95, 133, 0.2);
-    margin-bottom: 2em;
-    margin-top: 2em;
 
-}
-.wiki-monster-table img {
-    width: 10vw;
-    height: auto;
-}
-
-.wiki-monster-table td {
-    padding: 1em;
-    border-bottom: 1px dashed rgb(105, 179, 166);
-}
-
-.wiki-monster-table th {
-    padding-top: 1em;
-    color: #60bcc9;
-}
-
-.jungle-monster-section table {
-    margin-right: 2em;
-}
 
 .jungle-monster-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center
+    width: fit-content;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
+    padding: 1rem;
 }
 
 .outfit {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
     width: fit-content;
     padding: 1rem;
     font-weight: bold
@@ -616,9 +706,58 @@ body {
     gap: 1rem;
 }
 
+details {
+    margin: 2% 2% 0 0;
+    padding: 10px;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
+}
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+details ul li {
+    font-size: 1.1rem;
+}
+
 #wiki-navigation-mobile {
     display: none;
 }
+
+#wiki-backpacks-gallery img:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    filter: brightness(1.1);
+}
+
+.monster {
+    padding: 10px;
+    border: 1px solid #5381b9;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.monster img {
+    width: 70%;
+    height: auto;
+}
+
+.monster h3 {
+    margin-bottom: 0;
+}
+
+.monster-group {
+    display: flex;
+}
+
+/*-----------------------------/WIKI-----------------------------------------------------------*/
 
 @media (max-width: 768px) {
     #desktop-nav {

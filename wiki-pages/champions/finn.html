@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Open ATBP is a multiplayer online battle arena (MOBA) game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="Open ATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="Open ATBP - Multiplayer MOBA Game Based on Adventure Time">
-    <meta property="og:description" content="Play Open ATBP, a thrilling MOBA game inspired by Adventure Time. Control one of 19 unique Champions in intense 3v3 battles.">
-    <meta property="og:image" content="atbp-bee.png">
+    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
+    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
+    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
+    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
+    <meta property="og:image" content="favicon.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/finn.html">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
 <body>
     <div id="navigation">
         <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/atbp-bee.png" id="nav-logo" alt="Open ATBP Logo">
+        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
         <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
         <div id="mobile-nav">
             <table>
@@ -29,7 +29,7 @@
                     <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
                 </tr>
                 <tr>
-                    <td><a href="../../index.html">DOWNLOAD</a></td>
+                    <td><a href="../../index.html">HOME PAGE</a></td>
                 </tr>
                 <tr>
                     <td><a href="../../notes.html">PATCH NOTES</a></td>
@@ -49,7 +49,7 @@
             </table>
         </div>
         <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">DOWNLOAD</a>
+            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
             <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
             <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
             <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
@@ -219,6 +219,18 @@
                     </tr>
                 </table>
             </div>
+            <details>
+                <summary>Statistics per level</summary>
+                <ul>
+                    <li id="finn-ad"></li>
+                    <li id="finn-as"></li>
+                    <li id="finn-armor"></li>
+                    <li id="finn-health"></li>
+                    <li id="finn-regen"></li>
+                    <li id="finn-shields"></li>
+                    <li id="finn-pd"></li>
+                </ul>
+            </details>
             <h1>Abilities</h1>
             <div class="wiki-champion-abilities">
                 <table>
@@ -238,7 +250,7 @@
                         </td>
                         <td>
                             <p class="wiki-bold-text wiki-mark-out">Armored Attack (Q)</p>
-                            <p>Finn creates a shield for 3 seconds that resets his auto-attack timer and boosts his <span class="wiki-armor">armor</span> by 15% and <span class="wiki-attack-speed">attack speed</span> by 20%. If Finn reaches max <span class="wiki-mark-out">Fury</span> while <span class="wiki-mark-out">Armored Attack</span> is active, the shield explodes, doing damage (50 <span class="wiki-power-damage">+ 60% power damage</span>). The shield also explodes if Finn is KO'ed while it is active. Also, as long as the shield is active, finn gets a +0.5 <span class="wiki-speed">speed </span> boost.</p>
+                            <p>Finn creates a shield for 3 seconds that resets his auto-attack timer and boosts his <span class="wiki-armor">armor</span> by 15% and <span class="wiki-attack-speed">attack speed</span> by 20%. If Finn reaches max <span class="wiki-mark-out">Fury</span> while <span class="wiki-mark-out">Armored Attack</span> is active, the shield explodes, doing damage (20 <span class="wiki-power-damage">+ 60% power damage</span>). The shield also explodes if Finn is KO'ed while it is active. Also, as long as the shield is active, finn gets a +0.5 <span class="wiki-speed">speed </span> boost.</p>
                             <p><span class="wiki-bold-text">Cooldown:</span> 10s (8s at level 10)</p>
                         </td>
                     </tr>
@@ -248,7 +260,7 @@
                         </td>
                         <td>
                             <p class="wiki-bold-text wiki-mark-out">Bombastic Dash (W)</p>
-                            <p>Finn dashes forward and slashes enemies in his path (75 <span class="wiki-power-damage">+ 20% power damage</span>). <span class="wiki-mark-out">Bombastic Dash</span> adds <span class="wiki-mark-out">Fury</span> and it's cooldown refreshes on kills and assists.</p>
+                            <p>Finn dashes forward and slashes enemies in his path (20 <span class="wiki-power-damage">+ 20% power damage</span>). <span class="wiki-mark-out">Bombastic Dash</span> adds <span class="wiki-mark-out">Fury</span> and it's cooldown refreshes on kills and assists.</p>
                             <p><span class="wiki-bold-text">Cooldown:</span> 12s (10s at level 10)</p>
                         </td>
                     </tr>
@@ -258,7 +270,7 @@
                         </td>
                         <td>
                             <p class="wiki-bold-text wiki-mark-out">The Ring! (E)</p>
-                            <p>Finn drops 4 sword walls creating a fighting ring around himself. The ring damages (65 <span class="wiki-power-damage">+ 20% power damage</span>) and roots for 2 seconds the first enemy to touch each wall. <span class="wiki-mark-out">The Ring!</span> adds <span class="wiki-mark-out">Fury</span>.</p>
+                            <p>Finn drops 4 sword walls creating a fighting ring around himself. The ring damages (65 <span class="wiki-power-damage">+ 50% power damage</span>) and roots for 2 seconds the first enemy to touch each wall. <span class="wiki-mark-out">The Ring!</span> adds <span class="wiki-mark-out">Fury</span>.</p>
                             <p><span class="wiki-bold-text">Cooldown:</span> 40s (26s at level 10)</p>
                         </td>
                     </tr> 
@@ -316,12 +328,11 @@
                     <img src="../../img/wiki/other/pb-coin.png">
                 </div>
             </div>
-            <div id="recommended-backpacks">
-                <h1>Recommended backpacks</h1>
-                <script src="../../recommended-backpacks-maker.js" type="text/javascript"></script>
-            </div>
         </div>
     </div>
+    <script src="../../champion-base-stats.js" type="text/javascript"></script>
+    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
+    <script src="../../display-champion-stats.js" type="text/javascript"></script>
     <script src="../../champion-table-handler.js" type="text/javascript"></script>
 </body>
 </html>
