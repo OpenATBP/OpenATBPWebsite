@@ -641,6 +641,7 @@ body {
     width: 30vw;
     height: auto;
     margin-top: 1.5em;
+    border-radius: 0.65rem;
 }
 
 .wiki-item-image {
