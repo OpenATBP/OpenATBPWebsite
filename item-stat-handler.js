@@ -1,6 +1,6 @@
 const ITEMS = {
     "anti-anti-magic-potion": {
-        "stat1": "Power Damage (25/50/125/250)",
+        "stat1": "Power Damage (25/50/100/225)",
         "stat2": "Power Vamp (3%/5%/7%/10%)",
         "stat3": "Shields (-5/-10/-20/-40)"
     },
@@ -16,7 +16,7 @@ const ITEMS = {
     },
     "armor-of-zelderon": {
         "stat1": "Armor (5/10/15/20)",
-        "stat2": "Shield Breach (5/10/15/25)",
+        "stat2": "Shield Breach (5%/10%/15%/25%)",
         "stat3": "After casting an ability, gain a temporary speed boost (0.05/0.1/0.15/0.2) for 2 seconds."
     },
     "ax-bass": {
@@ -44,7 +44,7 @@ const ITEMS = {
     },
     "candy-cane-shotgun": {
         "stat1": "Attack Damage (10/25/45/75)",
-        "stat2": "Armor Breach (5/10/20/30)",
+        "stat2": "Armor Breach (5%/10%/20%/30%)",
         "stat3": "Attack Range (-.2/-.3/-.4/-.5)"
     },
     "cosmic-gauntlet": {
@@ -64,7 +64,7 @@ const ITEMS = {
     },
     "demonic-wishing-eye": {
         "stat1": "Power Damage (15/35/75/150)",
-        "stat2": "Critical Chance: (5%/10%/20%/40%)",
+        "stat2": "Critical Chance: (5%/10%/20%/35%)",
         "stat3": "Abilities can now crit. AoE and Dot spells have half the chance to proc."
     },
     "electrode-gun": {
@@ -135,9 +135,9 @@ const ITEMS = {
         "stat3": "Every 90 seconds, gain a spell shield that blocks all effects from one spell."
     },
     "hotdog-knights-helmet": {
-        "stat1": "Armor: 10/15/17/20",
-        "stat2": "Crit chance: 5%/10%/15%/30%",
-        "stat3": "Armor Breach: 5/10/20/40"
+        "stat1": "Armor: (10/15/17/20)",
+        "stat2": "Crit chance: (5%/10%/15%/30%)",
+        "stat3": "Armor Breach: (10%/20%/30%/50%)"
     },
     "ice-armor": {
         "stat1": "Armor (10/15/25/40)",
@@ -146,7 +146,7 @@ const ITEMS = {
     },
     "ice-kings-crown": {
         "stat1": "Shields (10/15/17/20)",
-        "stat2": "Shield Breach (10/15/20/40)",
+        "stat2": "Shield Breach (10%/20%/30%/50%)",
         "stat3": "Cooldown (3%/7%/10%/15%)"
     },
     "jakes-helm": {
@@ -154,12 +154,12 @@ const ITEMS = {
     },
     "jakes-mace": {
         "stat1": "Attack Damage (10/20/40/60)",
-        "stat2": "Armor Breach (5/10/15/25)",
+        "stat2": "Armor Breach (5%/10%/15%/25%)",
         "stat3": "Health (25/50/75/100)"
     },
     "lich-hand": {
         "stat1": "Power Damage (20/45/90/165)",
-        "stat2": "Shield Breach (5/10/15/20)",
+        "stat2": "Shield Breach (5%/10%/15%/20%)",
         "stat3": "Hitting the same target with abilities grants a stack, increasing spell damage dealt to that target by 10% per stack (up to 3 stacks). Cannot gain a new stack more than once per second."
     },
     "lightning-sword": {
@@ -169,7 +169,7 @@ const ITEMS = {
     "magic-nail": {
         "stat1": "Attack Damage (5/10/20/35)",
         "stat2": "Speed (.05/.10/.15/.20)",
-        "stat3": "Getting KO's adds bonus Attack Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 40 Attack Damage per level in Magic Nail."
+        "stat3": "Getting KO's adds bonus Attack Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 30 Attack Damage per level in Magic Nail."
     },
     "magic-carpet": {
         "stat1": "Cooldown (5%/10%/15%/20%)",
@@ -205,7 +205,7 @@ const ITEMS = {
     },
     "nothung": {
         "stat1": "Attack Damage (10/25/45/75)",
-        "stat2": "Armor Breach (10/20/35/55)"
+        "stat2": "Armor Breach (10%/20%/35%/65%)"
     },
     "numb-chucks": {
         "stat1": "Attack Damage (10/20/30/50)",
@@ -222,7 +222,7 @@ const ITEMS = {
         "stat2": "Increased speed (0.05 per stack, capping at 3 stacks) out of combat. When at three stacks, first hit removes stacks and slows the attacker by 20% for 2 seconds. This passive has a 10 second cooldown."
     },
     "sai": {
-        "stat1": "Attack Damage: 10/25/50/75",
+        "stat1": "Attack Damage: 10/25/40/50",
         "stat2": "Crit Chance: 5%/10%/15%/20%",
         "stat3": "Basic attacks have a chance to reduce the target’s Armor. The chance and amount of reduction are equal to your Crit Chance. This effect lasts 3 seconds and does not stack"
     },
@@ -238,7 +238,7 @@ const ITEMS = {
     },
     "the-gauntlet-of-the-hero": {
         "stat1": "Power Damage (15/35/70/125)",
-        "stat2": "Shield Breach (10/20/35/55)"
+        "stat2": "Shield Breach (10%/20%/35%/65%)"
     },
     "wizard-robe": {
         "stat1": "Shields (5/10/15/20)",
