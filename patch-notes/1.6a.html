@@ -82,10 +82,29 @@
 
         <h2 class="list-header">New Content</h2>
         <ul class="patch-notes-ul">
-            <li>Added new game mode: <strong>3v3 Bots!</strong> 3 players vs a team of 3 randomly selected bots.</li>
+            <li>Added new game mode: <strong>3v3 Bots</strong>. 3 players vs a team of 3 randomly selected bots.</li>
             <li>Added 3 new bot-controlled champions: <strong>Ice King</strong>, <strong>Jake</strong>, and <strong>Lemongrab</strong>.</li>
         </ul>
 
+        <h3>New user icons</h3>
+        <div class="patch-notes-image-section">
+            <img src="../img/profile-icons/Reaper.jpg" alt="Reaper">
+            <p>Reaper</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Rarity: Algebraic</li>
+            <li>Unlock: Achieve a 25-KO spree in a single Ranked match</li>
+        </ul>
+
+        <div class="patch-notes-image-section">
+            <img src="../img/profile-icons/Huntress Wizard.jpg" alt="Huntress Wizard">
+            <p>Huntress Wizard</p>
+        </div>
+        <ul class="balance-ul">
+            <li>Rarity: Algebraic</li>
+            <li>Unlock: Reach account level 99</li>
+        </ul>
+        
         <h2>Movement System Rework</h2>
         <ul class="patch-notes-ul">
             <li>Player hitbox now updates continuously throughout the entire movement ability process.</li>
@@ -150,7 +169,8 @@
         <ul class="balance-ul">
             <li>Armored Attack (Q)
             <ul>
-                <li>move speed bonus changed from flat +0.5 to 10% move speed buff.</li>
+                <li>Move speed bonus changed from flat +0.5 to 10% move speed buff.</li>
+                <li>[NERF] Basic attack reset on ability activation now sets attack speed to 500ms instead of 0ms, bringing it in line with all other champions' basic attack resets.</li>
             </ul>
             </li>
         </ul>
@@ -207,11 +227,14 @@
 
         <h2>Effect System Rework</h2>
         <ul class="patch-notes-ul">
-            <li>All effects now stack correctly.</li>
+            <li>All effects now stack correctly. Multiple instances of the same effect compound as expected regardless of whether the effect operates on a percentage or a flat value.</li>
         </ul>
 
         <h2 class="list-header">Bug Fixes & Improvements</h2>
         <ul class="patch-notes-ul">
+            <li>Improved hit detection for all projectiles. Projectile hit dection now uses a rectangle that matches the spell indicator shape.</li>
+            <li>Fixed an issue where skillshot that destroy on first affected target would not hit the closest one.</li>
+            <li>Improved minion lane pathing, targeting, and wave stacking. Fixed issues where minions would get stuck, stop moving, or stand still in lane instead of pushing.</li>
             <li>Improved bot AI. bots now make smarter decisions around ability usage and positioning.</li>
             <li>Fixed an issue where only the first player to accept a party invite would successfully join the team. Subsequent accepted invites were incorrectly treated as declined.</li>
             <li>Fixed incorrect buff durations on Goo Monster and Keeoth.</li>
@@ -235,12 +258,12 @@
 
         <h3 class="list-header">Prestige Points (Account XP % per match)</h3>
         <ul class="patch-notes-ul">
-            <li>Winning a ranked game: 20%</li>
-            <li>Losing a ranked game: 10%</li>
-            <li>Winning 3v3 Bots: 10%</li>
-            <li>Losing 3v3 Bots: 5%</li>
-            <li>Winning Practice: 5%</li>
-            <li>Losing Practice: 2%</li>
+            <li>Winning a ranked game: 40%</li>
+            <li>Losing a ranked game: 20%</li>
+            <li>Winning 3v3 Bots: 20%</li>
+            <li>Losing 3v3 Bots: 10%</li>
+            <li>Winning Practice: 10%</li>
+            <li>Losing Practice: 5%</li>
         </ul>
     </div>
     <script type="text/javascript" src="../mobile-nav-handler.js"></script>
