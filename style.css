@@ -1,283 +1,749 @@
-html {
-    font-size: 16px;
-    font-family: Open Sans, sans-serif;
-}
-
-#reddit-link-img {
-    display: none;
-    height: 5vh;
-    width: auto;
-}
-
-#mobile-nav-open-btn {
-    display: none;
-    height: 5vh;
-    width: auto;
-}
-
-#mobile-nav {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #0C0C0C;
-    text-align: left;
-    font-size: 1.5rem;
-    transition: left 0.3s ease;
-}
-
-#mobile-nav table {
-    border-collapse: collapse;
-}
-
-#mobile-nav tr:nth-child(2) td {
-    padding: 0 1rem 1rem 1rem;
-}
-
-#mobile-nav tr:nth-child(n+3) td {
-    padding: 1rem;
-}
-
-#mobile-nav tr:nth-child(n+2) {
-    border-bottom: 1px solid white;
-}
-
-#mobile-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-#mobile-nav-img {
-    height: 5vh;
-    width: auto;
-}
-
-#mobile-nav-close {
-    height: 5vh;
-    width: 5vh;
-    padding-top: 0.5rem;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    background-color: #0a192f;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle 600px at top center, rgba(255, 190, 80, 0.15), transparent 70%),
+        linear-gradient(135deg, #111827, #050816);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
 }
 
+/*-----------------------------NAVIGATION-----------------------------------------------------------*/
+
 #navigation {
+    width: 100%;
+    height: 82px;
+    padding: 0 70px;
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: #112240;
-    color: white;
-    border-bottom: 1px solid #233554;
+    justify-content: space-between;
+
+    background: rgba(10, 14, 28, 0.85);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#nav-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#nav-logo:hover {
+    transform: scale(1.08) rotate(-4deg);
+    filter: drop-shadow(0 0 10px rgba(255, 200, 90, 0.7));
+}
+
+#desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .navigation-a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: inherit;
-    margin-right: 2rem;
     position: relative;
-    transition: color 0.3s ease;
+
+    min-height: 44px;
+    padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.navigation-a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: -1;
 }
 
 .navigation-a::after {
-    content: '';
+    content: "";
     position: absolute;
-    left: 0;
-    bottom: -0.2em;
-    width: 100%;
+    left: 16px;
+    right: 16px;
+    bottom: 7px;
     height: 2px;
-    background-color: #E9C874;
+
+    background: white;
+    border-radius: 999px;
+
     transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+    transform-origin: center;
+    transition: transform 0.25s ease;
 }
 
 .navigation-a:hover {
-    color: #E9C874;
+    color: #171717;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(255, 190, 70, 0.25);
+}
+
+.navigation-a:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .navigation-a:hover::after {
     transform: scaleX(1);
-    transform-origin: left;
 }
 
-#nav-logo {
-    height: 3.5rem;
-    padding: 0.5rem;
-    width: auto;
-    margin-right: 1rem;
+.navigation-a img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
 }
+
+.navigation-a:hover img {
+    transform: scale(1.15);
+}
+
+/*-----------------------------HOME / DOWNLOAD SECTION-----------------------------------------------------------*/
 
 #download-section {
+    height: calc(100vh - 82px);
+
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
     justify-content: center;
     align-items: center;
+    gap: 18px;
+
+    padding: 24px;
+    text-align: center;
+    overflow: hidden;
 }
 
 #atbp-logo {
-    max-width: 100%;
-    height: 300px;
-    width: auto;
-    justify-content: center;
-}
+    width: min(460px, 78vw);
+    height: auto;
 
-#button {
-    text-decoration: none;
-    background-color: #e4be35;
-    color: black;
-    margin-top: 1em;
-    padding: 1em 3em;
-    font-weight: bold;
-    font-size: 1.7em;
-    border: 2px solid white;
-    border-radius: 0.35em;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    display: inline-block;
-    cursor: pointer;
-    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.2);
-}
+    filter:
+        drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55))
+        drop-shadow(0 0 14px rgba(255, 195, 60, 0.12));
 
-#button:hover {
-    background-color: #f7ce3c;
-    color: white;
-    border-color: #f7ce3c;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-#button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-#windows-img {
-    height: 30px;
-    width: auto;
-}
-
-#button-text {
-    margin: 0 0 0.5em 0;
+    animation: logoFloat 4s ease-in-out infinite;
 }
 
 #download-header {
-    text-align: center;
-    margin-top: 2em;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 850px;
+
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.8px;
+
+    color: #f8fafc;
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.45),
+        0 10px 24px rgba(0, 0, 0, 0.55);
 }
 
-#patch-notes-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5% 20% 0 20%;
+#download-subtitle {
+    max-width: 620px;
 
+    font-size: clamp(14px, 1.2vw, 17px);
+    line-height: 1.45;
+
+    color: #cbd5e1;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+#download-button {
+    position: relative;
+
+    min-width: 220px;
+    padding: 14px 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1a1300;
+    text-decoration: none;
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(135deg, #ffd84d, #f6b91f 45%, #d89012);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 0 #8b5708,
+        0 16px 30px rgba(0, 0, 0, 0.45),
+        inset 0 2px 0 rgba(255, 255, 255, 0.65),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+#download-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.45s ease;
+}
+
+#download-button:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 12px 0 #8b5708,
+        0 22px 42px rgba(0, 0, 0, 0.55),
+        0 0 28px rgba(255, 200, 60, 0.28),
+        inset 0 2px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+}
+
+#download-button:hover::before {
+    left: 130%;
+}
+
+#download-button:active {
+    transform: translateY(5px);
+
+    box-shadow:
+        0 3px 0 #8b5708,
+        0 10px 22px rgba(0, 0, 0, 0.45),
+        inset 0 2px 0 rgba(255, 255, 255, 0.65),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/*-----------------------------PATCH NOTES-----------------------------------------------------------*/
+
+.patch-page {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 44px 0 80px 0;
+}
+
+.patch-header {
+    text-align: left;
+    margin-bottom: 26px;
+}
+
+.patch-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+    padding: 7px 18px;
+
+    color: #1a1300;
+    background: linear-gradient(135deg, #ffd84d, #f6b91f 45%, #d89012);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.patch-header h1 {
+    margin: 0;
+
+    color: #f8fafc;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.45),
+        0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.patch-subtitle {
+    margin-top: 16px;
+
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.patch-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 40px 0 42px 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 216, 77, 0.05),
+        rgba(255, 216, 77, 0.45),
+        rgba(83, 129, 185, 0.55),
+        rgba(255, 216, 77, 0.12)
+    );
+
+    box-shadow: 0 0 18px rgba(255, 216, 77, 0.12);
 }
 
 .patch-notes-content {
-    margin: 2em 20% 1em 20%;
-    background-color: #081324;
-    color: white;
-    border-top-right-radius: 1em;
-    border-top-left-radius: 1em;
-    border: 1px solid #335279;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: #f8fafc;
 }
 
-.patch-notes-ul {
-    margin: 0 0 1em 0;
+.patch-section {
+    margin-bottom: 54px;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
-.patch-notes-content h2 {
-    margin-left: 1em;
-}
-
-.patch-notes-image-section {
-    margin-left: 1.5em;
-}
-
-.patch-notes-image-section p {
-    font-weight: bold;
-    color: #e4be35;
-    margin: 0.5em 0 0 0;
-}
-
-.patch-notes-image-section img {
-    height: 8vh;
-    width: 8vh;
-}
-
-.balance-ul {
-    margin: 1em 0 2em 2em;
-}
-
-.patch-notes-content li {
-    list-style-type: square;
-}
-
-/*-----------------------------WIKI-----------------------------------------------------------*/
-.wiki-area {
-    margin: 2em 15% 0 15%;
-    background-color: #081324;
-    color: #ffffff;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    border: 1px solid #335279;
-}
-
-.wiki-page-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.wiki-page-header h1 {
+.patch-section:last-child {
     margin-bottom: 0;
 }
 
-.wiki-navigation {
+.patch-section h2 {
+    margin: 0 0 22px 0;
+
+    color: #ffd84d;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(255, 216, 77, 0.16);
+}
+
+.patch-notes-ul,
+.balance-ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.patch-notes-ul li,
+.balance-ul li {
+    position: relative;
+
+    margin-bottom: 8px;
+    padding-left: 24px;
+
+    color: #f8fafc;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+}
+
+.patch-notes-ul li::before,
+.balance-ul li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.62em;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ffd84d;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 216, 77, 0.35);
+
+    transform: rotate(45deg);
+}
+
+.patch-notes-ul li:last-child,
+.balance-ul li:last-child {
+    margin-bottom: 0;
+}
+
+.balance-card {
+    width: fit-content;
+    max-width: 760px;
+
+    margin: 0 0 32px 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.balance-card:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.patch-notes-image-section {
+    margin: 0 0 14px 0;
+
     display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.item {
+.patch-notes-image-section img {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.35),
+        0 0 14px rgba(255, 216, 77, 0.05);
+}
+
+.patch-notes-image-section p {
+    margin: 8px 0 0 0;
+
+    color: #ffd84d;
+    font-size: 1.05rem;
+    font-weight: 900;
+    text-align: left;
+    line-height: 1.15;
+    letter-spacing: 0.4px;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 12px rgba(255, 216, 77, 0.12);
+}
+
+@media (max-width: 768px) {
+    .patch-page {
+        width: min(100% - 28px, 720px);
+        padding: 30px 0 56px 0;
+    }
+
+    .patch-header h1 {
+        font-size: clamp(34px, 11vw, 52px);
+        letter-spacing: 3px;
+    }
+
+    .patch-subtitle {
+        font-size: 16px;
+    }
+
+    .patch-divider {
+        margin: 28px 0 34px 0;
+    }
+
+    .patch-section {
+        margin-bottom: 42px;
+    }
+
+    .patch-section h2 {
+        font-size: clamp(26px, 8vw, 36px);
+        letter-spacing: 2.5px;
+    }
+
+    .balance-card {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 28px;
+    }
+
+    .patch-notes-image-section img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .patch-notes-ul li,
+    .balance-ul li {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+}
+
+/*-----------------------------WIKI-----------------------------------------------------------*/
+
+.wiki-page {
+    width: min(1150px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 42px 0 70px 0;
+}
+
+.wiki-page-header {
     text-align: center;
+    margin-bottom: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item a {
-    transition: transform 0.3s ease;
+.wiki-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+    padding: 7px 16px;
+
+    color: #1a1300;
+    background: linear-gradient(135deg, #ffd84d, #f6b91f 45%, #d89012);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
-.item a:hover {
-    color: #f7ce3c;
+.wiki-page-header h1 {
+    margin: 0;
+
+    color: #f8fafc;
+    font-size: clamp(34px, 4vw, 56px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.05;
+
+    text-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.45),
+        0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
-.wiki-navigation img {
-    width: 10vh;
-    height: 10vh;
-    display: block;
-    margin-bottom: 0.3em;
-    transition: transform 0.3s ease;
+.wiki-page-header p:not(.wiki-label) {
+    max-width: 720px;
+    margin-top: 12px;
+
+    color: #cbd5e1;
+    font-size: clamp(15px, 1.5vw, 19px);
+    line-height: 1.5;
 }
 
-.wiki-navigation img:hover {
-    transform: scale(1.1);
+.wiki-divider {
+    width: min(760px, 100%);
+    height: 2px;
+    margin: 0 auto 36px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 216, 77, 0.25),
+            rgba(255, 216, 77, 0.9),
+            rgba(255, 216, 77, 0.25),
+            transparent
+        );
+
+    box-shadow: 0 0 22px rgba(255, 216, 77, 0.22);
 }
+
+.wiki-area {
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+.wiki-navigation-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+
+    margin: 0;
+}
+
+.navigation-gallery-item {
+    position: relative;
+
+    min-height: 230px;
+    padding: 24px 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    color: #e5e7eb;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        background-color 0.22s ease;
+}
+
+.navigation-gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 216, 77, 0.12), transparent 45%);
+
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+}
+
+.navigation-gallery-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 216, 77, 0.55);
+
+    box-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.42),
+        0 0 24px rgba(255, 216, 77, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.navigation-gallery-item:hover::before {
+    opacity: 1;
+}
+
+.navigation-gallery-item img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+
+    margin-bottom: 6px;
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.navigation-gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.08);
+}
+
+.navigation-name {
+    color: #ffd84d;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+.navigation-desc {
+    max-width: 180px;
+
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Existing wiki content styles */
 
 .wiki-champions-text {
     margin: 1em;
@@ -295,6 +761,7 @@ body {
 
 .wiki-champion-gallery {
     margin: 0 1em 1em 1em;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -305,20 +772,23 @@ body {
 .wiki-champion-gallery img {
     width: 9vh;
     height: 9vh;
+
     border: 1px solid white;
     border-radius: 0.3em;
-    transition: transform 0.3s ease;
+
     overflow: hidden;
-    display: block; 
+    display: block;
+
+    transition: transform 0.3s ease;
 }
 
 .wiki-champion-gallery img:hover {
     transform: scale(1.1);
 }
 
-
 .wiki-monster-gallery {
     margin: 0 1em 1em 1em;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -327,19 +797,23 @@ body {
 
 .monster-gallery-item {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
+
     text-decoration: none;
     color: #EAEAEA;
+
     transition: transform 0.3s ease;
 }
 
 .monster-gallery-item img {
     width: 15vh;
     height: 15vh;
-    object-fit: cover; 
-    border: 1px solid var(--border-color, white); 
+    object-fit: cover;
+
+    border: 1px solid var(--border-color, white);
     border-radius: 0.3em;
+
     display: block;
     margin-bottom: 0.5em;
 }
@@ -352,45 +826,6 @@ body {
 
 .monster-gallery-item:hover {
     transform: scale(1.1);
-
-}
-
-.wiki-navigation-gallery {
-    margin: 0 1em 1em 1em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.navigation-gallery-item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    text-decoration: none;
-    color: #EAEAEA;
-    transition: transform 0.3s ease;
-}
-
-.navigation-gallery-item img {
-    width: 10vh;
-    height: 10vh;
-    object-fit: cover; 
-    border: 1px solid var(--border-color, white); 
-    border-radius: 0.3em;
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.navigation-name {
-    font-size: 0.9em;
-    font-weight: bold;
-    text-align: center;
-}
-
-.navigation-gallery-item:hover {
-    transform: scale(1.02);
-
 }
 
 #wiki-home-logo {
@@ -403,27 +838,6 @@ body {
     width: 10vw;
     height: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .wiki-colored-text {
     color: #e4be35;
@@ -455,16 +869,19 @@ body {
 }
 
 .wiki-champion-infobox th {
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.5em 0;
+
     text-align: center;
     font-weight: bold;
     font-size: 1.1em;
+
     background-color: #0d2c4c;
 }
 
 .wiki-champion {
     display: flex;
     justify-content: center;
+
     margin-top: 2em;
     margin-right: 2em;
 }
@@ -479,18 +896,21 @@ body {
     margin-left: 0.2em;
     margin-bottom: 0;
     margin-top: 0;
+
     color: #60bcc9;
 }
 
 .wiki-champion-stat-table {
     text-align: center;
     border-collapse: collapse;
+
     margin-right: 2em;
 }
 
-.wiki-champion-stat-table td, .wiki-champion-stat-table th {
+.wiki-champion-stat-table td,
+.wiki-champion-stat-table th {
     border: 1px solid #1A2833;
-    padding: 0 0.5em 0 0.5em;
+    padding: 0 0.5em;
 }
 
 .wiki-champion-stat-table img {
@@ -503,7 +923,6 @@ body {
     font-weight: bold;
 }
 
-
 .wiki-champion-stat-value {
     margin: 0.3em 0 0 0;
     font-weight: bold;
@@ -512,6 +931,7 @@ body {
 .wiki-champion-stat-table td {
     width: 10vw;
     height: fit-content;
+
     background-color: rgba(27, 67, 107, 0.1);
 }
 
@@ -519,18 +939,14 @@ body {
     padding: 0.5em;
 }
 
-.wiki-attack-damage {
+.wiki-attack-damage,
+.wiki-attack-speed {
     color: #de5d4a;
     font-weight: bold;
 }
 
 .wiki-armor {
     color: #e1b641;
-    font-weight: bold;
-}
-
-.wiki-attack-speed {
-    color: #de5d4a;
     font-weight: bold;
 }
 
@@ -544,17 +960,14 @@ body {
     font-weight: bold;
 }
 
-.wiki-health {
-    color: #039403;
-    font-weight: bold;
-}
-
+.wiki-health,
 .wiki-regenerate {
     color: #039403;
     font-weight: bold;
 }
 
-.wiki-attack-range {
+.wiki-attack-range,
+.wiki-crit {
     color: #d22e15;
     font-weight: bold;
 }
@@ -571,11 +984,6 @@ body {
 
 .wiki-power-vamp {
     color: #00ffff;
-    font-weight: bold;
-}
-
-.wiki-crit {
-    color: #d22e15;
     font-weight: bold;
 }
 
@@ -640,6 +1048,7 @@ body {
 .wiki-backpack-image {
     width: 30vw;
     height: auto;
+
     margin-top: 1.5em;
     border-radius: 0.65rem;
 }
@@ -654,6 +1063,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -661,6 +1071,12 @@ body {
 #wiki-backpacks-gallery img {
     max-width: 100%;
     transition: filter 0.2s ease-in-out;
+}
+
+#wiki-backpacks-gallery img:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    filter: brightness(1.1);
 }
 
 .wiki-link {
@@ -673,22 +1089,24 @@ body {
     text-decoration: underline;
 }
 
-
-
 .jungle-monster-section {
     width: fit-content;
+
     border: 1px solid #5381b9;
     border-radius: 5px;
+
     padding: 1rem;
 }
 
 .outfit {
-    text-align: center;
-    border: 1px solid #5381b9;
-    border-radius: 5px;
     width: fit-content;
     padding: 1rem;
-    font-weight: bold
+
+    text-align: center;
+    font-weight: bold;
+
+    border: 1px solid #5381b9;
+    border-radius: 5px;
 }
 
 .outfit p {
@@ -710,9 +1128,11 @@ body {
 details {
     margin: 2% 2% 0 0;
     padding: 10px;
+
     border: 1px solid #5381b9;
     border-radius: 5px;
 }
+
 summary {
     cursor: pointer;
     font-weight: bold;
@@ -723,26 +1143,18 @@ details ul li {
     font-size: 1.1rem;
 }
 
-#wiki-navigation-mobile {
-    display: none;
-}
-
-#wiki-backpacks-gallery img:hover {
-    transform: scale(1.03);
-    transition: transform 0.2s ease;
-    filter: brightness(1.1);
-}
-
 .monster {
-    padding: 10px;
-    border: 1px solid #5381b9;
-    border-radius: 5px;
     width: fit-content;
     margin: 0.5rem;
+    padding: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border: 1px solid #5381b9;
+    border-radius: 5px;
 }
 
 .monster img {
@@ -758,7 +1170,280 @@ details ul li {
     display: flex;
 }
 
-/*-----------------------------/WIKI-----------------------------------------------------------*/
+@media (max-width: 768px) {
+    .wiki-page {
+        width: min(100% - 24px, 1150px);
+        padding: 30px 0 50px 0;
+    }
+
+    .wiki-page-header h1 {
+        font-size: clamp(30px, 10vw, 42px);
+    }
+
+    .wiki-navigation-gallery {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .navigation-gallery-item {
+        min-height: 180px;
+        padding: 22px 16px;
+    }
+
+    .navigation-gallery-item img {
+        width: 82px;
+        height: 82px;
+    }
+
+    .navigation-name {
+        font-size: 1.15rem;
+    }
+
+    .navigation-desc {
+        font-size: 0.9rem;
+    }
+
+    .wiki-area {
+        margin: 0;
+    }
+
+    .wiki-champion {
+        flex-direction: column;
+    }
+
+    .wiki-champion-infobox img {
+        width: 50vw;
+        height: auto;
+    }
+
+    .wiki-champion-stat-table {
+        display: none;
+    }
+
+    #wiki-backpacks-gallery img {
+        width: 70vw;
+        height: auto;
+    }
+
+    .wiki-backpack-image {
+        width: 80vw;
+        height: auto;
+    }
+
+    .wiki-item-image {
+        width: 70px;
+        height: auto;
+    }
+
+    .wiki-monster-table img {
+        width: 40vw;
+        height: auto;
+    }
+}
+
+
+.wiki-content-section {
+    margin-bottom: 42px;
+}
+
+.wiki-content-section:last-child {
+    margin-bottom: 0;
+}
+
+.wiki-content-section h2 {
+    margin: 0 0 14px 0;
+
+    color: #ffd84d;
+    font-size: clamp(24px, 2.3vw, 34px);
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 216, 77, 0.16);
+}
+
+.wiki-content-section p {
+    max-width: 900px;
+    margin: 0 0 14px 0;
+
+    color: #dbe4f0;
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.65;
+}
+
+.wiki-attack-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+
+    margin-top: 20px;
+}
+
+.wiki-attack-type-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.wiki-attack-type-card img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+}
+
+.wiki-attack-type-card h3 {
+    margin: 0 0 4px 0;
+
+    color: #ffd84d;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.wiki-attack-type-card p {
+    margin: 0;
+
+    color: #cbd5e1;
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.wiki-champion-roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: 16px;
+
+    margin: 22px 0 0 0;
+}
+
+.wiki-champion-card {
+    min-height: 160px;
+    padding: 16px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    color: #e5e7eb;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.wiki-champion-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 216, 77, 0.55);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.38),
+        0 0 22px rgba(255, 216, 77, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.wiki-champion-card img {
+    width: 82px;
+    height: 82px;
+    object-fit: cover;
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.wiki-champion-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.08);
+}
+
+.wiki-champion-card span {
+    color: #ffd84d;
+    font-size: 0.98rem;
+    font-weight: 900;
+    line-height: 1.2;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+@media (max-width: 768px) {
+    .wiki-content-section {
+        margin-bottom: 34px;
+    }
+
+    .wiki-attack-type-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wiki-attack-type-card {
+        align-items: flex-start;
+    }
+
+    .wiki-champion-roster {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    .wiki-champion-card {
+        min-height: 145px;
+        padding: 14px 10px;
+    }
+
+    .wiki-champion-card img {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+/*-----------------------------RESPONSIVE-----------------------------------------------------------*/
+
+@media (min-width: 1200px) {
+    #navigation {
+        font-size: 1.15rem;
+    }
+}
 
 @media (max-width: 768px) {
     #desktop-nav {
@@ -774,8 +1459,36 @@ details ul li {
     }
 
     #navigation {
+        height: 72px;
+        padding: 0 24px;
         justify-content: space-between;
         flex-direction: row-reverse;
+    }
+
+    #download-section {
+        height: calc(100vh - 72px);
+        padding: 18px;
+        gap: 14px;
+    }
+
+    #atbp-logo {
+        width: min(340px, 88vw);
+    }
+
+    #download-header {
+        font-size: clamp(22px, 7vw, 32px);
+        max-width: 92vw;
+    }
+
+    #download-subtitle {
+        font-size: 14px;
+        max-width: 92vw;
+    }
+
+    #download-button {
+        min-width: 200px;
+        padding: 13px 28px;
+        font-size: 18px;
     }
 
     #reddit-link-img {
@@ -824,7 +1537,7 @@ details ul li {
         width: 70vw;
         height: auto;
     }
-    
+
     .wiki-backpack-image {
         width: 80vw;
         height: auto;
@@ -839,11 +1552,1178 @@ details ul li {
         width: 40vw;
         height: auto;
     }
-
 }
 
-@media (min-width: 1200px) {
-    #navigation {
-        font-size: 1.15rem;
+/*-----------------------------CHAMPION PAGES-----------------------------------------------------------*/
+
+.champion-page {
+    width: min(1180px, calc(100% - 32px));
+}
+
+.champion-page-header {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.champion-page-header p:not(.wiki-label) {
+    max-width: 760px;
+    margin-left: 0;
+}
+
+.champion-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 28px;
+    align-items: start;
+
+    margin-bottom: 54px;
+}
+
+.champion-stat-panel,
+.champion-info-card,
+.champion-ability-card,
+.champion-outfit-card {
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.champion-stat-panel {
+    padding: 22px;
+}
+
+.champion-section-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.champion-section-title-row h2,
+.champion-section h2 {
+    margin: 0;
+
+    color: #ffd84d;
+    font-size: clamp(24px, 2.3vw, 34px);
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 216, 77, 0.16);
+}
+
+.champion-level-select {
+    min-width: 130px;
+    padding: 9px 12px;
+
+    color: #f8fafc;
+    background: rgba(5, 8, 22, 0.8);
+
+    border: 1px solid rgba(255, 216, 77, 0.45);
+    border-radius: 10px;
+
+    font: inherit;
+    font-weight: 800;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.champion-level-select:focus {
+    border-color: rgba(255, 216, 77, 0.9);
+    box-shadow: 0 0 16px rgba(255, 216, 77, 0.15);
+}
+
+.champion-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
+}
+
+.champion-stat-card {
+    min-height: 112px;
+    padding: 14px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    text-align: center;
+
+    background: rgba(5, 8, 22, 0.38);
+    border: 1px solid rgba(83, 129, 185, 0.32);
+    border-radius: 14px;
+}
+
+.champion-stat-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+.champion-stat-card span {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.champion-stat-card strong {
+    color: #ffd84d;
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.champion-info-card {
+    overflow: hidden;
+}
+
+.champion-info-image-wrap {
+    background:
+        radial-gradient(circle at top, rgba(255, 216, 77, 0.16), transparent 60%),
+        rgba(5, 8, 22, 0.35);
+
+    border-bottom: 1px solid rgba(83, 129, 185, 0.42);
+}
+
+.champion-info-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.champion-info-content {
+    padding: 20px;
+}
+
+.champion-info-content h2 {
+    margin: 0 0 8px 0;
+
+    color: #ffd84d;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.champion-info-content > p {
+    margin: 0 0 18px 0;
+
+    color: #dbe4f0;
+    line-height: 1.45;
+}
+
+.champion-info-content dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.champion-info-content dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(83, 129, 185, 0.28);
+}
+
+.champion-info-content dl div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.champion-info-content dt {
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.champion-info-content dd {
+    color: #f8fafc;
+    font-weight: 900;
+    text-align: right;
+}
+
+.champion-details {
+    margin-top: 18px;
+    padding: 14px 16px;
+
+    background: rgba(5, 8, 22, 0.35);
+    border: 1px solid rgba(83, 129, 185, 0.32);
+    border-radius: 14px;
+}
+
+.champion-details summary {
+    color: #ffd84d;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.champion-details ul {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.champion-details li {
+    margin-bottom: 6px;
+
+    color: #dbe4f0;
+    line-height: 1.35;
+}
+
+.champion-section {
+    margin-bottom: 54px;
+}
+
+.champion-section:last-child {
+    margin-bottom: 0;
+}
+
+.champion-section > h2 {
+    margin-bottom: 22px;
+}
+
+.champion-abilities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.champion-ability-card {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 18px;
+
+    padding: 18px;
+}
+
+.champion-ability-card > img {
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+}
+
+.champion-ability-card h3 {
+    margin: 0 0 8px 0;
+
+    color: #ffd84d;
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.champion-ability-card h3 span {
+    margin-left: 8px;
+    padding: 3px 8px;
+
+    color: #1a1300;
+    background: linear-gradient(135deg, #ffd84d, #f6b91f 45%, #d89012);
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+    font-weight: 900;
+    vertical-align: middle;
+}
+
+.champion-ability-card p {
+    margin: 0 0 9px 0;
+
+    color: #dbe4f0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.champion-ability-card p:last-child {
+    margin-bottom: 0;
+}
+
+.champion-ability-card strong {
+    color: #f8fafc;
+    font-weight: 900;
+}
+
+.champion-outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 220px));
+    gap: 16px;
+}
+
+.champion-outfit-card {
+    padding: 16px;
+
+    text-align: center;
+}
+
+.champion-outfit-card > img {
+    width: 135px;
+    height: 135px;
+    object-fit: contain;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.champion-outfit-card h3 {
+    margin: 0 0 8px 0;
+
+    color: #ffd84d;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.champion-outfit-card p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin: 0;
+
+    color: #f8fafc;
+    font-weight: 900;
+}
+
+.champion-outfit-card p img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Champion text colors */
+
+.wiki-colored-text {
+    color: #ffd84d;
+    font-weight: 900;
+}
+
+.wiki-bold-text {
+    font-weight: 900;
+}
+
+.wiki-mark-out {
+    color: #60bcc9;
+    font-weight: 900;
+}
+
+.wiki-attack-damage,
+.wiki-attack-speed {
+    color: #ff6b5a;
+    font-weight: 900;
+}
+
+.wiki-armor {
+    color: #e1b641;
+    font-weight: 900;
+}
+
+.wiki-power-damage {
+    color: #5da2ff;
+    font-weight: 900;
+}
+
+.wiki-shields {
+    color: #b47cff;
+    font-weight: 900;
+}
+
+.wiki-health,
+.wiki-regenerate {
+    color: #4ade80;
+    font-weight: 900;
+}
+
+.wiki-attack-range,
+.wiki-crit {
+    color: #ff7a5c;
+    font-weight: 900;
+}
+
+.wiki-speed {
+    color: #ffff80;
+    font-weight: 900;
+}
+
+.wiki-attack-vamp {
+    color: #ff4f8b;
+    font-weight: 900;
+}
+
+.wiki-power-vamp {
+    color: #67e8f9;
+    font-weight: 900;
+}
+
+@media (max-width: 900px) {
+    .champion-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .champion-info-card {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .champion-page {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .champion-section-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .champion-level-select {
+        width: 100%;
+    }
+
+    .champion-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .champion-stat-card {
+        min-height: 104px;
+    }
+
+    .champion-ability-card {
+        grid-template-columns: 1fr;
+    }
+
+    .champion-ability-card > img {
+        width: 78px;
+        height: 78px;
+    }
+
+    .champion-outfit-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/*-----------------------------BACKPACKS PAGE-----------------------------------------------------------*/
+
+.backpacks-page {
+    width: min(1180px, calc(100% - 32px));
+}
+
+.backpacks-intro {
+    margin-bottom: 48px;
+}
+
+.backpacks-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+
+    margin-top: 20px;
+}
+
+.backpack-info-card {
+    padding: 20px;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.backpack-info-card h3 {
+    margin: 0 0 8px 0;
+
+    color: #ffd84d;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+.backpack-info-card p {
+    margin: 0;
+
+    color: #dbe4f0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.backpack-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+.backpack-gallery-item {
+    position: relative;
+
+    display: block;
+    padding: 12px;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.backpack-gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 216, 77, 0.12), transparent 48%);
+
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+}
+
+.backpack-gallery-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 216, 77, 0.55);
+
+    box-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.42),
+        0 0 24px rgba(255, 216, 77, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.backpack-gallery-item:hover::before {
+    opacity: 1;
+}
+
+.backpack-gallery-item img {
+    width: 100%;
+    aspect-ratio: 545 / 123;
+    object-fit: cover;
+
+    display: block;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.backpack-gallery-item:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.08);
+}
+
+@media (max-width: 768px) {
+    .backpack-gallery {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .backpack-gallery-item {
+        padding: 9px;
+        border-radius: 15px;
+    }
+
+    .backpack-gallery-item img {
+        border-radius: 10px;
+    }
+
+    .backpacks-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*-----------------------------BACKPACK DETAIL PAGES-----------------------------------------------------------*/
+
+.backpack-detail-page {
+    width: min(1120px, calc(100% - 32px));
+}
+
+.backpack-detail-header {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.backpack-detail-header p:not(.wiki-label) {
+    max-width: 760px;
+    margin-left: 0;
+}
+
+.backpack-hero-card {
+    margin-bottom: 54px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 22px;
+    align-items: center;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.backpack-hero-card > img {
+    width: 100%;
+    aspect-ratio: 545 / 123;
+    object-fit: cover;
+
+    display: block;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+}
+
+.backpack-pros-cons {
+    display: grid;
+    gap: 14px;
+}
+
+.backpack-pros-cons article {
+    padding: 16px;
+
+    background: rgba(5, 8, 22, 0.38);
+    border: 1px solid rgba(83, 129, 185, 0.32);
+    border-radius: 14px;
+}
+
+.backpack-pros-cons h2 {
+    margin: 0 0 8px 0;
+
+    color: #ffd84d;
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.backpack-pros-cons p {
+    margin: 0 0 5px 0;
+
+    color: #dbe4f0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.backpack-pros-cons p:last-child {
+    margin-bottom: 0;
+}
+
+.backpack-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.backpack-item-card {
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 18px;
+
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.backpack-item-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 216, 77, 0.5);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.38),
+        0 0 22px rgba(255, 216, 77, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.backpack-item-card > img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.36),
+        0 0 18px rgba(255, 216, 77, 0.08);
+}
+
+.backpack-item-card h3 {
+    margin: 0 0 6px 0;
+
+    color: #ffd84d;
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.15;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+.backpack-item-card p {
+    margin: 0 0 12px 0;
+
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.backpack-item-stats {
+    margin: 0;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    list-style: none;
+}
+
+.backpack-item-stats li {
+    position: relative;
+
+    padding-left: 22px;
+
+    color: #f8fafc;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.backpack-item-stats li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.52em;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ffd84d;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 216, 77, 0.35);
+
+    transform: rotate(45deg);
+}
+
+@media (max-width: 850px) {
+    .backpack-hero-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .backpack-detail-page {
+        width: min(100% - 24px, 1120px);
+    }
+
+    .backpack-hero-card {
+        padding: 14px;
+        margin-bottom: 42px;
+    }
+
+    .backpack-item-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .backpack-item-card > img {
+        width: 76px;
+        height: 76px;
+    }
+}
+
+/*-----------------------------JUNGLE MONSTERS-----------------------------------------------------------*/
+
+.jungle-monsters-page {
+    width: min(1150px, calc(100% - 32px));
+}
+
+.jungle-monster-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+.jungle-monster-card {
+    position: relative;
+
+    min-height: 260px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    color: #e5e7eb;
+    text-decoration: none;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 216, 77, 0.10), transparent 45%),
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.jungle-monster-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 216, 77, 0.12),
+            transparent 45%,
+            rgba(83, 129, 185, 0.10)
+        );
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease;
+}
+
+.jungle-monster-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 216, 77, 0.58);
+
+    box-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.42),
+        0 0 24px rgba(255, 216, 77, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.jungle-monster-card:hover::before {
+    opacity: 1;
+}
+
+.jungle-monster-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+
+    padding: 12px;
+
+    background: rgba(5, 8, 22, 0.34);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
+
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.jungle-monster-card:hover img {
+    transform: scale(1.04);
+    filter:
+        brightness(1.08)
+        drop-shadow(0 12px 20px rgba(0, 0, 0, 0.4));
+}
+
+.jungle-monster-card h3 {
+    margin: 0 0 6px 0;
+
+    color: #ffd84d;
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.1;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+.jungle-monster-card p {
+    margin: 0;
+
+    color: #cbd5e1;
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .jungle-monster-gallery {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .jungle-monster-card {
+        min-height: 230px;
+        padding: 18px;
+    }
+
+    .jungle-monster-card img {
+        height: 130px;
+    }
+}
+
+/*-----------------------------JUNGLE MONSTER SINGLE PAGES-----------------------------------------------------------*/
+
+.jungle-monster-page {
+    width: min(1150px, calc(100% - 32px));
+}
+
+.jungle-camp-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+
+    margin-bottom: 54px;
+}
+
+.jungle-camp-info-card,
+.jungle-monster-stat-card {
+    background:
+        linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(8, 19, 36, 0.78));
+    border: 1px solid rgba(83, 129, 185, 0.42);
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.jungle-camp-info-card {
+    padding: 22px;
+}
+
+.jungle-camp-info-card h2 {
+    margin: 0 0 16px 0;
+
+    color: #ffd84d;
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 216, 77, 0.16);
+}
+
+.jungle-camp-info-card p {
+    margin: 0;
+
+    color: #dbe4f0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.jungle-camp-info-card dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.jungle-camp-info-card dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(83, 129, 185, 0.28);
+}
+
+.jungle-camp-info-card dl div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.jungle-camp-info-card dt {
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.jungle-camp-info-card dd {
+    color: #f8fafc;
+    font-weight: 900;
+    text-align: right;
+}
+
+.jungle-monster-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.jungle-monster-stat-card {
+    overflow: hidden;
+}
+
+.jungle-monster-image-wrap {
+    min-height: 170px;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 216, 77, 0.16), transparent 60%),
+        rgba(5, 8, 22, 0.35);
+
+    border-bottom: 1px solid rgba(83, 129, 185, 0.42);
+}
+
+.jungle-monster-image-wrap img {
+    width: 100%;
+    max-width: 180px;
+    height: 140px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.42));
+}
+
+.jungle-monster-stat-content {
+    padding: 20px;
+}
+
+.jungle-monster-stat-content h3 {
+    margin: 0 0 16px 0;
+
+    color: #ffd84d;
+    font-size: 1.55rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.45),
+        0 0 14px rgba(255, 216, 77, 0.12);
+}
+
+.jungle-monster-stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jungle-monster-stat-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(83, 129, 185, 0.24);
+}
+
+.jungle-monster-stat-list div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.jungle-monster-stat-list dt {
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.jungle-monster-stat-list dd {
+    color: #f8fafc;
+    font-weight: 900;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .jungle-camp-overview {
+        grid-template-columns: 1fr;
+        margin-bottom: 42px;
+    }
+
+    .jungle-monster-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jungle-monster-image-wrap {
+        min-height: 150px;
+    }
+
+    .jungle-monster-image-wrap img {
+        max-width: 150px;
+        height: 120px;
     }
 }

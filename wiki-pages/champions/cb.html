@@ -3,294 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="Cinnamon Bun champion page">
+    <meta name="keywords" content="OpenATBP, Cinnamon Bun, OpenATBP Wiki, Adventure Time Battle Party, Champion, MOBA">
+
+    <meta property="og:title" content="Cinnamon Bun | OpenATBP Wiki">
+    <meta property="og:description" content="Cinnamon Bun champion page">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/wiki/champion-portraits/cb-portrait.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/cb.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Cinnamon Bun | OpenATBP Wiki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="../../index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
-            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div class="wiki-area">
-        <div class="wiki-text">
-            <h1>Statistics</h1>
-            <div class="wiki-champion">
-                <table class="wiki-champion-stat-table">
-                    <tr>
-                        <th colspan="2" class="wiki-champion-stat-table-top">Champion statistics</th>
-                        <th class="wiki-champion-stat-table-top">
-                            <select class="champion-level-select">
-                                <option>Level 1</option>
-                                <option>Level 2</option>
-                                <option>Level 3</option>
-                                <option>Level 4</option>
-                                <option>Level 5</option>
-                                <option>Level 6</option>
-                                <option>Level 7</option>
-                                <option>Level 8</option>
-                                <option>Level 9</option>
-                                <option>Level 10</option>
-                            </select>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-speed-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shields.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shields</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shields-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/health.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Health</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value health-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/regenerate.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Regenerate</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value regenerate-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-range.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Range</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-range-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value speed-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-breach-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shield-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shield Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shield-breach-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Chance</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-chance-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-damage-value"></p>
-                        </td>
-                    </tr>      
-                </table>
-                <table class="wiki-champion-infobox">
-                    <tr>
-                        <th colspan="2">Cinnamon Bun</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><img src="../../img/wiki/champion-portraits/cb-portrait.png"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="wiki-champion-infobox-desc">The guardian of Flame Princess.</td>
-                    </tr>
-                    <tr>
-                        <td>Release date</td>
-                        <td>2015-04-13</td>
-                    </tr>
-                    <tr>
-                        <td>Attack range type</td>
-                        <td>Melee</td>
-                    </tr>
-                    <tr>
-                        <td>Roles</td>
-                        <td>Fighter, Trapper</td>
-                    </tr>
-                </table>
-            </div>
-            <details>
-                <summary>Statistics per level</summary>
-                <ul>
-                    <li id="cb-ad"></li>
-                    <li id="cb-as"></li>
-                    <li id="cb-armor"></li>
-                    <li id="cb-health"></li>
-                    <li id="cb-regen"></li>
-                    <li id="cb-shields"></li>
-                    <li id="cb-pd"></li>
-                </ul>
-            </details>
-            <h1>Abilities</h1>
-            <div class="wiki-champion-abilities">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/cb-passive.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Perfect Sandwich (Passive)</p>
-                            <p>Using a power heals CB for 5% of his total Health.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> none</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/cb-q.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Lance Strike (Q)</p>
-                            <p>A lance strike in a medium sized area near CB that does (30 <span class="wiki-power-damage">+ 60% power damage</span>). This is a quick, low cooldown power. Resets auto-attack timer.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 6.5s (4.5s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/cb-w.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Sticky Slide (W)</p>
-                            <p>Cinnamon Bun Dashes, creating a trail of sticky frosting for 5 seconds. The frosting damages (10 <span class="wiki-power-damage">+ 30% power damage</span>) per second and <span class="wiki-colored-text">slows</span> enemies by 20% for 1 second.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 15s (12s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/cb-e.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Ring of Frosting (E)</p>
-                            <p>Cinnamon Bun can place up to 2 rings that do (50 <span class="wiki-power-damage">+ 45% power damage</span>) per-second AoE damage, with a final burst after 4.5 seconds or can be activated by a final press of E. These 2 rings can be placed on top of one another to make a larger ring with 2x range. Small rings deal 50% more damage. While Cinnamon Bun is standing inside a ring, he gains a 10% buff to <span class="wiki-colored-text">movement speed</span>.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 60s (47s at level 10)</p>
-                        </td>
-                    </tr> 
-                </table>
-            </div>
-            <h1>Outfits</h1>
-            <div id="wiki-champion-outfits">
-                <div class="outfit">
-                    <p>Guy Farting</p>
-                    <img src="../../img/wiki/champion-skins/guy-farting.png">
-                    <br>
-                    <span>2500</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
+    <div id="navigation-placeholder"></div>
+
+    <main class="wiki-page champion-page">
+        <header class="wiki-page-header champion-page-header">
+            <p class="wiki-label">Champion Wiki</p>
+            <h1>Cinnamon Bun</h1>
+            <p>The guardian of Flame Princess.</p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="champion-overview">
+            <article class="champion-stat-panel">
+                <div class="champion-section-title-row">
+                    <h2>Statistics</h2>
+
+                    <select class="champion-level-select" aria-label="Select champion level">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                    </select>
                 </div>
+
+                <div class="champion-stats-grid">
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-damage.png" alt="">
+                        <span>Attack Damage</span>
+                        <strong class="attack-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor.png" alt="">
+                        <span>Armor</span>
+                        <strong class="armor-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-speed.png" alt="">
+                        <span>Attack Speed</span>
+                        <strong class="attack-speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-damage.png" alt="">
+                        <span>Power Damage</span>
+                        <strong class="power-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shields.png" alt="">
+                        <span>Shields</span>
+                        <strong class="shields-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/health.png" alt="">
+                        <span>Health</span>
+                        <strong class="health-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/regenerate.png" alt="">
+                        <span>Regenerate</span>
+                        <strong class="regenerate-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-range.png" alt="">
+                        <span>Attack Range</span>
+                        <strong class="attack-range-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/speed.png" alt="">
+                        <span>Speed</span>
+                        <strong class="speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-vamp.png" alt="">
+                        <span>Attack Vamp</span>
+                        <strong class="attack-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-vamp.png" alt="">
+                        <span>Power Vamp</span>
+                        <strong class="power-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor-breach.png" alt="">
+                        <span>Armor Breach</span>
+                        <strong class="armor-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shield-breach.png" alt="">
+                        <span>Shield Breach</span>
+                        <strong class="shield-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Chance</span>
+                        <strong class="critical-chance-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Damage</span>
+                        <strong class="critical-damage-value"></strong>
+                    </div>
+                </div>
+
+                <details class="champion-details">
+                    <summary>Statistics per level</summary>
+
+                    <ul>
+                        <li id="cb-ad"></li>
+                        <li id="cb-as"></li>
+                        <li id="cb-armor"></li>
+                        <li id="cb-health"></li>
+                        <li id="cb-regen"></li>
+                        <li id="cb-shields"></li>
+                        <li id="cb-pd"></li>
+                    </ul>
+                </details>
+            </article>
+
+            <aside class="champion-info-card">
+                <div class="champion-info-image-wrap">
+                    <img src="/img/wiki/champion-portraits/cb-portrait.png" alt="Cinnamon Bun portrait">
+                </div>
+
+                <div class="champion-info-content">
+                    <h2>Cinnamon Bun</h2>
+                    <p>The guardian of Flame Princess.</p>
+
+                    <dl>
+                        <div>
+                            <dt>Release date</dt>
+                            <dd>2015-04-13</dd>
+                        </div>
+
+                        <div>
+                            <dt>Attack range type</dt>
+                            <dd>Melee</dd>
+                        </div>
+
+                        <div>
+                            <dt>Roles</dt>
+                            <dd>Fighter, Trapper</dd>
+                        </div>
+                    </dl>
+                </div>
+            </aside>
+        </section>
+
+        <section class="champion-section">
+            <h2>Abilities</h2>
+
+            <div class="champion-abilities-list">
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/cb-passive.png" alt="Perfect Sandwich icon">
+
+                    <div>
+                        <h3>Perfect Sandwich <span>Passive</span></h3>
+                        <p>Using a power heals Cinnamon Bun for 5% of his total Health.</p>
+                        <p><strong>Cooldown:</strong> none</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/cb-q.png" alt="Lance Strike icon">
+
+                    <div>
+                        <h3>Lance Strike <span>Q</span></h3>
+                        <p>
+                            A lance strike in a medium sized area near Cinnamon Bun that does
+                            30 <span class="wiki-power-damage">+ 60% power damage</span>.
+                            This is a quick, low cooldown power. Resets auto-attack timer.
+                        </p>
+                        <p><strong>Cooldown:</strong> 6.5s, 4.5s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/cb-w.png" alt="Sticky Slide icon">
+
+                    <div>
+                        <h3>Sticky Slide <span>W</span></h3>
+                        <p>
+                            Cinnamon Bun dashes, creating a trail of sticky frosting for 5 seconds.
+                            The frosting damages enemies for
+                            10 <span class="wiki-power-damage">+ 30% power damage</span> per second
+                            and <span class="wiki-colored-text">slows</span> enemies by 20% for 1 second.
+                        </p>
+                        <p><strong>Cooldown:</strong> 15s, 12s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/cb-e.png" alt="Ring of Frosting icon">
+
+                    <div>
+                        <h3>Ring of Frosting <span>E</span></h3>
+                        <p>
+                            Cinnamon Bun can place up to 2 rings that deal
+                            50 <span class="wiki-power-damage">+ 45% power damage</span>
+                            per-second AoE damage, with a final burst after 4.5 seconds or by pressing E again.
+                        </p>
+
+                        <p>
+                            These 2 rings can be placed on top of one another to make a larger ring with 2x range.
+                            Small rings deal 50% more damage. While Cinnamon Bun is standing inside a ring,
+                            he gains a 10% buff to <span class="wiki-speed">movement speed</span>.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 60s, 47s at level 10</p>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-    <script src="../../champion-base-stats.js" type="text/javascript"></script>
-    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
-    <script src="../../display-champion-stats.js" type="text/javascript"></script>
-    <script src="../../champion-table-handler.js" type="text/javascript"></script>
+        </section>
+
+        <section class="champion-section">
+            <h2>Outfits</h2>
+
+            <div class="champion-outfit-grid">
+                <article class="champion-outfit-card">
+                    <img src="/img/wiki/champion-skins/guy-farting.png" alt="Guy Farting outfit">
+
+                    <h3>Guy Farting</h3>
+
+                    <p>
+                        <span>2500</span>
+                        <img src="/img/wiki/other/pb-coin.png" alt="Coins">
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
+    <script src="/scripts/champion-base-stats.js"></script>
+    <script src="/scripts/champion-stats-per-level.js"></script>
+    <script src="/scripts/champion-table-handler.js"></script>
 </body>
 </html>

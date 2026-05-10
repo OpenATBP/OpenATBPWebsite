@@ -3,294 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="Magic Man champion page">
+    <meta name="keywords" content="OpenATBP, Magic Man, OpenATBP Wiki, Adventure Time Battle Party, Champion, MOBA">
+
+    <meta property="og:title" content="Magic Man | OpenATBP Wiki">
+    <meta property="og:description" content="Magic Man champion page">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/wiki/champion-portraits/magic-man-portrait.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/magicman.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Magic Man | OpenATBP Wiki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="../../index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
-            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div class="wiki-area">
-        <div class="wiki-text">
-            <h1>Statistics</h1>
-            <div class="wiki-champion">
-                <table class="wiki-champion-stat-table">
-                    <tr>
-                        <th colspan="2" class="wiki-champion-stat-table-top">Champion statistics</th>
-                        <th class="wiki-champion-stat-table-top">
-                            <select class="champion-level-select">
-                                <option>Level 1</option>
-                                <option>Level 2</option>
-                                <option>Level 3</option>
-                                <option>Level 4</option>
-                                <option>Level 5</option>
-                                <option>Level 6</option>
-                                <option>Level 7</option>
-                                <option>Level 8</option>
-                                <option>Level 9</option>
-                                <option>Level 10</option>
-                            </select>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-speed-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shields.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shields</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shields-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/health.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Health</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value health-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/regenerate.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Regenerate</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value regenerate-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-range.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Range</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-range-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value speed-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-breach-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shield-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shield Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shield-breach-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Chance</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-chance-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-damage-value"></p>
-                        </td>
-                    </tr>      
-                </table>
-                <table class="wiki-champion-infobox">
-                    <tr>
-                        <th colspan="2">Magic Man</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><img src="../../img/wiki/champion-portraits/magic-man-portrait.png"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="wiki-champion-infobox-desc">He's a Magic Man, and he's a jerk.</td>
-                    </tr>
-                    <tr>
-                        <td>Release date</td>
-                        <td>19-03-2014</td>
-                    </tr>
-                    <tr>
-                        <td>Attack range type</td>
-                        <td>Ranged</td>
-                    </tr>
-                    <tr>
-                        <td>Roles</td>
-                        <td>Wizard, Ninja</td>
-                    </tr>
-                </table>
-            </div>
-            <details>
-                <summary>Statistics per level</summary>
-                <ul>
-                    <li id="magicman-ad"></li>
-                    <li id="magicman-as"></li>
-                    <li id="magicman-armor"></li>
-                    <li id="magicman-health"></li>
-                    <li id="magicman-regen"></li>
-                    <li id="magicman-shields"></li>
-                    <li id="magicman-pd"></li>
-                </ul>
-            </details>
-            <h1>Abilities</h1>
-            <div class="wiki-champion-abilities">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/magic-man-passive.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Chase (Passive)</p>
-                            <p>When Magic Man hits other Champions with a basic attack, he gets 20% <span class="wiki-speed">speed</span> boost for 3 seconds.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> none</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/magic-man-q.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Energy Snakes (Q)</p>
-                            <p>Magic Man releases 3 energy snake projectiles that damage (20 <span class="wiki-power-damage">+ 70% power damage</span>) each and <span class="wiki-colored-text">silence</span> opponents for 2 second. Resets auto-attack timer. Subsequent snakes deal 75% less damage to the same target.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 10s (8s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/magic-man-w.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">EAT IT! (W)</p>
-                            <p>Magic Man teleports to a target location and goes <span class="wiki-colored-text">stealth</span> (3 seconds or until revealed), leaving behind a decoy that will explode after a delay, doing damage (50 <span class="wiki-power-damage">+ 70% power damage</span>) to enemies nearby. Magic Man can detonate the decoy early by pressing W again.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 25s (19s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/magic-man-e.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Magic Away (E)</p>
-                            <p>Magic man rolls to a target location, ignoring obstacles and explodes, dealing (100 <span class="wiki-power-damage">+ 50% Power Damage</span>). Any enemies affected suffer a 20% debuff to <span class="wiki-armor">armor</span> and <span class="wiki-shields">shields</span> for 3 seconds and are also <span class="wiki-colored-text">slowed</span> by 20% for 2.5 seconds.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 60s (40s at level 10)</p>
-                        </td>
-                    </tr> 
-                </table>
-            </div>
-            <h1>Outfits</h1>
-            <div id="wiki-champion-outfits">
-                <div class="outfit">
-                    <p>Mystery Man</p>
-                    <img src="../../img/wiki/champion-skins/mystery-man.png">
-                    <br>
-                    <span>1250</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
+    <div id="navigation-placeholder"></div>
+
+    <main class="wiki-page champion-page">
+        <header class="wiki-page-header champion-page-header">
+            <p class="wiki-label">Champion Wiki</p>
+            <h1>Magic Man</h1>
+            <p>He's a Magic Man, and he's a jerk.</p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="champion-overview">
+            <article class="champion-stat-panel">
+                <div class="champion-section-title-row">
+                    <h2>Statistics</h2>
+
+                    <select class="champion-level-select" aria-label="Select champion level">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                    </select>
                 </div>
+
+                <div class="champion-stats-grid">
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-damage.png" alt="">
+                        <span>Attack Damage</span>
+                        <strong class="attack-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor.png" alt="">
+                        <span>Armor</span>
+                        <strong class="armor-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-speed.png" alt="">
+                        <span>Attack Speed</span>
+                        <strong class="attack-speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-damage.png" alt="">
+                        <span>Power Damage</span>
+                        <strong class="power-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shields.png" alt="">
+                        <span>Shields</span>
+                        <strong class="shields-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/health.png" alt="">
+                        <span>Health</span>
+                        <strong class="health-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/regenerate.png" alt="">
+                        <span>Regenerate</span>
+                        <strong class="regenerate-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-range.png" alt="">
+                        <span>Attack Range</span>
+                        <strong class="attack-range-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/speed.png" alt="">
+                        <span>Speed</span>
+                        <strong class="speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-vamp.png" alt="">
+                        <span>Attack Vamp</span>
+                        <strong class="attack-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-vamp.png" alt="">
+                        <span>Power Vamp</span>
+                        <strong class="power-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor-breach.png" alt="">
+                        <span>Armor Breach</span>
+                        <strong class="armor-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shield-breach.png" alt="">
+                        <span>Shield Breach</span>
+                        <strong class="shield-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Chance</span>
+                        <strong class="critical-chance-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Damage</span>
+                        <strong class="critical-damage-value"></strong>
+                    </div>
+                </div>
+
+                <details class="champion-details">
+                    <summary>Statistics per level</summary>
+
+                    <ul>
+                        <li id="magicman-ad"></li>
+                        <li id="magicman-as"></li>
+                        <li id="magicman-armor"></li>
+                        <li id="magicman-health"></li>
+                        <li id="magicman-regen"></li>
+                        <li id="magicman-shields"></li>
+                        <li id="magicman-pd"></li>
+                    </ul>
+                </details>
+            </article>
+
+            <aside class="champion-info-card">
+                <div class="champion-info-image-wrap">
+                    <img src="/img/wiki/champion-portraits/magic-man-portrait.png" alt="Magic Man portrait">
+                </div>
+
+                <div class="champion-info-content">
+                    <h2>Magic Man</h2>
+                    <p>He's a Magic Man, and he's a jerk.</p>
+
+                    <dl>
+                        <div>
+                            <dt>Release date</dt>
+                            <dd>2014-03-19</dd>
+                        </div>
+
+                        <div>
+                            <dt>Attack range type</dt>
+                            <dd>Ranged</dd>
+                        </div>
+
+                        <div>
+                            <dt>Roles</dt>
+                            <dd>Wizard, Ninja</dd>
+                        </div>
+                    </dl>
+                </div>
+            </aside>
+        </section>
+
+        <section class="champion-section">
+            <h2>Abilities</h2>
+
+            <div class="champion-abilities-list">
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/magic-man-passive.png" alt="Chase icon">
+
+                    <div>
+                        <h3>Chase <span>Passive</span></h3>
+
+                        <p>
+                            When Magic Man hits other Champions with a basic attack, he gets a 20%
+                            <span class="wiki-speed">speed</span> boost for 3 seconds.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> none</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/magic-man-q.png" alt="Energy Snakes icon">
+
+                    <div>
+                        <h3>Energy Snakes <span>Q</span></h3>
+
+                        <p>
+                            Magic Man releases 3 energy snake projectiles that damage
+                            20 <span class="wiki-power-damage">+ 70% power damage</span> each and
+                            <span class="wiki-colored-text">silence</span> opponents for 2 seconds.
+                            This ability resets the auto-attack timer.
+                        </p>
+
+                        <p>
+                            Subsequent snakes deal 75% less damage to the same target.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 10s, 8s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/magic-man-w.png" alt="EAT IT! icon">
+
+                    <div>
+                        <h3>EAT IT! <span>W</span></h3>
+
+                        <p>
+                            Magic Man teleports to a target location and goes
+                            <span class="wiki-colored-text">stealth</span> for 3 seconds or until revealed,
+                            leaving behind a decoy that will explode after a delay.
+                        </p>
+
+                        <p>
+                            The decoy deals 50 <span class="wiki-power-damage">+ 70% power damage</span>
+                            to nearby enemies. Magic Man can detonate the decoy early by pressing W again.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 25s, 19s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/magic-man-e.png" alt="Magic Away icon">
+
+                    <div>
+                        <h3>Magic Away <span>E</span></h3>
+
+                        <p>
+                            Magic Man rolls to a target location, ignoring obstacles, and explodes, dealing
+                            100 <span class="wiki-power-damage">+ 50% power damage</span>.
+                        </p>
+
+                        <p>
+                            Any enemies affected suffer a 20% debuff to
+                            <span class="wiki-armor">armor</span> and <span class="wiki-shields">shields</span>
+                            for 3 seconds and are also <span class="wiki-colored-text">slowed</span>
+                            by 20% for 2.5 seconds.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 60s, 40s at level 10</p>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-    <script src="../../champion-base-stats.js" type="text/javascript"></script>
-    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
-    <script src="../../display-champion-stats.js" type="text/javascript"></script>
-    <script src="../../champion-table-handler.js" type="text/javascript"></script>
+        </section>
+
+        <section class="champion-section">
+            <h2>Outfits</h2>
+
+            <div class="champion-outfit-grid"></div>
+        </section>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
+
+    <script src="/scripts/champion-base-stats.js"></script>
+    <script src="/scripts/champion-stats-per-level.js"></script>
+    <script src="/scripts/champion-table-handler.js"></script>
+
+    <script src="/scripts/skin-data.js"></script>
+    <script src="/scripts/display-champion-skins.js"></script>
 </body>
 </html>

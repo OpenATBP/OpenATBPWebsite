@@ -3,213 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="OpenATBP Patch Notes 1.2">
+    <meta name="keywords" content="OpenATBP, Patch Notes, Adventure Time Battle Party, MOBA, balance updates, bug fixes">
+
+    <meta property="og:title" content="OpenATBP Patch Notes 1.2">
+    <meta property="og:description" content="OpenATBP Patch Notes 1.2">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/patch-images/1.2.png">
     <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.2.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Patch Notes 1.2 | OpenATBP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        @media (min-width: 1500px) {
-            body {
-                font-size: 1.2rem;
-            }
-        }       
-    </style>
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<div id="navigation">
-    <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-    <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-    <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-    <div id="mobile-nav">
-        <table>
-            <tr>
-                <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
-            </tr>
-            <tr>
-                <td><a href="../index.html">HOME PAGE</a></td>
-            </tr>
-            <tr>
-                <td><a href="../notes.html">PATCH NOTES</a></td>
-            </tr>
-            <tr>
-                <td><a href="../wiki-home.html">WIKI</a></td>
-            </tr>
-            <tr>
-                <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="desktop-nav">
-        <a class="navigation-a" href="../index.html">HOME PAGE</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-    </div>
-</div>
-    <div class="patch-notes-content">
-        <h2>NEW FEATURES</h2>
-        <ul class="patch-notes-ul">
-            <li>Added refresh button to client sidebar for easy refreshing, if needed</li>
-            <li>Added default player icons to replace Lich icon for friends</li>
-            <li>Added personal champion stat tracking</li>
-            <li>[BETA] Added "spicy battle" functionality to BMO bot. Features are still being worked on</li>
-        </ul>
-        <h2>BALANCE UPDATES</h2>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/billy.png" alt="billy image">
-            <p>Billy</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Lowered base HP from 550 to 500</li>
-            <li>Lowered base attack damage from 65 to 50</li>
-            <li>Increased base W cooldown by 2 seconds</li>
-            <li>Lowered shield growth per level from 2 to 1</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/finn.png" alt="finn image">
-            <p>Finn</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Removed attack speed gained in ult</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/fionna.png" alt="fionna image">
-            <p>Fionna</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Power scaling on Q increased from 30% to 40%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/fp.png" alt="fp image">
-            <p>Flame Princess</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Passive base damage decreased from 20 to 10</li>
-            <li>Passive damage scaling increased from 35% to 45%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/gunter.png" alt="gunter image">
-            <p>Gunter</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increase base crit chance from 0% to 1%</li>
-            <li>Increase crit damage from 200% to 250%</li>
-            <li>Increase base armor breach from 0 to 5</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/hunson.png" alt="hunson image">
-            <p>Hunson</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increased base life streal from 0% to 10%</li>
-            <li>Increased base attack from 40 to 55</li>
-            <li>Increased base armor from 10 to 15</li>
-            <li>Hunson can now move slowly while in ult form</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/iceking.png" alt="ice king image">
-            <p>Ice King</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increased speed from 2.65 to 2.8</li>
-            <li>Decreased ult movement speed from 100% to 90%</li>
-            <li>Deals 10% more damage to targets affected by CC</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/jake.png" alt="jake image">
-            <p>Jake</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increased passive ad scaling from 40% to 60%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lemongrab.png" alt="lemongrab image">
-            <p>Lemongrab</p>
-        </div>
-        <ul class="balance-ul">
-            <li>W's cooldown is now reduced by 30% if you only hit a non-champion</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lich.png" alt="lich image">
-            <p>The Lich</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Reduced base attack damage from 40 to 35</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lsp.png" alt="lumpy space princess image">
-            <p>Lumpy Space Princess</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increased Q AP scaling from 40% to 70%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/neptr.png" alt="neptr image">
-            <p>NEPTR</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Passive no longer disappears while standing in the bush</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/pepbut.png" alt="peppermint butler image">
-            <p>Peppermint Butler</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Passive now gives you up to 20% CDR for your W based on how long you stand still</li>
-            <li>Ult now gives Pepp an increased .1 attack range</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/pb.png" alt="princess bubblegum image">
-            <p>Princess Bubblegum</p>
-        </div>
-        <ul class="balance-ul">
-            <li>PB turrets no longer scale on PB's health but rather on PB's level (50 per level)</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/minion.png" alt="minion image">
-            <p>Minions</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Increase xp earned from 5 to 7</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/robo-suit.png" alt="robo suit image">
-            <p>Robo Suit</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Decreased shields from 5/10/15/25 to 5/10/15/20</li>
-        </ul>
-        <h2>BUG FIXES</h2>
-        <ul class="patch-notes-ul">
-            <li>Fixed issue where BMO's W would not go on cooldown when stunned</li>
-            <li>Fixed issue where Marceline's voiceline would not play when transforming</li>
-            <li>Fixed issue where minions were not received DC buff</li>
-            <li>Fixed friends not showing party when a person leaves & visual bug with friends "denying" accepted invites</li>
-            <li>Fixed visual bug where tower aggro will never go away</li>
-            <li>Fixed visual bug where monster health is depleted when spawning</li>
-            <li>Fixed issue where players could select the same champion</li>
-            <li>Fixed how knockbacks are handled so that they do not pull when near walls</li>
-            <li>Fixed an issue where Quinceanera LSP crashed the game</li>
-        </ul>
-    </div>
-    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
+    <div id="navigation-placeholder"></div>
+
+    <main class="patch-page">
+        <header class="patch-header">
+            <p class="patch-label">Patch Notes</p>
+            <h1>OpenATBP Update 1.2</h1>
+        </header>
+
+        <div class="patch-divider"></div>
+
+        <article class="patch-notes-content">
+            <section class="patch-section">
+                <h2>New Features</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Added refresh button to client sidebar for easy refreshing, if needed.</li>
+                    <li>Added default player icons to replace Lich icon for friends.</li>
+                    <li>Added personal champion stat tracking.</li>
+                    <li>[BETA] Added "Spicy Battle" functionality to BMO bot. Features are still being worked on.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Balance Updates</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/billy.png" alt="Billy image">
+                        <p>Billy</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Lowered base HP from 550 to 500.</li>
+                        <li>Lowered base attack damage from 65 to 50.</li>
+                        <li>Increased base W cooldown by 2 seconds.</li>
+                        <li>Lowered shield growth per level from 2 to 1.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/finn.png" alt="Finn image">
+                        <p>Finn</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Removed attack speed gained in ult.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/fionna.png" alt="Fionna image">
+                        <p>Fionna</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Power scaling on Q increased from 30% to 40%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/fp.png" alt="Flame Princess image">
+                        <p>Flame Princess</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Passive base damage decreased from 20 to 10.</li>
+                        <li>Passive damage scaling increased from 35% to 45%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/gunter.png" alt="Gunter image">
+                        <p>Gunter</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased base crit chance from 0% to 1%.</li>
+                        <li>Increased crit damage from 200% to 250%.</li>
+                        <li>Increased base armor breach from 0 to 5.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/hunson.png" alt="Hunson image">
+                        <p>Hunson</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased base life steal from 0% to 10%.</li>
+                        <li>Increased base attack from 40 to 55.</li>
+                        <li>Increased base armor from 10 to 15.</li>
+                        <li>Hunson can now move slowly while in ult form.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/iceking.png" alt="Ice King image">
+                        <p>Ice King</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased speed from 2.65 to 2.8.</li>
+                        <li>Decreased ult movement speed from 100% to 90%.</li>
+                        <li>Deals 10% more damage to targets affected by CC.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/jake.png" alt="Jake image">
+                        <p>Jake</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased passive AD scaling from 40% to 60%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lemongrab.png" alt="Lemongrab image">
+                        <p>Lemongrab</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>W's cooldown is now reduced by 30% if you only hit a non-champion.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lich.png" alt="The Lich image">
+                        <p>The Lich</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Reduced base attack damage from 40 to 35.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lsp.png" alt="Lumpy Space Princess image">
+                        <p>Lumpy Space Princess</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased Q AP scaling from 40% to 70%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/neptr.png" alt="NEPTR image">
+                        <p>NEPTR</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Passive no longer disappears while standing in the bush.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/pepbut.png" alt="Peppermint Butler image">
+                        <p>Peppermint Butler</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Passive now gives you up to 20% CDR for your W based on how long you stand still.</li>
+                        <li>Ult now gives Pepp an increased 0.1 attack range.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/pb.png" alt="Princess Bubblegum image">
+                        <p>Princess Bubblegum</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>PB turrets no longer scale on PB's health, but rather on PB's level. They now gain 50 HP per level.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/minion.png" alt="Minion image">
+                        <p>Minions</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Increased XP earned from 5 to 7.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/robo-suit.png" alt="Robo Suit image">
+                        <p>Robo Suit</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Decreased shields from 5/10/15/25 to 5/10/15/20.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Bug Fixes</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Fixed issue where BMO's W would not go on cooldown when stunned.</li>
+                    <li>Fixed issue where Marceline's voice line would not play when transforming.</li>
+                    <li>Fixed issue where minions were not receiving DC buff.</li>
+                    <li>Fixed friends not showing party when a person leaves and visual bug with friends "denying" accepted invites.</li>
+                    <li>Fixed visual bug where tower aggro would never go away.</li>
+                    <li>Fixed visual bug where monster health was depleted when spawning.</li>
+                    <li>Fixed issue where players could select the same champion.</li>
+                    <li>Fixed how knockbacks are handled so that they do not pull when near walls.</li>
+                    <li>Fixed an issue where Quinceanera LSP crashed the game.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>

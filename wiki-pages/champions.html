@@ -3,100 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="Browse all OpenATBP champions">
+    <meta name="keywords" content="OpenATBP, OpenATBP Wiki, Champions, Adventure Time Battle Party, MOBA, Champion Roster, Melee Champions, Ranged Champions">
+
+    <meta property="og:title" content="OpenATBP Champions Wiki">
+    <meta property="og:description" content="Browse the OpenATBP champion roster">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/favicon.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Champions | OpenATBP Wiki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="../index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="../index.html">HOME PAGE</a>
-            <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-            <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div class="wiki-area">
-        <div class="wiki-page-header">
+    <div id="navigation-placeholder"></div>
+
+    <main class="wiki-page">
+        <header class="wiki-page-header">
+            <p class="wiki-label">OpenATBP Wiki</p>
             <h1>Champions</h1>
-            <div class="wiki-champions-text" style="text-align: left; line-height: 1.6;">
-                <p>Champions are the stars of the show in OpenATBP. They're the characters you jump into battle with, each bringing their own style, powers, and personality to the game. Whether you're smashing enemies up close or blasting them from afar, there's a champ for every kind of playstyle.</p>
-                <p>Every champion comes with three active abilities (mapped to Q, W, and E) and a passive ability that gives them a little extra flavor. Some passives are always on, while others kick in automatically when certain things happen in the game. The active abilities can do all sorts of things - deal damage, mess with enemy stats, or help your team out in a pinch.</p>      
+            <p>Browse the full OpenATBP champion roster and learn how each character fits into battle.</p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="wiki-area">
+            <div class="wiki-content-section">
+                <h2>About Champions</h2>
+
+                <p>
+                    Champions are the stars of the show in OpenATBP. They are the characters you jump into battle with,
+                    each bringing their own style, powers, and personality to the game. Whether you're smashing enemies
+                    up close or blasting them from afar, there is a champion for every kind of playstyle.
+                </p>
+
+                <p>
+                    Every champion comes with three active abilities mapped to Q, W, and E, plus a passive ability that
+                    gives them extra flavor. Some passives are always active, while others trigger automatically when
+                    specific things happen during the match.
+                </p>
             </div>
-        </div>
-        <div class="wiki-text">
-            <p style="margin-top: 0;">Champions in OpenATBP are categorized by their attack types:</p>
-            <ul class="wiki-list">
-                <li><img class="wiki-attack-type" src="../img/wiki/champion-attack-types/melee.png"><span class="wiki-colored-text">Melee:</span> Champions who engage in close combat, requiring physical proximity to their targets to unleash their attacks.</li>
-                <li><img class="wiki-attack-type" src="../img/wiki/champion-attack-types/ranged.png"><span class="wiki-colored-text">Ranged:</span> Characters that attack from a distance, firing projectiles as their basic attacks.</li>
-            </ul>
-            <p style="margin-top: 2rem;">With so many different characters to choose from, every match feels a little different - and that's what keeps the battles exciting!</p>
-            <h2>Champion roster</h2>
-        </div>
-        <div class="wiki-champion-gallery">
-            <a href="../wiki-pages/champions/billy.html"><img src="../img/champions/billy.png"></a>
-            <a href="../wiki-pages/champions/bmo.html"><img src="../img/champions/bmo.png"></a>
-            <a href="../wiki-pages/champions/choosegoose.html"><img src="../img/champions/choosegoose.png"></a>
-            <a href="../wiki-pages/champions/cb.html"><img src="../img/champions/cb.png"></a>
-            <a href="../wiki-pages/champions/finn.html"><img src="../img/champions/finn.png"></a>
-            <a href="../wiki-pages/champions/fionna.html"><img src="../img/champions/fionna.png"></a>
-            <a href="../wiki-pages/champions/fp.html"><img src="../img/champions/fp.png"></a>
-            <a href="../wiki-pages/champions/gunter.html"><img src="../img/champions/gunter.png"></a>
-            <a href="../wiki-pages/champions/hunson.html"><img src="../img/champions/hunson.png"></a>
-            <a href="../wiki-pages/champions/iceking.html"><img src="../img/champions/iceking.png"></a>
-            <a href="../wiki-pages/champions/jake.html"><img src="../img/champions/jake.png"></a>
-            <a href="../wiki-pages/champions/lemongrab.html"><img src="../img/champions/lemongrab.png"></a>
-            <a href="../wiki-pages/champions/lich.html"><img src="../img/champions/lich.png"></a>
-            <a href="../wiki-pages/champions/lsp.html"><img src="../img/champions/lsp.png"></a>
-            <a href="../wiki-pages/champions/magicman.html"><img src="../img/champions/magicman.png"></a>
-            <a href="../wiki-pages/champions/marceline.html"><img src="../img/champions/marceline.png"></a>
-            <a href="../wiki-pages/champions/neptr.html"><img src="../img/champions/neptr.png"></a>
-            <a href="../wiki-pages/champions/pepbut.html"><img src="../img/champions/pepbut.png"></a>
-            <a href="../wiki-pages/champions/pb.html"><img src="../img/champions/pb.png"></a>
-            <a href="../wiki-pages/champions/rattleballs.html"><img src="../img/champions/rattleballs.png"></a>
-        </div>
-    </div>
-    <script type="text/javascript" src="../mobile-nav-handler.js" ></script>
+
+            <div class="wiki-content-section">
+                <h2>Attack Types</h2>
+
+                <p>Champions in OpenATBP are categorized by their attack types:</p>
+
+                <div class="wiki-attack-type-grid">
+                    <div class="wiki-attack-type-card">
+                        <img src="/img/wiki/champion-attack-types/melee.png" alt="Melee attack type">
+                        <div>
+                            <h3>Melee</h3>
+                            <p>Champions who fight in close combat and need to stay near their target to attack.</p>
+                        </div>
+                    </div>
+
+                    <div class="wiki-attack-type-card">
+                        <img src="/img/wiki/champion-attack-types/ranged.png" alt="Ranged attack type">
+                        <div>
+                            <h3>Ranged</h3>
+                            <p>Champions who attack from a distance, usually by firing projectiles as basic attacks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wiki-content-section">
+                <h2>Champion Roster</h2>
+
+                <p>
+                    With many different characters to choose from, every match feels a little different. Select a champion
+                    below to view their wiki page.
+                </p>
+
+                <div class="wiki-champion-gallery wiki-champion-roster">
+                    <a href="/wiki-pages/champions/billy.html" class="wiki-champion-card">
+                        <img src="/img/champions/billy.png" alt="Billy">
+                        <span>Billy</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/bmo.html" class="wiki-champion-card">
+                        <img src="/img/champions/bmo.png" alt="BMO">
+                        <span>BMO</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/choosegoose.html" class="wiki-champion-card">
+                        <img src="/img/champions/choosegoose.png" alt="Choose Goose">
+                        <span>Choose Goose</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/cb.html" class="wiki-champion-card">
+                        <img src="/img/champions/cb.png" alt="Cinnamon Bun">
+                        <span>Cinnamon Bun</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/finn.html" class="wiki-champion-card">
+                        <img src="/img/champions/finn.png" alt="Finn">
+                        <span>Finn</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/fionna.html" class="wiki-champion-card">
+                        <img src="/img/champions/fionna.png" alt="Fionna">
+                        <span>Fionna</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/fp.html" class="wiki-champion-card">
+                        <img src="/img/champions/fp.png" alt="Flame Princess">
+                        <span>Flame Princess</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/gunter.html" class="wiki-champion-card">
+                        <img src="/img/champions/gunter.png" alt="Gunter">
+                        <span>Gunter</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/hunson.html" class="wiki-champion-card">
+                        <img src="/img/champions/hunson.png" alt="Hunson Abadeer">
+                        <span>Hunson</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/iceking.html" class="wiki-champion-card">
+                        <img src="/img/champions/iceking.png" alt="Ice King">
+                        <span>Ice King</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/jake.html" class="wiki-champion-card">
+                        <img src="/img/champions/jake.png" alt="Jake">
+                        <span>Jake</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/lemongrab.html" class="wiki-champion-card">
+                        <img src="/img/champions/lemongrab.png" alt="Lemongrab">
+                        <span>Lemongrab</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/lich.html" class="wiki-champion-card">
+                        <img src="/img/champions/lich.png" alt="The Lich">
+                        <span>The Lich</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/lsp.html" class="wiki-champion-card">
+                        <img src="/img/champions/lsp.png" alt="Lumpy Space Princess">
+                        <span>LSP</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/magicman.html" class="wiki-champion-card">
+                        <img src="/img/champions/magicman.png" alt="Magic Man">
+                        <span>Magic Man</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/marceline.html" class="wiki-champion-card">
+                        <img src="/img/champions/marceline.png" alt="Marceline">
+                        <span>Marceline</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/neptr.html" class="wiki-champion-card">
+                        <img src="/img/champions/neptr.png" alt="NEPTR">
+                        <span>NEPTR</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/pepbut.html" class="wiki-champion-card">
+                        <img src="/img/champions/pepbut.png" alt="Peppermint Butler">
+                        <span>Peppermint Butler</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/pb.html" class="wiki-champion-card">
+                        <img src="/img/champions/pb.png" alt="Princess Bubblegum">
+                        <span>Princess Bubblegum</span>
+                    </a>
+
+                    <a href="/wiki-pages/champions/rattleballs.html" class="wiki-champion-card">
+                        <img src="/img/champions/rattleballs.png" alt="Sir Rattleballs">
+                        <span>Sir Rattleballs</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>

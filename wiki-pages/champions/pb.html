@@ -3,315 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="Princess Bubblegum champion page">
+    <meta name="keywords" content="OpenATBP, Princess Bubblegum, PB, OpenATBP Wiki, Adventure Time Battle Party, Champion, MOBA">
+
+    <meta property="og:title" content="Princess Bubblegum | OpenATBP Wiki">
+    <meta property="og:description" content="Princess Bubblegum champion page">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/wiki/champion-portraits/pb-portrait.png">
     <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/champions/pb.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Princess Bubblegum | OpenATBP Wiki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="../../index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
-            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div class="wiki-area">
-        <div class="wiki-text">
-            <h1>Statistics</h1>
-            <div class="wiki-champion">
-                <table class="wiki-champion-stat-table">
-                    <tr>
-                        <th colspan="2" class="wiki-champion-stat-table-top">Champion statistics</th>
-                        <th class="wiki-champion-stat-table-top">
-                            <select class="champion-level-select">
-                                <option>Level 1</option>
-                                <option>Level 2</option>
-                                <option>Level 3</option>
-                                <option>Level 4</option>
-                                <option>Level 5</option>
-                                <option>Level 6</option>
-                                <option>Level 7</option>
-                                <option>Level 8</option>
-                                <option>Level 9</option>
-                                <option>Level 10</option>
-                            </select>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-speed-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-damage.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-damage-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shields.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shields</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shields-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/health.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Health</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value health-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/regenerate.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Regenerate</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value regenerate-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-range.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Range</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-range-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/speed.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Speed</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value speed-value"></p>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/attack-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Attack Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value attack-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/power-vamp.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Power Vamp</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value power-vamp-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/armor-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Armor Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value armor-breach-value"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/shield-breach.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Shield Breach</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value shield-breach-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Chance</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-chance-value"></p>
-                        </td>
-                        <td>
-                            <div class="wiki-champion-stat-div">
-                                <img src="../../img/wiki/champion-stats/crit.png" alt="Image">
-                                <p class="wiki-champion-stat-p">Critical Damage</p><br>
-                            </div>
-                            <p class="wiki-champion-stat-value critical-damage-value"></p>
-                        </td>
-                    </tr>      
-                </table>
-                <table class="wiki-champion-infobox">
-                    <tr>
-                        <th colspan="2">Princess Bubblegum</th>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><img src="../../img/wiki/champion-portraits/pb-portrait.png"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="wiki-champion-infobox-desc">A science genius, and the ruler of the Candy Kingdom.</td>
-                    </tr>
-                    <tr>
-                        <td>Release date</td>
-                        <td>19-03-2014</td>
-                    </tr>
-                    <tr>
-                        <td>Attack range type</td>
-                        <td>Ranged</td>
-                    </tr>
-                    <tr>
-                        <td>Roles</td>
-                        <td>Trapper, Jinxer</td>
-                    </tr>
-                </table>
+    <div id="navigation-placeholder"></div>
+
+    <main class="wiki-page champion-page">
+        <header class="wiki-page-header champion-page-header">
+            <p class="wiki-label">Champion Wiki</p>
+            <h1>Princess Bubblegum</h1>
+            <p>A science genius, and the ruler of the Candy Kingdom.</p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="champion-overview">
+            <article class="champion-stat-panel">
+                <div class="champion-section-title-row">
+                    <h2>Statistics</h2>
+
+                    <select class="champion-level-select" aria-label="Select champion level">
+                        <option>Level 1</option>
+                        <option>Level 2</option>
+                        <option>Level 3</option>
+                        <option>Level 4</option>
+                        <option>Level 5</option>
+                        <option>Level 6</option>
+                        <option>Level 7</option>
+                        <option>Level 8</option>
+                        <option>Level 9</option>
+                        <option>Level 10</option>
+                    </select>
+                </div>
+
+                <div class="champion-stats-grid">
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-damage.png" alt="">
+                        <span>Attack Damage</span>
+                        <strong class="attack-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor.png" alt="">
+                        <span>Armor</span>
+                        <strong class="armor-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-speed.png" alt="">
+                        <span>Attack Speed</span>
+                        <strong class="attack-speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-damage.png" alt="">
+                        <span>Power Damage</span>
+                        <strong class="power-damage-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shields.png" alt="">
+                        <span>Shields</span>
+                        <strong class="shields-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/health.png" alt="">
+                        <span>Health</span>
+                        <strong class="health-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/regenerate.png" alt="">
+                        <span>Regenerate</span>
+                        <strong class="regenerate-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-range.png" alt="">
+                        <span>Attack Range</span>
+                        <strong class="attack-range-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/speed.png" alt="">
+                        <span>Speed</span>
+                        <strong class="speed-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/attack-vamp.png" alt="">
+                        <span>Attack Vamp</span>
+                        <strong class="attack-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/power-vamp.png" alt="">
+                        <span>Power Vamp</span>
+                        <strong class="power-vamp-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/armor-breach.png" alt="">
+                        <span>Armor Breach</span>
+                        <strong class="armor-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/shield-breach.png" alt="">
+                        <span>Shield Breach</span>
+                        <strong class="shield-breach-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Chance</span>
+                        <strong class="critical-chance-value"></strong>
+                    </div>
+
+                    <div class="champion-stat-card">
+                        <img src="/img/wiki/champion-stats/crit.png" alt="">
+                        <span>Critical Damage</span>
+                        <strong class="critical-damage-value"></strong>
+                    </div>
+                </div>
+
+                <details class="champion-details">
+                    <summary>Statistics per level</summary>
+
+                    <ul>
+                        <li id="pb-ad"></li>
+                        <li id="pb-as"></li>
+                        <li id="pb-armor"></li>
+                        <li id="pb-health"></li>
+                        <li id="pb-regen"></li>
+                        <li id="pb-shields"></li>
+                        <li id="pb-pd"></li>
+                    </ul>
+                </details>
+            </article>
+
+            <aside class="champion-info-card">
+                <div class="champion-info-image-wrap">
+                    <img src="/img/wiki/champion-portraits/pb-portrait.png" alt="Princess Bubblegum portrait">
+                </div>
+
+                <div class="champion-info-content">
+                    <h2>Princess Bubblegum</h2>
+                    <p>A science genius, and the ruler of the Candy Kingdom.</p>
+
+                    <dl>
+                        <div>
+                            <dt>Release date</dt>
+                            <dd>2014-03-19</dd>
+                        </div>
+
+                        <div>
+                            <dt>Attack range type</dt>
+                            <dd>Ranged</dd>
+                        </div>
+
+                        <div>
+                            <dt>Roles</dt>
+                            <dd>Trapper, Jinxer</dd>
+                        </div>
+                    </dl>
+                </div>
+            </aside>
+        </section>
+
+        <section class="champion-section">
+            <h2>Abilities</h2>
+
+            <div class="champion-abilities-list">
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/pb-passive.png" alt="Sticky Sweet icon">
+
+                    <div>
+                        <h3>Sticky Sweet <span>Passive</span></h3>
+
+                        <p>
+                            Princess Bubblegum begins with 3 charges of her special sticky ammunition.
+                            Each basic attack she lands on enemy players consumes a charge, reducing their
+                            <span class="wiki-attack-speed">attack speed</span> by 20% for 5 seconds per charge.
+                        </p>
+
+                        <p>
+                            This debuff stacks, allowing for a maximum reduction of 60% if all three charges
+                            are applied to the same target. It also applies a 25% slow for 2.5 seconds.
+                            Every 10 seconds, Princess Bubblegum automatically regenerates one charge of sticky ammunition.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> none</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/pb-q.png" alt="Gumdrop Potion icon">
+
+                    <div>
+                        <h3>Gumdrop Potion <span>Q</span></h3>
+
+                        <p>
+                            Princess Bubblegum lobs a scientific potion at a target location, creating a puddle
+                            that deals 5 <span class="wiki-power-damage">+ 50% power damage</span> per second
+                            and <span class="wiki-colored-text">slows</span> foes in the area by 30% for 2 seconds.
+                        </p>
+
+                        <p>
+                            Entering the area grants Princess Bubblegum a 40% <span class="wiki-speed">speed</span>
+                            boost for 2 seconds. The puddle lasts for 3 seconds.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 10s, 8s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/pb-w.png" alt="Candy Turrets icon">
+
+                    <div>
+                        <h3>Candy Turrets <span>W</span></h3>
+
+                        <p>
+                            Princess Bubblegum drops candy-powered turrets, up to 2 max, that blast enemies for
+                            10 <span class="wiki-power-damage">+ 40% power damage</span>, prioritizing enemy champions.
+                        </p>
+
+                        <p>
+                            Each Candy Turret lasts for 30 seconds or until it is destroyed or Princess Bubblegum is KO'ed.
+                            <span class="wiki-mark-out">Candy Turrets'</span> health scales with Princess Bubblegum's level
+                            by <span class="wiki-health">+50 health</span> per level and
+                            <span class="wiki-health">20% of HP</span> gained from items.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 20s, 16s at level 10</p>
+                    </div>
+                </article>
+
+                <article class="champion-ability-card">
+                    <img src="/img/wiki/champion-abilities/pb-e.png" alt="Cherry Boom icon">
+
+                    <div>
+                        <h3>Cherry Boom <span>E</span></h3>
+
+                        <p>
+                            Princess Bubblegum plants a bomb that she can trigger by pressing E again,
+                            or it will explode on its own after 4 seconds.
+                        </p>
+
+                        <p>
+                            When set off, the explosive blast deals
+                            85 <span class="wiki-power-damage">+ 60% power damage</span>
+                            and <span class="wiki-colored-text">knocks back</span> enemies away from the bomb.
+                            The bomb deals 25% more damage to slowed enemies.
+                            If Princess Bubblegum is in the area, the knockback also affects her.
+                        </p>
+
+                        <p><strong>Cooldown:</strong> 65s, 60s at level 10</p>
+                    </div>
+                </article>
             </div>
-            <details>
-                <summary>Statistics per level</summary>
-                <ul>
-                    <li id="pb-ad"></li>
-                    <li id="pb-as"></li>
-                    <li id="pb-armor"></li>
-                    <li id="pb-health"></li>
-                    <li id="pb-regen"></li>
-                    <li id="pb-shields"></li>
-                    <li id="pb-pd"></li>
-                </ul>
-            </details>
-            <h1>Abilities</h1>
-            <div class="wiki-champion-abilities">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/pb-passive.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Sticky Sweet (Passive)</p>
-                            <p>Princess Bubblegum begins with 3 charges of her special sticky ammunition. Each basic attack she lands on enemy players consumes a charge, reducing their <span class="wiki-attack-speed">attack speed</span> by 20% for 5 seconds per charge. This debuff stacks, allowing for a maximum reduction of 60% if all three charges are applied as well as a 25% slow for 2.5 seconds (if applied to the same target). Every 10 seconds, Princess Bubblegum automatically regenerates one charge of sticky ammunition.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> none</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/pb-q.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Gumdrop Potion (Q)</p>
-                            <p>Princess Bubblegum lobs a scientific potion at a target location, creating a puddle that does damage (5 <span class="wiki-power-damage">+ 50% power damage</span>) per second and <span class="wiki-colored-text">slows</span> foes in the area by 30% for 2 seconds. Entering the area grants Princess Bubblegum a 40% <span class="wiki-speed">speed</span> boost for 2 seconds. The puddle lasts for 3 seconds.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 10s (8s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/pb-w.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Candy Turrets (W)</p>
-                            <p>Princess Bubblegum drops candy-powered turrets (2 max) that blasts enemies (10 <span class="wiki-power-damage">+ 40% power damage</span>), prioritizing enemy champions. Each Candy Turret lasts for 30 seconds or until it is destroyed or Princess Bubblegum is KO'ed. <span class="wiki-mark-out">Candy Turrets'</span> health scale with Princess Bubblegum's level (<span class="wiki-health">+ 50 health</span> per level) and <span class="wiki-health">20% of HP</span> gained from items</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 20s (16s at level 10)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../../img/wiki/champion-abilities/pb-e.png" class="wiki-champion-ability-img">
-                        </td>
-                        <td>
-                            <p class="wiki-bold-text wiki-mark-out">Cherry Boom (E)</p>
-                            <p>Princess Bubblegum plants a bomb that she can trigger by pressing E again or will explode on its own after 4 seconds. When set off, an explosive blast will damage (85 <span class="wiki-power-damage">+ 60% power damage</span>) and <span class="wiki-colored-text">knockback</span> enemies away from the bomb. Bomb does 25% more damage to slowed enemies. If PB is in the area, the <span class="wiki-colored-text">knockback</span> will also affect her.</p>
-                            <p><span class="wiki-bold-text">Cooldown:</span> 65s (60s at level 10)</p>
-                        </td>
-                    </tr> 
-                </table>
-            </div>
-            <h1>Outfits</h1>
-            <div id="wiki-champion-outfits">
-                <div class="outfit">
-                    <p>Parka Peebles</p>
-                    <img src="../../img/wiki/champion-skins/parka-peebles.png">
-                    <br>
-                    <span>1250</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
-                </div>
-                <div class="outfit">
-                    <p>Prince Gumball</p>
-                    <img src="../../img/wiki/champion-skins/prince-gumball.png">
-                    <br>
-                    <span>2000</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
-                </div>
-                <div class="outfit">
-                    <p>Too Young<br> Bubblegum</p>
-                    <img src="../../img/wiki/champion-skins/too-young-bubblegum.png">
-                    <br>
-                    <span>2000</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
-                </div>
-                <div class="outfit">
-                    <p>Warrior PB</p>
-                    <img src="../../img/wiki/champion-skins/warrior-pb.png">
-                    <br>
-                    <span>1250</span>
-                    <img src="../../img/wiki/other/pb-coin.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="../../champion-base-stats.js" type="text/javascript"></script>
-    <script src="../../champion-stats-per-level.js" type="text/javascript"></script>
-    <script src="../../display-champion-stats.js" type="text/javascript"></script>
-    <script src="../../champion-table-handler.js" type="text/javascript"></script>
+        </section>
+
+        <section class="champion-section">
+            <h2>Outfits</h2>
+
+            <div class="champion-outfit-grid"></div>
+        </section>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
+
+    <script src="/scripts/champion-base-stats.js"></script>
+    <script src="/scripts/champion-stats-per-level.js"></script>
+    <script src="/scripts/champion-table-handler.js"></script>
+
+    <script src="/scripts/skin-data.js"></script>
+    <script src="/scripts/display-champion-skins.js"></script>
 </body>
 </html>

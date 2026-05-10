@@ -3,98 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
-    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/jungle-monsters/goomonster.html">
+    <meta name="description" content="View Kee-Oth jungle boss stats">
+    <meta name="keywords" content="OpenATBP, Kee-Oth, Jungle Monster, Jungle Boss, OpenATBP Wiki, Adventure Time Battle Party, MOBA">
+
+    <meta property="og:title" content="Kee-Oth | OpenATBP Wiki">
+    <meta property="og:description" content="View Kee-Oth jungle boss stats">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/wiki/jungle-monsters/kee-oth.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/jungle-monsters/keeoth.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Kee-Oth | OpenATBP Wiki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="navigation">
-        <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-        <img src="../../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-        <img src="../../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-        <div id="mobile-nav">
-            <table>
-                <tr>
-                    <td><img src="../../img/close.png" alt="close" id="mobile-nav-close"></td>
-                </tr>
-                <tr>
-                    <td><a href="../../index.html">HOME PAGE</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../notes.html">PATCH NOTES</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../wiki-home.html">WIKI</a></td>
-                </tr>
-                <tr>
-                    <td><a href="../../spicybattle.html">SPICY BATTLE</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-                </tr>
-            </table>
-        </div>
-        <div id="desktop-nav">
-            <a class="navigation-a" href="../../index.html">HOME PAGE</a>
-            <a class="navigation-a" href="../../notes.html">PATCH NOTES</a>
-            <a class="navigation-a" href="../../wiki-home.html">WIKI</a>
-            <a class="navigation-a" href="../../spicybattle.html">SPICY BATTLE</a>
-            <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-            <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-        </div>
-    </div>
-    <div class="wiki-area">
-        <div class="wiki-text">
+    <div id="navigation-placeholder"></div>
+
+    <main class="wiki-page jungle-monster-page">
+        <header class="wiki-page-header">
+            <p class="wiki-label">Jungle Boss</p>
             <h1>Kee-Oth</h1>
-            <p>Kee-Oth is the strongest jungle monster in the Battle Lab. Upon being killed, the team that landed the killing blow heals  <span class="wiki-health">30% health</span> and get a buff that grants  <span class="wiki-attack-vamp">35% attack vamp</span>,  <span class="wiki-power-vamp">40% power vamp</span> and  <span class="wiki-crit">35% critical chance</span> bonus for 60 seconds. Keeoth spawns initially at 13:00 and respawns every 120 seconds after being killed.</p>
-            <div class="monster-group">
-                <div class="monster">
-                    <img src="../../img/wiki/jungle-monsters/kee-oth.png">
-                    <h3>Statistics:</h3>
-                    <ul>
-                        <li>Health: 3500</li>
-                        <li>Armor: 20</li>
-                        <li>Shields: 10</li>
-                        <li>Attack Damage: 100</li>
-                        <li>Attack Speed: 2000</li>
-                        <li>Attack Range: 2</li>
-                        <li>Speed: 1.5</li>
-                        <li>Score Value: 100</li>
-                        <li>Respawn Time Seconds: 120</li>
-                    </ul>
-                </div>   
-            </div>  
-            <h3>Special Ability</h3>
-                <div class="wiki-champion-abilities" style="width: 50%; margin-top: 1rem;">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="../../img/wiki/other/pyroclasm.png" class="wiki-champion-ability-img">
-                            </td>
-                            <td>
-                                <p class="wiki-bold-text wiki-mark-out">Pyroclasm</p>
-                                <p>After a brief delay (1.15s) a massive fireball drops on the targeted area. Foes caught in the outer ring take <span class="wiki-power-damage">150 power damage</span> while enemies in the center ring take <span class="wiki-power-damage">450 power damage</span>. Damage is unleashed upon them after a brief 1-second interval.</p>
-                                <p><span class="wiki-bold-text">Cooldown:</span> 3 seconds</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>  
-        </div>
-    </div>
-    <script type="text/javascript" src="../../mobile-nav-handler.js"></script>
+            <p>
+                Kee-Oth is the strongest jungle monster in the Battle Lab. When defeated, the team that lands the killing blow
+                heals for <span class="wiki-health">30% health</span> and gains a powerful 60-second buff.
+            </p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="jungle-camp-overview">
+            <article class="jungle-camp-info-card">
+                <h2>Boss Info</h2>
+
+                <dl>
+                    <div>
+                        <dt>Initial spawn</dt>
+                        <dd>13:00</dd>
+                    </div>
+
+                    <div>
+                        <dt>Respawn time</dt>
+                        <dd>120 seconds</dd>
+                    </div>
+
+                    <div>
+                        <dt>Score value</dt>
+                        <dd>100</dd>
+                    </div>
+
+                    <div>
+                        <dt>Reward duration</dt>
+                        <dd>60 seconds</dd>
+                    </div>
+                </dl>
+            </article>
+
+            <article class="jungle-camp-info-card">
+                <h2>Defeat Reward</h2>
+
+                <dl>
+                    <div>
+                        <dt>Team heal</dt>
+                        <dd><span class="wiki-health">30% health</span></dd>
+                    </div>
+
+                    <div>
+                        <dt>Attack Vamp</dt>
+                        <dd><span class="wiki-attack-vamp">+35%</span></dd>
+                    </div>
+
+                    <div>
+                        <dt>Power Vamp</dt>
+                        <dd><span class="wiki-power-vamp">+40%</span></dd>
+                    </div>
+
+                    <div>
+                        <dt>Critical Chance</dt>
+                        <dd><span class="wiki-crit">+35%</span></dd>
+                    </div>
+                </dl>
+            </article>
+        </section>
+
+        <section class="wiki-content-section">
+            <h2>Monster Statistics</h2>
+
+            <div class="jungle-monster-stat-grid">
+                <article class="jungle-monster-stat-card">
+                    <div class="jungle-monster-image-wrap">
+                        <img src="/img/wiki/jungle-monsters/kee-oth.png" alt="Kee-Oth">
+                    </div>
+
+                    <div class="jungle-monster-stat-content">
+                        <h3>Kee-Oth</h3>
+
+                        <dl class="jungle-monster-stat-list">
+                            <div>
+                                <dt>Health</dt>
+                                <dd>3500</dd>
+                            </div>
+
+                            <div>
+                                <dt>Armor</dt>
+                                <dd>20</dd>
+                            </div>
+
+                            <div>
+                                <dt>Shields</dt>
+                                <dd>10</dd>
+                            </div>
+
+                            <div>
+                                <dt>Attack Damage</dt>
+                                <dd>100</dd>
+                            </div>
+
+                            <div>
+                                <dt>Attack Speed</dt>
+                                <dd>2000</dd>
+                            </div>
+
+                            <div>
+                                <dt>Attack Range</dt>
+                                <dd>2</dd>
+                            </div>
+
+                            <div>
+                                <dt>Speed</dt>
+                                <dd>1.5</dd>
+                            </div>
+
+                            <div>
+                                <dt>Score Value</dt>
+                                <dd>100</dd>
+                            </div>
+
+                            <div>
+                                <dt>Respawn Time</dt>
+                                <dd>120s</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="wiki-content-section">
+            <h2>Special Ability</h2>
+
+            <div class="wiki-ability-card-grid">
+                <article class="wiki-ability-card">
+                    <div class="wiki-ability-icon-wrap">
+                        <img src="/img/wiki/other/pyroclasm.png" alt="Pyroclasm" class="wiki-champion-ability-img">
+                    </div>
+
+                    <div class="wiki-ability-content">
+                        <h3>Pyroclasm</h3>
+
+                        <p>
+                            After a brief delay of 1.15 seconds, Kee-Oth drops a massive fireball on the targeted area.
+                            Foes caught in the outer ring take <span class="wiki-power-damage">150 power damage</span>,
+                            while enemies in the center ring take <span class="wiki-power-damage">450 power damage</span>.
+                            Damage is unleashed after a brief 1-second interval.
+                        </p>
+
+                        <p><span class="wiki-bold-text">Cooldown:</span> 3 seconds</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>

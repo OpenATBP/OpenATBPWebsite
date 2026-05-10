@@ -3,374 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 20 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
+    <meta name="description" content="Let's get this party started with patch 1.6!">
+    <meta name="keywords" content="OpenATBP, Patch Notes, Adventure Time Battle Party, MOBA, 3v3 Bots, movement rework, balance updates, bug fixes">
+
+    <meta property="og:title" content="OpenATBP Patch Notes 1.6">
+    <meta property="og:description" content="Let's get this party started with patch 1.6!">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/patch-images/1.6.png.png">
     <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.6.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Patch Notes 1.6 | OpenATBP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        @media (min-width: 1500px) {
-            body {
-                font-size: 1.2rem;
-                line-height: 1.6;
-            }
-        }
- 
-        h3, h4 {
-            margin-left: 1em;
-        }
- 
-        .list-header {
-            margin-bottom: 0;
-        }
- 
-        .patch-notes-ul {
-            margin: 0 0 1em 1em;
-        }
-    </style>
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<div id="navigation">
-    <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-    <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-    <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-    <div id="mobile-nav">
-        <table>
-            <tr>
-                <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
-            </tr>
-            <tr>
-                <td><a href="../index.html">HOME PAGE</a></td>
-            </tr>
-            <tr>
-                <td><a href="../notes.html">PATCH NOTES</a></td>
-            </tr>
-            <tr>
-                <td><a href="../wiki-home.html">WIKI</a></td>
-            </tr>
-            <tr>
-                <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="desktop-nav">
-        <a class="navigation-a" href="../index.html">HOME PAGE</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-    </div>
-</div>
-    <div class="patch-notes-content">
-        <h1 style="margin-left: 1rem">Open Beta 1.6</h1>
- 
-        <h2 class="list-header">New Content</h2>
-        <ul class="patch-notes-ul">
-            <li>Added new game mode: <strong>3v3 Bots</strong>. 3 players vs a team of 3 randomly selected bots.</li>
-            <li>Added 3 new bot-controlled champions: <strong>Ice King</strong>, <strong>Jake</strong>, and <strong>Lemongrab</strong>.</li>
-        </ul>
- 
-        <h3>New user icons</h3>
+    <div id="navigation-placeholder"></div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/profile-icons/The Lich.jpg" alt="The Lich">
-            <p>The Lich</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Rarity: Common</li>
-            <li>Unlock: 200 coins</li>
-        </ul>
+    <main class="patch-page">
+        <header class="patch-header">
+            <p class="patch-label">Patch Notes</p>
+            <h1>OpenATBP Update 1.6</h1>
+        </header>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/profile-icons/Bonnie.jpg" alt="Bonnie">
-            <p>Bonnie</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Rarity: Blooby</li>
-            <li>Unlock: Earn 500 points in a single Ranked match</li>
-        </ul>
+        <div class="patch-divider"></div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/profile-icons/Supportive Jake.jpg" alt="Supportive Jake">
-            <p>Supporting Jake</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Rarity: Blooby</li>
-            <li>Unlock: Earn 250 total assists in Ranked matches</li>
-        </ul>
+        <article class="patch-notes-content">
+            <section class="patch-section">
+                <h2>New Content</h2>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/profile-icons/Reaper.jpg" alt="Reaper">
-            <p>Reaper</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Rarity: Algebraic</li>
-            <li>Unlock: Achieve a 25-KO spree in a single Ranked match</li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/profile-icons/Huntress Wizard.jpg" alt="Huntress Wizard">
-            <p>Huntress Wizard</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Rarity: Algebraic</li>
-            <li>Unlock: Reach account level 99</li>
-        </ul>
-
-        <h3>New Sounds</h3>
-        <ul class="patch-notes-ul">
-            <li>Added new voice lines and sound effects for champions.</li>
-            <li>Voice lines for Q and W abilities now have a 50% chance of playing.</li>
-        </ul>
-        
-        <h2>Movement System Rework</h2>
-        <ul class="patch-notes-ul">
-            <li>Player hitbox now updates continuously for all movement states.</li>
-            <li>Movement abilities are now divided into three categories:
-                <ul>
-                    <li><strong>Dash</strong>: Cannot pass through obstacles.</li>
-                    <li><strong>Leap</strong>: Can jump over obstacles if the endpoint is outside them; otherwise the champion leaps to the nearest obstacle edge. Champions are immune to damage and most effects while airborne (see exceptions below).</li>
-                    <li><strong>Teleport</strong>: Behaves like Leap but is instant.</li>
+                <ul class="patch-notes-ul">
+                    <li>Added new game mode: <strong>3v3 Bots</strong>. 3 players vs a team of 3 randomly selected bots.</li>
+                    <li>Added 3 new bot-controlled champions: <strong>Ice King</strong>, <strong>Jake</strong>, and <strong>Lemongrab</strong>.</li>
                 </ul>
-            </li>
-            <br>
-            <li>The following abilities still deal damage and apply debuffs to leaping champions:
-                <ul>
-                    <li>Billy's <strong>Nothung (E)</strong></li>
-                    <li>BMO's <strong>Game Frame (W)</strong></li>
-                    <li>Choose Goose's <strong>Electric Charge (Q)</strong></li>
-                    <li>Cinnamon Bun's <strong>Ring of Frosting (E)</strong></li>
-                    <li>Flame Princess's <strong>Scatter Fire (Passive)</strong></li>
-                    <li>Ice King's <strong>Hailstorm (W)</strong></li>
+            </section>
+
+            <section class="patch-section">
+                <h2>New User Icons</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/profile-icons/The Lich.jpg" alt="The Lich icon">
+                        <p>The Lich</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Rarity: Common.</li>
+                        <li>Unlock: 200 coins.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/profile-icons/Bonnie.jpg" alt="Bonnie icon">
+                        <p>Bonnie</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Rarity: Blooby.</li>
+                        <li>Unlock: Earn 500 points in a single Ranked match.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/profile-icons/Supportive Jake.jpg" alt="Supportive Jake icon">
+                        <p>Supportive Jake</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Rarity: Blooby.</li>
+                        <li>Unlock: Earn 250 total assists in Ranked matches.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/profile-icons/Reaper.jpg" alt="Reaper icon">
+                        <p>Reaper</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Rarity: Algebraic.</li>
+                        <li>Unlock: Achieve a 25-KO spree in a single Ranked match.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/profile-icons/Huntress Wizard.jpg" alt="Huntress Wizard icon">
+                        <p>Huntress Wizard</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Rarity: Algebraic.</li>
+                        <li>Unlock: Reach account level 99.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>New Sounds</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Added new voice lines and sound effects for champions.</li>
+                    <li>Voice lines for Q and W abilities now have a 50% chance of playing.</li>
                 </ul>
-            </li>
-        </ul>
- 
-        <h3 class="list-header">Movement Ability Categories</h3>
-        <ul class="patch-notes-ul">
-            <li>Billy's <strong>Ground Pound (W)</strong>: Leap</li>
-            <li>Choose Goose's <strong>Goose Leap (W)</strong>: Leap</li>
-            <li>Cinnamon Bun's <strong>Sticky Slide (W)</strong>: Leap</li>
-            <li>Finn's <strong>Bombastic Dash (W)</strong>: Dash</li>
-            <li>Fionna's <strong>Blade Rush (Q)</strong>: Dash</li>
-            <li>Flame Princess's <strong>Blazing Inferno (E)</strong>: Dash</li>
-            <li>Gunter's <strong>Belly Slide (Q)</strong>: Dash</li>
-            <li>The Lich's <strong>Well of Power (E)</strong> (second activation): Teleport</li>
-            <li>Magic Man's <strong>EAT IT! (W)</strong>: Teleport</li>
-            <li>Magic Man's <strong>Magic Away (E)</strong>: Dash</li>
-            <li>Peppermint Butler's <strong>You Rang? (W)</strong>: Leap</li>
-            <li>Princess Bubblegum's <strong>Cherry Boom (E)</strong> (second activation on self): Leap</li>
-            <li>Sir Rattleballs' <strong>Shadowless Thrust (Q)</strong>: Leap (first activation), Dash (second activation)</li>
-        </ul>
- 
-        <h2>BALANCE UPDATES</h2>
- 
-        <h3>Champion Balance</h3>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/billy.png" alt="billy image">
-            <p>Billy</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Ground Pound (W)
-            <ul>
-                <li>Attack speed buff and move speed buff durations unified to 5 seconds.</li>
-                <li>Attack speed buff: 4s ➝ 5s</li>
-                <li>Move speed buff: 6s ➝ 5s</li>
-            </ul>
-            </li>
-            <li>Nothung (E)
-            <ul>
-                <li>The ability can now be cast with variable range. Previously, Nothung could only be cast at maximum range; it can now be cast anywhere within a 6-unit radius.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/finn.png" alt="finn image">
-            <p>Finn</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Armored Attack (Q)
-            <ul>
-                <li>Move speed bonus changed from flat +0.5 to 10% move speed buff.</li>
-                <li>Basic attack reset on ability activation now sets attack speed to 0.5s instead of 0, bringing it in line with all other champions' basic attack resets.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/jake.png" alt="jake image">
-            <p>Jake</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Stretchy Grab (Q)
-            <ul>
-                <li>Ability reworked into a pull.</li>
-                <li>Max ability range decreased from 9 to 7 units to match the stretch animation. Ability hitbox width remains constant across the skillshot's duration.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <ul class="balance-ul">
-            <li>Giant Jake (E)
-            <ul>
-                <li>Activation now removes all negative effects. Jake is fully immune to all negative effects while his ultimate is active.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lsp.png" alt="lsp image">
-            <p>Lumpy Space Princess</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Hot Bod (W)
-            <ul>
-                <li>Increased ability duration: 3.5s ➝ 4s</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/marceline.png" alt="marceline image">
-            <p>Marceline</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Blood Mist/Hunter (W)
-            <ul>
-                <li>Basic attack reset on ability activation now sets attack speed to 0.5s instead of 0, bringing it in line with all other champions' basic attack resets.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <ul class="balance-ul">
-            <li>Transform (E)
-            <ul>
-                <li>Removed unintended basic attack reset.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/pepbut.png" alt="peppermint butler image">
-            <p>Peppermint Butler</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Minty Aura (Q)
-            <ul>
-                <li>Blind no longer persists longer than intended.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/rattleballs.png" alt="rattleballs image">
-            <p>Sir Rattleballs</p>
-        </div>
-        <ul class="balance-ul">
-            <li>The Sword Stuff (E)
-            <ul>
-                <li>Polymorph previously cancelled this ability; it now only disables it for the duration of the polymorph.</li>
-            </ul>
-            </li>
-        </ul>
- 
-        <h3>Item Balance</h3>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/anti-magic-cube.png" alt="anti-magic cube image">
-            <p>Anti-Magic Cube</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Power damage debuff now has a 6-second cooldown per target. Effect duration is 5 seconds.</li>
-        </ul>
- 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/electrode-gun.png" alt="electrode gun image">
-            <p>Electrode Gun</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Passive reworked — abilities now grant a stack on champion hit (3s cooldown between stack gains). At 3 stacks, the next ability stuns the first champion hit for 0.5/1/1.5/2s. Stacks expire after 3 seconds.</li>
-        </ul>
- 
-        <h2>Effect System Rework</h2>
-        <ul class="patch-notes-ul">
-            <li>All effects now stack correctly. Multiple instances of the same effect compound as expected regardless of whether the effect operates on a percentage or a flat value.</li>
-        </ul>
- 
-        <h2>Polymorph Update</h2>
-        <ul class="patch-notes-ul">
-            <li>Polymorph now disables the following abilities for its duration:
-                <ul>
-                    <li>Flame Princess's <strong>Blazing Inferno (E)</strong></li>
-                    <li>The Lich's <strong>Trail of Death (Q)</strong></li>
-                    <li>Lumpy Space Princess's <strong>Hot Bod (W)</strong></li>
-                    <li>Marceline's <strong>Blood Mist/Hunter (W)</strong> (Vampire Form)</li>
-                    <li>Peppermint Butler's <strong>Minty Aura (Q)</strong></li>
-                    <li>Sir Rattleballs' <strong>The Sword Stuff (E)</strong></li>
+            </section>
+
+            <section class="patch-section">
+                <h2>Movement System Rework</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Player hitbox now updates continuously for all movement states.</li>
+                    <li><strong>Dash:</strong> Cannot pass through obstacles.</li>
+                    <li><strong>Leap:</strong> Can jump over obstacles if the endpoint is outside them; otherwise the champion leaps to the nearest obstacle edge. Champions are immune to damage and most effects while airborne, with some exceptions.</li>
+                    <li><strong>Teleport:</strong> Behaves like Leap but is instant.</li>
+                    <li>The following abilities still deal damage and apply debuffs to leaping champions: Billy's <strong>Nothung (E)</strong>, BMO's <strong>Game Frame (W)</strong>, Choose Goose's <strong>Electric Charge (Q)</strong>, Cinnamon Bun's <strong>Ring of Frosting (E)</strong>, Flame Princess's <strong>Scatter Fire (Passive)</strong>, and Ice King's <strong>Hailstorm (W)</strong>.</li>
                 </ul>
-            </li>
-        </ul>
- 
-        <h2 class="list-header">Bug Fixes & Improvements</h2>
-        <ul class="patch-notes-ul">
-            <li>Bots now correctly display in the TAB view and end game summary.</li>
-            <li>Disconnect buffs now apply in bot games.</li>
-            <li>Fixed an issue where bots would not be revealed from stealth when damaged or when attacking.</li>
-            <li>Improved bot AI. Bots now make smarter decisions around ability usage and positioning.</li>
-            <li>Improved hit detection for all projectiles. Projectile hit detection now uses a rectangle that matches the spell indicator shape.</li>
-            <li>Fixed an issue where skillshots that destroy on first affected target would not hit the closest one.</li>
-            <li>Improved minion lane pathing, targeting, and wave stacking. Fixed issues where minions would get stuck, stop moving, or stand still in lane instead of pushing.</li>
-            <li>Fixed an issue where only the first player to accept a party invite would successfully join the team. Subsequent accepted invites were incorrectly treated as declined.</li>
-            <li>Fixed incorrect buff durations on Goo Monster and Keeoth.</li>
-            <li>Fixed an issue where minions would move across the entire map to their correct position immediately after spawning.</li>
-            <li>Shortened announcer voice lines in the tutorial, reducing the time players are unable to move between prompts.</li>
-            <li>Added a status icon to indicate when a champion is affected by the Anti-Magic Cube's special effect.</li>
-            <li>Corrected Ice King's Q projectile range to match the cast indicator.</li>
-        </ul>
- 
-        <h2>Economy & Progression</h2>
-        <p style="margin-left: 1em">Coins and account experience (percentage of next account level progress) per game mode have been updated:</p>
- 
-        <h3 class="list-header">Coins</h3>
-        <ul class="patch-notes-ul">
-            <li>Completing the tutorial for the first time: 1,000 coins</li>
-            <li>Winning a ranked game: 100 coins</li>
-            <li>Losing a ranked game: 75 coins</li>
-            <li>Winning 3v3 Bots: 40 coins</li>
-            <li>Losing 3v3 Bots: 20 coins</li>
-            <li>Winning Practice: 25 coins</li>
-            <li>Losing Practice: 10 coins</li>
-        </ul>
- 
-        <h3 class="list-header">Account experience % per match</h3>
-        <ul class="patch-notes-ul">
-            <li>Winning a ranked game: 40%</li>
-            <li>Losing a ranked game: 20%</li>
-            <li>Winning 3v3 Bots: 20%</li>
-            <li>Losing 3v3 Bots: 10%</li>
-            <li>Winning Practice: 10%</li>
-            <li>Losing Practice: 5%</li>
-        </ul>
-    </div>
-    <script type="text/javascript" src="../mobile-nav-handler.js"></script>
+            </section>
+
+            <section class="patch-section">
+                <h2>Movement Ability Categories</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Billy's <strong>Ground Pound (W)</strong>: Leap.</li>
+                    <li>Choose Goose's <strong>Goose Leap (W)</strong>: Leap.</li>
+                    <li>Cinnamon Bun's <strong>Sticky Slide (W)</strong>: Leap.</li>
+                    <li>Finn's <strong>Bombastic Dash (W)</strong>: Dash.</li>
+                    <li>Fionna's <strong>Blade Rush (Q)</strong>: Dash.</li>
+                    <li>Flame Princess's <strong>Blazing Inferno (E)</strong>: Dash.</li>
+                    <li>Gunter's <strong>Belly Slide (Q)</strong>: Dash.</li>
+                    <li>The Lich's <strong>Well of Power (E)</strong>, second activation: Teleport.</li>
+                    <li>Magic Man's <strong>EAT IT! (W)</strong>: Teleport.</li>
+                    <li>Magic Man's <strong>Magic Away (E)</strong>: Dash.</li>
+                    <li>Peppermint Butler's <strong>You Rang? (W)</strong>: Leap.</li>
+                    <li>Princess Bubblegum's <strong>Cherry Boom (E)</strong>, second activation on self: Leap.</li>
+                    <li>Sir Rattleballs' <strong>Shadowless Thrust (Q)</strong>: Leap on first activation, Dash on second activation.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Champion Balance</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/billy.png" alt="Billy image">
+                        <p>Billy</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Ground Pound (W): Attack speed buff and move speed buff durations unified to 5 seconds.</li>
+                        <li>Ground Pound (W): Attack speed buff duration increased from 4s to 5s.</li>
+                        <li>Ground Pound (W): Move speed buff duration reduced from 6s to 5s.</li>
+                        <li>Nothung (E): The ability can now be cast with variable range. Previously, Nothung could only be cast at maximum range; it can now be cast anywhere within a 6-unit radius.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/finn.png" alt="Finn image">
+                        <p>Finn</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Armored Attack (Q): Move speed bonus changed from flat +0.5 to 10% move speed buff.</li>
+                        <li>Armored Attack (Q): Basic attack reset on ability activation now sets attack speed to 0.5s instead of 0, bringing it in line with all other champions' basic attack resets.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/jake.png" alt="Jake image">
+                        <p>Jake</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Stretchy Grab (Q): Ability reworked into a pull.</li>
+                        <li>Stretchy Grab (Q): Max ability range decreased from 9 to 7 units to match the stretch animation. Ability hitbox width remains constant across the skillshot's duration.</li>
+                        <li>Giant Jake (E): Activation now removes all negative effects. Jake is fully immune to all negative effects while his ultimate is active.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lsp.png" alt="Lumpy Space Princess image">
+                        <p>Lumpy Space Princess</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Hot Bod (W): Increased ability duration from 3.5s to 4s.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/marceline.png" alt="Marceline image">
+                        <p>Marceline</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Blood Mist/Hunter (W): Basic attack reset on ability activation now sets attack speed to 0.5s instead of 0, bringing it in line with all other champions' basic attack resets.</li>
+                        <li>Transform (E): Removed unintended basic attack reset.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/pepbut.png" alt="Peppermint Butler image">
+                        <p>Peppermint Butler</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Minty Aura (Q): Blind no longer persists longer than intended.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/rattleballs.png" alt="Sir Rattleballs image">
+                        <p>Sir Rattleballs</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>The Sword Stuff (E): Polymorph previously cancelled this ability; it now only disables it for the duration of the polymorph.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Item Balance</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/anti-magic-cube.png" alt="Anti-Magic Cube image">
+                        <p>Anti-Magic Cube</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Power damage debuff now has a 6-second cooldown per target. Effect duration is 5 seconds.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/electrode-gun.png" alt="Electrode Gun image">
+                        <p>Electrode Gun</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Passive reworked. Abilities now grant a stack on champion hit, with a 3s cooldown between stack gains. At 3 stacks, the next ability stuns the first champion hit for 0.5/1/1.5/2s. Stacks expire after 3 seconds.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Effect System Rework</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>All effects now stack correctly. Multiple instances of the same effect compound as expected regardless of whether the effect operates on a percentage or a flat value.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Polymorph Update</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Polymorph now disables Flame Princess's <strong>Blazing Inferno (E)</strong> for its duration.</li>
+                    <li>Polymorph now disables The Lich's <strong>Trail of Death (Q)</strong> for its duration.</li>
+                    <li>Polymorph now disables Lumpy Space Princess's <strong>Hot Bod (W)</strong> for its duration.</li>
+                    <li>Polymorph now disables Marceline's <strong>Blood Mist/Hunter (W)</strong> in Vampire Form for its duration.</li>
+                    <li>Polymorph now disables Peppermint Butler's <strong>Minty Aura (Q)</strong> for its duration.</li>
+                    <li>Polymorph now disables Sir Rattleballs' <strong>The Sword Stuff (E)</strong> for its duration.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Bug Fixes & Improvements</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Bots now correctly display in the TAB view and end game summary.</li>
+                    <li>Disconnect buffs now apply in bot games.</li>
+                    <li>Fixed an issue where bots would not be revealed from stealth when damaged or when attacking.</li>
+                    <li>Improved bot AI. Bots now make smarter decisions around ability usage and positioning.</li>
+                    <li>Improved hit detection for all projectiles. Projectile hit detection now uses a rectangle that matches the spell indicator shape.</li>
+                    <li>Fixed an issue where skillshots that destroy on first affected target would not hit the closest one.</li>
+                    <li>Improved minion lane pathing, targeting, and wave stacking. Fixed issues where minions would get stuck, stop moving, or stand still in lane instead of pushing.</li>
+                    <li>Fixed an issue where only the first player to accept a party invite would successfully join the team. Subsequent accepted invites were incorrectly treated as declined.</li>
+                    <li>Fixed incorrect buff durations on Goo Monster and Keeoth.</li>
+                    <li>Fixed an issue where minions would move across the entire map to their correct position immediately after spawning.</li>
+                    <li>Shortened announcer voice lines in the tutorial, reducing the time players are unable to move between prompts.</li>
+                    <li>Added a status icon to indicate when a champion is affected by Anti-Magic Cube's special effect.</li>
+                    <li>Corrected Ice King's Q projectile range to match the cast indicator.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Economy & Progression</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Completing the tutorial for the first time: 1,000 coins.</li>
+                    <li>Winning a ranked game: 100 coins.</li>
+                    <li>Losing a ranked game: 75 coins.</li>
+                    <li>Winning 3v3 Bots: 40 coins.</li>
+                    <li>Losing 3v3 Bots: 20 coins.</li>
+                    <li>Winning Practice: 25 coins.</li>
+                    <li>Losing Practice: 10 coins.</li>
+                    <li>Winning a ranked game: 40% account experience.</li>
+                    <li>Losing a ranked game: 20% account experience.</li>
+                    <li>Winning 3v3 Bots: 20% account experience.</li>
+                    <li>Losing 3v3 Bots: 10% account experience.</li>
+                    <li>Winning Practice: 10% account experience.</li>
+                    <li>Losing Practice: 5% account experience.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>
- 

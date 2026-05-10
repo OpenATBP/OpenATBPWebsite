@@ -250,32 +250,18 @@ const ITEMS = {
     }
 }
 
-window.onload = function() {
-    for (let item in ITEMS) {
+document.addEventListener('DOMContentLoaded', function () {
+    for (const item in ITEMS) {
         const element = document.querySelector(`.${item}`);
-        if (element) {
-            const itemStats = ITEMS[item];
 
-            for (let statKey in itemStats) {
-                const li = document.createElement("li");
-                li.textContent = `${itemStats[statKey]}`;
-                element.appendChild(li);
-            }
+        if (!element) continue;
+
+        const itemStats = ITEMS[item];
+
+        for (const statKey in itemStats) {
+            const li = document.createElement("li");
+            li.textContent = itemStats[statKey];
+            element.appendChild(li);
         }
     }
-
-    // add mobile nav handler here cause two window.onload scripts cant be used on one page
-    const mobileNavOpenBtn = document.getElementById('mobile-nav-open-btn');
-    const mobileNavCloseBtn = document.getElementById('mobile-nav-close');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    mobileNavOpenBtn.addEventListener('click', function() {
-        mobileNav.style.left = '0';
-        mobileNavOpenBtn.style.display = 'none';
-    });
-
-    mobileNavCloseBtn.addEventListener('click', function() {
-        mobileNav.style.left = '-100%';
-        mobileNavOpenBtn.style.display = 'flex';
-    });
-}
+});

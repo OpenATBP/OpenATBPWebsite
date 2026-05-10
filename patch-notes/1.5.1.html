@@ -3,244 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 20 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
-    <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.3.html">
+    <meta name="description" content="OpenATBP Patch Notes 1.5.1">
+    <meta name="keywords" content="OpenATBP, Patch Notes, Adventure Time Battle Party, MOBA, queue changes, balance updates, item balance, bug fixes">
+
+    <meta property="og:title" content="OpenATBP Patch Notes 1.5.1">
+    <meta property="og:description" content="OpenATBP Patch Notes 1.5.1">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/patch-images/1.5.1.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.5.1.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Patch Notes 1.5.1 | OpenATBP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        @media (min-width: 1500px) {
-            body {
-                font-size: 1.2rem;
-                line-height: 1.6;
-            }
-        }
 
-        h3, h4 {
-            margin-left: 1em;
-        }
-
-        .list-header {
-            margin-bottom: 0;
-        }
-
-        .patch-notes-ul {
-            margin: 0 0 1em 1em;
-        }
-    </style>
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<div id="navigation">
-    <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-    <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-    <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-    <div id="mobile-nav">
-        <table>
-            <tr>
-                <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
-            </tr>
-            <tr>
-                <td><a href="../index.html">HOME PAGE</a></td>
-            </tr>
-            <tr>
-                <td><a href="../notes.html">PATCH NOTES</a></td>
-            </tr>
-            <tr>
-                <td><a href="../wiki-home.html">WIKI</a></td>
-            </tr>
-            <tr>
-                <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="desktop-nav">
-        <a class="navigation-a" href="../index.html">HOME PAGE</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-    </div>
-</div>
-    <div class="patch-notes-content">
-        <h1 style="margin-left: 1rem">Open Beta 1.5.1</h1>
-        <h2 class="list-header">Queue Changes</h2>
-        <ul class="patch-notes-ul">
-            <li>To make the experience better for all players and to create a better balance of teams, we have made adjustments to the queue system.</li>
-            <li>Premades have been disabled for the regular 3v3 team to promote diversity in matchmaking, especially where there are few players online.</li>
-            <li>We have tweaked the queue dodging system to better detect when dodging is occurring and be less forgiving when players dodge. (How is secret :3 pls don't dodge)</li>
-            <li>While alt accounts are not necessarily prohibited at this point, using alts to avoid a queue ban will result in (1) the complete erasure of all accounts created by the offender for the first offense and (2) an irreversible ip ban on the second offense.</li>
-        </ul>
+    <div id="navigation-placeholder"></div>
 
-        <h2>BALANCE UPDATES</h2>
-        <div class="patch-notes-image-section">
-            <img src="../img/favicon.png" alt="bee image">
-            <p>General Changes</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Added around 10 armor / MR to each character's base stats to give everyone a bit more survivability.</li>
-            <li>Reworked how breach works to where your amount of breach is not a flat shred of the enemy's armor or MR, but rather takes a percentage. (e.g. 35 armor breach reduces 35% of the opponent's armor).</li>
-        </ul>
+    <main class="patch-page">
+        <header class="patch-header">
+            <p class="patch-label">Patch Notes</p>
+            <h1>OpenATBP Update 1.5.1</h1>
+        </header>
 
-        <h3>Champion balance</h3>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/choosegoose.png" alt="choosegoose image">
-            <p>Choose Goose</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Base speed reduced from 2.9 to 2.8</li>
-        </ul>
+        <div class="patch-divider"></div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/cb.png" alt="cinnamonbun image">
-            <p>Cinnamon Bun</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[BUFF] W cooldown reduced from 17s (14s at lvl 10) to 15s (12s at lvl 10)</li>
-            <li>[NERF] E cooldown increased from 55s (42s at lvl 10) to 60s (47s at lvl 10)</li>
-            <li>[BUFF] E scaling increased from 35% PD to 45% PD</li>
-        </ul>
+        <article class="patch-notes-content">
+            <section class="patch-section">
+                <h2>Queue Changes</h2>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/fp.png" alt="fp image">
-            <p>Flame Princess</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Passive scaling reduced from 40% PD to 25% PD</li>
-            <li>[NERF] E cooldown increased from 60s (45s at lvl 10) to 68s (60s at lvl 10)</li>
-            <li>[NERF] E damage decreased from 50 + 65% PD to 35 + 55% PD</li>
-        </ul>
+                <ul class="patch-notes-ul">
+                    <li>To make the experience better for all players and to create a better balance of teams, we have made adjustments to the queue system.</li>
+                    <li>Premades have been disabled for the regular 3v3 queue to promote diversity in matchmaking, especially where there are few players online.</li>
+                    <li>We have tweaked the queue dodging system to better detect when dodging is occurring and be less forgiving when players dodge. How is secret :3 pls don't dodge.</li>
+                    <li>While alt accounts are not necessarily prohibited at this point, using alts to avoid a queue ban will result in complete erasure of all accounts created by the offender for the first offense, and an irreversible IP ban on the second offense.</li>
+                </ul>
+            </section>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/hunson.png" alt="hunson abadeer image">
-            <p>Hunson Abadeer</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Base speed decreased from 2.85 to 2.8</li>
-        </ul>
+            <section class="patch-section">
+                <h2>Balance Updates</h2>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/iceking.png" alt="ice king image">
-            <p>Ice King</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] E scaling decreased from 50% PD to 35% PD</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/favicon.png" alt="OpenATBP icon">
+                        <p>General Changes</p>
+                    </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lemongrab.png" alt="lemongrab image">
-            <p>Lemongrab</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Q damage decreased from 40 + 45% PD to 10 + 40% PD</li>
-        </ul>
+                    <ul class="balance-ul">
+                        <li>Added around 10 armor / MR to each character's base stats to give everyone a bit more survivability.</li>
+                        <li>Reworked how breach works. Your amount of breach is no longer a flat shred of the enemy's armor or MR, but rather takes a percentage. For example, 35 armor breach reduces 35% of the opponent's armor.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/pb.png" alt="princess bubblegum image">
-            <p>Princess Bubblegum</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[BUFF] PB Turrets health now scales +50 per level AND 20% HP from items</li>
-            <li>[NERF] E scaling reduced from 70% to 60%</li>
-            <li>[NERF] E cooldown increased from 55s (40s at lvl 10) to 65s (60s at lvl 10)</li>
-        </ul>
+            <section class="patch-section">
+                <h2>Champion Balance</h2>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/rattleballs.png" alt="rattleballs image">
-            <p>Rattleballs</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[BUFF] Counter attack from Q now deals 100% AD and 50% AP back to attacker</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/choosegoose.png" alt="Choose Goose image">
+                        <p>Choose Goose</p>
+                    </div>
 
-        <h3>Item Balance</h3>
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/anti-anti-magic-potion.png" alt="anti anti magic potion image">
-            <p>Anti-Anti-Magic Potion</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Reduced PD from 25/50/125/250 to 25/50/100/225</li>
-        </ul>
+                    <ul class="balance-ul">
+                        <li>[NERF] Base speed reduced from 2.9 to 2.8.</li>
+                    </ul>
+                </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/demonic-wishing-eye.png" alt="demonic wishing eye image">
-            <p>Demonic Wishing Eye</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Decreased crit chance from 5%/10%/20%/40% to 5%/10%/20%/35%</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/cb.png" alt="Cinnamon Bun image">
+                        <p>Cinnamon Bun</p>
+                    </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/the-gauntlet-of-the-hero.png" alt="gauntlet of the hero image">
-            <p>Gauntlet of the Hero</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[CHANGE] Shield Breach changed from 10/20/35/45 to 10%/20%/35%/65%</li>
-        </ul>
+                    <ul class="balance-ul">
+                        <li>[BUFF] W cooldown reduced from 17s / 14s at level 10 to 15s / 12s at level 10.</li>
+                        <li>[NERF] E cooldown increased from 55s / 42s at level 10 to 60s / 47s at level 10.</li>
+                        <li>[BUFF] E scaling increased from 35% PD to 45% PD.</li>
+                    </ul>
+                </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/hotdog-knights-helmet.png" alt="hotdog knights helmet image">
-            <p>Hotdog Knight's Helmet</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[CHANGE] Armor breach changed from 5/10/20/40 to 10%/20%/30%/50%</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/fp.png" alt="Flame Princess image">
+                        <p>Flame Princess</p>
+                    </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/ice-kings-crown.png" alt="ice kings crown image">
-            <p>Ice King's Crown</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[CHANGE] Shield breach changed from 10/15/20/40 to 10%/20%/30%/50%</li>
-        </ul>
+                    <ul class="balance-ul">
+                        <li>[NERF] Passive scaling reduced from 40% PD to 25% PD.</li>
+                        <li>[NERF] E cooldown increased from 60s / 45s at level 10 to 68s / 60s at level 10.</li>
+                        <li>[NERF] E damage decreased from 50 + 65% PD to 35 + 55% PD.</li>
+                    </ul>
+                </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/magic-nail.png" alt="Magic Nail">
-            <p>Magic Nail</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] Max bonus AD per level reduced from 40 to 30</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/hunson.png" alt="Hunson Abadeer image">
+                        <p>Hunson Abadeer</p>
+                    </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/nothung.png" alt="nothung image">
-            <p>Nothung</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[CHANGE] Armor breach changed from 10/20/35/55 to 10%/20%/35%/65%</li>
-        </ul>
+                    <ul class="balance-ul">
+                        <li>[NERF] Base speed decreased from 2.85 to 2.8.</li>
+                    </ul>
+                </div>
 
-        <div class="patch-notes-image-section">
-            <img src="../img/wiki/items/sai.png" alt="sai image">
-            <p>Sai</p>
-        </div>
-        <ul class="balance-ul">
-            <li>[NERF] AD reduced from 10/25/50/75 to 10/20/40/50</li>
-        </ul>
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/iceking.png" alt="Ice King image">
+                        <p>Ice King</p>
+                    </div>
 
-        <h2 class="list-header">Bug Fixes</h2>
-        <ul class="patch-notes-ul">
-            <li>Fixed an exploit where people could avoid the queue ban by logging into another tab.</li>
-            <li>Fixed an issue where ARAM queue would not pop.</li>
-            <li>Fixed an issue where Choose Goose's treasure would apply the permanent health increase to the person who stepped on the box rather the Choose Goose himself.</li>
-            <li>Fixed an issue where LSP's ult would not trigger on enemies standing close together.</li>
-            <li>Fixed a general issue with projectiles that would linger indefinitely.</li>
-        </ul>
-    </div>
+                    <ul class="balance-ul">
+                        <li>[NERF] E scaling decreased from 50% PD to 35% PD.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lemongrab.png" alt="Lemongrab image">
+                        <p>Lemongrab</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[NERF] Q damage decreased from 40 + 45% PD to 10 + 40% PD.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/pb.png" alt="Princess Bubblegum image">
+                        <p>Princess Bubblegum</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[BUFF] PB Turrets health now scales +50 per level and 20% HP from items.</li>
+                        <li>[NERF] E scaling reduced from 70% to 60%.</li>
+                        <li>[NERF] E cooldown increased from 55s / 40s at level 10 to 65s / 60s at level 10.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/rattleballs.png" alt="Rattleballs image">
+                        <p>Rattleballs</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[BUFF] Counter attack from Q now deals 100% AD and 50% AP back to attacker.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Item Balance</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/anti-anti-magic-potion.png" alt="Anti-Anti-Magic Potion image">
+                        <p>Anti-Anti-Magic Potion</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[NERF] Reduced PD from 25/50/125/250 to 25/50/100/225.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/demonic-wishing-eye.png" alt="Demonic Wishing Eye image">
+                        <p>Demonic Wishing Eye</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[NERF] Decreased crit chance from 5%/10%/20%/40% to 5%/10%/20%/35%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/the-gauntlet-of-the-hero.png" alt="Gauntlet of the Hero image">
+                        <p>Gauntlet of the Hero</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[CHANGE] Shield Breach changed from 10/20/35/45 to 10%/20%/35%/65%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/hotdog-knights-helmet.png" alt="Hotdog Knight's Helmet image">
+                        <p>Hotdog Knight's Helmet</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[CHANGE] Armor breach changed from 5/10/20/40 to 10%/20%/30%/50%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/ice-kings-crown.png" alt="Ice King's Crown image">
+                        <p>Ice King's Crown</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[CHANGE] Shield breach changed from 10/15/20/40 to 10%/20%/30%/50%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/magic-nail.png" alt="Magic Nail image">
+                        <p>Magic Nail</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[NERF] Max bonus AD per level reduced from 40 to 30.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/nothung.png" alt="Nothung image">
+                        <p>Nothung</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[CHANGE] Armor breach changed from 10/20/35/55 to 10%/20%/35%/65%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/wiki/items/sai.png" alt="Sai image">
+                        <p>Sai</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>[NERF] AD reduced from 10/25/50/75 to 10/20/40/50.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Bug Fixes</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Fixed an exploit where people could avoid the queue ban by logging into another tab.</li>
+                    <li>Fixed an issue where ARAM queue would not pop.</li>
+                    <li>Fixed an issue where Choose Goose's treasure would apply the permanent health increase to the person who stepped on the box rather than Choose Goose himself.</li>
+                    <li>Fixed an issue where LSP's ult would not trigger on enemies standing close together.</li>
+                    <li>Fixed a general issue with projectiles that would linger indefinitely.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>

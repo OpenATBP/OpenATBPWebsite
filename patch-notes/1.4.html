@@ -3,203 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenATBP is a MOBA game based on the Adventure Time series. It features 19 unique Champions and intense 3v3 sessions where teams battle to destroy the enemy base.">
-    <meta name="keywords" content="OpenATBP, MOBA game, Adventure Time, multiplayer online battle arena, 3v3 game, Champions, game release, video game, Adventure Time Battle Party">
-    <meta property="og:title" content="OpenATBP: The Unofficial Server for Adventure Time Battle Party">
-    <meta property="og:description" content="Experience the nostalgia of Adventure Time Battle Party with OpenATBP, an open-source server dedicated to preserving this classic MOBA game">
-    <meta property="og:image" content="favicon.png">
-    <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.3.html">
+    <meta name="description" content="OpenATBP Patch Notes 1.4">
+    <meta name="keywords" content="OpenATBP, Patch Notes, Adventure Time Battle Party, MOBA, Elo, matchmaking, backpack rework, balance updates, bug fixes">
+
+    <meta property="og:title" content="OpenATBP Patch Notes 1.4">
+    <meta property="og:description" content="OpenATBP Patch Notes 1.4">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/patch-images/1.4.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/patch-notes/1.4.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
+
     <title>Patch Notes 1.4 | OpenATBP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        @media (min-width: 1500px) {
-            body {
-                font-size: 1.2rem;
-            }
-        }       
-    </style>
+
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<div id="navigation">
-    <a href="https://www.reddit.com/r/battleparty/" target="_blank"><img src="../img/reddit.png" alt="r/battleparty" id="reddit-link-img"></a>
-    <img src="../img/favicon.png" id="nav-logo" alt="OpenATBP Logo">
-    <img src="../img/menu.png" alt="menu" id="mobile-nav-open-btn">
-    <div id="mobile-nav">
-        <table>
-            <tr>
-                <td><img src="../img/close.png" alt="close" id="mobile-nav-close"></td>
-            </tr>
-            <tr>
-                <td><a href="../index.html">HOME PAGE</a></td>
-            </tr>
-            <tr>
-                <td><a href="../notes.html">PATCH NOTES</a></td>
-            </tr>
-            <tr>
-                <td><a href="../wiki-home.html">WIKI</a></td>
-            </tr>
-            <tr>
-                <td><a href="../spicybattle.html">SPICY BATTLE</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a></td>
-            </tr>
-            <tr>
-                <td><a target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="desktop-nav">
-        <a class="navigation-a" href="../index.html">HOME PAGE</a>
-        <a class="navigation-a" href="../notes.html">PATCH NOTES</a>
-        <a class="navigation-a" href="../wiki-home.html">WIKI</a>
-        <a class="navigation-a" href="../spicybattle.html">SPICY BATTLE</a>
-        <a class="navigation-a" target="_blank" href="https://discord.gg/YzJkPDjZxG">DISCORD SERVER</a>
-        <a class="navigation-a" target="_blank" href="https://github.com/OpenATBP/OpenATBP">GITHUB</a>
-    </div>
-</div>
-    <div class="patch-notes-content">
-        <h2>ELO, FRIENDS, AND MATCHMAKING</h2>
-        <ul class="patch-notes-ul">
-            <li>Reset all player stats including elo, played games, champ data, etc.</li>
-            <li>Removed old elo system and replaced it with a net positive system.</li>
-            <li>Elo is now based on your total wins. Every game won/tied is +1 elo and every game lost simply prevents elo gain.</li>
-            <li>Elo can only be lost through dodging or leaving games.</li>
-            <li>Elo tiers are now as follows: [Tier 1] 0-25; [Tier 2] 26-75; [Tier 3] 76-200; [Tier 4] 201-500+</li>
-            <li>Matchmaking is now indefinitely randomized, as skilled based matchmaking cannot exist with the new system.</li>
-            <li>The rule preventing alts is temporarily halted as there should be no reason to make alts outside of anonymity.</li>
-            <li>Indefinitely, your friends list will now show everyone who is online, effectively removing the functionality of a "friends list."</li>
-        </ul>
-        <h2>SHOP CHANGES</h2>
-        <ul class="patch-notes-ul">
-            <p>Skins have had their prices changed to reflect the quality of the skin in comparison to others. The new prices are as follows:</p>
-            <li>Beemo Noir 1250 -> 2000</li>
-            <li>Soccer BMO 500 -> 1250</li>
-            <li>Evil Eye Gunter 2500 -> 1250</li>
-            <li>Young Ice King 1250 -> 2000</li>
-            <li>Guardian Jake 1250 -> 2500</li>
-            <li>Randy Butternubs 1250 -> 2000</li>
-            <li>Wiz Biz Jake 2500 -> 1250</li>
-            <li>Skeletal Lich 2500 -> 1250</li>
-            <li>Mohawk Marcy 2500 -> 1250</li>
-            <li>Racing NEPTR 1250 -> 2000</li>
-            <li>Mr. Crowley 500 -> 1250</li>
-            <li>Zombie Butler 2500 -> 2000</li>
-            <li>Prince Gumball 2500 -> 2000</li>
-            <li>Too Young Bubblegum 2500 -> 2000</li>
-        </ul>
-        <h2>STEALTH CHANGES</h2>
-        <ul class="patch-notes-ul">
-            <p>Stealth has been reworked significantly to prevent bush cheesing that was present in 1.3.</p>
-            <li>Attacking or using an ability will prevent you from using bush invisibility for 3 seconds.</li>
-            <li>After being attacked, you will be revealed and cannot go into stealth from bushes for 3 seconds.</li>
-        </ul>
-        <h2>BACKPACK REWORK</h2>
-        <ul class="patch-notes-ul">
-            <p>All backpacks have been reworked from the ground up, effectively removing all original bags and replacing them with all new ones.</p>
-            <p>There are too many bags to list here so please check out the wiki for more details. But here is a brief description of the bags and their gimmicks.</p>
-            <li>Champion's Backpack - Pretty much unchanged. Cannot replace the GOAT.</li>
-            <li>Assassin's Starter-Kit - Playstyle: Assassin, high damage low survivability | Gimmick: "Night Sword" on kill briefly enter stealth</li>
-            <li>Choose Goose's Lootbox - Playstyle: RNG | Gimmick: "Demonic Wishing Eye" allows abilities to crit</li>
-            <li>Nurse Pound Cake's Medkit - Playstyle: Support | Gimmick: "Simon Petrikov's Glasses" buffs nearby allies' power damage</li>
-            <li>Techno Tank - Playstyle: Tank | Gimmick: "Robo Suit" High defenses + increasing speed stacks that can be used to slow target</li>
-            <li>Huntress Wizard's Arsenal - Playstyle: Jungler | Gimmick: "Demon Blood Sword" increases damage to jungle monsters and gives unique buffs for slaying monsters</li>
-            <li>Candy Monarch Regalia - Playstyle: Laner | Gimmick: "Grape Juice Sword" increases damage to minions and buffs nearby minions</li>
-            <li>Daredevil's Duffel Bag - Playstyle: Snowballing | Gimmick: "Lightning Sword" increases PD on kill</li>
-            <li>Billy's Bag - Playstyle: ADC | Gimmick: "Grass Sword" enhances next critical attack periodically</li>
-            <li>Nearly Ultimate Wizard Wear - Playstyle: High Burst AP | Gimmick: "Wizard Robe" grants stacking CDR on kill</li>
-            <li>Sorcerous Satchel - Playstyle: High CDR AP | Gimmick: "Lich's Hand" grants increased spell damage when hitting same target</li>
-            <li>Bindle of Bravery - Playstyle: Bruiser | Gimmick: "Peppermint Tank" deals additional damage to close range targets</li>
-            <li>Susan's Shredder - Playstyle: Anti-Tank | Gimmick: "Glob's Helmet" deals increased damage to targets with more max HP</li>
-            <li>Hybrid Haversack - Playstyle: AP/AD Hybrid | Gimmick: "Fight King's Sword" and "Cosmic Gauntlet" alternate in enhancing your attacks and abilities</li>
-            <li>Vampire Rocker Gear - Playstyle: High Vamp | Gimmick: "AX Bass" prevents outside healing but grants extreme attack vamp</li>
-        </ul>
-        <h2>BALANCE UPDATES</h2>
-        <div class="patch-notes-image-section">
-            <img src="../img/favicon.png" alt="bee image">
-            <p>General Changes</p>
-        </div>
-        <ul class="balance-ul">
-            <li>Reworked armor/MR system to deal flat percentage reduction based on stats 1 armor = 1% physical damage reduction</li>
-            <li>Changed all champions' base stats with most ranged champs at 0 base stats, melee at 5 armor/5 MR, and tanks at 10 armor/10 MR. For more details, check out the wiki</li>
-            <li>Removed Herobrine</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/cb.png" alt="cb image">
-            <p>Cinnamon Bun</p>
-        </div>
-        <ul class="balance-ul">
-            <li>BUFF: Ability damage reduction to towers decreased from 50% to 25%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/fp.png" alt="fp image">
-            <p>Flame Princess</p>
-        </div>
-        <ul class="balance-ul">
-            <li>NERF: Decreased attack range from 6.4 to 6.0</li>
-            <li>NERF: Abilities now need to damage something to activate FP's passive</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/hunson.png" alt="hunson image">
-            <p>Hunson</p>
-        </div>
-        <ul class="balance-ul">
-            <li>BUFF: Removed damage fall off from hitting the same target multiple times with Q</li>
-            <li>BUFF: Third hit with Q now does 75% increased damage</li>
-            <li>BUFF: Increased E PD scaling from 50% to 60%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/iceking.png" alt="ice king image">
-            <p>Ice King</p>
-        </div>
-        <ul class="balance-ul">
-            <li>BUFF: Increased W PD scaling from 30% to 40%</li>
-            <li>BUFF: Increased E PD scaling from 20% to 50%</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lemongrab.png" alt="lemongrab image">
-            <p>Lemongrab</p>
-        </div>
-        <ul class="balance-ul">
-            <li>BUFF: Increased health scaling from 35 to 50</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/lich.png" alt="lich image">
-            <p>The Lich</p>
-        </div>
-        <ul class="balance-ul">
-            <li>CHANGE: Skully's basic attack damage is now 10 + 40% Lich's AP</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/marceline.png" alt="marceline image">
-            <p>Marceline</p>
-        </div>
-        <ul class="balance-ul">
-            <li>NERF: Reduced Q damage scaling from 80% to 60%</li>
-            <li>NERF: Reduced Beast Form Q root duration from 3 seconds to 2 seconds</li>
-        </ul>
-        <div class="patch-notes-image-section">
-            <img src="../img/champions/pb.png" alt="princess bubblegum image">
-            <p>Princess Bubblegum</p>
-        </div>
-        <ul class="balance-ul">
-            <li>CHANGE: PB's Turret now does 10 + 40% PB's AP</li>
-        </ul>
-        <h2>BUG FIXES</h2>
-        <ul class="patch-notes-ul">
-            <li>Fixed minion pathing where they would frequently walk backwards. Now minions should walk to the closest point going towards the enemy base</li>
-            <li>Fixed numerous bugs over the course of multiple hotfixes during the 1.4 playtest</li>
-            <li>Fixed an issue where FP's passive would always proc on hitting a tower, even when the passive was on cooldown</li>
-            <li>Fixed an issue where Fionna's blue sword would cause weird rounding values for defensive stats</li>
-            <li>Fixed an issue where chaining fear would not work on rooted/stunned characters</li>
-            <li>[NOTE] Reminder that we exclusively work on bugs that are reported in the Discord's bug reporting channel. If it is not there, it does not exist.</li>
-        </ul>
-    </div>
+    <div id="navigation-placeholder"></div>
+
+    <main class="patch-page">
+        <header class="patch-header">
+            <p class="patch-label">Patch Notes</p>
+            <h1>OpenATBP Update 1.4</h1>
+        </header>
+
+        <div class="patch-divider"></div>
+
+        <article class="patch-notes-content">
+            <section class="patch-section">
+                <h2>Elo, Friends, and Matchmaking</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Reset all player stats including Elo, played games, champion data, etc.</li>
+                    <li>Removed old Elo system and replaced it with a net positive system.</li>
+                    <li>Elo is now based on your total wins. Every game won or tied is +1 Elo, and every game lost simply prevents Elo gain.</li>
+                    <li>Elo can only be lost through dodging or leaving games.</li>
+                    <li>Elo tiers are now as follows: Tier 1: 0-25; Tier 2: 26-75; Tier 3: 76-200; Tier 4: 201-500+.</li>
+                    <li>Matchmaking is now indefinitely randomized, as skill-based matchmaking cannot exist with the new system.</li>
+                    <li>The rule preventing alts is temporarily halted, as there should be no reason to make alts outside of anonymity.</li>
+                    <li>Indefinitely, your friends list will now show everyone who is online, effectively removing the functionality of a "friends list."</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Shop Changes</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Skins have had their prices changed to reflect the quality of the skin in comparison to others. The new prices are as follows:</li>
+                    <li>Beemo Noir: 1250 -> 2000.</li>
+                    <li>Soccer BMO: 500 -> 1250.</li>
+                    <li>Evil Eye Gunter: 2500 -> 1250.</li>
+                    <li>Young Ice King: 1250 -> 2000.</li>
+                    <li>Guardian Jake: 1250 -> 2500.</li>
+                    <li>Randy Butternubs: 1250 -> 2000.</li>
+                    <li>Wiz Biz Jake: 2500 -> 1250.</li>
+                    <li>Skeletal Lich: 2500 -> 1250.</li>
+                    <li>Mohawk Marcy: 2500 -> 1250.</li>
+                    <li>Racing NEPTR: 1250 -> 2000.</li>
+                    <li>Mr. Crowley: 500 -> 1250.</li>
+                    <li>Zombie Butler: 2500 -> 2000.</li>
+                    <li>Prince Gumball: 2500 -> 2000.</li>
+                    <li>Too Young Bubblegum: 2500 -> 2000.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Stealth Changes</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Stealth has been reworked significantly to prevent bush cheesing that was present in 1.3.</li>
+                    <li>Attacking or using an ability will prevent you from using bush invisibility for 3 seconds.</li>
+                    <li>After being attacked, you will be revealed and cannot go into stealth from bushes for 3 seconds.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Backpack Rework</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>All backpacks have been reworked from the ground up, effectively removing all original bags and replacing them with all new ones.</li>
+                    <li>There are too many bags to list here, so please check out the wiki for more details. Here is a brief description of the bags and their gimmicks.</li>
+                    <li>Champion's Backpack - Playstyle: generalist. Gimmick: pretty much unchanged. Cannot replace the GOAT.</li>
+                    <li>Assassin's Starter-Kit - Playstyle: assassin, high damage, low survivability. Gimmick: "Night Sword" lets you briefly enter stealth on kill.</li>
+                    <li>Choose Goose's Lootbox - Playstyle: RNG. Gimmick: "Demonic Wishing Eye" allows abilities to crit.</li>
+                    <li>Nurse Pound Cake's Medkit - Playstyle: support. Gimmick: "Simon Petrikov's Glasses" buffs nearby allies' power damage.</li>
+                    <li>Techno Tank - Playstyle: tank. Gimmick: "Robo Suit" gives high defenses plus increasing speed stacks that can be used to slow targets.</li>
+                    <li>Huntress Wizard's Arsenal - Playstyle: jungler. Gimmick: "Demon Blood Sword" increases damage to jungle monsters and gives unique buffs for slaying monsters.</li>
+                    <li>Candy Monarch Regalia - Playstyle: laner. Gimmick: "Grape Juice Sword" increases damage to minions and buffs nearby minions.</li>
+                    <li>Daredevil's Duffel Bag - Playstyle: snowballing. Gimmick: "Lightning Sword" increases PD on kill.</li>
+                    <li>Billy's Bag - Playstyle: ADC. Gimmick: "Grass Sword" enhances next critical attack periodically.</li>
+                    <li>Nearly Ultimate Wizard Wear - Playstyle: high burst AP. Gimmick: "Wizard Robe" grants stacking CDR on kill.</li>
+                    <li>Sorcerous Satchel - Playstyle: high CDR AP. Gimmick: "Lich's Hand" grants increased spell damage when hitting the same target.</li>
+                    <li>Bindle of Bravery - Playstyle: bruiser. Gimmick: "Peppermint Tank" deals additional damage to close range targets.</li>
+                    <li>Susan's Shredder - Playstyle: anti-tank. Gimmick: "Glob's Helmet" deals increased damage to targets with more max HP.</li>
+                    <li>Hybrid Haversack - Playstyle: AP/AD hybrid. Gimmick: "Fight King's Sword" and "Cosmic Gauntlet" alternate in enhancing your attacks and abilities.</li>
+                    <li>Vampire Rocker Gear - Playstyle: high vamp. Gimmick: "AX Bass" prevents outside healing but grants extreme attack vamp.</li>
+                </ul>
+            </section>
+
+            <section class="patch-section">
+                <h2>Balance Updates</h2>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/favicon.png" alt="OpenATBP icon">
+                        <p>General Changes</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>Reworked armor/MR system to deal flat percentage reduction based on stats. 1 armor = 1% physical damage reduction.</li>
+                        <li>Changed all champions' base stats, with most ranged champions at 0 base stats, melee champions at 5 armor / 5 MR, and tanks at 10 armor / 10 MR. For more details, check out the wiki.</li>
+                        <li>Removed Herobrine.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/cb.png" alt="Cinnamon Bun image">
+                        <p>Cinnamon Bun</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>BUFF: Ability damage reduction to towers decreased from 50% to 25%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/fp.png" alt="Flame Princess image">
+                        <p>Flame Princess</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>NERF: Decreased attack range from 6.4 to 6.0.</li>
+                        <li>NERF: Abilities now need to damage something to activate Flame Princess's passive.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/hunson.png" alt="Hunson image">
+                        <p>Hunson</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>BUFF: Removed damage falloff from hitting the same target multiple times with Q.</li>
+                        <li>BUFF: Third hit with Q now does 75% increased damage.</li>
+                        <li>BUFF: Increased E PD scaling from 50% to 60%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/iceking.png" alt="Ice King image">
+                        <p>Ice King</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>BUFF: Increased W PD scaling from 30% to 40%.</li>
+                        <li>BUFF: Increased E PD scaling from 20% to 50%.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lemongrab.png" alt="Lemongrab image">
+                        <p>Lemongrab</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>BUFF: Increased health scaling from 35 to 50.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/lich.png" alt="The Lich image">
+                        <p>The Lich</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>CHANGE: Skully's basic attack damage is now 10 + 40% of The Lich's AP.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/marceline.png" alt="Marceline image">
+                        <p>Marceline</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>NERF: Reduced Q damage scaling from 80% to 60%.</li>
+                        <li>NERF: Reduced Beast Form Q root duration from 3 seconds to 2 seconds.</li>
+                    </ul>
+                </div>
+
+                <div class="balance-card">
+                    <div class="patch-notes-image-section">
+                        <img src="/img/champions/pb.png" alt="Princess Bubblegum image">
+                        <p>Princess Bubblegum</p>
+                    </div>
+
+                    <ul class="balance-ul">
+                        <li>CHANGE: PB's Turret now does 10 + 40% of PB's AP.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="patch-section">
+                <h2>Bug Fixes</h2>
+
+                <ul class="patch-notes-ul">
+                    <li>Fixed minion pathing where they would frequently walk backwards. Minions should now walk to the closest point going towards the enemy base.</li>
+                    <li>Fixed numerous bugs over the course of multiple hotfixes during the 1.4 playtest.</li>
+                    <li>Fixed an issue where Flame Princess's passive would always proc on hitting a tower, even when the passive was on cooldown.</li>
+                    <li>Fixed an issue where Fionna's blue sword would cause weird rounding values for defensive stats.</li>
+                    <li>Fixed an issue where chaining fear would not work on rooted or stunned characters.</li>
+                    <li>[NOTE] Reminder that we exclusively work on bugs that are reported in the Discord's bug reporting channel. If it is not there, it does not exist.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>
