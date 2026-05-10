@@ -1,482 +1,328 @@
+```html id="rank-page-updated"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about OpenATBP game mechanics, including controls, combat, leveling, crowd control, altars, health packs, jungle monsters, and spawn timers.">
-    <meta name="keywords" content="OpenATBP, Game Mechanics, Adventure Time Battle Party, MOBA, combat system, crowd control, altars, jungle monsters, health packs, ranked mechanics">
-    <meta property="og:title" content="Game Mechanics | OpenATBP Wiki">
-    <meta property="og:description" content="A complete guide to OpenATBP's core game mechanics, combat systems, objectives, and match flow.">
-    <meta property="og:image" content="https://www.openatbp.xyz/img/favicon.png">
-    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/game-mechanics.html">
+    <meta name="description" content="OpenATBP ranked system page. Learn how Elo works, how to gain rank, and view every rank threshold.">
+    <meta name="keywords" content="OpenATBP, Rank, Ranked System, Elo, Adventure Time Battle Party, MOBA, Wiki">
+
+    <meta property="og:title" content="Ranked System | OpenATBP Wiki">
+    <meta property="og:description" content="Learn how OpenATBP's ranked system works and view every rank threshold.">
+    <meta property="og:image" content="https://www.openatbp.xyz/img/ranks/4-4.png">
+    <meta property="og:url" content="https://www.openatbp.xyz/wiki-pages/rank.html">
     <meta property="og:type" content="website">
+
     <meta name="robots" content="index, follow">
 
-    <title>Game Mechanics | OpenATBP Wiki</title>
+    <title>Ranked System | OpenATBP Wiki</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .mechanics-hero {
-            text-align: center;
-            padding: 3rem 1rem 2.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(239, 194, 54, 0.35);
-        }
-
-        .mechanics-badge {
-            display: inline-block;
-            padding: 0.35rem 1.4rem;
-            margin-bottom: 1.2rem;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #f8d64e, #c88b18);
-            color: #111827;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            box-shadow: 0 0 24px rgba(248, 214, 78, 0.25);
-        }
-
-        .mechanics-hero h1 {
-            margin: 0;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 0.95;
-            letter-spacing: 0.08em;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-        }
-
-        .mechanics-hero p {
-            max-width: 900px;
-            margin: 1.4rem auto 0;
-            font-size: clamp(1.05rem, 2vw, 1.35rem);
-            color: #dfe9f7;
-        }
-
-        .mechanics-layout {
+        .rank-info-grid {
             display: grid;
-            grid-template-columns: minmax(230px, 280px) 1fr;
-            gap: 1.5rem;
-            align-items: start;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
-        #wiki-page-nav {
-            position: sticky;
-            top: 1rem;
-            background: rgba(10, 16, 31, 0.9);
-            border: 1px solid rgba(110, 148, 196, 0.65);
+        .rank-info-card {
+            background: rgba(16, 22, 34, 0.78);
+            border: 1px solid rgba(83, 129, 185, 0.7);
+            border-radius: 0.9rem;
+            padding: 1rem;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .rank-info-card h2 {
+            margin-top: 0;
+        }
+
+        .rank-info-card ul,
+        .rank-info-card .wiki-list {
+            list-style-position: outside;
+            list-style-type: disc;
+            margin: 0.5rem 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .rank-info-card li {
+            display: list-item;
+            margin: 0.25rem 0;
+            padding-left: 0.15rem;
+        }
+
+        .rank-tier-section {
+            margin-top: 2.5rem;
+        }
+
+        .rank-tier-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .rank-tier-header h2 {
+            margin: 0;
+        }
+
+        .rank-tier-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(83, 129, 185, 0.8), transparent);
+        }
+
+        .rank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 1rem;
+        }
+
+        .rank-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 13rem;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(83, 129, 185, 0.20), transparent 42%),
+                rgba(16, 22, 34, 0.86);
+            border: 1px solid rgba(83, 129, 185, 0.65);
             border-radius: 1rem;
-            padding: 1.2rem;
-            box-shadow: 0 0 28px rgba(0, 0, 0, 0.22);
+            padding: 1.25rem 1rem;
+            text-align: center;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.22);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
         }
 
-        #wiki-page-nav h3 {
-            margin: 0 0 1rem;
-            color: #ffffff;
+        .rank-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 229, 156, 0.9);
+            box-shadow: 0 0 22px rgba(0, 0, 0, 0.34);
+        }
+
+        .rank-card img {
+            width: 5.75rem;
+            height: 5.75rem;
+            object-fit: contain;
+            image-rendering: auto;
+            filter: drop-shadow(0 0 0.45rem rgba(0, 0, 0, 0.55));
+        }
+
+        .rank-card h3 {
+            margin: 0.7rem 0 0.2rem;
+            font-size: 1.1rem;
+        }
+
+        .rank-range {
+            margin: 0;
+            color: #ffeaa8;
             font-size: 1.35rem;
+            font-weight: 700;
             letter-spacing: 0.04em;
         }
 
-        #wiki-page-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #wiki-page-nav li {
-            margin: 0;
-        }
-
-        #wiki-page-nav a {
-            display: block;
-            padding: 0.48rem 0.65rem;
-            color: #c9d9ef;
-            text-decoration: none;
-            border-radius: 0.55rem;
-            font-weight: 600;
-            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-        }
-
-        #wiki-page-nav a:hover {
-            color: #ffffff;
-            background: rgba(83, 129, 185, 0.22);
-            transform: translateX(4px);
-        }
-
-        .mechanics-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1.35rem;
-        }
-
-        .mechanics-section {
-            background: rgba(10, 16, 31, 0.72);
-            border: 1px solid rgba(110, 148, 196, 0.55);
-            border-radius: 1.2rem;
-            padding: clamp(1.2rem, 2vw, 1.8rem);
-            box-shadow: 0 0 26px rgba(0, 0, 0, 0.18);
-        }
-
-        .mechanics-section h2 {
-            margin-top: 0;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-        }
-
-        .mechanics-section h3 {
-            margin-bottom: 0.4rem;
-            color: #ffffff;
-            font-size: 1.35rem;
-        }
-
-        .mechanics-section p {
-            color: #dfe9f7;
-            line-height: 1.55;
-        }
-
-        .mechanics-section ul {
-            margin: 0.6rem 0 1rem 1.3rem;
-            padding-left: 0.7rem;
-        }
-
-        .mechanics-section li {
-            margin: 0.25rem 0;
-            color: #f2f6ff;
-            line-height: 1.4;
-        }
-
-        .mechanics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .mechanics-mini-card {
-            background: rgba(20, 31, 55, 0.72);
-            border: 1px solid rgba(110, 148, 196, 0.38);
-            border-radius: 0.85rem;
-            padding: 1rem;
-        }
-
-        .mechanics-mini-card h3 {
-            margin-top: 0;
-        }
-
-        .mechanics-highlight {
-            color: #f8d64e;
-            font-weight: 700;
+        .rank-subtitle {
+            margin: 0.25rem 0 0;
+            opacity: 0.82;
+            font-size: 0.95rem;
         }
 
         @media (max-width: 900px) {
-            .mechanics-layout {
+            .rank-info-grid {
                 grid-template-columns: 1fr;
             }
 
-            #wiki-page-nav {
-                position: static;
+            .rank-card {
+                min-height: 12rem;
+            }
+
+            .rank-card img {
+                width: 5.25rem;
+                height: 5.25rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="navigation"></div>
+    <div id="navigation-placeholder"></div>
 
-    <div class="wiki-area">
-        <section class="mechanics-hero">
-            <span class="mechanics-badge">Knowledge Base</span>
-            <h1>Game Mechanics</h1>
-            <p>Learn how OpenATBP works, from movement and combat to objectives, jungle timers, crowd control, and match flow.</p>
+    <main class="wiki-page rank-page">
+        <header class="wiki-page-header">
+            <p class="wiki-label">Ranked</p>
+            <h1>Ranked System</h1>
+            <p>
+                Play Ranked Matches to climb through OpenATBP's rank ladder. Your rank is based on your current Elo.
+            </p>
+        </header>
+
+        <div class="wiki-divider"></div>
+
+        <section class="rank-info-grid">
+            <article class="rank-info-card">
+                <h2>How to Gain Rank</h2>
+                <p>You can increase your rank by playing Ranked Matches through:</p>
+                <ul class="wiki-list">
+                    <li>The 3vs3 Quick Match button</li>
+                    <li>Inviting friends to a ranked lobby</li>
+                </ul>
+            </article>
+
+            <article class="rank-info-card">
+                <h2>Elo System</h2>
+                <ul class="wiki-list">
+                    <li>+1 Elo for each win or tie</li>
+                    <li>No Elo gain on a loss</li>
+                    <li>Elo can only be lost by dodging a match or leaving mid-game</li>
+                </ul>
+            </article>
+
+            <article class="rank-info-card">
+                <h2>Matchmaking</h2>
+                <p>
+                    Matchmaking is completely randomized. There is no skill-based matchmaking, so every match is a wild card.
+                </p>
+            </article>
         </section>
 
-        <div class="wiki-text mechanics-layout">
-            <nav id="wiki-page-nav">
-                <h3>On This Page</h3>
-                <ul>
-                    <li><a href="#player-controls">Player Controls</a></li>
-                    <li><a href="#damage-death">Damage and Death</a></li>
-                    <li><a href="#gain-exp">Experience and Leveling</a></li>
-                    <li><a href="#combat-system">Combat System</a></li>
-                    <li><a href="#dc-buffs">Disconnect Buffs</a></li>
-                    <li><a href="#crowd-control">Crowd Control</a></li>
-                    <li><a href="#altars">Altars</a></li>
-                    <li><a href="#health-packs">Health Packs</a></li>
-                    <li><a href="#spawn-times">Spawn Times</a></li>
-                </ul>
-            </nav>
+        <section class="rank-tier-section">
+            <div class="rank-tier-header">
+                <h2>Brave Hero</h2>
+                <div class="rank-tier-line"></div>
+            </div>
 
-            <main class="mechanics-content">
-                <section id="player-controls" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Player Controls and Actions</h2>
-                    <p>In OpenATBP, controlling your champion is simple but full of depth. Here is how to command the battlefield:</p>
-                    <ul>
-                        <li>Left-click on the ground to move your champion to the clicked location.</li>
-                        <li>Left-click on an enemy to begin attacking that target.</li>
-                        <li>Right-click on the ground to send a ping to that location.</li>
-                    </ul>
+            <div class="rank-grid">
+                <article class="rank-card">
+                    <img src="/img/ranks/1-0.png" alt="Brave Hero rank 0">
+                    <h3>Brave Hero I</h3>
+                    <p class="rank-range">0-11</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>Champion Abilities</h3>
-                    <p>Each champion has three active abilities mapped to the Q, W, and E keys. These abilities can deal damage, apply debuffs, control enemies, or create helpful effects.</p>
-                    <p>Each ability has its own cooldown. Once used, you need to wait before casting it again.</p>
+                <article class="rank-card">
+                    <img src="/img/ranks/1-1.png" alt="Brave Hero rank 1">
+                    <h3>Brave Hero II</h3>
+                    <p class="rank-range">12-24</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
+            </div>
+        </section>
 
-                    <h3>No Mana</h3>
-                    <p>OpenATBP does not use a mana system. You can cast abilities as long as they are off cooldown, letting you focus on timing, positioning, and decision-making.</p>
+        <section class="rank-tier-section">
+            <div class="rank-tier-header">
+                <h2>Royal Legend</h2>
+                <div class="rank-tier-line"></div>
+            </div>
 
-                    <h3>Passive Powers</h3>
-                    <p>Every champion also has a passive ability. These are either always active or automatically trigger when specific conditions are met.</p>
-                </section>
+            <div class="rank-grid">
+                <article class="rank-card">
+                    <img src="/img/ranks/2-0.png" alt="Royal Legend rank 0">
+                    <h3>Royal Legend I</h3>
+                    <p class="rank-range">25-40</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                <section id="damage-death" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Damage and Death</h2>
-                    <p>Every unit, except <a href="champions/magicman.html" class="wiki-link">Magic Man's decoy</a>, has Health Points. When a unit reaches 0 health, it is knocked out.</p>
+                <article class="rank-card">
+                    <img src="/img/ranks/2-1.png" alt="Royal Legend rank 1">
+                    <h3>Royal Legend II</h3>
+                    <p class="rank-range">41-56</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>Champion Knockouts and Respawning</h3>
-                    <p>When a champion is knocked out, they respawn at their team's base after a delay.</p>
-                    <ul>
-                        <li>Base respawn time: <span class="mechanics-highlight">10 seconds</span></li>
-                        <li>Respawn time increases by <span class="mechanics-highlight">+1 second</span> for every full minute the match has lasted.</li>
-                        <li>Example: at 5 minutes, respawn time is 15 seconds.</li>
-                    </ul>
-                </section>
+                <article class="rank-card">
+                    <img src="/img/ranks/2-2.png" alt="Royal Legend rank 2">
+                    <h3>Royal Legend III</h3>
+                    <p class="rank-range">57-74</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
+            </div>
+        </section>
 
-                <section id="gain-exp" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Gaining Experience and Leveling Up</h2>
-                    <p>Defeating enemy champions, minions, and jungle creeps earns Experience Points. Earning enough XP causes your champion to level up.</p>
+        <section class="rank-tier-section">
+            <div class="rank-tier-header">
+                <h2>Master of Battle</h2>
+                <div class="rank-tier-line"></div>
+            </div>
 
-                    <h3>Leveling Benefits</h3>
-                    <ul>
-                        <li>Your base stats increase.</li>
-                        <li>You gain a Skill Point.</li>
-                        <li>Skill Points can be invested into Battle Junk items from your backpack.</li>
-                    </ul>
+            <div class="rank-grid">
+                <article class="rank-card">
+                    <img src="/img/ranks/3-0.png" alt="Master of Battle rank 0">
+                    <h3>Master of Battle I</h3>
+                    <p class="rank-range">75-105</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>Battle Junk Upgrades</h3>
-                    <p>Battle Junk items can improve stats such as:</p>
-                    <div class="mechanics-grid">
-                        <div class="mechanics-mini-card">
-                            <h3>Offense</h3>
-                            <ul>
-                                <li>Attack Damage</li>
-                                <li>Power Damage</li>
-                                <li>Attack Speed</li>
-                                <li>Critical Chance</li>
-                            </ul>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Defense</h3>
-                            <ul>
-                                <li>Health</li>
-                                <li>Armor</li>
-                                <li>Shields</li>
-                                <li>Regenerate</li>
-                            </ul>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Utility</h3>
-                            <ul>
-                                <li>Attack Vamp</li>
-                                <li>Power Vamp</li>
-                                <li>Armor Breach</li>
-                                <li>Shield Breach</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                <article class="rank-card">
+                    <img src="/img/ranks/3-1.png" alt="Master of Battle rank 1">
+                    <h3>Master of Battle II</h3>
+                    <p class="rank-range">106-136</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                <section id="combat-system" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Combat System</h2>
-                    <p>All units can deal damage, but not all damage works the same way.</p>
+                <article class="rank-card">
+                    <img src="/img/ranks/3-2.png" alt="Master of Battle rank 2">
+                    <h3>Master of Battle III</h3>
+                    <p class="rank-range">137-167</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>Attack Damage</h3>
-                    <p>Attack Damage is physical damage used by basic attacks and some abilities. It is commonly used by champions, minions, jungle monsters, and towers.</p>
+                <article class="rank-card">
+                    <img src="/img/ranks/3-3.png" alt="Master of Battle rank 3">
+                    <h3>Master of Battle IV</h3>
+                    <p class="rank-range">168-199</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
+            </div>
+        </section>
 
-                    <h3>Power Damage</h3>
-                    <p>Power Damage is magical or ability-based damage. Most champion abilities and jungle boss special attacks use Power Damage.</p>
-                </section>
+        <section class="rank-tier-section">
+            <div class="rank-tier-header">
+                <h2>Immortal Warrior</h2>
+                <div class="rank-tier-line"></div>
+            </div>
 
-                <section id="dc-buffs" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Disconnect Buffs</h2>
-                    <p>Disconnect buffs help balance uneven matches when teammates go offline. These buffs only apply in real matches, not PvP test matches.</p>
-                    <p>If both teams have disconnected players, the buffs cancel each other out.</p>
+            <div class="rank-grid">
+                <article class="rank-card">
+                    <img src="/img/ranks/4-0.png" alt="Immortal Warrior bronze rank">
+                    <h3>Bronze</h3>
+                    <p class="rank-range">200-259</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>One Teammate Disconnected</h3>
-                    <ul>
-                        <li>+20% Armor</li>
-                        <li>+20% Shields</li>
-                        <li>+15% Movement Speed</li>
-                    </ul>
+                <article class="rank-card">
+                    <img src="/img/ranks/4-1.png" alt="Immortal Warrior silver rank">
+                    <h3>Silver</h3>
+                    <p class="rank-range">260-319</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <h3>Two Teammates Disconnected</h3>
-                    <ul>
-                        <li>+20% Attack Damage</li>
-                        <li>+20% Power Damage</li>
-                    </ul>
+                <article class="rank-card">
+                    <img src="/img/ranks/4-2.png" alt="Immortal Warrior gold rank">
+                    <h3>Gold</h3>
+                    <p class="rank-range">320-379</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                    <p>If all three team members disconnect, that team automatically forfeits the match.</p>
-                </section>
+                <article class="rank-card">
+                    <img src="/img/ranks/4-3.png" alt="Immortal Warrior teal rank">
+                    <h3>Teal</h3>
+                    <p class="rank-range">380-439</p>
+                    <p class="rank-subtitle">Elo bracket</p>
+                </article>
 
-                <section id="crowd-control" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Crowd Control Effects</h2>
-                    <p>Crowd Control, often shortened to CC, refers to effects that restrict movement, actions, or both.</p>
-
-                    <div class="mechanics-grid">
-                        <div class="mechanics-mini-card">
-                            <h3>Root</h3>
-                            <p>You cannot move or use movement abilities, but you can still attack and use non-movement abilities.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Stun</h3>
-                            <p>You cannot move, attack, or use abilities.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Charm</h3>
-                            <p>You lose control and automatically walk toward the charmer.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Slow</h3>
-                            <p>Your movement speed is reduced, but you can still attack and cast abilities.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Fear</h3>
-                            <p>You lose control and run in a random direction before freezing until the effect ends.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Silence</h3>
-                            <p>You cannot cast abilities, but you can still move and basic attack.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Blind</h3>
-                            <p>Your basic attacks deal no damage during the effect.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Polymorph</h3>
-                            <p>You are transformed into a Flambit and cannot use abilities or basic attacks.</p>
-                        </div>
-                        <div class="mechanics-mini-card">
-                            <h3>Airborne</h3>
-                            <p>You are knocked back or pulled and cannot move or use abilities while airborne.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="altars" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Altars</h2>
-                    <p>Altars are powerful control points that provide temporary team buffs.</p>
-
-                    <h3>Mid Altar</h3>
-                    <ul>
-                        <li>Located at the center of the map.</li>
-                        <li>Grants +25% Attack Damage and Power Damage.</li>
-                        <li>Usually the most important altar to contest.</li>
-                    </ul>
-
-                    <h3>Side Altars</h3>
-                    <ul>
-                        <li>Located on opposite sides of the map.</li>
-                        <li>Grant +25% Armor and Shields.</li>
-                        <li>Useful for surviving extended fights.</li>
-                    </ul>
-
-                    <h3>Capture Speed</h3>
-                    <ul>
-                        <li>If your team has a 1-player advantage on the altar, capture takes 5 seconds.</li>
-                        <li>If your team has a 2-player or greater advantage, Fast Capture activates and capture takes 2 seconds.</li>
-                    </ul>
-
-                    <h3>Re-Capture</h3>
-                    <p>After an altar is captured, it becomes available again after 1.5 minutes.</p>
-
-                    <h3>Goo Buff Synergy</h3>
-                    <p>Players with the Goo Buff amplify altar effects by 50%:</p>
-                    <ul>
-                        <li>Mid Altar becomes +37.5% Attack Damage and Power Damage.</li>
-                        <li>Side Altars become +37.5% Armor and Shields.</li>
-                    </ul>
-                </section>
-
-                <section id="health-packs" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Health Packs</h2>
-                    <p>Health Packs are pickups that provide instant healing and temporary regeneration.</p>
-
-                    <h3>Effects</h3>
-                    <ul>
-                        <li>Instantly restores 15% of your maximum health.</li>
-                        <li>Grants +15 Health Regeneration for 1 minute.</li>
-                    </ul>
-
-                    <h3>Timing</h3>
-                    <ul>
-                        <li>Initial spawn: 14:00 into the match.</li>
-                        <li>Respawn time: 60 seconds after being picked up.</li>
-                    </ul>
-                </section>
-
-                <section id="spawn-times" class="mechanics-section">
-                    <h2 class="wiki-mark-out">Spawn Times and Respawn Times</h2>
-                    <p>Knowing spawn timers helps control the map and plan objectives.</p>
-
-                    <div class="mechanics-grid">
-                        <div class="mechanics-mini-card">
-                            <h3>Champions</h3>
-                            <ul>
-                                <li>Spawn at match start.</li>
-                                <li>Respawn: 10 seconds + 1 second per match minute.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mechanics-mini-card">
-                            <h3>Minions</h3>
-                            <ul>
-                                <li>First wave: 14:30.</li>
-                                <li>New wave every 30 seconds.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mechanics-mini-card">
-                            <h3>Small Jungle Monsters</h3>
-                            <ul>
-                                <li>Gnomes, Iron Owls, Grass Bear, and Hug Wolf.</li>
-                                <li>Spawn: 14:15.</li>
-                                <li>Respawn: 45 seconds after being killed.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mechanics-mini-card">
-                            <h3>Goo Monster</h3>
-                            <ul>
-                                <li>Spawn: 13:30.</li>
-                                <li>Respawn: 90 seconds after being killed.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mechanics-mini-card">
-                            <h3>Kee-Oth</h3>
-                            <ul>
-                                <li>Spawn: 13:00.</li>
-                                <li>Respawn: 120 seconds after being killed.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mechanics-mini-card">
-                            <h3>Health Packs</h3>
-                            <ul>
-                                <li>Spawn: 14:00.</li>
-                                <li>Respawn: 60 seconds after being picked up.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-    </div>
+                <article class="rank-card">
+                    <img src="/img/ranks/4-4.png" alt="Immortal Warrior purple rank">
+                    <h3>Purple</h3>
+                    <p class="rank-range">440+</p>
+                    <p class="rank-subtitle">Elo required</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
     <script src="/scripts/load-navigation.js"></script>
 </body>
 </html>
+```
