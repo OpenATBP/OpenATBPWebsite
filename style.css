@@ -398,6 +398,7 @@ body {
     margin: 0;
     padding-left: 0;
     list-style: none;
+    margin-left: 1rem;
 }
 
 .patch-notes-ul li,
@@ -406,7 +407,6 @@ body {
 
     margin-bottom: 8px;
     padding-left: 24px;
-
     color: #f8fafc;
     font-size: 1.1rem;
     line-height: 1.4;
@@ -435,23 +435,56 @@ body {
     margin-bottom: 0;
 }
 
+.patch-notes-new-content {
+    width: fit-content;
+    max-width: 760px;
+    margin: 0 0 1.5rem 1rem;
+}
+
 .balance-card {
     width: fit-content;
+    min-width: 760px;
     max-width: 760px;
 
     margin: 0 0 32px 0;
-    padding: 0;
+    padding: 1rem;
 
     background: transparent;
-    border: none;
-    border-radius: 0;
+    border: 1px solid rgb(71, 70, 70);
     box-shadow: none;
 }
 
-.balance-card:hover {
-    transform: none;
-    border-color: transparent;
-    box-shadow: none;
+.balance-ability-section {
+    margin: 2rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.balance-ability-section img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.35),
+        0 0 14px rgba(255, 216, 77, 0.05);
+}
+
+.balance-ability-section p {
+    margin: 0;
+    color: #ffd84d;
+    font-weight: 900;
+}
+
+.ability-balance-list {
+    margin-left: 1rem;
 }
 
 .patch-notes-image-section {
