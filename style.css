@@ -393,6 +393,22 @@ body {
         0 0 20px rgba(255, 216, 77, 0.16);
 }
 
+
+.patch-section h3 {
+    margin: 0.5rem;
+
+    color: #ffd84d;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(255, 216, 77, 0.16);
+}
+
 .patch-notes-ul,
 .balance-ul {
     margin: 0;
