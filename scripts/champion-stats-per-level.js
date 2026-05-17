@@ -45,7 +45,7 @@ STATS_PER_LEVEL = {
         "regenerate": 1,
     },
     "fionna": {
-        "attack-damage": 5,
+        "attack-damage": 4,
         "armor": 1,
         "attack-speed": 15,
         "power-damage": 2,
@@ -122,11 +122,11 @@ STATS_PER_LEVEL = {
         "attack-speed": 50,
         "power-damage": 4,
         "shields": 1,
-        "health": 35,
+        "health": 25,
         "regenerate": 1,
     },
     "magicman": {
-        "attack-damage": 2,
+        "attack-damage": 3,
         "armor": 1,
         "attack-speed": 40,
         "power-damage": 3,

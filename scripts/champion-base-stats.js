@@ -17,7 +17,7 @@ BASE_STATS = {
         "critical-damage": "125%"
     },
     "bmo": {
-        "attack-damage": 33,
+        "attack-damage": 28,
         "armor": 16,
         "attack-speed": 1560,
         "power-damage": 58,
@@ -85,7 +85,7 @@ BASE_STATS = {
         "critical-damage": "125%"
     },
     "fionna": {
-        "attack-damage": 55,
+        "attack-damage": 54,
         "armor": 16,
         "attack-speed": 1385,
         "power-damage": 17,
@@ -104,7 +104,7 @@ BASE_STATS = {
     "fp": {
         "attack-damage": 34,
         "armor": 11,
-        "attack-speed": 1760,
+        "attack-speed": 1560,
         "power-damage": 63,
         "shields": 11,
         "health": 375,
@@ -116,7 +116,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "125%"
+        "critical-damage": "140%"
     },
     "gunter": {
         "attack-damage": 54,
@@ -133,7 +133,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "1%",
-        "critical-damage": "150%"
+        "critical-damage": "140%"
     },
     "hunson": {
         "attack-damage": 59,
@@ -153,7 +153,7 @@ BASE_STATS = {
         "critical-damage": "125%"
     },
     "iceking": {
-        "attack-damage": 42,
+        "attack-damage": 27,
         "armor": 11,
         "attack-speed": 1235,
         "power-damage": 63,
@@ -175,7 +175,7 @@ BASE_STATS = {
         "attack-speed": 1450,
         "power-damage": 12,
         "shields": 21,
-        "health": 800,
+        "health": 550,
         "regenerate": 3,
         "attack-range": 1.5,
         "speed": 2.65,
@@ -205,14 +205,14 @@ BASE_STATS = {
     },
     "lich": {
         "attack-damage": 37,
-        "armor": 11,
+        "armor": 6,
         "attack-speed": 1780,
         "power-damage": 53,
-        "shields": 11,
+        "shields": 6,
         "health": 375,
         "regenerate": 3,
-        "attack-range": 6,
-        "speed": 2.45,
+        "attack-range": 5.5,
+        "speed": 2.5,
         "attack-vamp": "0%",
         "power-vamp": "0%",
         "armor-breach": 0,
@@ -226,10 +226,10 @@ BASE_STATS = {
         "attack-speed": 1550,
         "power-damage": 54,
         "shields": 11,
-        "health": 385,
+        "health": 375,
         "regenerate": 3,
         "attack-range": 5.75,
-        "speed": 3.15,
+        "speed": 3,
         "attack-vamp": "0%",
         "power-vamp": "0%",
         "armor-breach": 0,
@@ -238,7 +238,7 @@ BASE_STATS = {
         "critical-damage": "125%"
     },
     "magicman": {
-        "attack-damage": 47,
+        "attack-damage": 48,
         "armor": 11,
         "attack-speed": 1560,
         "power-damage": 28,
@@ -252,7 +252,7 @@ BASE_STATS = {
         "armor-breach": 0,
         "shield-breach": 0,
         "critical-chance": "0%",
-        "critical-damage": "125%"
+        "critical-damage": "140%"
     },
     "marceline": {
         "attack-damage": 53,

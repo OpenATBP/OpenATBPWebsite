@@ -12,7 +12,7 @@ const ITEMS = {
     "anti-magic-cube": {
         "stat1": "Shields (10/20/30/45)",
         "stat2": "Power Damage (-10/-20/-30/-50)",
-        "stat3": "Abilities reduce target's Power Damage (-25/-50/-75/-100)"
+        "stat3": "Abilities reduce target's Power Damage (-25/-50/-75/-100). This effect lasts for 5 seconds and has a 6 second cooldown per target."
     },
     "armor-of-zelderon": {
         "stat1": "Armor (5/10/15/20)",
@@ -70,7 +70,7 @@ const ITEMS = {
     "electrode-gun": {
         "stat1": "Power Damage (15/35/75/150)",
         "stat2": "Cooldown (5%/10%/15%/20%)",
-        "stat3": "25% chance to deal chain damage to enemies (25%/30%/40%/50% of damage)"
+        "stat3": "Abilities grant a stack on champion hit, with a 3s cooldown between stack gains. At 3 stacks, the next ability stuns the first champion hit for 0.5/1/1.5/2s. Stacks expire after 3 seconds."
     },
     "enchiridion": {
         "stat1": "Health (75/125/200/275)",
@@ -164,12 +164,13 @@ const ITEMS = {
     },
     "lightning-sword": {
         "stat1": "Power Damage (10/32/50/75)",
-        "stat2": "Getting KO's add bonus Spell Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 55 Spell Damage per level in Lightning Sword."
+        "stat1": "Cooldown (5/7/9/15)",
+        "stat2": "Getting KO's add bonus Spell Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and all stacks. Max of 55 Spell Damage per level in Lightning Sword."
     },
     "magic-nail": {
         "stat1": "Attack Damage (5/10/20/35)",
-        "stat2": "Speed (.05/.10/.15/.20)",
-        "stat3": "Getting KO's adds bonus Attack Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 30 Attack Damage per level in Magic Nail."
+        "stat2": "Health (25/50/75/150)",
+        "stat3": "Getting KO's adds bonus Attack Damage (+7 for champions, +4 for minions/jungle creeps), get KO'ed and lose half your bonus. Max of 25 Attack Damage per level in Magic Nail."
     },
     "magic-carpet": {
         "stat1": "Cooldown (5%/10%/15%/20%)",
